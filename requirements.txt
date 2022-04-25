@@ -1,2 +1,5 @@
-Imported modules/packages:
+Imported modules/packages (no need to install):
 - argparse
+
+Imported modules/packages (need to install):
+- pandas
