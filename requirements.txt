@@ -1,5 +1,5 @@
-Imported modules/packages (no need to install):
+Modules/packages used from the Python standard library:
 - argparse
 
-Imported modules/packages (need to install):
+Imported modules/packages:
 - pandas

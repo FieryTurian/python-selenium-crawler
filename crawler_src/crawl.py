@@ -12,7 +12,7 @@ def parse_arguments():
     Returns
     -------
     dict
-        a dictionary with the values for all command line arguments
+        A dictionary with the values for all command line arguments
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("-m", "--mobile", action="store_true", required=False,
@@ -42,7 +42,7 @@ def read_tranco_top_500(file_path):
     Returns
     -------
     dict
-        a dictionary with the Tranco ranks and the corresponding domain
+        A dictionary with the Tranco ranks and the corresponding domain
     """
     tranco_df = pd.read_csv(file_path, header=0, index_col=0, squeeze=True)
     tranco_dict = tranco_df.to_dict()
