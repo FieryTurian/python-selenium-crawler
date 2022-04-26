@@ -3,7 +3,15 @@
 A placeholder for a very nice description of our crawler :)
 """
 import argparse
+from telnetlib import EC
+
 import pandas as pd
+
+# from selenium import webdriver
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 def parse_arguments():
@@ -50,9 +58,36 @@ def read_tranco_top_500(file_path):
     return tranco_dict
 
 
+def crawl_url(url):
+    driver = webdriver.Chrome()
+    driver.get(url)
+
+    # link for switching to English
+    en_link = driver.find_element(
+        By.CSS_SELECTOR, "li.language:nth-child(2) > span:nth-child(2) > a:nth-child(1)")
+    en_link.click()
+
+    # we now want to click the Allow all cookies button
+    # The following fails sine the allow all button takes a while to load
+    # driver.find_element(By.CLASS_NAME, "btn_alow_true")
+    # instead we wait until it becomes clickable
+    allow_all = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.CLASS_NAME, "btn_allow_true")))
+
+    if allow_all:
+        allow_all.click()
+    driver.quit()
+    print("I am here :D")
+
+    return
+
+
 if __name__ == '__main__':
     args = parse_arguments()
     if args['input']:
         tranco_domains = read_tranco_top_500(args['input'])
+
+    if args['url']:
+        crawl_url(args['url'])
 
     print("Hello world!")
