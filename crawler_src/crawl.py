@@ -24,9 +24,9 @@ def parse_arguments():
     parser.add_argument("-v", "--view", action="store", type=str, required=True,
                         choices=["headless", "headful"],
                         help="Choose between headless and headful modes of the crawler.")
-    args = parser.parse_args()
+    arguments = parser.parse_args()
 
-    if (not args.url and not args.input) or (args.url and args.input):
+    if (not arguments.url and not arguments.input) or (arguments.url and arguments.input):
         parser.error("Invalid input: please provide either the -u or -i argument.")
 
     return vars(args)
