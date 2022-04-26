@@ -1,5 +1,1 @@
-Modules/packages used from the Python standard library:
-- argparse
-
-Imported modules/packages:
-- pandas
+pandas==1.4.2
