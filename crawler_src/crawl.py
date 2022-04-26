@@ -26,10 +26,11 @@ def parse_arguments():
                         help="Choose between headless and headful modes of the crawler.")
     args = parser.parse_args()
 
-    if ((not args.url and not args.input) or (args.url and args.input)):
+    if (not args.url and not args.input) or (args.url and args.input):
         parser.error("Invalid input: please provide either the -u or -i argument.")
 
     return vars(args)
+
 
 def read_tranco_top_500(file_path):
     """Reads a csv file containing domains to crawl and their Tranco ranks
@@ -47,6 +48,7 @@ def read_tranco_top_500(file_path):
     tranco_df = pd.read_csv(file_path, header=0, index_col=0, squeeze=True)
     tranco_dict = tranco_df.to_dict()
     return tranco_dict
+
 
 if __name__ == '__main__':
     args = parse_arguments()
