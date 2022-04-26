@@ -29,7 +29,7 @@ def parse_arguments():
     if (not arguments.url and not arguments.input) or (arguments.url and arguments.input):
         parser.error("Invalid input: please provide either the -u or -i argument.")
 
-    return vars(args)
+    return vars(arguments)
 
 
 def read_tranco_top_500(file_path):
@@ -54,4 +54,5 @@ if __name__ == '__main__':
     args = parse_arguments()
     if args['input']:
         tranco_domains = read_tranco_top_500(args['input'])
+
     print("Hello world!")
