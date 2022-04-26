@@ -84,10 +84,19 @@ def crawl_url(url):
     return
 
 
+def crawl_list(domain_list):
+    for domain in domain_list.values():
+        crawl_url(domain)
+
+    print("Please give us a moment, we are trying to crawl your entire input list :D")
+    return
+
+
 if __name__ == '__main__':
     args = parse_arguments()
     if args['input']:
         tranco_domains = read_tranco_top_500(args['input'])
+        crawl_list(tranco_domains)
 
     if args['url']:
         crawl_url(args['url'])
