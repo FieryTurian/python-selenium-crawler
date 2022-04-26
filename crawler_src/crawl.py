@@ -6,6 +6,7 @@ import argparse
 from telnetlib import EC
 
 import pandas as pd
+import selenium
 
 # from selenium import webdriver
 from selenium import webdriver
