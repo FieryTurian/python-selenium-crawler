@@ -4,6 +4,7 @@ A placeholder for a very nice description of our crawler :)
 """
 import argparse
 import pandas as pd
+import selenium
 
 
 def parse_arguments():
