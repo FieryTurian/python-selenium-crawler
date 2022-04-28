@@ -106,21 +106,16 @@ def crawl_url(url, params):
     else:
         driver.save_screenshot(f'../crawl_data/{url}_desktop_pre_consent.png')
 
-    # link for switching to English
-    en_link = driver.find_element(
-        By.CSS_SELECTOR, "li.language:nth-child(2) > span:nth-child(2) > a:nth-child(1)")
-    en_link.click()
-
-    # we now want to click the Allow all cookies button
-    # The following fails sine the allow all button takes a while to load
-    # driver.find_element(By.CLASS_NAME, "btn_alow_true")
-    # instead we wait until it becomes clickable
-    allow_all = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.CLASS_NAME, "btn_allow_true"))
-    )
-
-    if allow_all:
-        allow_all.click()
+    # # We now want to click the Allow all cookies button (On the RU Page)
+    # # The following fails sine the allow all button takes a while to load.
+    # # Using driver.find_element(By.CLASS_NAME, "btn_alow_true") instead we
+    # # wait until it becomes clickable and only then click on accept.
+    # allow_all = WebDriverWait(driver, 10).until(
+    #     EC.element_to_be_clickable((By.CLASS_NAME, "btn_allow_true"))
+    # )
+    #
+    # if allow_all:
+    #     allow_all.click()
 
     requests = driver.requests
     driver.quit()
