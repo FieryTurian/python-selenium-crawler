@@ -75,6 +75,7 @@ def set_webdriver_options(params):
         ChromeOptions that are used to customize the ChromeDriver session
     """
     chrome_options = webdriver.ChromeOptions()
+    chrome_options.add_argument('--lang=en-gb')
     chrome_options.add_argument('--start-maximized')
     # To remove the "Chrome is being controlled by automated test software" notification:
     chrome_options.add_experimental_option("excludeSwitches", ['enable-automation'])
