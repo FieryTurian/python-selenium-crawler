@@ -4,6 +4,7 @@ A placeholder for a very nice description of our crawler :)
 """
 import argparse
 import time
+import os
 
 import pandas as pd
 
@@ -90,8 +91,10 @@ def set_webdriver_options(params):
 
 
 def crawl_url(url, params):
+    # Change the current working directory to the directory of the running file:
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
     chrome_options = set_webdriver_options(params)
-    # driver = webdriver.Chrome(executable_path="drivers/chromedriver.exe", chrome_options=chrome_options)
     driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
 
     website_domain = "https://" + url
@@ -99,15 +102,11 @@ def crawl_url(url, params):
     time.sleep(10)
 
     if params['mobile']:
-        # driver.save_screenshot(f'crawl_data/{url}_mobile_pre_consent.png')
         driver.save_screenshot(f'../crawl_data/{url}_mobile_pre_consent.png')
     else:
-        # driver.save_screenshot(f'crawl_data/{url}_desktop_pre_consent.png')
         driver.save_screenshot(f'../crawl_data/{url}_desktop_pre_consent.png')
 
     requests = driver.requests
-    print(requests)
-    print(type(requests))
     driver.quit()
 
     # # link for switching to English
