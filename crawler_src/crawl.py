@@ -83,7 +83,7 @@ def set_webdriver_options(params):
         chrome_options.add_argument(f'--window-size={WINDOW_SIZE}')
 
     if params['mobile']:
-        mobile_emulation = {"deviceName": "iPhone XR"}
+        mobile_emulation = {"deviceName": "iPhone X"}
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
 
     return chrome_options
@@ -99,9 +99,11 @@ def crawl_url(url, params):
     time.sleep(10)
 
     if params['mobile']:
-        driver.save_screenshot(f'./{url}_mobile_pre_consent.png')
+        # driver.save_screenshot(f'crawl_data/{url}_mobile_pre_consent.png')
+        driver.save_screenshot(f'../crawl_data/{url}_mobile_pre_consent.png')
     else:
-        driver.save_screenshot(f'./{url}_desktop_pre_consent.png')
+        # driver.save_screenshot(f'crawl_data/{url}_desktop_pre_consent.png')
+        driver.save_screenshot(f'../crawl_data/{url}_desktop_pre_consent.png')
 
     requests = driver.requests
     print(requests)
