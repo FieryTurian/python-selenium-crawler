@@ -17,7 +17,7 @@ WINDOW_SIZE = "1920x1080"
 
 
 def parse_arguments():
-    """Parses the command line ArgumentParser
+    """Parse the command line ArgumentParser
 
     Returns
     -------
@@ -43,7 +43,7 @@ def parse_arguments():
 
 
 def read_tranco_top_500(file_path):
-    """Reads a csv file containing domains to crawl and their Tranco ranks
+    """Read a csv file containing domains to crawl and their Tranco ranks
 
     Parameters
     ----------
@@ -83,7 +83,7 @@ def set_webdriver_options(params):
         chrome_options.add_argument(f'--window-size={WINDOW_SIZE}')
 
     if params['mobile']:
-        mobile_emulation = {"deviceName": "iPhone X"}
+        mobile_emulation = {"deviceName": "iPhone XR"}
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
 
     return chrome_options
@@ -91,8 +91,8 @@ def set_webdriver_options(params):
 
 def crawl_url(url, params):
     chrome_options = set_webdriver_options(params)
-    driver = webdriver.Chrome(executable_path="drivers/chromedriver.exe", chrome_options=chrome_options)
-    # driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
+    # driver = webdriver.Chrome(executable_path="drivers/chromedriver.exe", chrome_options=chrome_options)
+    driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
 
     website_domain = "https://" + url
     driver.get(website_domain)
@@ -104,6 +104,8 @@ def crawl_url(url, params):
         driver.save_screenshot(f'./{url}_desktop_pre_consent.png')
 
     requests = driver.requests
+    print(requests)
+    print(type(requests))
     driver.quit()
 
     # # link for switching to English
