@@ -127,24 +127,26 @@ def crawl_url(url, params):
     # driver.quit()
     # print("I am here :D")
 
-    return
+    return requests
 
 
 def crawl_list(domain_list, params):
+    requests_list = []
     for domain in domain_list.values():
-        crawl_url(domain, params)
+        requests = crawl_url(domain, params)
+        requests_list.append(requests)
 
     print("Please give us a moment, we are trying to crawl your entire input list :D")
-    return
+    return requests_list
 
 
 if __name__ == '__main__':
     args = parse_arguments()
     if args['input']:
         tranco_domains = read_tranco_top_500(args['input'])
-        crawl_list(tranco_domains, args)
+        requests_list = crawl_list(tranco_domains, args)
 
     if args['url']:
-        crawl_url(args['url'], args)
+        requests = crawl_url(args['url'], args)
 
     print("Hello world!")
