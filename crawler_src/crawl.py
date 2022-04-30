@@ -111,12 +111,20 @@ def crawl_url(url, params):
     # # The following fails sine the allow all button takes a while to load.
     # # Using driver.find_element(By.CLASS_NAME, "btn_alow_true") instead we
     # # wait until it becomes clickable and only then click on accept.
-    # allow_all = WebDriverWait(driver, 10).until(
-    #     EC.element_to_be_clickable((By.CLASS_NAME, "btn_allow_true"))
-    # )
-    #
-    # if allow_all:
-    #     allow_all.click()
+
+    # We open and read the full datalist of the priv-accept project.
+    with open('accept_words.txt', encoding='utf8') as acceptwords_file:
+        accept_words = acceptwords_file.read().splitlines()
+
+    # For testing purposes
+    # time.sleep(50)
+
+    allow_all = WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.XPATH, "//*[normalize-space()='Alle cookies toestaan' or @value='Alle cookies toestaan']"))
+    )
+
+    if allow_all:
+        allow_all.click()
 
     requests = driver.requests
     driver.quit()
