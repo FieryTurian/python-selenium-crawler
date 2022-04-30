@@ -118,6 +118,12 @@ def crawl_url(url, params):
     # given by NU.nl, for some reason this XPATH does not work. The strange thing is that while testing this XPATH
     # with 'Akkoord', the devtools inspector DOES actually recognize the element. But then selenium gives an error...
     # I am still trying to resolve this problem.
+
+    # Another comment I would like to make is that the file with accept words contains all kinds of languages BUT
+    # Dutch. When I visit microsoft for example, I automatically get referred to the Dutch page, and I am unsure
+    # whether I should first go to the english page and then make use of the list of words, or whether I am allowed
+    # to add the Dutch words for accepting cookies to this list. (The assignments states does state I could add words
+    # though...)
     allow_all = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, "//*[normalize-space()='Alle cookies toestaan' or @value='Alle cookies toestaan']"))
     )
