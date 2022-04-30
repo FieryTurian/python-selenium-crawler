@@ -107,11 +107,6 @@ def crawl_url(url, params):
     else:
         driver.save_screenshot(f'../crawl_data/{url}_desktop_pre_consent.png')
 
-    # # We now want to click the Allow all cookies button (On the RU Page)
-    # # The following fails sine the allow all button takes a while to load.
-    # # Using driver.find_element(By.CLASS_NAME, "btn_alow_true") instead we
-    # # wait until it becomes clickable and only then click on accept.
-
     # We open and read the full datalist of the priv-accept project.
     with open('accept_words.txt', encoding='utf8') as acceptwords_file:
         accept_words = acceptwords_file.read().splitlines()
@@ -119,6 +114,10 @@ def crawl_url(url, params):
     # For testing purposes
     # time.sleep(50)
 
+    # For allowing the cookies on the RU webpage (www.ru.nl). This is still hard-coded. When trying 'Akkoord' as is
+    # given by NU.nl, for some reason this XPATH does not work. The strange thing is that while testing this XPATH
+    # with 'Akkoord', the devtools inspector DOES actually recognize the element. But then selenium gives an error...
+    # I am still trying to resolve this problem.
     allow_all = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, "//*[normalize-space()='Alle cookies toestaan' or @value='Alle cookies toestaan']"))
     )
