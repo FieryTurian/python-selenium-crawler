@@ -124,16 +124,22 @@ def crawl_url(url, params):
     # whether I should first go to the english page and then make use of the list of words, or whether I am allowed
     # to add the Dutch words for accepting cookies to this list. (The assignments states does state I could add words
     # though...)
-    allow_all = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.XPATH, "//*[normalize-space()='Alle cookies toestaan' or @value='Alle cookies toestaan']"))
-    )
 
-    if allow_all:
-        allow_all.click()
+    # Initialise the allow_all_cookies variable to None. If we are able to find an element using one of the words in
+    # the list, it becomes something and the code breaks out of the loop. It then clicks on this found element.
+    allow_all_cookies = None
+    for accept_word in accept_words: # (Currently however, it does not yet use the words in the list due to the comment/uncertainty I mentioned above.)
+        allow_all_cookies = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.XPATH, "//*[normalize-space()='Alle cookies toestaan' or @value='Alle cookies toestaan']"))
+        )
+        if allow_all_cookies:
+            break
+
+    if allow_all_cookies:
+        allow_all_cookies.click()
 
     requests = driver.requests
     driver.quit()
-    print("I am here :D")
 
     return requests
 
