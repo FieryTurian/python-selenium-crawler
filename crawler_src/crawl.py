@@ -148,6 +148,23 @@ def get_request_timestamp(request):
     return request.date
 
 
+def get_headers(request):
+    request_headers = request.headers
+    response_headers = None
+
+    for key in request_headers:
+        if len(request_headers[key]) > 512:
+            request_headers[key] = request_headers[key][:512]
+
+    if request.response:
+        response_headers = request.response.headers
+        for key in response_headers:
+            if len(response_headers[key]) > 512:
+                response_headers[key] = response_headers[key][:512]
+
+    return request_headers, response_headers
+
+
 def crawl_url(params, url):
     url_dict = {"Entries": []}
 
@@ -164,7 +181,10 @@ def crawl_url(params, url):
     for request in requests_url:
         url = get_request_url(request)
         timestamp = get_request_timestamp(request)
-        url_dict["Entries"].append({"URL": url, "Timestamp": timestamp.strftime("%m/%d/%Y, %H:%M:%S")})
+        request_headers, response_headers = get_headers(request)
+        url_dict["Entries"].append({"URL": url, "Timestamp": timestamp.strftime("%m/%d/%Y, %H:%M:%S"),
+                                    "Request Headers": dict(request_headers),
+                                    "Response Headers": dict(response_headers)})
 
     # print(requests_url)
     driver.quit()
