@@ -164,34 +164,34 @@ def crawl_url(params, url):
     for request in requests_url:
         url = get_request_url(request)
         timestamp = get_request_timestamp(request)
-        url_dict["Entries"].append({"URL": url, "Timestamp": timestamp})
+        url_dict["Entries"].append({"URL": url, "Timestamp": timestamp.strftime("%m/%d/%Y, %H:%M:%S")})
 
-    print(url_dict)
+    # print(requests_url)
     driver.quit()
 
-    return requests_url
+    return url_dict
 
 
 def crawl_list(params, domain_list):
-    requests_url_list = []
+    url_dict_list = []
     for domain in domain_list.values():
-        requests_url = crawl_url(domain, params)
-        requests_url_list.append(requests_url)
+        url_dict = crawl_url(params, domain)
+        url_dict_list.append(url_dict)
 
     print("Please wait, we are trying to crawl your entire input list")
-    return requests_url_list
+    return url_dict_list
 
 
 def main():
     args = parse_arguments()
     if args['input']:
         tranco_domains = read_tranco_top_500(args['input'])
-        requests_list = crawl_list(tranco_domains, args)
-        # print(requests_list)
+        url_dict_list = crawl_list(tranco_domains, args)
+        # print(url_dict_list)
 
     if args['url']:
-        requests = crawl_url(args, args['url'])
-        # print(requests)
+        url_dict = crawl_url(args, args['url'])
+        # print(url_dict)
 
     print("End of main()")
 
