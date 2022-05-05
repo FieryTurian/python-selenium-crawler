@@ -132,21 +132,41 @@ def take_screenshots_pre_consent(params, driver, url):
         driver.save_screenshot(f'../crawl_data/{url}_desktop_pre_consent.png')
 
 
+def get_requests(driver, url):
+    website_domain = "https://" + url
+    driver.get(website_domain)
+    requests_url = driver.requests
+
+    return requests_url
+
+
+def get_request_url(request):
+    return request.url
+
+
+def get_request_timestamp(request):
+    return request.date
+
+
 def crawl_url(params, url):
+    url_dict = {"Entries": []}
+
     # Change the current working directory to the directory of the running file:
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
     chrome_options = set_webdriver_options(params)
     driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
 
-    website_domain = "https://" + url
-    driver.get(website_domain)
-
+    requests_url = get_requests(driver, url)
     # time.sleep(10)
     # take_screenshots_pre_consent(params, driver, url)
     # allow_cookies(driver)
 
-    requests_url = driver.requests
+    for request in requests_url:
+        url = get_request_url(request)
+        timestamp = get_request_timestamp(request)
+        url_dict["Entries"].append({"URL": url, "Timestamp": timestamp})
+
+    print(url_dict)
     driver.quit()
 
     return requests_url
@@ -167,11 +187,11 @@ def main():
     if args['input']:
         tranco_domains = read_tranco_top_500(args['input'])
         requests_list = crawl_list(tranco_domains, args)
-        print(requests_list)
+        # print(requests_list)
 
     if args['url']:
         requests = crawl_url(args, args['url'])
-        print(requests)
+        # print(requests)
 
     print("End of main()")
 
