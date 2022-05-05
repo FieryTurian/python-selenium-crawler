@@ -6,6 +6,7 @@ import argparse
 import time
 import os
 
+from tld import get_fld
 import pandas as pd
 
 from seleniumwire import webdriver
@@ -74,16 +75,16 @@ def set_webdriver_options(params):
         ChromeOptions that are used to customize the ChromeDriver session
     """
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument('--lang=en-gb')
-    chrome_options.add_argument('--start-maximized')
+    chrome_options.add_argument("--lang=en-gb")
+    chrome_options.add_argument("--start-maximized")
     # To remove the "Chrome is being controlled by automated test software" notification:
-    chrome_options.add_experimental_option("excludeSwitches", ['enable-automation'])
+    chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 
-    if params['view'] == "headless":
-        chrome_options.add_argument('--headless')
-        chrome_options.add_argument(f'--window-size={WINDOW_SIZE}')
+    if params["view"] == "headless":
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument(f"--window-size={WINDOW_SIZE}")
 
-    if params['mobile']:
+    if params["mobile"]:
         mobile_emulation = {"deviceName": "iPhone X"}
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
 
@@ -92,7 +93,7 @@ def set_webdriver_options(params):
 
 def allow_cookies(driver):
     # We open and read the full datalist of the priv-accept project.
-    with open('accept_words.txt', encoding='utf8') as acceptwords_file:
+    with open("accept_words.txt", encoding="utf8") as acceptwords_file:
         accept_words = acceptwords_file.read().splitlines()
 
     # For testing purposes
@@ -125,16 +126,16 @@ def allow_cookies(driver):
         allow_all_cookies.click()
 
 
-def take_screenshots_pre_consent(params, driver, url):
-    if params['mobile']:
-        driver.save_screenshot(f'../crawl_data/{url}_mobile_pre_consent.png')
+def take_screenshots_pre_consent(params, driver, domain):
+    if params["mobile"]:
+        driver.save_screenshot(f"../crawl_data/{domain}_mobile_pre_consent.png")
     else:
-        driver.save_screenshot(f'../crawl_data/{url}_desktop_pre_consent.png')
+        driver.save_screenshot(f"../crawl_data/{domain}_desktop_pre_consent.png")
 
 
-def get_requests(driver, url):
-    website_domain = "https://" + url
-    driver.get(website_domain)
+def get_requests(driver, domain):
+    url = "https://" + domain
+    driver.get(url)
     requests_url = driver.requests
 
     return requests_url
@@ -165,26 +166,43 @@ def get_headers(request):
     return request_headers, response_headers
 
 
-def crawl_url(params, url):
-    url_dict = {"Entries": []}
+def get_third_party_domains(domain, requests):
+    # Not completely sure about this
+    first_party_domains = [domain]
+    third_party_domains = set()
 
+    for request in requests:
+        request_domain = get_fld(request.url)
+        if request_domain not in first_party_domains:
+            third_party_domains.add(request_domain)
+
+    return list(third_party_domains)
+
+
+def crawl_url(params, domain):
     # Change the current working directory to the directory of the running file:
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     chrome_options = set_webdriver_options(params)
     driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
 
-    requests_url = get_requests(driver, url)
+    requests_url = get_requests(driver, domain)
     # time.sleep(10)
-    # take_screenshots_pre_consent(params, driver, url)
+    # take_screenshots_pre_consent(params, driver, domain)
     # allow_cookies(driver)
 
+    url_dict = {"website_domain": domain,
+                "crawl_mode": "mobile" if params["mobile"] else "desktop",
+                "third_party_domains": get_third_party_domains(domain, requests_url),
+                "nr_requests": len(requests_url),
+                "requests_list": []}
     for request in requests_url:
         url = get_request_url(request)
         timestamp = get_request_timestamp(request)
         request_headers, response_headers = get_headers(request)
-        url_dict["Entries"].append({"URL": url, "Timestamp": timestamp.strftime("%m/%d/%Y, %H:%M:%S"),
-                                    "Request Headers": dict(request_headers),
-                                    "Response Headers": dict(response_headers)})
+        url_dict["requests_list"].append({"request_url": url,
+                                          "timestamp": timestamp.strftime("%m/%d/%Y, %H:%M:%S"),
+                                          "request_headers": dict(request_headers),
+                                          "response_headers": dict(response_headers)})
 
     # print(requests_url)
     driver.quit()
@@ -204,13 +222,13 @@ def crawl_list(params, domain_list):
 
 def main():
     args = parse_arguments()
-    if args['input']:
-        tranco_domains = read_tranco_top_500(args['input'])
+    if args["input"]:
+        tranco_domains = read_tranco_top_500(args["input"])
         url_dict_list = crawl_list(tranco_domains, args)
         # print(url_dict_list)
 
-    if args['url']:
-        url_dict = crawl_url(args, args['url'])
+    if args["url"]:
+        url_dict = crawl_url(args, args["url"])
         # print(url_dict)
 
     print("End of main()")
