@@ -13,7 +13,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
 WINDOW_SIZE = "1920x1080"
 
 
@@ -91,22 +90,7 @@ def set_webdriver_options(params):
     return chrome_options
 
 
-def crawl_url(url, params):
-    # Change the current working directory to the directory of the running file:
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
-    chrome_options = set_webdriver_options(params)
-    driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
-
-    website_domain = "https://" + url
-    driver.get(website_domain)
-    time.sleep(10)
-
-    if params['mobile']:
-        driver.save_screenshot(f'../crawl_data/{url}_mobile_pre_consent.png')
-    else:
-        driver.save_screenshot(f'../crawl_data/{url}_desktop_pre_consent.png')
-
+def allow_cookies(driver):
     # We open and read the full datalist of the priv-accept project.
     with open('accept_words.txt', encoding='utf8') as acceptwords_file:
         accept_words = acceptwords_file.read().splitlines()
@@ -128,9 +112,11 @@ def crawl_url(url, params):
     # Initialise the allow_all_cookies variable to None. If we are able to find an element using one of the words in
     # the list, it becomes something and the code breaks out of the loop. It then clicks on this found element.
     allow_all_cookies = None
-    for accept_word in accept_words: # (Currently however, it does not yet use the words in the list due to the comment/uncertainty I mentioned above.)
+    # Currently, however, it does not yet use the words in the list due to the  comment/uncertainty I mentioned above.
+    for accept_word in accept_words:
         allow_all_cookies = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable((By.XPATH, "//*[normalize-space()='Alle cookies toestaan' or @value='Alle cookies toestaan']"))
+            EC.element_to_be_clickable(
+                (By.XPATH, "//*[normalize-space()='Alle cookies toestaan' or @value='Alle cookies toestaan']"))
         )
         if allow_all_cookies:
             break
@@ -138,29 +124,57 @@ def crawl_url(url, params):
     if allow_all_cookies:
         allow_all_cookies.click()
 
-    requests = driver.requests
+
+def take_screenshots_pre_consent(params, driver, url):
+    if params['mobile']:
+        driver.save_screenshot(f'../crawl_data/{url}_mobile_pre_consent.png')
+    else:
+        driver.save_screenshot(f'../crawl_data/{url}_desktop_pre_consent.png')
+
+
+def crawl_url(params, url):
+    # Change the current working directory to the directory of the running file:
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+    chrome_options = set_webdriver_options(params)
+    driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
+
+    website_domain = "https://" + url
+    driver.get(website_domain)
+
+    # time.sleep(10)
+    # take_screenshots_pre_consent(params, driver, url)
+    # allow_cookies(driver)
+
+    requests_url = driver.requests
     driver.quit()
 
-    return requests
+    return requests_url
 
 
-def crawl_list(domain_list, params):
-    requests_list = []
+def crawl_list(params, domain_list):
+    requests_url_list = []
     for domain in domain_list.values():
-        requests = crawl_url(domain, params)
-        requests_list.append(requests)
+        requests_url = crawl_url(domain, params)
+        requests_url_list.append(requests_url)
 
-    print("Please give us a moment, we are trying to crawl your entire input list :D")
-    return requests_list
+    print("Please wait, we are trying to crawl your entire input list")
+    return requests_url_list
 
 
-if __name__ == '__main__':
+def main():
     args = parse_arguments()
     if args['input']:
         tranco_domains = read_tranco_top_500(args['input'])
         requests_list = crawl_list(tranco_domains, args)
+        print(requests_list)
 
     if args['url']:
-        requests = crawl_url(args['url'], args)
+        requests = crawl_url(args, args['url'])
+        print(requests)
 
-    print("Hello world!")
+    print("End of main()")
+
+
+if __name__ == '__main__':
+    main()
