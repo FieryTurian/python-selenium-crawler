@@ -3,7 +3,6 @@
 A placeholder for a very nice description of our crawler :)
 """
 import argparse
-import time
 import os
 
 from tld import get_fld
@@ -96,34 +95,31 @@ def allow_cookies(driver):
     with open("accept_words.txt", encoding="utf8") as acceptwords_file:
         accept_words = acceptwords_file.read().splitlines()
 
-    # For testing purposes
-    # time.sleep(50)
-
-    # For allowing the cookies on the RU webpage (www.ru.nl). This is still hard-coded. When trying 'Akkoord' as is
-    # given by NU.nl, for some reason this XPATH does not work. The strange thing is that while testing this XPATH
-    # with 'Akkoord', the devtools inspector DOES actually recognize the element. But then selenium gives an error...
-    # I am still trying to resolve this problem.
-
-    # Another comment I would like to make is that the file with accept words contains all kinds of languages BUT
-    # Dutch. When I visit microsoft for example, I automatically get referred to the Dutch page, and I am unsure
-    # whether I should first go to the english page and then make use of the list of words, or whether I am allowed
-    # to add the Dutch words for accepting cookies to this list. (The assignments states does state I could add words
-    # though...)
-
     # Initialise the allow_all_cookies variable to None. If we are able to find an element using one of the words in
     # the list, it becomes something and the code breaks out of the loop. It then clicks on this found element.
     allow_all_cookies = None
-    # Currently, however, it does not yet use the words in the list due to the  comment/uncertainty I mentioned above.
     for accept_word in accept_words:
-        allow_all_cookies = WebDriverWait(driver, 10).until(
-            EC.element_to_be_clickable(
-                (By.XPATH, "//*[normalize-space()='Alle cookies toestaan' or @value='Alle cookies toestaan']"))
-        )
-        if allow_all_cookies:
-            break
+        try:
+            allow_all_cookies = WebDriverWait(driver, 0.2).until(
+                EC.element_to_be_clickable(
+                    # Long and complicated XPATH. Searches case-insensitive for an accept word in Button values or Text.
+                    (By.XPATH, "//*[normalize-space(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
+                                "'abcdefghijklmnopqrstuvwxyz')) = '" + accept_word + "' or "
+                                "translate(@value, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = '" +
+                                accept_word + "']")
+                )
+            )
+        # Pycharm complains here that the exception clause is too broad, but what it actually means is that it is
+        # more neat to print the actual Exception. However, I find that quite ugly in the Console output,
+        # so I did not do this here (yet). Up for discussion :P
+        except Exception:
+            print("Accept word '" + accept_word + "' was not found on this website!")
 
-    if allow_all_cookies:
-        allow_all_cookies.click()
+        if allow_all_cookies:
+            allow_all_cookies.click()
+            return True
+
+    return False
 
 
 def take_screenshots_pre_consent(params, driver, domain):
@@ -188,7 +184,9 @@ def crawl_url(params, domain):
     requests_url = get_requests(driver, domain)
     # time.sleep(10)
     # take_screenshots_pre_consent(params, driver, domain)
-    # allow_cookies(driver)
+    cookies_accepted = allow_cookies(driver)
+    print("The cookies for " + domain + " are accepted: " + str(
+        cookies_accepted))  # Print statement for testing purposes.
 
     url_dict = {"website_domain": domain,
                 "crawl_mode": "mobile" if params["mobile"] else "desktop",
@@ -216,7 +214,7 @@ def crawl_list(params, domain_list):
         url_dict = crawl_url(params, domain)
         url_dict_list.append(url_dict)
 
-    print("Please wait, we are trying to crawl your entire input list")
+    print("Please wait, we are trying to crawl your entire input list.")
     return url_dict_list
 
 
