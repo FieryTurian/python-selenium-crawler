@@ -204,11 +204,11 @@ def crawl_url(params, domain):
         timestamp = request.date
         request_headers, response_headers = get_headers(request)
         url_dict["requests_list"].append({"request_url": url,
-                                          "timestamp": timestamp.strftime("%m/%d/%Y, %H:%M:%S"),
+                                          "timestamp": timestamp.strftime("%d/%m/%Y %H:%M:%S.%f"),
                                           "request_headers": dict(request_headers),
                                           "response_headers": dict(response_headers)})
 
-    print(requests_url)
+    # print(requests_url)
     driver.quit()
 
     return url_dict
