@@ -122,11 +122,24 @@ def allow_cookies(driver):
     return False
 
 
-def take_screenshots_pre_consent(params, driver, domain):
+def take_screenshots_consent(params, driver, domain, state):
+    """Take and save a screenshot of the viewport before or after accepting the cookies_accepted
+
+    Parameters
+    ----------
+    params: dict
+        A dictionary with the values for all command line arguments
+    driver: seleniumwire.webdriver
+        The webdriver that is used to visit the domain
+    domain: str
+        The domain that is visited
+    state: str
+        Indicates whether the screenshot is taken pre or post consent
+    """
     if params["mobile"]:
-        driver.save_screenshot(f"../crawl_data/{domain}_mobile_pre_consent.png")
+        driver.save_screenshot(f"../crawl_data/{domain}_mobile_{state}_consent.png")
     else:
-        driver.save_screenshot(f"../crawl_data/{domain}_desktop_pre_consent.png")
+        driver.save_screenshot(f"../crawl_data/{domain}_desktop_{state}_consent.png")
 
 
 def get_requests(driver, domain):
@@ -135,14 +148,6 @@ def get_requests(driver, domain):
     requests_url = driver.requests
 
     return requests_url
-
-
-def get_request_url(request):
-    return request.url
-
-
-def get_request_timestamp(request):
-    return request.date
 
 
 def get_headers(request):
@@ -183,10 +188,11 @@ def crawl_url(params, domain):
 
     requests_url = get_requests(driver, domain)
     # time.sleep(10)
-    # take_screenshots_pre_consent(params, driver, domain)
+    # take_screenshots_consent(params, driver, domain, "pre")
     cookies_accepted = allow_cookies(driver)
     print("The cookies for " + domain + " are accepted: " + str(
         cookies_accepted))  # Print statement for testing purposes.
+    # take_screenshots_consent(params, driver, domain, "post")
 
     url_dict = {"website_domain": domain,
                 "crawl_mode": "mobile" if params["mobile"] else "desktop",
@@ -194,21 +200,21 @@ def crawl_url(params, domain):
                 "nr_requests": len(requests_url),
                 "requests_list": []}
     for request in requests_url:
-        url = get_request_url(request)
-        timestamp = get_request_timestamp(request)
+        url = request.url
+        timestamp = request.date
         request_headers, response_headers = get_headers(request)
         url_dict["requests_list"].append({"request_url": url,
                                           "timestamp": timestamp.strftime("%m/%d/%Y, %H:%M:%S"),
                                           "request_headers": dict(request_headers),
                                           "response_headers": dict(response_headers)})
 
-    # print(requests_url)
+    print(requests_url)
     driver.quit()
 
     return url_dict
 
 
-def crawl_list(params, domain_list):
+def crawl_list(domain_list, params):
     url_dict_list = []
     for domain in domain_list.values():
         url_dict = crawl_url(params, domain)
