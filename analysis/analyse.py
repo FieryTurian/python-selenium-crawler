@@ -3,13 +3,14 @@
 Analyse the data obtained by the crawler:
 [WORK IN PROGRESS]
 """
-from ast import literal_eval
 import csv
 import glob
 import json
 import os
+from ast import literal_eval
 
 import pandas as pd
+import matplotlib.pyplot as plt
 
 
 def write_data_to_csv(headers):
@@ -69,10 +70,17 @@ def csv_to_pandas_dataframe(headers):
     return dataframe
 
 
+def generate_box_plots(dataframe, header, crawl_mode):
+    dataframe.boxplot(header, by=crawl_mode)
+    plt.savefig("test.png")
+    plt.show()
+
+
 def main():
     headers = ["website_domain", "crawl_mode", "third_party_domains", "nr_requests", "requests_list"]
     write_data_to_csv(headers)
     dataframe = csv_to_pandas_dataframe(headers)
+    generate_box_plots(dataframe, "nr_requests", "crawl_mode")
 
 
 if __name__ == '__main__':
