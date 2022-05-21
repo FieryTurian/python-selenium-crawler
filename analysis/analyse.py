@@ -100,12 +100,11 @@ def customize_grid(ax, border, yaxis, xaxis, bg_color='white', grid_color='gray'
         ax.yaxis.grid(yaxis, which='major', color=grid_color, linewidth=width)
     if yminor:
         ax.yaxis.grid(yminor, which='minor', color=grid_color, linewidth=width/4)
-        ax.minorticks_on()
-        ax.tick_params(which='minor', bottom=False, left=False)
     if xaxis:
         ax.xaxis.grid(xaxis, which='major', color=grid_color, linewidth=width)
     if xminor:
         ax.xaxis.grid(xminor, which='minor', color=grid_color, linewidth=width/4)
+    if yminor or xminor: # Show minor grid lines, but not minor ticks
         ax.minorticks_on()
         ax.tick_params(which='minor', bottom=False, left=False)
     ax.set(axisbelow=True) # Do not draw the grid over the plotted items
