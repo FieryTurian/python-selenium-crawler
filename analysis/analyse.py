@@ -70,9 +70,20 @@ def csv_to_pandas_dataframe(headers):
     return dataframe
 
 
-def generate_box_plots(dataframe, header, crawl_mode):
+def generate_box_plot(dataframe, header, crawl_mode):
+    """Read the CSV file into a pandas dataframe in order to analyse the data
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    header: string
+        A string with the value for one of the headers of the data in the dataframe
+    crawl_mode: string
+        A string with the value for the crawl_mode header of the data in the dataframe
+    """
     dataframe.boxplot(header, by=crawl_mode)
-    plt.savefig("test.png")
+    plt.savefig(f"box_plot_{header}.png")
     plt.show()
 
 
@@ -80,7 +91,7 @@ def main():
     headers = ["website_domain", "crawl_mode", "third_party_domains", "nr_requests", "requests_list"]
     write_data_to_csv(headers)
     dataframe = csv_to_pandas_dataframe(headers)
-    generate_box_plots(dataframe, "nr_requests", "crawl_mode")
+    generate_box_plot(dataframe, "nr_requests", "crawl_mode")
 
 
 if __name__ == '__main__':
