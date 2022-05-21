@@ -8,7 +8,6 @@ import csv
 import glob
 import json
 import os
-import sys
 from ast import literal_eval
 
 import pandas as pd
@@ -163,5 +162,4 @@ def main():
 
 
 if __name__ == '__main__':
-    sys.dont_write_bytecode = True
     main()
