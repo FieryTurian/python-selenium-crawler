@@ -195,7 +195,7 @@ def crawl_url(params, domain):
     # take_screenshots_consent(params, driver, domain, "post")
 
     url_dict = {"website_domain": domain,
-                "crawl_mode": "mobile" if params["mobile"] else "desktop",
+                "crawl_mode": "Mobile" if params["mobile"] else "Desktop",
                 "third_party_domains": get_third_party_domains(domain, requests_url),
                 "nr_requests": len(requests_url),
                 "requests_list": []}
