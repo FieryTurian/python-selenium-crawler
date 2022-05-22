@@ -71,6 +71,30 @@ def csv_to_pandas_dataframe(headers):
     return dataframe
 
 
+def generate_table_question_1():
+    """
+    TODO: TEMPLATE FOR TABLE QUESTION 1 -> ADD ACTUAL CONTENT IN TABLE
+    """
+    if os.path.isfile("data/table_question_1.txt"):
+        os.remove("data/table_question_1.txt")
+
+    file = open("data/table_question_1.txt", "a")
+    file.write("\\begin{table}[ht] \n")
+    file.write("\caption{Number of failures encountered during each crawl.} \n")
+    file.write("\centering \n")
+    file.write("\\begin{tabular}{|l|r|r|} \n")
+    file.write("\hline \n")
+    file.write("\\textbf{Error type} & \multicolumn{1}{l|}{\\textbf{Crawl-desktop}} & \multicolumn{1}{l|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
+
+    # for header in headers
+    #    do something to make the entries for each error type
+
+    file.write("\end{tabular} \n")
+    file.write("\label{table:NumberOfFailures} \n")
+    file.write("\end{table}")
+    file.close()
+
+
 def customize_grid(ax, border, yaxis, xaxis, bg_color='white', grid_color='gray', width=1.2, yminor=True, xminor=True):
     """Customize the looks of the grid
 
@@ -218,6 +242,7 @@ def main():
     headers = ["website_domain", "crawl_mode", "third_party_domains", "nr_requests", "requests_list"]
     write_data_to_csv(headers)
     dataframe = csv_to_pandas_dataframe(headers)
+    generate_table_question_1()
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
 
