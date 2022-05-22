@@ -89,7 +89,7 @@ def customize_grid(ax, border, yaxis, xaxis, bg_color='white', grid_color='gray'
         The color of the grid lines
     width: float, default=1.2
         The width of the grid lines
-   yminor, xminor: bool, default=True
+    yminor, xminor: bool, default=True
        Boolean values that define whether respectively the horizontal and vertical
         minor grid lines need to be drawn
     """
@@ -130,7 +130,7 @@ def customize_box_plot_color(ax):
 
 
 def generate_box_plot(dataframe, header, crawl_mode, metric):
-    """Read the CSV file into a pandas dataframe in order to analyse the data
+    """Generate a box plot for dataframe[header] grouped by crawl_mode
 
     Parameters
     ----------
@@ -147,11 +147,71 @@ def generate_box_plot(dataframe, header, crawl_mode, metric):
     customize_grid(bp_dict[0][0], False, True, False, BOX_BACKGROUND, BOX_GRID, xminor=False)
     customize_box_plot_color(bp_dict[0][1])
     plt.title(f"The distribution of the {metric} per website\nfor both desktop and mobile crawl mode.")
-    plt.suptitle("") # Remove the automatic "grouped by" title
+    plt.suptitle("")  # Remove the automatic "grouped by" title
     plt.xlabel("Crawl mode")
     plt.ylabel(metric.capitalize())
     plt.savefig(f"data/box_plot_{header}.png", bbox_inches='tight')
     plt.show()
+
+
+def generate_entry_table_question_3(dataframe, header):
+    """Generate a header specific entry for the table about the comparison of desktop and mobile crawl data
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    header: tuple
+        A tuple holding the header name and belonging text that should appear in the entry
+
+    Returns
+    -------
+    entry: string
+        A string that holds the precise entry text that will be added in the table
+    """
+    df = dataframe.sort_values(['crawl_mode', header[0]]).groupby('crawl_mode')
+    min_desktop = df[header[0]].min()[0]
+    max_desktop = df[header[0]].max()[0]
+    median_desktop = df[header[0]].median()[0]
+    min_mobile = df[header[0]].min()[1]
+    max_mobile = df[header[0]].max()[1]
+    median_mobile = df[header[0]].median()[1]
+
+    entry = "%s & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} \\\\ \hline \n" % (header[1], min_desktop, max_desktop, median_desktop, min_mobile, max_mobile, median_mobile)
+
+    return entry
+
+
+def generate_table_question_3(dataframe, headers):
+    """Generate a LaTeX table about the comparison of desktop and mobile crawl data in a file
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    headers: list
+        A list with tuples holding the headers and text that should appear in the table
+    """
+    if os.path.isfile("data/table_question_3.txt"):
+        os.remove("data/table_question_3.txt")
+
+    file = open("data/table_question_3.txt", "a")
+    file.write("\\begin{table}[ht] \n")
+    file.write("\caption{Comparison of the desktop and mobile crawl data.} \n")
+    file.write("\centering \n")
+    file.write("\\begin{tabular}{|l|rrl|lll|} \n")
+    file.write("\\hline \n")
+    file.write("\\textbf{} & \multicolumn{3}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{3}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
+    file.write("\\textbf{Metric} & \multicolumn{1}{r|}{\\textbf{Min}} & \multicolumn{1}{r|}{\\textbf{Max}} & \\textbf{Median} & \multicolumn{1}{l|}{\\textbf{Min}} & \multicolumn{1}{l|}{\\textbf{Max}} & \\textbf{Median} \\\\ \hline \n")
+
+    for header in headers:
+        entry = generate_entry_table_question_3(dataframe, header)
+        file.write(entry)
+
+    file.write("\end{tabular} \n")
+    file.write("\label{table:Comparison} \n")
+    file.write("\end{table}")
+    file.close()
 
 
 def main():
@@ -159,6 +219,7 @@ def main():
     write_data_to_csv(headers)
     dataframe = csv_to_pandas_dataframe(headers)
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
+    generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
 
 
 if __name__ == '__main__':
