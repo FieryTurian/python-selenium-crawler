@@ -214,7 +214,7 @@ def generate_table_question_3(dataframe, headers):
     dataframe: pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
     headers: list
-        A list with tuples holding the headers and text that should appear in the table
+        A list of tuples holding the headers and text that should appear in the table
     """
     if os.path.isfile("data/table_question_3.txt"):
         os.remove("data/table_question_3.txt")
@@ -239,6 +239,20 @@ def generate_table_question_3(dataframe, headers):
 
 
 def prevalence_third_party(dataframe, mode):
+    """Find the top ten most prevalent third-party domains in the crawl
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    mode: string
+        A string that holds the crawl-mode to use: either desktop or mobile
+
+    Returns
+    -------
+    prevalence_tuples[:10]: list
+        A list of tuples holding the ten most prevalent third-party domains
+    """
     third_party_domains = []
     third_parties_list = dataframe["third_party_domains"]
     crawl_mode = dataframe["crawl_mode"]
@@ -260,12 +274,37 @@ def prevalence_third_party(dataframe, mode):
     return prevalence_tuples[:10]
 
 
-def generate_entry_table_question_4(dataframe):
+def generate_table_question_4(dataframe):
+    """Generate a LaTeX table about the ten most prevalent third-party domains in a file
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    """
+    if os.path.isfile("data/table_question_4.txt"):
+        os.remove("data/table_question_4.txt")
+
+    file = open("data/table_question_4.txt", "a")
+    file.write("\\begin{table}[ht] \n")
+    file.write("\caption{The ten most prevalent third-party domains for each crawl.} \n")
+    file.write("\centering \n")
+    file.write("\\begin{tabular}{|l|ll|ll|} \n")
+    file.write("\hline")
+    file.write("\\textbf{} & \multicolumn{2}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{2}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
+    file.write("& \multicolumn{1}{r|}{\\textbf{Third-party domain}} & \\textbf{\# websites} & \multicolumn{1}{l|}{\\textbf{Third-party domain}} & \\textbf{\# websites} \\\\ \hline \n")
+
     top_ten_desktop = prevalence_third_party(dataframe, "desktop")
     top_ten_mobile = prevalence_third_party(dataframe, "mobile")
 
-    print(top_ten_desktop)
-    print(top_ten_mobile)
+    for i in range(10):
+        entry = "\\textbf{%d} & \multicolumn{1}{l|}{%s} & \multicolumn{1}{r|}{%d} & \multicolumn{1}{l|}{%s} & \multicolumn{1}{r|}{%d} \\\\ \hline \n" % (i+1, top_ten_desktop[i][0], top_ten_desktop[i][1], top_ten_mobile[i][0], top_ten_mobile[i][1])
+        file.write(entry)
+
+    file.write("\end{tabular} \n")
+    file.write("\label{tab:Top10} \n")
+    file.write("\end{table}")
+    file.close()
 
 
 def main():
@@ -275,7 +314,7 @@ def main():
     generate_table_question_1()
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
-    generate_entry_table_question_4(dataframe)
+    generate_table_question_4(dataframe)
 
 
 if __name__ == '__main__':
