@@ -75,9 +75,11 @@ def generate_table_question_1():
     """
     TODO: TEMPLATE FOR TABLE QUESTION 1 -> ADD ACTUAL CONTENT IN TABLE
     """
+    # Remove the file if it is already existing
     if os.path.isfile("data/table_question_1.txt"):
         os.remove("data/table_question_1.txt")
 
+    # Open the file and write to it
     file = open("data/table_question_1.txt", "a")
     file.write("\\begin{table}[ht] \n")
     file.write("\caption{Number of failures encountered during each crawl.} \n")
@@ -92,6 +94,8 @@ def generate_table_question_1():
     file.write("\end{tabular} \n")
     file.write("\label{table:NumberOfFailures} \n")
     file.write("\end{table}")
+
+    # Close the file
     file.close()
 
 
@@ -193,7 +197,10 @@ def generate_entry_table_question_3(dataframe, header):
     entry: string
         A string that holds the precise entry text that will be added in the table
     """
+    # Sort the CSV data by crawl_mode and then by the value of the provided header
     df = dataframe.sort_values(['crawl_mode', header[0]]).groupby('crawl_mode')
+
+    # Get the minimum, maximum and median values for each provided header
     min_desktop = df[header[0]].min()[0]
     max_desktop = df[header[0]].max()[0]
     median_desktop = df[header[0]].median()[0]
@@ -216,9 +223,11 @@ def generate_table_question_3(dataframe, headers):
     headers: list
         A list of tuples holding the headers and text that should appear in the table
     """
+    # Remove the file if it is already existing
     if os.path.isfile("data/table_question_3.txt"):
         os.remove("data/table_question_3.txt")
 
+    # Open the file and write to it
     file = open("data/table_question_3.txt", "a")
     file.write("\\begin{table}[ht] \n")
     file.write("\caption{Comparison of the desktop and mobile crawl data.} \n")
@@ -235,6 +244,8 @@ def generate_table_question_3(dataframe, headers):
     file.write("\end{tabular} \n")
     file.write("\label{table:Comparison} \n")
     file.write("\end{table}")
+
+    # Close the file
     file.close()
 
 
@@ -257,18 +268,23 @@ def prevalence_third_party(dataframe, mode):
     third_parties_list = dataframe["third_party_domains"]
     crawl_mode = dataframe["crawl_mode"]
 
+    # Collect the third-parties belonging to the (desktop or mobile) crawl
     for index, third_parties in enumerate(third_parties_list):
         if crawl_mode[index] == mode:
             third_party_domains += third_parties
 
+    # Remove duplicates from the list
     third_party_domains = list(dict.fromkeys(third_party_domains))
+    # Add a zero count to all third party domains
     prevalence_third_parties = dict.fromkeys(third_party_domains, 0)
 
+    # If the third party has been found in the CSV file, increment the count
     for third_party in third_party_domains:
         for i in range(len(third_parties_list)):
             if third_party in third_parties_list[i] and crawl_mode[i] == mode:
                 prevalence_third_parties[third_party] += 1
 
+    # Sort the domains on their prevalence
     prevalence_tuples = sorted(prevalence_third_parties.items(), key=lambda item: item[1], reverse=True)
 
     return prevalence_tuples[:10]
@@ -282,9 +298,11 @@ def generate_table_question_4(dataframe):
     dataframe: pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
     """
+    # Remove the file if it is already existing
     if os.path.isfile("data/table_question_4.txt"):
         os.remove("data/table_question_4.txt")
 
+    # Open the file and write to it
     file = open("data/table_question_4.txt", "a")
     file.write("\\begin{table}[ht] \n")
     file.write("\caption{The ten most prevalent third-party domains for each crawl.} \n")
@@ -294,6 +312,7 @@ def generate_table_question_4(dataframe):
     file.write("\\textbf{} & \multicolumn{2}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{2}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
     file.write("& \multicolumn{1}{r|}{\\textbf{Third-party domain}} & \\textbf{\# websites} & \multicolumn{1}{l|}{\\textbf{Third-party domain}} & \\textbf{\# websites} \\\\ \hline \n")
 
+    # Get the top 10 for both desktop and mobile
     top_ten_desktop = prevalence_third_party(dataframe, "desktop")
     top_ten_mobile = prevalence_third_party(dataframe, "mobile")
 
@@ -304,6 +323,8 @@ def generate_table_question_4(dataframe):
     file.write("\end{tabular} \n")
     file.write("\label{tab:Top10} \n")
     file.write("\end{table}")
+
+    # Close the file
     file.close()
 
 
@@ -311,6 +332,8 @@ def main():
     headers = ["website_domain", "crawl_mode", "third_party_domains", "nr_requests", "requests_list"]
     write_data_to_csv(headers)
     dataframe = csv_to_pandas_dataframe(headers)
+
+    # Generate answers for all the questions in the assignment
     generate_table_question_1()
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
