@@ -238,6 +238,36 @@ def generate_table_question_3(dataframe, headers):
     file.close()
 
 
+def prevalence_third_party(dataframe, mode):
+    third_party_domains = []
+    third_parties_list = dataframe["third_party_domains"]
+    crawl_mode = dataframe["crawl_mode"]
+
+    for index, third_parties in enumerate(third_parties_list):
+        if crawl_mode[index] == mode:
+            third_party_domains += third_parties
+
+    third_party_domains = list(dict.fromkeys(third_party_domains))
+    prevalence_third_parties = dict.fromkeys(third_party_domains, 0)
+
+    for third_party in third_party_domains:
+        for i in range(len(third_parties_list)):
+            if third_party in third_parties_list[i] and crawl_mode[i] == mode:
+                prevalence_third_parties[third_party] += 1
+
+    prevalence_tuples = sorted(prevalence_third_parties.items(), key=lambda item: item[1], reverse=True)
+
+    return prevalence_tuples[:10]
+
+
+def generate_entry_table_question_4(dataframe):
+    top_ten_desktop = prevalence_third_party(dataframe, "desktop")
+    top_ten_mobile = prevalence_third_party(dataframe, "mobile")
+
+    print(top_ten_desktop)
+    print(top_ten_mobile)
+
+
 def main():
     headers = ["website_domain", "crawl_mode", "third_party_domains", "nr_requests", "requests_list"]
     write_data_to_csv(headers)
@@ -245,6 +275,7 @@ def main():
     generate_table_question_1()
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
+    generate_entry_table_question_4(dataframe)
 
 
 if __name__ == '__main__':
