@@ -7,6 +7,7 @@ from ast import literal_eval
 from collections import Counter
 from colors import *
 import csv
+import copy
 import glob
 import json
 import os
@@ -413,21 +414,28 @@ def generate_scatter_plots_question_7(dataframe):
     crawl_mode = dataframe["crawl_mode"]
     tranco_ranks_list = list(dataframe["nr_requests"])
 
-    generate_scatter_plot("desktop", third_parties_list, crawl_mode, tranco_ranks_list, "trackers", "number of distinct trackers")
-    generate_scatter_plot("mobile", third_parties_list, crawl_mode, tranco_ranks_list, "trackers", "number of distinct trackers")
+    generate_scatter_plot("desktop", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "number of distinct third parties")
+    generate_scatter_plot("mobile", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "number of distinct third parties")
 
 
 def generate_scatter_plots_question_8(dataframe):
     """
     TODO: CHANGE DATAFRAME["NR_REQUESTS"] TO DATAFRAME["TRANCO_RANK"] (OR SIMILAR)
-    TODO: CHANGE THIRD PARTIES INTO TRACKERS
     """
     third_parties_list = dataframe["third_party_domains"]
+    tracker_list = copy.deepcopy(third_parties_list)
     crawl_mode = dataframe["crawl_mode"]
     tranco_ranks_list = list(dataframe["nr_requests"])
+    tracker_domains = read_blocklist()
 
-    generate_scatter_plot("desktop", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "number of distinct third parties")
-    generate_scatter_plot("mobile", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "number of distinct third parties")
+    # Transform the third party domains list to a tracker list by only saving the tracker domains in tracker_list
+    for i in range(len(tracker_list)):
+        tracker_list[i] = set(tracker_list[i])
+        tracker_list[i].intersection_update(tracker_domains)
+        tracker_list[i] = list(tracker_list[i])
+
+    generate_scatter_plot("desktop", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "number of distinct trackers")
+    generate_scatter_plot("mobile", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "number of distinct trackers")
 
 
 def main():
@@ -442,9 +450,6 @@ def main():
     generate_table_question_4(dataframe)
     generate_scatter_plots_question_7(dataframe)
     generate_scatter_plots_question_8(dataframe)
-
-    # test = prevalence_third_party(dataframe, "desktop")
-    # print(prevalence_third_party_trackers(test))
 
 
 if __name__ == '__main__':
