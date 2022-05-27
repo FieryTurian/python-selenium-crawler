@@ -11,6 +11,7 @@ import copy
 import glob
 import json
 import os
+import re
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -329,41 +330,47 @@ def prevalence_third_party_trackers(prevalence_third_party):
     return third_party_trackers.most_common(10)
 
 
-def generate_table_question_4(dataframe):
-    """Generate a LaTeX table about the ten most prevalent third-party domains in a file
+def generate_table_question(questionnr, target, top_ten_desktop, top_ten_mobile):
+    """Generate a LaTeX table TODO
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    questionnr: int
+        The number of the question for which the table needs to be generated
+    target: str
+        The target that we are building the prevalence table for, e.g., third-party domains
+    top_ten_desktop: list
+        The top ten prevalent instances of the target for the desktop crawl mode
+    top_ten_mobile: list
+        The top ten prevalent instances of the target for the mobile crawl mode
     """
     # Remove the file if it is already existing
-    if os.path.isfile("data/table_question_4.txt"):
-        os.remove("data/table_question_4.txt")
+    if os.path.isfile(f"data/table_question_{questionnr}.txt"):
+        os.remove(f"data/table_question_{questionnr}.txt")
 
     # Open the file and write to it
-    file = open("data/table_question_4.txt", "a")
+    file = open(f"data/table_question_{questionnr}.txt", 'a')
     file.write("\\begin{table}[ht] \n")
-    file.write("\caption{The ten most prevalent third-party domains for each crawl.} \n")
+    file.write("\caption{The ten most prevalent %ss for each crawl.} \n" % (re.sub(r'y$', r'ie', target)))
     file.write("\centering \n")
     file.write("\\begin{tabular}{|l|ll|ll|} \n")
     file.write("\hline")
     file.write(
-        "\\textbf{} & \multicolumn{2}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{2}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
+        "\\textbf{} & \multicolumn{2}{c|}{\\textbf{Crawl-desktop}} & " +
+        "\multicolumn{2}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
     file.write(
-        "& \multicolumn{1}{r|}{\\textbf{Third-party domain}} & \\textbf{\# websites} & \multicolumn{1}{l|}{\\textbf{Third-party domain}} & \\textbf{\# websites} \\\\ \hline \n")
+        "& \multicolumn{1}{r|}{\\textbf{%s}} & \\textbf{\# websites} & " % (target.capitalize()) +
+        "\multicolumn{1}{l|}{\\textbf{%s}} & \\textbf{\# websites} \\\\ \hline \n" % (target.capitalize()))
 
-    # Get the top 10 for both desktop and mobile
-    top_ten_desktop = prevalence_third_party(dataframe, "desktop").most_common(10)
-    top_ten_mobile = prevalence_third_party(dataframe, "mobile").most_common(10)
-
+    # Write the data of the top ten for both mobile and desktop to the table
     for i in range(10):
-        entry = "\\textbf{%d} & \multicolumn{1}{l|}{%s} & \multicolumn{1}{r|}{%d} & \multicolumn{1}{l|}{%s} & \multicolumn{1}{r|}{%d} \\\\ \hline \n" % (
-        i + 1, top_ten_desktop[i][0], top_ten_desktop[i][1], top_ten_mobile[i][0], top_ten_mobile[i][1])
+        entry = ("\\textbf{%d} & \multicolumn{1}{l|}{%s} & " % (i + 1, top_ten_desktop[i][0]) +
+                "\multicolumn{1}{r|}{%d} & \multicolumn{1}{l|}{%s} & " % (top_ten_desktop[i][1], top_ten_mobile[i][0]) +
+                "\multicolumn{1}{r|}{%d} \\\\ \hline \n" % (top_ten_mobile[i][1]))
         file.write(entry)
 
     file.write("\end{tabular} \n")
-    file.write("\label{tab:Top10} \n")
+    file.write("\label{tab:Top10_q%d} \n" % (questionnr))
     file.write("\end{table}")
 
     # Close the file
@@ -447,7 +454,9 @@ def main():
     generate_table_question_1()
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
-    generate_table_question_4(dataframe)
+    top_ten_desktop = prevalence_third_party(dataframe, "desktop").most_common(10)
+    top_ten_mobile = prevalence_third_party(dataframe, "mobile").most_common(10)
+    generate_table_question(4, "third-party domain", top_ten_desktop, top_ten_mobile)
     generate_scatter_plots_question_7(dataframe)
     generate_scatter_plots_question_8(dataframe)
 
