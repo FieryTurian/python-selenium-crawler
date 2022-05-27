@@ -12,6 +12,9 @@ from ast import literal_eval
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns;
+
+sns.set_theme(color_codes=True)
 
 
 def write_data_to_csv(headers):
@@ -86,7 +89,8 @@ def generate_table_question_1():
     file.write("\centering \n")
     file.write("\\begin{tabular}{|l|r|r|} \n")
     file.write("\hline \n")
-    file.write("\\textbf{Error type} & \multicolumn{1}{l|}{\\textbf{Crawl-desktop}} & \multicolumn{1}{l|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
+    file.write(
+        "\\textbf{Error type} & \multicolumn{1}{l|}{\\textbf{Crawl-desktop}} & \multicolumn{1}{l|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
 
     # for header in headers
     #    do something to make the entries for each error type
@@ -121,20 +125,20 @@ def customize_grid(ax, border, yaxis, xaxis, bg_color='white', grid_color='gray'
        Boolean values that define whether respectively the horizontal and vertical
         minor grid lines need to be drawn
     """
-    ax.set_facecolor(bg_color) # Set background color
-    [ax.spines[spine].set_visible(border) for spine in ax.spines] # Remove border around the grid
+    ax.set_facecolor(bg_color)  # Set background color
+    [ax.spines[spine].set_visible(border) for spine in ax.spines]  # Remove border around the grid
     if yaxis:
         ax.yaxis.grid(yaxis, which='major', color=grid_color, linewidth=width)
     if yminor:
-        ax.yaxis.grid(yminor, which='minor', color=grid_color, linewidth=width/4)
+        ax.yaxis.grid(yminor, which='minor', color=grid_color, linewidth=width / 4)
     if xaxis:
         ax.xaxis.grid(xaxis, which='major', color=grid_color, linewidth=width)
     if xminor:
-        ax.xaxis.grid(xminor, which='minor', color=grid_color, linewidth=width/4)
-    if yminor or xminor: # Show minor grid lines, but not minor ticks
+        ax.xaxis.grid(xminor, which='minor', color=grid_color, linewidth=width / 4)
+    if yminor or xminor:  # Show minor grid lines, but not minor ticks
         ax.minorticks_on()
         ax.tick_params(which='minor', bottom=False, left=False)
-    ax.set(axisbelow=True) # Do not draw the grid over the plotted items
+    ax.set(axisbelow=True)  # Do not draw the grid over the plotted items
 
 
 def customize_box_plot_color(ax):
@@ -208,7 +212,8 @@ def generate_entry_table_question_3(dataframe, header):
     max_mobile = df[header[0]].max()[1]
     median_mobile = df[header[0]].median()[1]
 
-    entry = "%s & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} \\\\ \hline \n" % (header[1], min_desktop, max_desktop, median_desktop, min_mobile, max_mobile, median_mobile)
+    entry = "%s & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} \\\\ \hline \n" % (
+    header[1], min_desktop, max_desktop, median_desktop, min_mobile, max_mobile, median_mobile)
 
     return entry
 
@@ -234,8 +239,10 @@ def generate_table_question_3(dataframe, headers):
     file.write("\centering \n")
     file.write("\\begin{tabular}{|l|rrl|lll|} \n")
     file.write("\\hline \n")
-    file.write("\\textbf{} & \multicolumn{3}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{3}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
-    file.write("\\textbf{Metric} & \multicolumn{1}{r|}{\\textbf{Min}} & \multicolumn{1}{r|}{\\textbf{Max}} & \\textbf{Median} & \multicolumn{1}{l|}{\\textbf{Min}} & \multicolumn{1}{l|}{\\textbf{Max}} & \\textbf{Median} \\\\ \hline \n")
+    file.write(
+        "\\textbf{} & \multicolumn{3}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{3}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
+    file.write(
+        "\\textbf{Metric} & \multicolumn{1}{r|}{\\textbf{Min}} & \multicolumn{1}{r|}{\\textbf{Max}} & \\textbf{Median} & \multicolumn{1}{l|}{\\textbf{Min}} & \multicolumn{1}{l|}{\\textbf{Max}} & \\textbf{Median} \\\\ \hline \n")
 
     for header in headers:
         entry = generate_entry_table_question_3(dataframe, header)
@@ -309,15 +316,18 @@ def generate_table_question_4(dataframe):
     file.write("\centering \n")
     file.write("\\begin{tabular}{|l|ll|ll|} \n")
     file.write("\hline")
-    file.write("\\textbf{} & \multicolumn{2}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{2}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
-    file.write("& \multicolumn{1}{r|}{\\textbf{Third-party domain}} & \\textbf{\# websites} & \multicolumn{1}{l|}{\\textbf{Third-party domain}} & \\textbf{\# websites} \\\\ \hline \n")
+    file.write(
+        "\\textbf{} & \multicolumn{2}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{2}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
+    file.write(
+        "& \multicolumn{1}{r|}{\\textbf{Third-party domain}} & \\textbf{\# websites} & \multicolumn{1}{l|}{\\textbf{Third-party domain}} & \\textbf{\# websites} \\\\ \hline \n")
 
     # Get the top 10 for both desktop and mobile
     top_ten_desktop = prevalence_third_party(dataframe, "desktop")
     top_ten_mobile = prevalence_third_party(dataframe, "mobile")
 
     for i in range(10):
-        entry = "\\textbf{%d} & \multicolumn{1}{l|}{%s} & \multicolumn{1}{r|}{%d} & \multicolumn{1}{l|}{%s} & \multicolumn{1}{r|}{%d} \\\\ \hline \n" % (i+1, top_ten_desktop[i][0], top_ten_desktop[i][1], top_ten_mobile[i][0], top_ten_mobile[i][1])
+        entry = "\\textbf{%d} & \multicolumn{1}{l|}{%s} & \multicolumn{1}{r|}{%d} & \multicolumn{1}{l|}{%s} & \multicolumn{1}{r|}{%d} \\\\ \hline \n" % (
+        i + 1, top_ten_desktop[i][0], top_ten_desktop[i][1], top_ten_mobile[i][0], top_ten_mobile[i][1])
         file.write(entry)
 
     file.write("\end{tabular} \n")
@@ -326,6 +336,32 @@ def generate_table_question_4(dataframe):
 
     # Close the file
     file.close()
+
+
+def generate_scatter_plot(dataframe, mode):
+    """
+    TODO: CHANGE DATAFRAME["NR_REQUESTS"] TO DATAFRAME["TRANCO_RANK"] (OR SIMILAR)
+    """
+    third_parties_list = dataframe["third_party_domains"]
+    crawl_mode = dataframe["crawl_mode"]
+    tranco_ranks_list = list(dataframe["nr_requests"])
+    number_of_distinct_third_parties = []
+    tranco_ranks = []
+
+    for i in range(len(tranco_ranks_list)):
+        if crawl_mode[i] == mode:
+            tranco_ranks.append(tranco_ranks_list[i])
+    for index, third_parties in enumerate(third_parties_list):
+        if crawl_mode[index] == mode:
+            number_of_distinct_third_parties.append(len(third_parties))
+
+    df = pd.DataFrame(list(zip(tranco_ranks, number_of_distinct_third_parties)),
+                      columns=["website's Tranco rank", "number of distinct third parties"])
+    sns.lmplot(x="website's Tranco rank", y="number of distinct third parties", data=df)
+
+    plt.title(f"The number of distinct third parties vs the website's Tranco rank ({mode}-crawl)")
+    plt.savefig(f"data/scatter_plot_{mode}.png", bbox_inches='tight')
+    plt.show()  # use plt.show(block=True) if the window closes too soon
 
 
 def main():
@@ -338,6 +374,7 @@ def main():
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
     generate_table_question_4(dataframe)
+    generate_scatter_plot(dataframe, "desktop")
 
 
 if __name__ == '__main__':
