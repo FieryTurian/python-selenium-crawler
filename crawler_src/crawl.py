@@ -7,6 +7,7 @@ import os
 
 from tld import get_fld
 import pandas as pd
+from datetime import datetime
 
 from seleniumwire import webdriver
 from selenium.webdriver.common.by import By
@@ -144,10 +145,12 @@ def take_screenshots_consent(params, driver, domain, state):
 
 def get_requests(driver, domain):
     url = "https://" + domain
+    pageload_start_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
     driver.get(url)
+    pageload_end_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
     requests_url = driver.requests
 
-    return requests_url
+    return requests_url, pageload_start_ts, pageload_end_ts
 
 
 def get_headers(request):
@@ -168,7 +171,6 @@ def get_headers(request):
 
 
 def get_third_party_domains(domain, requests):
-    # Not completely sure about this
     first_party_domains = [domain]
     third_party_domains = set()
 
@@ -180,22 +182,37 @@ def get_third_party_domains(domain, requests):
     return list(third_party_domains)
 
 
-def crawl_url(params, domain):
+def get_cookies(request):
+    nr_cookies = 0
+    request_headers = request.headers
+
+    for key in request_headers:
+        if key == "cookie":
+            cookies = request_headers[key].split("; ")
+            nr_cookies = len(cookies)
+
+    return nr_cookies
+
+
+def crawl_url(params, domain, rank=None):
     # Change the current working directory to the directory of the running file:
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
     chrome_options = set_webdriver_options(params)
     driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
 
-    requests_url = get_requests(driver, domain)
+    requests_url, pageload_start_ts, pageload_end_ts = get_requests(driver, domain)
     # time.sleep(10)
     # take_screenshots_consent(params, driver, domain, "pre")
-    cookies_accepted = allow_cookies(driver)
-    print("The cookies for " + domain + " are accepted: " + str(
-        cookies_accepted))  # Print statement for testing purposes.
+    # cookies_accepted = allow_cookies(driver)
+    # print("The cookies for " + domain + " are accepted: " + str(
+    #     cookies_accepted))  # Print statement for testing purposes.
     # take_screenshots_consent(params, driver, domain, "post")
 
     url_dict = {"website_domain": domain,
+                "tranco_rank": rank,
                 "crawl_mode": "Mobile" if params["mobile"] else "Desktop",
+                "pageload_start_ts": pageload_start_ts,
+                "pageload_end_ts": pageload_end_ts,
                 "third_party_domains": get_third_party_domains(domain, requests_url),
                 "nr_requests": len(requests_url),
                 "requests_list": []}
@@ -203,24 +220,26 @@ def crawl_url(params, domain):
         url = request.url
         timestamp = request.date
         request_headers, response_headers = get_headers(request)
+        nr_cookies = get_cookies(request)
         url_dict["requests_list"].append({"request_url": url,
                                           "timestamp": timestamp.strftime("%d/%m/%Y %H:%M:%S.%f"),
                                           "request_headers": dict(request_headers),
-                                          "response_headers": dict(response_headers)})
+                                          "response_headers": dict(response_headers),
+                                          "nr_cookies": nr_cookies})
 
-    # print(requests_url)
     driver.quit()
 
     return url_dict
 
 
-def crawl_list(domain_list, params):
+def crawl_list(params, domain_list):
     url_dict_list = []
-    for domain in domain_list.values():
-        url_dict = crawl_url(params, domain)
-        url_dict_list.append(url_dict)
 
     print("Please wait, we are trying to crawl your entire input list.")
+    for tranco_rank in domain_list.keys():
+        url_dict = crawl_url(params, domain_list[tranco_rank], tranco_rank)
+        url_dict_list.append(url_dict)
+
     return url_dict_list
 
 
@@ -228,7 +247,7 @@ def main():
     args = parse_arguments()
     if args["input"]:
         tranco_domains = read_tranco_top_500(args["input"])
-        url_dict_list = crawl_list(tranco_domains, args)
+        url_dict_list = crawl_list(args, tranco_domains)
         # print(url_dict_list)
 
     if args["url"]:
