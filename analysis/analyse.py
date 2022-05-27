@@ -338,30 +338,65 @@ def generate_table_question_4(dataframe):
     file.close()
 
 
-def generate_scatter_plot(dataframe, mode):
+def generate_scatter_plot(mode, third_parties_list, crawl_mode, tranco_ranks_list, png_text, plot_text):
+    """Generate scatter plots of the provided data along with a linear regression line
+
+    Parameters
+    ----------
+    mode: string
+        A string that holds the crawl-mode to use: either desktop or mobile
+    third_parties_list: pandas.core.series.Series
+        A Pandas dataframe that holds the third party data from the CSV file
+    crawl_mode: pandas.core.series.Series
+        A Pandas dataframe with the data crawl mode data from the CSV file
+    tranco_ranks_list: list
+        A list of the Pandas dataframe that holds the website's Tranco ranks
+    text: string
+        A string that holds information on how to name the output .png file
+    """
+    # Define lists to hold the values belonging to the x- and y-axis
+    y_axis = []
+    x_axis = []
+
+    for i in range(len(tranco_ranks_list)):
+        if crawl_mode[i] == mode:
+            x_axis.append(tranco_ranks_list[i])
+    for index, third_parties in enumerate(third_parties_list):
+        if crawl_mode[index] == mode:
+            y_axis.append(len(third_parties))
+
+    df = pd.DataFrame(list(zip(x_axis, y_axis)),
+                      columns=["website's Tranco rank", plot_text])
+    sns.lmplot(x="website's Tranco rank", y=plot_text, data=df)
+
+    plt.title(f"The {plot_text} vs the website's Tranco rank ({mode}-crawl)")
+    plt.savefig(f"data/scatter_plot_{png_text}_{mode}.png", bbox_inches='tight')
+    plt.show()  # use plt.show(block=True) if the window closes too soon
+
+
+def generate_scatter_plots_question_7(dataframe):
     """
     TODO: CHANGE DATAFRAME["NR_REQUESTS"] TO DATAFRAME["TRANCO_RANK"] (OR SIMILAR)
     """
     third_parties_list = dataframe["third_party_domains"]
     crawl_mode = dataframe["crawl_mode"]
     tranco_ranks_list = list(dataframe["nr_requests"])
-    number_of_distinct_third_parties = []
-    tranco_ranks = []
 
-    for i in range(len(tranco_ranks_list)):
-        if crawl_mode[i] == mode:
-            tranco_ranks.append(tranco_ranks_list[i])
-    for index, third_parties in enumerate(third_parties_list):
-        if crawl_mode[index] == mode:
-            number_of_distinct_third_parties.append(len(third_parties))
+    generate_scatter_plot("desktop", third_parties_list, crawl_mode, tranco_ranks_list, "trackers", "number of distinct trackers")
+    generate_scatter_plot("mobile", third_parties_list, crawl_mode, tranco_ranks_list, "trackers", "number of distinct trackers")
 
-    df = pd.DataFrame(list(zip(tranco_ranks, number_of_distinct_third_parties)),
-                      columns=["website's Tranco rank", "number of distinct third parties"])
-    sns.lmplot(x="website's Tranco rank", y="number of distinct third parties", data=df)
 
-    plt.title(f"The number of distinct third parties vs the website's Tranco rank ({mode}-crawl)")
-    plt.savefig(f"data/scatter_plot_{mode}.png", bbox_inches='tight')
-    plt.show()  # use plt.show(block=True) if the window closes too soon
+def generate_scatter_plots_question_8(dataframe):
+    """
+    TODO: CHANGE DATAFRAME["NR_REQUESTS"] TO DATAFRAME["TRANCO_RANK"] (OR SIMILAR)
+    TODO: CHANGE THIRD PARTIES INTO TRACKERS
+    """
+    third_parties_list = dataframe["third_party_domains"]
+    crawl_mode = dataframe["crawl_mode"]
+    tranco_ranks_list = list(dataframe["nr_requests"])
+
+    generate_scatter_plot("desktop", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "number of distinct third parties")
+    generate_scatter_plot("mobile", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "number of distinct third parties")
 
 
 def main():
@@ -374,7 +409,8 @@ def main():
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
     generate_table_question_4(dataframe)
-    generate_scatter_plot(dataframe, "desktop")
+    generate_scatter_plots_question_7(dataframe)
+    generate_scatter_plots_question_8(dataframe)
 
 
 if __name__ == '__main__':
