@@ -13,9 +13,7 @@ import os
 
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns;
-
-sns.set_theme(color_codes=True)
+import seaborn as sns
 
 
 def write_data_to_csv(headers):
@@ -433,9 +431,6 @@ def generate_scatter_plots_question_8(dataframe):
 
 
 def main():
-    # Change the current working directory to the directory of the running file:
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
     headers = ["website_domain", "crawl_mode", "third_party_domains", "nr_requests", "requests_list"]
     write_data_to_csv(headers)
     dataframe = csv_to_pandas_dataframe(headers)
@@ -448,9 +443,16 @@ def main():
     generate_scatter_plots_question_7(dataframe)
     generate_scatter_plots_question_8(dataframe)
 
-    test = prevalence_third_party(dataframe, "desktop")
-    print(prevalence_third_party_trackers(test))
+    # test = prevalence_third_party(dataframe, "desktop")
+    # print(prevalence_third_party_trackers(test))
 
 
 if __name__ == '__main__':
+    # Set theme that seaborn should use
+    sns.set_theme(color_codes=True)
+
+    # Change the current working directory to the directory of the running file:
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+    # Start main function
     main()
