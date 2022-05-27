@@ -1,0 +1,9 @@
+\begin{table}[ht] 
+\caption{Number of failures encountered during each crawl.} 
+\centering 
+\begin{tabular}{|l|r|r|} 
+\hline 
+\textbf{Error type} & \multicolumn{1}{l|}{\textbf{Crawl-desktop}} & \multicolumn{1}{l|}{\textbf{Crawl-mobile}} \\ \hline 
+\end{tabular} 
+\label{table:NumberOfFailures} 
+\end{table}

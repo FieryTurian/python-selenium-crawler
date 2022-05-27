@@ -3,12 +3,13 @@
 Analyse the data obtained by the crawler:
 [WORK IN PROGRESS]
 """
+from ast import literal_eval
+from collections import Counter
 from colors import *
 import csv
 import glob
 import json
 import os
-from ast import literal_eval
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -22,9 +23,6 @@ def write_data_to_csv(headers):
     headers: list
         A list with the values for the headers of the data in the JSON files
     """
-    # Change the current working directory to the directory of the running file:
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-
     # Get all JSON files within the crawl_data folder
     files = glob.glob("../crawl_data/*.json")
     data = []
@@ -59,7 +57,7 @@ def csv_to_pandas_dataframe(headers):
 
     Returns
     -------
-    dataframe: pandas.core.series.Series
+    pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
     """
     dataframe = pd.read_csv("data/data.csv", usecols=headers)
@@ -194,7 +192,7 @@ def generate_entry_table_question_3(dataframe, header):
 
     Returns
     -------
-    entry: string
+    string
         A string that holds the precise entry text that will be added in the table
     """
     # Sort the CSV data by crawl_mode and then by the value of the provided header
@@ -250,7 +248,7 @@ def generate_table_question_3(dataframe, headers):
 
 
 def prevalence_third_party(dataframe, mode):
-    """Find the top ten most prevalent third-party domains in the crawl
+    """Find the prevalence of third-party domains in the crawl
 
     Parameters
     ----------
@@ -261,33 +259,68 @@ def prevalence_third_party(dataframe, mode):
 
     Returns
     -------
-    prevalence_tuples[:10]: list
-        A list of tuples holding the ten most prevalent third-party domains
+    collections.Counter
+        A counter object, holding a dictionary of all third-party domains (as keys)
+        and their prevalence (as values) in the crawl
     """
-    third_party_domains = []
-    third_parties_list = dataframe["third_party_domains"]
-    crawl_mode = dataframe["crawl_mode"]
-
     # Collect the third-parties belonging to the (desktop or mobile) crawl
-    for index, third_parties in enumerate(third_parties_list):
-        if crawl_mode[index] == mode:
-            third_party_domains += third_parties
+    third_parties = dataframe.loc[dataframe["crawl_mode"] == mode, "third_party_domains"]
+    # Turn the pandas series into a list and flatten it
+    third_parties_list = sum(third_parties.tolist(), [])
+    # Use Python Counter to return the count of every element in the list
+    counter_third_parties = Counter(third_parties_list)
 
-    # Remove duplicates from the list
-    third_party_domains = list(dict.fromkeys(third_party_domains))
-    # Add a zero count to all third party domains
-    prevalence_third_parties = dict.fromkeys(third_party_domains, 0)
+    return counter_third_parties
 
-    # If the third party has been found in the CSV file, increment the count
-    for third_party in third_party_domains:
-        for i in range(len(third_parties_list)):
-            if third_party in third_parties_list[i] and crawl_mode[i] == mode:
-                prevalence_third_parties[third_party] += 1
 
-    # Sort the domains on their prevalence
-    prevalence_tuples = sorted(prevalence_third_parties.items(), key=lambda item: item[1], reverse=True)
+def read_blocklist():
+    """Read all domains from the blocklist into a set"""
+    with open("data/disconnect_blocklist.json", 'rb') as f:
+        blocklist = json.load(f)
 
-    return prevalence_tuples[:10]
+    # Add every domain in the blocklist to a set
+    tracker_domains = set()
+
+    for cat in blocklist['categories'].keys():
+        for item in blocklist['categories'][cat]:
+            for _, urls in item.items():
+                for url, domains in urls.items():
+                    if url == "performance":
+                        continue
+                    for domain in domains:
+                        tracker_domains.add(domain)
+    return tracker_domains
+
+
+def prevalence_third_party_trackers(prevalence_third_party):
+    """Find the top ten most prevalent third-party tracker domains in the crawl
+
+    Parameters
+    ----------
+    prevalence_third_party: collections.Counter
+        A counter object, holding a dictionary of all third-party domains (as keys)
+        and their prevalence (as values) in the crawl
+
+    Returns
+    -------
+    list
+        A list, holding a tuples of the top ten third-party tracker domains and their prevalence
+    """
+    # Create a set of all third party domains encountered in the crawl
+    third_parties = set(prevalence_third_party)
+    # Read the tracker domains from the blocklist into a set
+    tracker_domains = read_blocklist()
+    # Remove the tracker domains from the set of third party domains
+    third_parties.difference_update(tracker_domains)
+    # Assign a count of zero to all non-tracker domains by updating a dictionary
+    #  with the counts of all third party domains
+    count_non_trackers = dict.fromkeys(third_parties, 0)
+    dict_third_party_count = dict(prevalence_third_party)
+    dict_third_party_count.update(count_non_trackers)
+    # Keep only the third-party tracker domains by removing all entries with a count <= 0
+    third_party_trackers = +Counter(dict_third_party_count)
+
+    return third_party_trackers.most_common(10)
 
 
 def generate_table_question_4(dataframe):
@@ -313,8 +346,8 @@ def generate_table_question_4(dataframe):
     file.write("& \multicolumn{1}{r|}{\\textbf{Third-party domain}} & \\textbf{\# websites} & \multicolumn{1}{l|}{\\textbf{Third-party domain}} & \\textbf{\# websites} \\\\ \hline \n")
 
     # Get the top 10 for both desktop and mobile
-    top_ten_desktop = prevalence_third_party(dataframe, "desktop")
-    top_ten_mobile = prevalence_third_party(dataframe, "mobile")
+    top_ten_desktop = prevalence_third_party(dataframe, "desktop").most_common(10)
+    top_ten_mobile = prevalence_third_party(dataframe, "mobile").most_common(10)
 
     for i in range(10):
         entry = "\\textbf{%d} & \multicolumn{1}{l|}{%s} & \multicolumn{1}{r|}{%d} & \multicolumn{1}{l|}{%s} & \multicolumn{1}{r|}{%d} \\\\ \hline \n" % (i+1, top_ten_desktop[i][0], top_ten_desktop[i][1], top_ten_mobile[i][0], top_ten_mobile[i][1])
@@ -329,6 +362,9 @@ def generate_table_question_4(dataframe):
 
 
 def main():
+    # Change the current working directory to the directory of the running file:
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
     headers = ["website_domain", "crawl_mode", "third_party_domains", "nr_requests", "requests_list"]
     write_data_to_csv(headers)
     dataframe = csv_to_pandas_dataframe(headers)
@@ -338,6 +374,9 @@ def main():
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
     generate_table_question_4(dataframe)
+
+    test = prevalence_third_party(dataframe, "desktop")
+    print(prevalence_third_party_trackers(test))
 
 
 if __name__ == '__main__':

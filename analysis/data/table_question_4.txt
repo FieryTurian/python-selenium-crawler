@@ -1,0 +1,19 @@
+\begin{table}[ht] 
+\caption{The ten most prevalent third-party domains for each crawl.} 
+\centering 
+\begin{tabular}{|l|ll|ll|} 
+\hline\textbf{} & \multicolumn{2}{c|}{\textbf{Crawl-desktop}} & \multicolumn{2}{c|}{\textbf{Crawl-mobile}} \\ \hline 
+& \multicolumn{1}{r|}{\textbf{Third-party domain}} & \textbf{\# websites} & \multicolumn{1}{l|}{\textbf{Third-party domain}} & \textbf{\# websites} \\ \hline 
+\textbf{1} & \multicolumn{1}{l|}{gvt1.com} & \multicolumn{1}{r|}{4} & \multicolumn{1}{l|}{google.com} & \multicolumn{1}{r|}{2} \\ \hline 
+\textbf{2} & \multicolumn{1}{l|}{gstatic.com} & \multicolumn{1}{r|}{3} & \multicolumn{1}{l|}{gvt1.com} & \multicolumn{1}{r|}{2} \\ \hline 
+\textbf{3} & \multicolumn{1}{l|}{google.com} & \multicolumn{1}{r|}{3} & \multicolumn{1}{l|}{googletagmanager.com} & \multicolumn{1}{r|}{1} \\ \hline 
+\textbf{4} & \multicolumn{1}{l|}{googletagmanager.com} & \multicolumn{1}{r|}{1} & \multicolumn{1}{l|}{fonts.googleapis.com} & \multicolumn{1}{r|}{1} \\ \hline 
+\textbf{5} & \multicolumn{1}{l|}{myfonts.net} & \multicolumn{1}{r|}{1} & \multicolumn{1}{l|}{cloudflare.com} & \multicolumn{1}{r|}{1} \\ \hline 
+\textbf{6} & \multicolumn{1}{l|}{cookiebot.com} & \multicolumn{1}{r|}{1} & \multicolumn{1}{l|}{cookiebot.com} & \multicolumn{1}{r|}{1} \\ \hline 
+\textbf{7} & \multicolumn{1}{l|}{fonts.googleapis.com} & \multicolumn{1}{r|}{1} & \multicolumn{1}{l|}{imagekit.io} & \multicolumn{1}{r|}{1} \\ \hline 
+\textbf{8} & \multicolumn{1}{l|}{outdooractive.com} & \multicolumn{1}{r|}{1} & \multicolumn{1}{l|}{outdooractive.com} & \multicolumn{1}{r|}{1} \\ \hline 
+\textbf{9} & \multicolumn{1}{l|}{cloudflare.com} & \multicolumn{1}{r|}{1} & \multicolumn{1}{l|}{gstatic.com} & \multicolumn{1}{r|}{1} \\ \hline 
+\textbf{10} & \multicolumn{1}{l|}{force.com} & \multicolumn{1}{r|}{1} & \multicolumn{1}{l|}{force.com} & \multicolumn{1}{r|}{1} \\ \hline 
+\end{tabular} 
+\label{tab:Top10} 
+\end{table}
