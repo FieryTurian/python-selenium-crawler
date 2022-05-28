@@ -18,6 +18,56 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 
+def read_blocklist():
+    """Read all domains and their corresponding entities from the blocklist into a set
+
+    Returns
+    -------
+    dict
+        A dictionary with domains of trackers as key and the corresponding entity name as the value
+    """
+    with open("data/disconnect_blocklist.json", 'rb') as f:
+        blocklist = json.load(f)
+
+    # Add every domain in the blocklist to a set
+    tracker_domains = dict()
+
+    for cat in blocklist['categories'].keys():
+        for item in blocklist['categories'][cat]:
+            for entityname, urls in item.items():
+                for url, domains in urls.items():
+                    if url == "performance":
+                        continue
+                    for domain in domains:
+                        tracker_domains[domain] = entityname
+    return tracker_domains
+
+
+def extract_tracker_domains_entities(third_party_domains, blocklist, blocklist_domains):
+    """Extract tracker domains and their corresponding entity name from a list of third-party domain_list
+        using a blocklist
+
+    Parameters
+    ----------
+    third_party_domains: set
+        A set with all distinct third-party domains for a request
+    blocklist: dict
+        A dictionary with the domains and their corresponding entity names from the blocklist
+    blocklist_domains: dict_keys
+        A list of domains that are present in the blocklist
+
+    Returns
+    -------
+    tracker_domains: set
+        A set of all (distinct) tracker domains for a request
+    tracker_entities: set
+        A set of all (distinct) tracker entities for a request
+    """
+    tracker_domains = set(blocklist_domains).intersection(third_party_domains)
+    tracker_entities = {blocklist[domain] for domain in tracker_domains}
+    return tracker_domains, tracker_entities
+
+
 def write_data_to_csv(headers):
     """Writes the data from the JSON files for all the crawled websites to a CSV file
 
@@ -26,6 +76,9 @@ def write_data_to_csv(headers):
     headers: list
         A list with the values for the headers of the data in the JSON files
     """
+    blocklist = read_blocklist()
+    blocklist_domains = blocklist.keys()
+
     # Get all JSON files within the crawl_data folder
     files = glob.glob("../crawl_data/*.json")
     data = []
@@ -33,12 +86,19 @@ def write_data_to_csv(headers):
         with open(file, 'r') as f:
             try:
                 json_file = json.load(f)
+                tracker_domains, tracker_entities = extract_tracker_domains_entities(
+                                                        json_file['third_party_domains'], blocklist, blocklist_domains)
                 data.append([
                     json_file['website_domain'],
                     json_file['crawl_mode'],
                     json_file['third_party_domains'],
+                    len(json_file['third_party_domains']),
                     json_file['nr_requests'],
-                    json_file['requests_list']
+                    json_file['requests_list'],
+                    list(tracker_domains),
+                    len(tracker_domains),
+                    list(tracker_entities),
+                    len(tracker_entities)
                 ])
             except KeyError:
                 print(f"Skipping {file} because of bad formatting.")
@@ -68,6 +128,8 @@ def csv_to_pandas_dataframe(headers):
     # Turn strings into their corresponding python literals
     dataframe['third_party_domains'] = dataframe.third_party_domains.apply(literal_eval)
     dataframe['requests_list'] = dataframe.requests_list.apply(literal_eval)
+    dataframe['tracker_domains'] = dataframe.tracker_domains.apply(literal_eval)
+    dataframe['tracker_entities'] = dataframe.tracker_entities.apply(literal_eval)
 
     return dataframe
 
@@ -156,7 +218,7 @@ def customize_box_plot_color(ax):
     for median in ax['medians']:
         median.set(color=BOX_MEDIAN)
     for flier in ax['fliers']:
-        flier.set(color=BOX_EDGECOLOR[i], marker='*')
+        flier.set(color=BOX_EDGECOLOR[i], marker='o')
 
 
 def generate_box_plot(dataframe, header, crawl_mode, metric):
@@ -255,8 +317,8 @@ def generate_table_question_3(dataframe, headers):
     file.close()
 
 
-def prevalence_third_party(dataframe, mode):
-    """Find the prevalence of third-party domains in the crawl
+def prevalence(dataframe, mode, target):
+    """Find the prevalence of the targeted group in the crawl
 
     Parameters
     ----------
@@ -264,15 +326,17 @@ def prevalence_third_party(dataframe, mode):
         A Pandas dataframe with all the data in the CSV file
     mode: string
         A string that holds the crawl-mode to use: either desktop or mobile
+    target: string
+        The group that the prevalance needs to be find for, e.g., third-party domains
 
     Returns
     -------
     collections.Counter
-        A counter object, holding a dictionary of all third-party domains (as keys)
+        A counter object, holding a dictionary of all items of the targeted group (as keys)
         and their prevalence (as values) in the crawl
     """
-    # Collect the third-parties belonging to the (desktop or mobile) crawl
-    third_parties = dataframe.loc[dataframe["crawl_mode"] == mode, "third_party_domains"]
+    # Collect all items belonging to the target group for the (desktop or mobile) crawl
+    third_parties = dataframe.loc[dataframe["crawl_mode"] == mode, target]
     # Turn the pandas series into a list and flatten it
     third_parties_list = sum(third_parties.tolist(), [])
     # Use Python Counter to return the count of every element in the list
@@ -281,60 +345,10 @@ def prevalence_third_party(dataframe, mode):
     return counter_third_parties
 
 
-def read_blocklist():
-    """Read all domains from the blocklist into a set"""
-    with open("data/disconnect_blocklist.json", 'rb') as f:
-        blocklist = json.load(f)
-
-    # Add every domain in the blocklist to a set
-    tracker_domains = set()
-
-    for cat in blocklist['categories'].keys():
-        for item in blocklist['categories'][cat]:
-            for _, urls in item.items():
-                for url, domains in urls.items():
-                    if url == "performance":
-                        continue
-                    for domain in domains:
-                        tracker_domains.add(domain)
-    return tracker_domains
-
-
-def prevalence_third_party_trackers(prevalence_third_party):
-    """Find the top ten most prevalent third-party tracker domains in the crawl
-
-    Parameters
-    ----------
-    prevalence_third_party: collections.Counter
-        A counter object, holding a dictionary of all third-party domains (as keys)
-        and their prevalence (as values) in the crawl
-
-    Returns
-    -------
-    list
-        A list, holding a tuples of the top ten third-party tracker domains and their prevalence
-    """
-    # Create a set of all third party domains encountered in the crawl
-    third_parties = set(prevalence_third_party)
-    # Read the tracker domains from the blocklist into a set
-    tracker_domains = read_blocklist()
-    # Remove the tracker domains from the set of third party domains
-    third_parties.difference_update(tracker_domains)
-    # Assign a count of zero to all non-tracker domains by updating a dictionary
-    #  with the counts of all third party domains
-    count_non_trackers = dict.fromkeys(third_parties, 0)
-    dict_third_party_count = dict(prevalence_third_party)
-    dict_third_party_count.update(count_non_trackers)
-    # Keep only the third-party tracker domains by removing all entries with a count <= 0
-    third_party_trackers = +Counter(dict_third_party_count)
-
-    return third_party_trackers.most_common(10)
-
-
 def generate_table_question(questionnr, target, top_ten_desktop, top_ten_mobile, label=""):
     """Generate a LaTeX table for questions 4, 5 and 6
 
-    TODO: change loop to range(10) -> currently len because otherwise errors occur :)
+    TODO: change loop to range(10) -> currently len because otherwise errors occurs :)
 
     Parameters
     ----------
@@ -373,7 +387,7 @@ def generate_table_question(questionnr, target, top_ten_desktop, top_ten_mobile,
         file.write(entry)
 
     file.write("\end{tabular} \n")
-    file.write("\label{tab:%sTop10} \n" % (re.sub(r'(Third-Party| Domain)', '', target.title())))
+    file.write("\label{tab:%sTop10} \n" % (re.sub(r'(Third-Party|Domain| )', '', target.title())))
     file.write("\end{table}")
 
     # Close the file
@@ -450,22 +464,26 @@ def generate_scatter_plots_question_8(dataframe):
 
 
 def main():
-    headers = ["website_domain", "crawl_mode", "third_party_domains", "nr_requests", "requests_list"]
+    headers = ["website_domain", "crawl_mode", "third_party_domains", "nr_third_party_domains", "nr_requests", "requests_list", "tracker_domains", "nr_tracker_domains", "tracker_entities", "nr_tracker_entities"]
     write_data_to_csv(headers)
     dataframe = csv_to_pandas_dataframe(headers)
 
     # Generate answers for all the questions in the assignment
     generate_table_question_1()
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
+    generate_box_plot(dataframe, "nr_third_party_domains", "crawl_mode", "number of disctinct third-party domains")
+    generate_box_plot(dataframe, "nr_tracker_domains", "crawl_mode", "number of disctinct tracker domains")
+    generate_box_plot(dataframe, "nr_tracker_entities", "crawl_mode", "number of disctinct tracker entities")
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
-    prevalence_desktop = prevalence_third_party(dataframe, "desktop")
-    prevalence_mobile = prevalence_third_party(dataframe, "mobile")
-    top_ten_desktop = prevalence_desktop.most_common(10)
-    top_ten_mobile = prevalence_mobile.most_common(10)
+    top_ten_desktop = prevalence(dataframe, "desktop", "third_party_domains").most_common(10)
+    top_ten_mobile = prevalence(dataframe, "mobile", "third_party_domains").most_common(10)
     generate_table_question(4, "third-party domain", top_ten_desktop, top_ten_mobile)
-    top_ten_tracker_desktop = prevalence_third_party_trackers(prevalence_desktop)
-    top_ten_tracker_mobile = prevalence_third_party_trackers(prevalence_mobile)
+    top_ten_tracker_desktop = prevalence(dataframe, "desktop", "tracker_domains").most_common(10)
+    top_ten_tracker_mobile = prevalence(dataframe, "mobile", "tracker_domains").most_common(10)
     generate_table_question(5, "tracker domain", top_ten_tracker_desktop, top_ten_tracker_mobile)
+    top_ten_entities_desktop = prevalence(dataframe, "desktop", "tracker_entities").most_common(10)
+    top_ten_entities_mobile = prevalence(dataframe, "mobile", "tracker_entities").most_common(10)
+    generate_table_question(6, "tracker entity", top_ten_entities_desktop, top_ten_entities_mobile)
     generate_scatter_plots_question_7(dataframe)
     generate_scatter_plots_question_8(dataframe)
 
