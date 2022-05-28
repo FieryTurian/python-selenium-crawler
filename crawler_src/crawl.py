@@ -215,8 +215,6 @@ def consent_error_logging(status, domain):
 
 
 def crawl_url(params, domain, rank=None):
-    # Change the current working directory to the directory of the running file:
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
     chrome_options = set_webdriver_options(params)
     driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
 
@@ -283,4 +281,7 @@ def main():
 
 
 if __name__ == '__main__':
+    # Change the current working directory to the directory of the running file:
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    
     main()
