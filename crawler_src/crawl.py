@@ -7,6 +7,7 @@ import os
 import \
     time  # DO NOT REMOVE THIS TIME IMPORT IT IS NEEDED HAHA BUT THE CODE FOR IT IS COMMENTED OUT DUE TO TESTING PURPOSES
 
+from selenium.common.exceptions import ElementClickInterceptedException
 from tld import get_fld
 import pandas as pd
 from datetime import datetime
@@ -94,6 +95,8 @@ def set_webdriver_options(params):
 
 
 def allow_cookies(driver):
+    status = ""
+
     # We open and read the full datalist of the priv-accept project.
     with open("accept_words.txt", encoding="utf8") as acceptwords_file:
         accept_words = acceptwords_file.read().splitlines()
@@ -114,14 +117,20 @@ def allow_cookies(driver):
                 )
             )
         except Exception:
-            # print("Accept word '" + accept_word + "' was not found on this website!")
             pass
 
         if allow_all_cookies:
-            allow_all_cookies.click()
-            return True
+            try:
+                allow_all_cookies.click()
+                status = "clicked"
+                return True, status
+            except ElementClickInterceptedException:
+                status = "errored"
+                break
+        else:
+            status = "not_found"
 
-    return False
+    return False, status
 
 
 def take_screenshots_consent(params, driver, domain, state):
@@ -195,6 +204,17 @@ def get_cookies(request):
     return nr_cookies
 
 
+def consent_error_logging(status, domain):
+    if status == "clicked":
+        logging = f"The cookies for {domain} are accepted"
+    elif status == "not_found":
+        logging = f"There was no cookie consent button found for {domain}"
+    else:
+        logging = f"An error occurred while trying to click the cookie consent button for {domain}"
+
+    return logging
+
+
 def crawl_url(params, domain, rank=None):
     # Change the current working directory to the directory of the running file:
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -204,8 +224,8 @@ def crawl_url(params, domain, rank=None):
     requests_url, pageload_start_ts, pageload_end_ts = get_requests(driver, domain)
     time.sleep(2)  # ToDo: Change back to 10 seconds
     take_screenshots_consent(params, driver, domain, "pre")
-    cookies_accepted = allow_cookies(driver)
-    print("The cookies for " + domain + " are accepted: " + str(cookies_accepted))
+    cookies_accepted, status = allow_cookies(driver)
+    print(consent_error_logging(status, domain))
 
     if cookies_accepted:
         time.sleep(2)  # ToDo: Change to 10 seconds
@@ -219,6 +239,7 @@ def crawl_url(params, domain, rank=None):
                 "crawl_mode": "Mobile" if params["mobile"] else "Desktop",
                 "pageload_start_ts": pageload_start_ts,
                 "pageload_end_ts": pageload_end_ts,
+                "consent_status": status,
                 "third_party_domains": get_third_party_domains(domain, requests_url),
                 "nr_requests": len(requests_url),
                 "requests_list": []}
@@ -257,7 +278,7 @@ def main():
 
     if args["url"]:
         url_dict = crawl_url(args, args["url"])
-        # print(url_dict)
+        print(url_dict)
 
     print("End of main()")
 
