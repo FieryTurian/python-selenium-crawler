@@ -4,6 +4,8 @@ A placeholder for a very nice description of our crawler :)
 """
 import argparse
 import os
+import \
+    time  # DO NOT REMOVE THIS TIME IMPORT IT IS NEEDED HAHA BUT THE CODE FOR IT IS COMMENTED OUT DUE TO TESTING PURPOSES
 
 from tld import get_fld
 import pandas as pd
@@ -100,21 +102,20 @@ def allow_cookies(driver):
     # the list, it becomes something and the code breaks out of the loop. It then clicks on this found element.
     allow_all_cookies = None
     for accept_word in accept_words:
+        # noinspection PyBroadException
         try:
-            allow_all_cookies = WebDriverWait(driver, 0.2).until(
+            allow_all_cookies = WebDriverWait(driver, 0.1).until(
                 EC.element_to_be_clickable(
                     # Long and complicated XPATH. Searches case-insensitive for an accept word in Button values or Text.
                     (By.XPATH, "//*[normalize-space(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
-                                "'abcdefghijklmnopqrstuvwxyz')) = '" + accept_word + "' or "
-                                "translate(@value, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = '" +
-                                accept_word + "']")
+                               "'abcdefghijklmnopqrstuvwxyz')) = '" + accept_word + "' or "
+                                                                                    "translate(@value, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = '" +
+                     accept_word + "']")
                 )
             )
-        # Pycharm complains here that the exception clause is too broad, but what it actually means is that it is
-        # more neat to print the actual Exception. However, I find that quite ugly in the Console output,
-        # so I did not do this here (yet). Up for discussion :P
         except Exception:
-            print("Accept word '" + accept_word + "' was not found on this website!")
+            # print("Accept word '" + accept_word + "' was not found on this website!")
+            pass
 
         if allow_all_cookies:
             allow_all_cookies.click()
@@ -201,13 +202,18 @@ def crawl_url(params, domain, rank=None):
     driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
 
     requests_url, pageload_start_ts, pageload_end_ts = get_requests(driver, domain)
-    # time.sleep(10)
-    # take_screenshots_consent(params, driver, domain, "pre")
-    # cookies_accepted = allow_cookies(driver)
-    # print("The cookies for " + domain + " are accepted: " + str(
-    #     cookies_accepted))  # Print statement for testing purposes.
-    # take_screenshots_consent(params, driver, domain, "post")
+    time.sleep(2)  # ToDo: Change back to 10 seconds
+    take_screenshots_consent(params, driver, domain, "pre")
+    cookies_accepted = allow_cookies(driver)
+    print("The cookies for " + domain + " are accepted: " + str(cookies_accepted))
 
+    if cookies_accepted:
+        time.sleep(2)  # ToDo: Change to 10 seconds
+
+    # take_screenshots_consent(params, driver, domain, "post")
+    driver.quit()
+
+    # Now it is time to process the gathered data:
     url_dict = {"website_domain": domain,
                 "tranco_rank": rank,
                 "crawl_mode": "Mobile" if params["mobile"] else "Desktop",
@@ -216,6 +222,7 @@ def crawl_url(params, domain, rank=None):
                 "third_party_domains": get_third_party_domains(domain, requests_url),
                 "nr_requests": len(requests_url),
                 "requests_list": []}
+
     for request in requests_url:
         url = request.url
         timestamp = request.date
@@ -226,8 +233,6 @@ def crawl_url(params, domain, rank=None):
                                           "request_headers": dict(request_headers),
                                           "response_headers": dict(response_headers),
                                           "nr_cookies": nr_cookies})
-
-    driver.quit()
 
     return url_dict
 
