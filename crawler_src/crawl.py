@@ -4,8 +4,7 @@ A placeholder for a very nice description of our crawler :)
 """
 import argparse
 import os
-import \
-    time  # DO NOT REMOVE THIS TIME IMPORT IT IS NEEDED HAHA BUT THE CODE FOR IT IS COMMENTED OUT DUE TO TESTING PURPOSES
+import time  # DO NOT REMOVE THIS TIME IMPORT IT IS NEEDED HAHA BUT THE CODE FOR IT IS COMMENTED OUT DUE TO TESTING PURPOSES
 
 from selenium.common.exceptions import ElementClickInterceptedException
 from tld import get_fld
