@@ -110,9 +110,8 @@ def allow_cookies(driver):
                 EC.element_to_be_clickable(
                     # Long and complicated XPATH. Searches case-insensitive for an accept word in Button values or Text.
                     (By.XPATH, "//*[normalize-space(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
-                               "'abcdefghijklmnopqrstuvwxyz')) = '" + accept_word + "' or "
-                                                                                    "translate(@value, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = '" +
-                     accept_word + "']")
+                               "'abcdefghijklmnopqrstuvwxyz')) = '" + accept_word + "' or translate(@value, "
+                               "'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = '" + accept_word + "']")
                 )
             )
         except Exception:
