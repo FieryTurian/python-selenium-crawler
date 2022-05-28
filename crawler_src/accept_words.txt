@@ -1,4 +1,5 @@
-alle cookies toestaan
+accepteren
+allow essential and optional cookies
 abilita
 abilita tutto
 accept
