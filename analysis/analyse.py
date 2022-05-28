@@ -77,11 +77,11 @@ def generate_table_question_1():
     TODO: TEMPLATE FOR TABLE QUESTION 1 -> ADD ACTUAL CONTENT IN TABLE
     """
     # Remove the file if it is already existing
-    if os.path.isfile("data/table_question_1.txt"):
-        os.remove("data/table_question_1.txt")
+    if os.path.isfile("data/table_question_1.tex"):
+        os.remove("data/table_question_1.tex")
 
     # Open the file and write to it
-    file = open("data/table_question_1.txt", "a")
+    file = open("data/table_question_1.tex", "a")
     file.write("\\begin{table}[ht] \n")
     file.write("\caption{Number of failures encountered during each crawl.} \n")
     file.write("\centering \n")
@@ -228,11 +228,11 @@ def generate_table_question_3(dataframe, headers):
         A list of tuples holding the headers and text that should appear in the table
     """
     # Remove the file if it is already existing
-    if os.path.isfile("data/table_question_3.txt"):
-        os.remove("data/table_question_3.txt")
+    if os.path.isfile("data/table_question_3.tex"):
+        os.remove("data/table_question_3.tex")
 
     # Open the file and write to it
-    file = open("data/table_question_3.txt", "a")
+    file = open("data/table_question_3.tex", "a")
     file.write("\\begin{table}[ht] \n")
     file.write("\caption{Comparison of the desktop and mobile crawl data.} \n")
     file.write("\centering \n")
@@ -348,11 +348,11 @@ def generate_table_question(questionnr, target, top_ten_desktop, top_ten_mobile,
         The top ten prevalent instances of the target for the mobile crawl mode
     """
     # Remove the file if it is already existing
-    if os.path.isfile(f"data/table_question_{questionnr}.txt"):
-        os.remove(f"data/table_question_{questionnr}.txt")
+    if os.path.isfile(f"data/table_question_{questionnr}.tex"):
+        os.remove(f"data/table_question_{questionnr}.tex")
 
     # Open the file and write to it
-    file = open(f"data/table_question_{questionnr}.txt", 'a')
+    file = open(f"data/table_question_{questionnr}.tex", 'a')
     file.write("\\begin{table}[ht] \n")
     file.write("\caption{The ten most prevalent %ss for each crawl.} \n" % (re.sub(r'y$', r'ie', target)))
     file.write("\centering \n")
