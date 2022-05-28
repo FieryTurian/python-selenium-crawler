@@ -15,5 +15,5 @@
 \textbf{9} & \multicolumn{1}{l|}{cloudflare.com} & \multicolumn{1}{r|}{1} & \multicolumn{1}{l|}{gstatic.com} & \multicolumn{1}{r|}{1} \\ \hline 
 \textbf{10} & \multicolumn{1}{l|}{force.com} & \multicolumn{1}{r|}{1} & \multicolumn{1}{l|}{force.com} & \multicolumn{1}{r|}{1} \\ \hline 
 \end{tabular} 
-\label{tab:Top10_q4} 
+\label{tab:Top10} 
 \end{table}

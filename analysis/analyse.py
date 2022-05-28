@@ -181,7 +181,8 @@ def generate_box_plot(dataframe, header, crawl_mode, metric):
     plt.xlabel("Crawl mode")
     plt.ylabel(metric.capitalize())
     plt.savefig(f"data/box_plot_{header}.png", bbox_inches='tight')
-    plt.show()
+    # plt.show()
+    plt.close()
 
 
 def generate_entry_table_question_3(dataframe, header):
@@ -330,8 +331,10 @@ def prevalence_third_party_trackers(prevalence_third_party):
     return third_party_trackers.most_common(10)
 
 
-def generate_table_question(questionnr, target, top_ten_desktop, top_ten_mobile):
-    """Generate a LaTeX table TODO
+def generate_table_question(questionnr, target, top_ten_desktop, top_ten_mobile, label=""):
+    """Generate a LaTeX table for questions 4, 5 and 6
+
+    TODO: change loop to range(10) -> currently len because otherwise errors occur :)
 
     Parameters
     ----------
@@ -363,14 +366,14 @@ def generate_table_question(questionnr, target, top_ten_desktop, top_ten_mobile)
         "\multicolumn{1}{l|}{\\textbf{%s}} & \\textbf{\# websites} \\\\ \hline \n" % (target.capitalize()))
 
     # Write the data of the top ten for both mobile and desktop to the table
-    for i in range(10):
+    for i in range(len(top_ten_desktop)):
         entry = ("\\textbf{%d} & \multicolumn{1}{l|}{%s} & " % (i + 1, top_ten_desktop[i][0]) +
                 "\multicolumn{1}{r|}{%d} & \multicolumn{1}{l|}{%s} & " % (top_ten_desktop[i][1], top_ten_mobile[i][0]) +
                 "\multicolumn{1}{r|}{%d} \\\\ \hline \n" % (top_ten_mobile[i][1]))
         file.write(entry)
 
     file.write("\end{tabular} \n")
-    file.write("\label{tab:Top10_q%d} \n" % (questionnr))
+    file.write("\label{tab:%sTop10} \n" % (re.sub(r'(Third-Party| Domain)', '', target.title())))
     file.write("\end{table}")
 
     # Close the file
@@ -405,12 +408,13 @@ def generate_scatter_plot(mode, third_parties_list, crawl_mode, tranco_ranks_lis
             y_axis.append(len(third_parties))
 
     df = pd.DataFrame(list(zip(x_axis, y_axis)),
-                      columns=["website's Tranco rank", plot_text])
-    sns.lmplot(x="website's Tranco rank", y=plot_text, data=df)
+                      columns=["Website's Tranco rank", plot_text])
+    sns.lmplot(x="Website's Tranco rank", y=plot_text, data=df)
 
-    plt.title(f"The {plot_text} vs the website's Tranco rank ({mode}-crawl)")
+    plt.title(f"The {plot_text.lower()} vs the website's Tranco rank ({mode}-crawl)")
     plt.savefig(f"data/scatter_plot_{png_text}_{mode}.png", bbox_inches='tight')
-    plt.show()  # use plt.show(block=True) if the window closes too soon
+    # plt.show()  # use plt.show(block=True) if the window closes too soon
+    plt.close()
 
 
 def generate_scatter_plots_question_7(dataframe):
@@ -421,8 +425,8 @@ def generate_scatter_plots_question_7(dataframe):
     crawl_mode = dataframe["crawl_mode"]
     tranco_ranks_list = list(dataframe["nr_requests"])
 
-    generate_scatter_plot("desktop", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "number of distinct third parties")
-    generate_scatter_plot("mobile", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "number of distinct third parties")
+    generate_scatter_plot("desktop", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "Number of distinct third parties")
+    generate_scatter_plot("mobile", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "Number of distinct third parties")
 
 
 def generate_scatter_plots_question_8(dataframe):
@@ -441,8 +445,8 @@ def generate_scatter_plots_question_8(dataframe):
         tracker_list[i].intersection_update(tracker_domains)
         tracker_list[i] = list(tracker_list[i])
 
-    generate_scatter_plot("desktop", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "number of distinct trackers")
-    generate_scatter_plot("mobile", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "number of distinct trackers")
+    generate_scatter_plot("desktop", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "Number of distinct trackers")
+    generate_scatter_plot("mobile", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "Number of distinct trackers")
 
 
 def main():
@@ -454,9 +458,14 @@ def main():
     generate_table_question_1()
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
-    top_ten_desktop = prevalence_third_party(dataframe, "desktop").most_common(10)
-    top_ten_mobile = prevalence_third_party(dataframe, "mobile").most_common(10)
+    prevalence_desktop = prevalence_third_party(dataframe, "desktop")
+    prevalence_mobile = prevalence_third_party(dataframe, "mobile")
+    top_ten_desktop = prevalence_desktop.most_common(10)
+    top_ten_mobile = prevalence_mobile.most_common(10)
     generate_table_question(4, "third-party domain", top_ten_desktop, top_ten_mobile)
+    top_ten_tracker_desktop = prevalence_third_party_trackers(prevalence_desktop)
+    top_ten_tracker_mobile = prevalence_third_party_trackers(prevalence_mobile)
+    generate_table_question(5, "tracker domain", top_ten_tracker_desktop, top_ten_tracker_mobile)
     generate_scatter_plots_question_7(dataframe)
     generate_scatter_plots_question_8(dataframe)
 
