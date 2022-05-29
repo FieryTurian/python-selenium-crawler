@@ -6,7 +6,7 @@ import argparse
 import os
 import time  # DO NOT REMOVE THIS TIME IMPORT IT IS NEEDED HAHA BUT THE CODE FOR IT IS COMMENTED OUT DUE TO TESTING PURPOSES
 
-from selenium.common.exceptions import ElementClickInterceptedException
+from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException
 from tld import get_fld
 import pandas as pd
 from datetime import datetime
@@ -122,7 +122,7 @@ def allow_cookies(driver):
                 allow_all_cookies.click()
                 status = "clicked"
                 return True, status
-            except ElementClickInterceptedException:
+            except (ElementClickInterceptedException, ElementNotInteractableException):
                 status = "errored"
                 break
         else:
