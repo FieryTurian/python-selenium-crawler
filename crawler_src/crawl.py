@@ -7,7 +7,7 @@ import os
 import time
 import json
 
-from selenium.common.exceptions import ElementClickInterceptedException
+from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException
 from tld import get_fld
 import pandas as pd
 from datetime import datetime
@@ -189,7 +189,7 @@ def allow_cookies(driver):
                 allow_all_cookies.click()
                 status = "clicked"
                 return True, status
-            except ElementClickInterceptedException:
+            except (ElementClickInterceptedException, ElementNotInteractableException):
                 status = "errored"
                 break
         else:
