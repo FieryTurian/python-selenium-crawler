@@ -16,6 +16,8 @@ from seleniumwire import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
 WINDOW_SIZE = "1920x1080"
 
@@ -60,7 +62,7 @@ def read_tranco_top_500(file_path):
     dict
         A dictionary with the Tranco ranks and the corresponding domain
     """
-    tranco_df = pd.read_csv(file_path, header=0, index_col=0, squeeze=True)
+    tranco_df = pd.read_csv(file_path, header=0, index_col=0).squeeze("columns")
     tranco_dict = tranco_df.to_dict()
 
     print("The CSV file has been read successfully!")
@@ -223,7 +225,7 @@ def get_nr_cookies(request):
 
 def crawl_url(params, domain, rank):
     chrome_options = set_webdriver_options(params)
-    driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), chrome_options=chrome_options)
 
     post_pageload_url, requests_url, pageload_start_ts, pageload_end_ts = get_url_requests_times(driver, domain)
     time.sleep(2)  # ToDo: Change back to 10 seconds
