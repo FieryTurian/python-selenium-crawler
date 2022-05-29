@@ -4,7 +4,8 @@ A placeholder for a very nice description of our crawler :)
 """
 import argparse
 import os
-import time  # DO NOT REMOVE THIS TIME IMPORT IT IS NEEDED HAHA BUT THE CODE FOR IT IS COMMENTED OUT DUE TO TESTING PURPOSES
+import time
+import json
 
 from selenium.common.exceptions import ElementClickInterceptedException
 from tld import get_fld
@@ -42,6 +43,7 @@ def parse_arguments():
     if (not arguments.url and not arguments.input) or (arguments.url and arguments.input):
         parser.error("Invalid input: please provide either the -u or -i argument.")
 
+    print("Arguments have been parsed successfully!")
     return vars(arguments)
 
 
@@ -60,6 +62,8 @@ def read_tranco_top_500(file_path):
     """
     tranco_df = pd.read_csv(file_path, header=0, index_col=0, squeeze=True)
     tranco_dict = tranco_df.to_dict()
+
+    print("The CSV file has been read successfully!")
     return tranco_dict
 
 
@@ -90,7 +94,70 @@ def set_webdriver_options(params):
         mobile_emulation = {"deviceName": "iPhone X"}
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
 
+    print("The webdriver options have been set successfully!")
     return chrome_options
+
+
+def take_screenshots_consent(params, driver, domain, state):
+    """Take and save a screenshot of the viewport before or after accepting the cookies_accepted
+
+    Parameters
+    ----------
+    params: dict
+        A dictionary with the values for all command line arguments
+    driver: seleniumwire.webdriver
+        The webdriver that is used to visit the domain
+    domain: str
+        The domain that is visited
+    state: str
+        Indicates whether the screenshot is taken pre or post consent
+    """
+    if params["mobile"]:
+        driver.save_screenshot(f"../crawl_data/{domain}_mobile_{state}_consent.png")
+    else:
+        driver.save_screenshot(f"../crawl_data/{domain}_desktop_{state}_consent.png")
+
+    print(f"{state} consent screenshot has been taken successfully!")
+
+
+def get_url_requests_times(driver, domain):
+    url = "https://" + domain
+    pageload_start_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
+    driver.get(url)
+    pageload_end_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
+    post_pageload_url = driver.current_url
+    requests_url = driver.requests
+
+    return post_pageload_url, requests_url, pageload_start_ts, pageload_end_ts
+
+
+def get_headers(request):
+    request_headers = request.headers
+    response_headers = None
+
+    for key in request_headers:
+        if len(request_headers[key]) > 512:
+            request_headers[key] = request_headers[key][:512]
+
+    if request.response:
+        response_headers = request.response.headers
+        for key in response_headers:
+            if len(response_headers[key]) > 512:
+                response_headers[key] = response_headers[key][:512]
+
+    return request_headers, response_headers
+
+
+def get_third_party_domains(domain, requests):
+    first_party_domains = [domain]
+    third_party_domains = set()
+
+    for request in requests:
+        request_domain = get_fld(request.url)
+        if request_domain not in first_party_domains:
+            third_party_domains.add(request_domain)
+
+    return list(third_party_domains)
 
 
 def allow_cookies(driver):
@@ -131,66 +198,18 @@ def allow_cookies(driver):
     return False, status
 
 
-def take_screenshots_consent(params, driver, domain, state):
-    """Take and save a screenshot of the viewport before or after accepting the cookies_accepted
-
-    Parameters
-    ----------
-    params: dict
-        A dictionary with the values for all command line arguments
-    driver: seleniumwire.webdriver
-        The webdriver that is used to visit the domain
-    domain: str
-        The domain that is visited
-    state: str
-        Indicates whether the screenshot is taken pre or post consent
-    """
-    if params["mobile"]:
-        driver.save_screenshot(f"../crawl_data/{domain}_mobile_{state}_consent.png")
+def consent_error_logging(status, domain):
+    if status == "clicked":
+        logging = f"The cookies for {domain} are accepted!"
+    elif status == "not_found":
+        logging = f"There was no cookie consent button found for {domain}!"
     else:
-        driver.save_screenshot(f"../crawl_data/{domain}_desktop_{state}_consent.png")
+        logging = f"An error occurred while trying to click the cookie consent button for {domain}!"
+
+    return logging
 
 
-def get_requests(driver, domain):
-    url = "https://" + domain
-    pageload_start_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
-    driver.get(url)
-    pageload_end_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
-    requests_url = driver.requests
-
-    return requests_url, pageload_start_ts, pageload_end_ts
-
-
-def get_headers(request):
-    request_headers = request.headers
-    response_headers = None
-
-    for key in request_headers:
-        if len(request_headers[key]) > 512:
-            request_headers[key] = request_headers[key][:512]
-
-    if request.response:
-        response_headers = request.response.headers
-        for key in response_headers:
-            if len(response_headers[key]) > 512:
-                response_headers[key] = response_headers[key][:512]
-
-    return request_headers, response_headers
-
-
-def get_third_party_domains(domain, requests):
-    first_party_domains = [domain]
-    third_party_domains = set()
-
-    for request in requests:
-        request_domain = get_fld(request.url)
-        if request_domain not in first_party_domains:
-            third_party_domains.add(request_domain)
-
-    return list(third_party_domains)
-
-
-def get_cookies(request):
+def get_nr_cookies(request):
     nr_cookies = 0
     request_headers = request.headers
 
@@ -202,24 +221,13 @@ def get_cookies(request):
     return nr_cookies
 
 
-def consent_error_logging(status, domain):
-    if status == "clicked":
-        logging = f"The cookies for {domain} are accepted"
-    elif status == "not_found":
-        logging = f"There was no cookie consent button found for {domain}"
-    else:
-        logging = f"An error occurred while trying to click the cookie consent button for {domain}"
-
-    return logging
-
-
-def crawl_url(params, domain, rank=None):
+def crawl_url(params, domain, rank):
     chrome_options = set_webdriver_options(params)
     driver = webdriver.Chrome(executable_path="../drivers/chromedriver.exe", chrome_options=chrome_options)
 
-    requests_url, pageload_start_ts, pageload_end_ts = get_requests(driver, domain)
+    post_pageload_url, requests_url, pageload_start_ts, pageload_end_ts = get_url_requests_times(driver, domain)
     time.sleep(2)  # ToDo: Change back to 10 seconds
-    take_screenshots_consent(params, driver, domain, "pre")
+    # take_screenshots_consent(params, driver, domain, "pre")
     cookies_accepted, status = allow_cookies(driver)
     print(consent_error_logging(status, domain))
 
@@ -235,6 +243,7 @@ def crawl_url(params, domain, rank=None):
                 "crawl_mode": "Mobile" if params["mobile"] else "Desktop",
                 "pageload_start_ts": pageload_start_ts,
                 "pageload_end_ts": pageload_end_ts,
+                "post_pageload_url": post_pageload_url,
                 "consent_status": status,
                 "third_party_domains": get_third_party_domains(domain, requests_url),
                 "nr_requests": len(requests_url),
@@ -244,7 +253,7 @@ def crawl_url(params, domain, rank=None):
         url = request.url
         timestamp = request.date
         request_headers, response_headers = get_headers(request)
-        nr_cookies = get_cookies(request)
+        nr_cookies = get_nr_cookies(request)
         url_dict["requests_list"].append({"request_url": url,
                                           "timestamp": timestamp.strftime("%d/%m/%Y %H:%M:%S.%f"),
                                           "request_headers": dict(request_headers),
@@ -255,28 +264,39 @@ def crawl_url(params, domain, rank=None):
 
 
 def crawl_list(params, domain_list):
-    url_dict_list = []
-
-    print("Please wait, we are trying to crawl your entire input list.")
+    print("Please wait, we are trying to crawl your entire input list!")
     for tranco_rank in domain_list.keys():
         url_dict = crawl_url(params, domain_list[tranco_rank], tranco_rank)
-        url_dict_list.append(url_dict)
+        convert_to_json(params, domain_list[tranco_rank], url_dict)
 
-    return url_dict_list
+
+def convert_to_json(params, domain, url_dict):
+    if params["mobile"]:
+        out_file = open(f"../crawl_data/{domain}_mobile.json", "w")
+    else:
+        out_file = open(f"../crawl_data/{domain}_desktop.json", "w")
+    json.dump(url_dict, out_file, indent=6)
+    out_file.close()
 
 
 def main():
     args = parse_arguments()
     if args["input"]:
         tranco_domains = read_tranco_top_500(args["input"])
-        url_dict_list = crawl_list(args, tranco_domains)
-        # print(url_dict_list)
+        crawl_list(args, tranco_domains)
 
     if args["url"]:
-        url_dict = crawl_url(args, args["url"])
-        print(url_dict)
+        tranco_rank = None
+        tranco_domains = read_tranco_top_500("tranco-top-500-safe.csv")
+        for rank in tranco_domains.keys():
+            if tranco_domains[rank] == args["url"]:
+                tranco_rank = rank
+                break
 
-    print("End of main()")
+        url_dict = crawl_url(args, args["url"], tranco_rank)
+        convert_to_json(args, args["url"], url_dict)
+
+    print("The crawl has completed successfully and your data was saved locally!")
 
 
 if __name__ == '__main__':
