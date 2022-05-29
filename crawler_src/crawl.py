@@ -28,7 +28,7 @@ def parse_arguments():
     Returns
     -------
     dict
-        A dictionary with the values for all command line arguments
+        A dictionary with the values for all command line argumentss
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("-m", "--mobile", action="store_true", required=False,
