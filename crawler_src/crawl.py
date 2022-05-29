@@ -28,7 +28,7 @@ def parse_arguments():
     Returns
     -------
     dict
-        A dictionary with the values for all command line argumentss
+        A dictionary with the values for all command line arguments
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("-m", "--mobile", action="store_true", required=False,
@@ -137,13 +137,13 @@ def get_headers(request):
     request_headers = request.headers
     response_headers = None
 
-    for key in request_headers:
+    for key in request_headers.keys():
         if len(request_headers[key]) > 512:
             request_headers[key] = request_headers[key][:512]
 
     if request.response:
         response_headers = request.response.headers
-        for key in response_headers:
+        for key in response_headers.keys():
             if len(response_headers[key]) > 512:
                 response_headers[key] = response_headers[key][:512]
 
@@ -215,7 +215,7 @@ def get_nr_cookies(request):
     nr_cookies = 0
     request_headers = request.headers
 
-    for key in request_headers:
+    for key in request_headers.keys():
         if key == "cookie":
             cookies = request_headers[key].split("; ")
             nr_cookies = len(cookies)
@@ -259,7 +259,8 @@ def crawl_url(params, domain, rank):
         url_dict["requests_list"].append({"request_url": url,
                                           "timestamp": timestamp.strftime("%d/%m/%Y %H:%M:%S.%f"),
                                           "request_headers": dict(request_headers),
-                                          "response_headers": dict(response_headers),
+                                          "response_headers": dict(response_headers) if response_headers else
+                                          response_headers,
                                           "nr_cookies": nr_cookies})
 
     return url_dict
