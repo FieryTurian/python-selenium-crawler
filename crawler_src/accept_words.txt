@@ -1,7 +1,16 @@
-accepteren
-allow essential and optional cookies
-abilita
-abilita tutto
+allow
+allow all
+allow all cookies
+allow cookies
+allows cookies
+agree
+agree & close
+agree & continue
+agree & exit
+agree all
+agree and close
+agree and continue
+agree and proceed
 accept
 accept & close
 accept & continue
@@ -15,6 +24,59 @@ accept and continue to site
 accept cookies
 accept our policy
 accept recommended cookies
+accepteren
+allow essential and optional cookies
+confirm
+consent
+close
+close this message and continue
+continue
+continue (accept cookies)
+continue and accept
+continue to site
+continue with recommended cookies
+enable all
+enable all cookies
+got it
+got it, thanks
+happy to accept cookies
+i accept
+i accept all
+i accept all cookies
+i accept cookies
+i accept cookies from this site
+i agree
+i agree/consent to its terms
+i am ok with this
+i consent
+i consent to cookies
+i understand
+i'm fine with this
+i'm ok with analytics cookies
+i'm ok with that
+i'm ok with this
+ik ga akkoord
+fine by me
+fine by me, i accept
+no problem
+ok
+okay
+okay got it
+okay, thank you
+okay, thanks
+ok, accept all
+save and close
+select all
+that's ok
+this is okay
+yes agreed
+yes, continue
+yes, i accept
+yes, i agree
+yes, i'm happy
+yes, i’m happy
+abilita
+abilita tutto
 accepter
 accepter & fermer
 accepter et accéder gratuitement
@@ -75,14 +137,6 @@ aceptar y seguir navegando
 acepto
 acepto las cookies
 acepto y sigo navegando
-agree
-agree & close
-agree & continue
-agree & exit
-agree all
-agree and close
-agree and continue
-agree and proceed
 akzeptieren
 akzeptieren & schließen
 akzeptieren und fortfahren
@@ -102,11 +156,6 @@ allen cookies zustimmen
 allen zustimmen
 alles akzeptieren
 alles klar
-allow
-allow all
-allow all cookies
-allow cookies
-allows cookies
 annehmen
 approvo
 autoriser
@@ -117,22 +166,13 @@ autorizza e chiudi
 c'est ok
 chiudi
 chiudi o scorri la pagina
-close
-close this message and continue
 compris
 conferma
-confirm
-consent
 consenti
 consento
 continua
 continuar
 continuare
-continue
-continue (accept cookies)
-continue and accept
-continue to site
-continue with recommended cookies
 continuer
 cookies akzeptieren
 cookies erlauben
@@ -151,39 +191,16 @@ d’accordo
 einverstanden
 einwilligen
 einwilligen und weiter zur website
-enable all
-enable all cookies
 entés
 erlauben
 estoy de acuerdo
 fermer
-fine by me
-fine by me, i accept
 fortfahren
 geht klar
-got it
-got it, thanks
-happy to accept cookies
 ho capito
-i accept
-i accept all
-i accept all cookies
-i accept cookies
-i accept cookies from this site
-i agree
-i agree/consent to its terms
-i am ok with this
-i consent
-i consent to cookies
-i understand
-i'm fine with this
-i'm ok with analytics cookies
-i'm ok with that
-i'm ok with this
 ich akzeptiere
 ich stimme allem zu
 ich stimme zu
-ik ga akkoord
 j'accept tout
 j'accepte
 j'accepte les cookies
@@ -193,12 +210,9 @@ je comprends
 j’accepte
 j’ai compris
 mit allem einverstanden
-no problem
-ok
 ok - diese meldung nicht mehr anzeigen
 ok accetto
 ok pour moi
-ok, accept all
 ok, accetta tutto
 ok, accetto
 ok, acepto
@@ -210,10 +224,6 @@ ok, i agree
 ok, j'accepte
 ok, tout accepter
 ok, weiter
-okay
-okay got it
-okay, thank you
-okay, thanks
 oui
 oui, j'accepts
 permetti
@@ -227,9 +237,7 @@ prihvati i zatvori
 prosegui
 prosseguir
 przejdź dalej
-save and close
 seguir navegando
-select all
 si
 si, accetto
 si, acepto
@@ -237,20 +245,12 @@ soy mayor de edad y acepto las cookies
 sì
 sì, acconsento
 sì, sono d'accordo
-that's ok
-this is okay
 tout accepter
 tout accepter et continuer
 tout accepter et fermer
 tout autorizer
 va bene
 vicino
-yes agreed
-yes, continue
-yes, i accept
-yes, i agree
-yes, i'm happy
-yes, i’m happy
 zustimmen
 zustimmen & schließen
 zustimmen & weiter
