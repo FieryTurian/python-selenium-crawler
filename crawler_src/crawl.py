@@ -235,6 +235,7 @@ def crawl_url(params, domain, rank):
 
     if cookies_accepted:
         time.sleep(2)  # ToDo: Change to 10 seconds
+    cookies = driver.get_cookies()
 
     # take_screenshots_consent(params, driver, domain, "post")
     driver.quit()
@@ -247,6 +248,7 @@ def crawl_url(params, domain, rank):
                 "pageload_end_ts": pageload_end_ts,
                 "post_pageload_url": post_pageload_url,
                 "consent_status": status,
+                "cookies": cookies,
                 "third_party_domains": get_third_party_domains(domain, requests_url),
                 "nr_requests": len(requests_url),
                 "requests_list": []}
