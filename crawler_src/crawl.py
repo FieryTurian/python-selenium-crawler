@@ -235,9 +235,10 @@ def crawl_url(params, domain, rank):
 
     if cookies_accepted:
         time.sleep(2)  # ToDo: Change to 10 seconds
+        # take_screenshots_consent(params, driver, domain, "post")
+
     cookies = driver.get_cookies()
 
-    # take_screenshots_consent(params, driver, domain, "post")
     driver.quit()
 
     # Now it is time to process the gathered data:
@@ -250,7 +251,6 @@ def crawl_url(params, domain, rank):
                 "consent_status": status,
                 "cookies": cookies,
                 "third_party_domains": get_third_party_domains(domain, requests_url),
-                "nr_requests": len(requests_url),
                 "requests_list": []}
 
     for request in requests_url:
@@ -307,5 +307,5 @@ def main():
 if __name__ == '__main__':
     # Change the current working directory to the directory of the running file:
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    
+
     main()

@@ -90,11 +90,17 @@ def write_data_to_csv(headers):
                                                         json_file['third_party_domains'], blocklist, blocklist_domains)
                 data.append([
                     json_file['website_domain'],
+                    json_file['tranco_rank'],
                     json_file['crawl_mode'],
+                    json_file['pageload_start_ts'],
+                    json_file['pageload_end_ts'],
+                    json_file['post_pageload_url'],
+                    json_file['consent_status'],
+                    json_file['cookies'],
                     json_file['third_party_domains'],
                     len(json_file['third_party_domains']),
-                    json_file['nr_requests'],
                     json_file['requests_list'],
+                    len(json_file['requests_list']),
                     list(tracker_domains),
                     len(tracker_domains),
                     list(tracker_entities),
@@ -464,7 +470,7 @@ def generate_scatter_plots_question_8(dataframe):
 
 
 def main():
-    headers = ["website_domain", "crawl_mode", "third_party_domains", "nr_third_party_domains", "nr_requests", "requests_list", "tracker_domains", "nr_tracker_domains", "tracker_entities", "nr_tracker_entities"]
+    headers = ["website_domain", "tranco_rank", "crawl_mode", "pageload_start_ts", "pageload_end_ts", "post_pageload_url", "consent_status", "cookies", "third_party_domains", "nr_third_party_domains", "requests_list", "nr_requests", "tracker_domains", "nr_tracker_domains", "tracker_entities", "nr_tracker_entities"]
     write_data_to_csv(headers)
     dataframe = csv_to_pandas_dataframe(headers)
 
