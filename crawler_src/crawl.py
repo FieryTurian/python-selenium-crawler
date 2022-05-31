@@ -14,8 +14,6 @@ from datetime import datetime
 
 from seleniumwire import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
@@ -173,15 +171,14 @@ def allow_cookies(driver):
     # the list, it becomes something and the code breaks out of the loop. It then clicks on this found element.
     allow_all_cookies = None
     for accept_word in accept_words:
+        print("Checking: " + accept_word)  # TODO: Remove this print. It's just here now for testing purposes.
         # noinspection PyBroadException
         try:
-            allow_all_cookies = WebDriverWait(driver, 0.1).until(
-                EC.element_to_be_clickable(
+            allow_all_cookies = driver.find_element(
                     # Long and complicated XPATH. Searches case-insensitive for an accept word in Button values or Text.
-                    (By.XPATH, "//*[normalize-space(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
+                    By.XPATH, "//*[normalize-space(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
                                "'abcdefghijklmnopqrstuvwxyz')) = \"" + accept_word + "\" or translate(@value, "
-                               "'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = \"" + accept_word + "\"]")
-                )
+                               "'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = \"" + accept_word + "\"]"
             )
         except Exception:
             pass
@@ -228,13 +225,13 @@ def crawl_url(params, domain, rank):
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), chrome_options=chrome_options)
 
     post_pageload_url, requests_url, pageload_start_ts, pageload_end_ts = get_url_requests_times(driver, domain)
-    time.sleep(2)  # ToDo: Change back to 10 seconds
+    time.sleep(3)  # ToDo: Change back to 10 seconds
     # take_screenshots_consent(params, driver, domain, "pre")
     cookies_accepted, status = allow_cookies(driver)
     print(consent_error_logging(status, domain))
 
     if cookies_accepted:
-        time.sleep(2)  # ToDo: Change to 10 seconds
+        time.sleep(3)  # ToDo: Change to 10 seconds
         # take_screenshots_consent(params, driver, domain, "post")
 
     cookies = driver.get_cookies()
