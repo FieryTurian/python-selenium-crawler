@@ -343,16 +343,17 @@ def generate_entry_table_question_3(dataframe, header):
     return entry
 
 
-def generate_table_question_3(dataframe, headers):
+def generate_table_question_3(dataframe):
     """Generate a LaTeX table about the comparison of desktop and mobile crawl data in a file
 
     Parameters
     ----------
     dataframe: pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
-    headers: list
-        A list of tuples holding the headers and text that should appear in the table
     """
+    # A list of tuples holding the headers and text that should appear in the table
+    headers = [("page_load_time", "Page load time(s)"), ("nr_requests", "\# requests"), ("nr_third_party_domains", "\# distinct third parties"), ("nr_tracker_domains", "\# distinct tracker domains"), ("nr_tracker_entities", "\# distinct tracker entities/companies")]
+
     # Remove the file if it is already existing
     if os.path.isfile("data/table_question_3.tex"):
         os.remove("data/table_question_3.tex")
@@ -364,10 +365,8 @@ def generate_table_question_3(dataframe, headers):
     file.write("\centering \n")
     file.write("\\begin{tabular}{|l|rrl|lll|} \n")
     file.write("\\hline \n")
-    file.write(
-        "\\textbf{} & \multicolumn{3}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{3}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
-    file.write(
-        "\\textbf{Metric} & \multicolumn{1}{r|}{\\textbf{Min}} & \multicolumn{1}{r|}{\\textbf{Max}} & \\textbf{Median} & \multicolumn{1}{l|}{\\textbf{Min}} & \multicolumn{1}{l|}{\\textbf{Max}} & \\textbf{Median} \\\\ \hline \n")
+    file.write("\\textbf{} & \multicolumn{3}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{3}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
+    file.write("\\textbf{Metric} & \multicolumn{1}{r|}{\\textbf{Min}} & \multicolumn{1}{r|}{\\textbf{Max}} & \\textbf{Median} & \multicolumn{1}{l|}{\\textbf{Min}} & \multicolumn{1}{l|}{\\textbf{Max}} & \\textbf{Median} \\\\ \hline \n")
 
     for header in headers:
         entry = generate_entry_table_question_3(dataframe, header)
@@ -583,7 +582,7 @@ def main():
     # Generate answers for all the questions in the assignment
     generate_table_question_1()
     generate_box_plots_question_2(dataframe)
-    generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
+    generate_table_question_3(dataframe)
     generate_table_question_4(dataframe)
     generate_table_question_5(dataframe)
     generate_table_question_6(dataframe)
