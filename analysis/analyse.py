@@ -16,6 +16,7 @@ import re
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from datetime import datetime
 
 
 def read_blocklist():
@@ -68,6 +69,28 @@ def extract_tracker_domains_entities(third_party_domains, blocklist, blocklist_d
     return tracker_domains, tracker_entities
 
 
+def calculate_page_load_time(start_time, end_time):
+    """Calculate the page load time by subtracting the the start_time from end_time
+
+    Parameters
+    ----------
+    start_time: string
+        A string denoting the start time of the pageload
+    end_time: string
+        A string denoting the end time of the pageload
+
+    Returns
+    -------
+    page_load_time: float
+        The page load time in seconds
+    """
+    page_load_start = datetime.strptime(start_time, '%d/%m/%Y %H:%M:%S.%f')
+    page_load_end = datetime.strptime(end_time, '%d/%m/%Y %H:%M:%S.%f')
+    page_load_time = (page_load_end - page_load_start).total_seconds()
+
+    return page_load_time
+
+
 def write_data_to_csv(headers):
     """Writes the data from the JSON files for all the crawled websites to a CSV file
 
@@ -88,12 +111,14 @@ def write_data_to_csv(headers):
                 json_file = json.load(f)
                 tracker_domains, tracker_entities = extract_tracker_domains_entities(
                                                         json_file['third_party_domains'], blocklist, blocklist_domains)
+                page_load_time = calculate_page_load_time(json_file['pageload_start_ts'], json_file['pageload_end_ts'])
                 data.append([
                     json_file['website_domain'],
                     json_file['tranco_rank'],
                     json_file['crawl_mode'],
                     json_file['pageload_start_ts'],
                     json_file['pageload_end_ts'],
+                    page_load_time,
                     json_file['post_pageload_url'],
                     json_file['consent_status'],
                     json_file['cookies'],
@@ -148,7 +173,7 @@ def preprocess_data():
     dataframe: pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
     """
-    headers = ["website_domain", "tranco_rank", "crawl_mode", "pageload_start_ts", "pageload_end_ts",
+    headers = ["website_domain", "tranco_rank", "crawl_mode", "pageload_start_ts", "pageload_end_ts", "page_load_time",
                "post_pageload_url", "consent_status", "cookies", "third_party_domains", "nr_third_party_domains",
                "requests_list", "nr_requests", "tracker_domains", "nr_tracker_domains", "tracker_entities",
                "nr_tracker_entities"]
@@ -279,6 +304,7 @@ def generate_box_plots_question_2(dataframe):
     dataframe: pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
     """
+    generate_box_plot(dataframe, "page_load_time", "crawl_mode", "page load time")
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
     generate_box_plot(dataframe, "nr_third_party_domains", "crawl_mode", "number of disctinct third-party domains")
     generate_box_plot(dataframe, "nr_tracker_domains", "crawl_mode", "number of disctinct tracker domains")
@@ -440,8 +466,9 @@ def generate_table_question_4(dataframe):
     dataframe: pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
     """
-    top_ten_desktop = prevalence(dataframe, "desktop", "third_party_domains").most_common(10)
-    top_ten_mobile = prevalence(dataframe, "mobile", "third_party_domains").most_common(10)
+    top_ten_desktop = prevalence(dataframe, "Desktop", "third_party_domains").most_common(10)
+    top_ten_mobile = prevalence(dataframe, "Mobile", "third_party_domains").most_common(10)
+
     generate_table_question(4, "third-party domain", top_ten_desktop, top_ten_mobile)
 
 
@@ -453,8 +480,9 @@ def generate_table_question_5(dataframe):
     dataframe: pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
     """
-    top_ten_tracker_desktop = prevalence(dataframe, "desktop", "tracker_domains").most_common(10)
-    top_ten_tracker_mobile = prevalence(dataframe, "mobile", "tracker_domains").most_common(10)
+    top_ten_tracker_desktop = prevalence(dataframe, "Desktop", "tracker_domains").most_common(10)
+    top_ten_tracker_mobile = prevalence(dataframe, "Mobile", "tracker_domains").most_common(10)
+
     generate_table_question(5, "tracker domain", top_ten_tracker_desktop, top_ten_tracker_mobile)
 
 
@@ -466,8 +494,8 @@ def generate_table_question_6(dataframe):
     dataframe: pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
     """
-    top_ten_entities_desktop = prevalence(dataframe, "desktop", "tracker_entities").most_common(10)
-    top_ten_entities_mobile = prevalence(dataframe, "mobile", "tracker_entities").most_common(10)
+    top_ten_entities_desktop = prevalence(dataframe, "Desktop", "tracker_entities").most_common(10)
+    top_ten_entities_mobile = prevalence(dataframe, "Mobile", "tracker_entities").most_common(10)
     generate_table_question(6, "tracker entity", top_ten_entities_desktop, top_ten_entities_mobile)
 
 
@@ -557,8 +585,8 @@ def main():
     generate_box_plots_question_2(dataframe)
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
     generate_table_question_4(dataframe)
-    generate_table_question_5(dataframe)
-    generate_table_question_6(dataframe)
+    # generate_table_question_5(dataframe)
+    # generate_table_question_6(dataframe)
     generate_scatter_plots_question_7(dataframe)
     generate_scatter_plots_question_8(dataframe)
 
