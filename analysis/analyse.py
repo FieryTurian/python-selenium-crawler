@@ -411,8 +411,6 @@ def prevalence(dataframe, mode, target):
 def generate_table_question(questionnr, target, top_ten_desktop, top_ten_mobile, label=""):
     """Generate a LaTeX table for questions 4, 5 and 6
 
-    TODO: change loop to range(10) -> currently len because otherwise errors occurs :)
-
     Parameters
     ----------
     questionnr: int
@@ -443,7 +441,7 @@ def generate_table_question(questionnr, target, top_ten_desktop, top_ten_mobile,
         "\multicolumn{1}{l|}{\\textbf{%s}} & \\textbf{\# websites} \\\\ \hline \n" % (target.capitalize()))
 
     # Write the data of the top ten for both mobile and desktop to the table
-    for i in range(len(top_ten_desktop)):
+    for i in range(10):
         entry = ("\\textbf{%d} & \multicolumn{1}{l|}{%s} & " % (i + 1, top_ten_desktop[i][0]) +
                 "\multicolumn{1}{r|}{%d} & \multicolumn{1}{l|}{%s} & " % (top_ten_desktop[i][1], top_ten_mobile[i][0]) +
                 "\multicolumn{1}{r|}{%d} \\\\ \hline \n" % (top_ten_mobile[i][1]))
