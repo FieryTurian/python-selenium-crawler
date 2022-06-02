@@ -573,6 +573,98 @@ def generate_scatter_plots_question_8(dataframe):
     generate_scatter_plot("Mobile", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "Number of distinct trackers")
 
 
+def generate_table_question_9():
+    """Generate a LaTeX table holding the request with the most cookies for each crawl"""
+    # Remove the file if it is already existing
+    if os.path.isfile(f"data/table_question_9.tex"):
+        os.remove(f"data/table_question_9.tex")
+
+    # Open the file and write to it
+    file = open(f"data/table_question_9.tex", 'a')
+    file.write("\\begin{table}[ht] \n")
+    file.write("\caption{Request with the most cookies for the desktop and mobile crawl.} \n")
+    file.write("\centering \n")
+    file.write("\\begin{tabular}{|l|l|l|r|c|} \n")
+    file.write("\hline")
+    file.write(
+        "\\textbf{Crawl} & \\textbf{Request hostname} & \\textbf{Website} & " +
+        "\multicolumn{1}{l|}{\\textbf{\# cookies}} & \multicolumn{1}{l|}{\\textbf{First-party request}} \\\\ \hline \n")
+
+    # ToDo
+
+    file.write("\end{tabular} \n")
+    file.write("\label{tab:mostcookies} \n")
+    file.write("\end{table}")
+
+    # Close the file
+    file.close()
+
+
+def generate_table_question_10(crawl_mode):
+    """Generate a LaTeX table holding the three cookies with the longest lifespan in the `crawl_mode` crawl
+
+    Parameters
+    ----------
+    crawl_mode: str
+        The crawl mode for which the table needs to be generated
+    """
+    # Remove the file if it is already existing
+    if os.path.isfile(f"data/table_question_10_{crawl_mode}.tex"):
+        os.remove(f"data/table_question_10_{crawl_mode}.tex")
+
+    # Open the file and write to it
+    file = open(f"data/table_question_10_{crawl_mode}.tex", 'a')
+    file.write("\\begin{table}[!htbp] \n")
+    file.write("\caption{Three cookies with the longest lifespan in the %s crawl.} \n" % (crawl_mode))
+    file.write("\centering \n")
+    file.write("\\resizebox{\\textwidth}{!}{\\begin{tabular}{|l|l|l|l|l|l|l|l|l|} \n")
+    file.write("\hline\\rowcolor{lightgray} \n")
+    file.write(
+        "\\textbf{Name} & \\textbf{Value} & \\textbf{Domain} & \\textbf{Path} & \\textbf{Expires / Max-Age} & " +
+        "\\textbf{Size} & \\textbf{HttpOnly} & \\textbf{Secure} & \\textbf{SameSite} \\\\ \hline \n")
+
+    # ToDo
+
+    file.write("\end{tabular}} \n")
+    file.write("\label{tab:lifespan_%s} \n" % (crawl_mode))
+    file.write("\end{table}")
+
+    # Close the file
+    file.close()
+
+
+def generate_table_question_11(crawl_mode):
+    """Generate a LaTeX table holding the ten most prevalent cross-domain HTTP redirection pairs for the `crawl_mode` crawl
+
+    Parameters
+    ----------
+    crawl_mode: str
+        The crawl mode for which the table needs to be generated
+    """
+    # Remove the file if it is already existing
+    if os.path.isfile(f"data/table_question_11_{crawl_mode}.tex"):
+        os.remove(f"data/table_question_11_{crawl_mode}.tex")
+
+    # Open the file and write to it
+    file = open(f"data/table_question_11_{crawl_mode}.tex", 'a')
+    file.write("\\begin{table}[ht] \n")
+    file.write("\caption{The ten most prevalent cross-domain HTTP redirection pairs (%s crawl).} \n" % (crawl_mode))
+    file.write("\centering \n")
+    file.write("\\begin{tabular}{|l|l|l|l|} \n")
+    file.write("\hline \n")
+    file.write(
+        "& \\textbf{Source hostname} & \\textbf{Target hostname} & \\textbf{Number of distinct websites \\\\ \hline \n")
+
+    # ToDo
+
+    file.write("\end{tabular} \n")
+    file.write("\label{tab:redirections%s} \n" % (crawl_mode))
+    file.write("\end{table}")
+
+    # Close the file
+    file.close()
+
+
 def main():
     # We first preprocess the data and turn it into a Pandas dataframe
     dataframe = preprocess_data()
