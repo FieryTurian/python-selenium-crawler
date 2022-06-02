@@ -509,25 +509,33 @@ def generate_scatter_plot(mode, third_parties_list, crawl_mode, tranco_ranks_lis
 
 
 def generate_scatter_plots_question_7(dataframe):
-    """
-    TODO: CHANGE DATAFRAME["NR_REQUESTS"] TO DATAFRAME["TRANCO_RANK"] (OR SIMILAR)
+    """Generate the scatter plots showing the number of distinct third parties vs the website's Tranco rank
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
     """
     third_parties_list = dataframe["third_party_domains"]
     crawl_mode = dataframe["crawl_mode"]
-    tranco_ranks_list = list(dataframe["nr_requests"])
+    tranco_ranks_list = list(dataframe["tranco_rank"])
 
     generate_scatter_plot("Desktop", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "Number of distinct third parties")
     generate_scatter_plot("Mobile", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "Number of distinct third parties")
 
 
 def generate_scatter_plots_question_8(dataframe):
-    """
-    TODO: CHANGE DATAFRAME["NR_REQUESTS"] TO DATAFRAME["TRANCO_RANK"] (OR SIMILAR)
+    """Generate the scatter plots showing the number of distinct trackers vs the website's Tranco rank
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
     """
     third_parties_list = dataframe["third_party_domains"]
     tracker_list = copy.deepcopy(third_parties_list)
     crawl_mode = dataframe["crawl_mode"]
-    tranco_ranks_list = list(dataframe["nr_requests"])
+    tranco_ranks_list = list(dataframe["tranco_rank"])
     tracker_domains = read_blocklist()
 
     # Transform the third party domains list to a tracker list by only saving the tracker domains in tracker_list
