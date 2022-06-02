@@ -585,8 +585,8 @@ def main():
     generate_box_plots_question_2(dataframe)
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
     generate_table_question_4(dataframe)
-    # generate_table_question_5(dataframe)
-    # generate_table_question_6(dataframe)
+    generate_table_question_5(dataframe)
+    generate_table_question_6(dataframe)
     generate_scatter_plots_question_7(dataframe)
     generate_scatter_plots_question_8(dataframe)
 
