@@ -15,6 +15,7 @@ from datetime import datetime
 from seleniumwire import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
+from tld.exceptions import TldDomainNotFound
 from webdriver_manager.chrome import ChromeDriverManager
 
 WINDOW_SIZE = "1920x1080"
@@ -153,9 +154,12 @@ def get_third_party_domains(domain, requests):
     third_party_domains = set()
 
     for request in requests:
-        request_domain = get_fld(request.url)
-        if request_domain not in first_party_domains:
-            third_party_domains.add(request_domain)
+        try:
+            request_domain = get_fld(request.url)
+            if request_domain not in first_party_domains:
+                third_party_domains.add(request_domain)
+        except TldDomainNotFound:
+            print("Could not find TLD")
 
     return list(third_party_domains)
 
