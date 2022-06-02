@@ -140,6 +140,24 @@ def csv_to_pandas_dataframe(headers):
     return dataframe
 
 
+def preprocess_data():
+    """This function turns the data into a csv file and in turn this csv file to a Pandas dataframe
+
+    Returns
+    -------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    """
+    headers = ["website_domain", "tranco_rank", "crawl_mode", "pageload_start_ts", "pageload_end_ts",
+               "post_pageload_url", "consent_status", "cookies", "third_party_domains", "nr_third_party_domains",
+               "requests_list", "nr_requests", "tracker_domains", "nr_tracker_domains", "tracker_entities",
+               "nr_tracker_entities"]
+    write_data_to_csv(headers)
+    dataframe = csv_to_pandas_dataframe(headers)
+
+    return dataframe
+
+
 def generate_table_question_1():
     """
     TODO: TEMPLATE FOR TABLE QUESTION 1 -> ADD ACTUAL CONTENT IN TABLE
@@ -251,6 +269,20 @@ def generate_box_plot(dataframe, header, crawl_mode, metric):
     plt.savefig(f"data/box_plot_{header}.png", bbox_inches='tight')
     # plt.show()
     plt.close()
+
+
+def generate_box_plots_question_2(dataframe):
+    """Generate five box plots to compare the data from the two crawls
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    """
+    generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
+    generate_box_plot(dataframe, "nr_third_party_domains", "crawl_mode", "number of disctinct third-party domains")
+    generate_box_plot(dataframe, "nr_tracker_domains", "crawl_mode", "number of disctinct tracker domains")
+    generate_box_plot(dataframe, "nr_tracker_entities", "crawl_mode", "number of disctinct tracker entities")
 
 
 def generate_entry_table_question_3(dataframe, header):
@@ -400,6 +432,45 @@ def generate_table_question(questionnr, target, top_ten_desktop, top_ten_mobile,
     file.close()
 
 
+def generate_table_question_4(dataframe):
+    """Generate a LaTeX table holding the ten most prevalent third-party domains for each crawl
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    """
+    top_ten_desktop = prevalence(dataframe, "desktop", "third_party_domains").most_common(10)
+    top_ten_mobile = prevalence(dataframe, "mobile", "third_party_domains").most_common(10)
+    generate_table_question(4, "third-party domain", top_ten_desktop, top_ten_mobile)
+
+
+def generate_table_question_5(dataframe):
+    """Generate a LaTeX table holding the ten most prevalent third-party tracker domains for each crawl
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    """
+    top_ten_tracker_desktop = prevalence(dataframe, "desktop", "tracker_domains").most_common(10)
+    top_ten_tracker_mobile = prevalence(dataframe, "mobile", "tracker_domains").most_common(10)
+    generate_table_question(5, "tracker domain", top_ten_tracker_desktop, top_ten_tracker_mobile)
+
+
+def generate_table_question_6(dataframe):
+    """Generate a LaTeX table holding the ten most prevalent tracker entities (companies) for each crawl
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    """
+    top_ten_entities_desktop = prevalence(dataframe, "desktop", "tracker_entities").most_common(10)
+    top_ten_entities_mobile = prevalence(dataframe, "mobile", "tracker_entities").most_common(10)
+    generate_table_question(6, "tracker entity", top_ten_entities_desktop, top_ten_entities_mobile)
+
+
 def generate_scatter_plot(mode, third_parties_list, crawl_mode, tranco_ranks_list, png_text, plot_text):
     """Generate scatter plots of the provided data along with a linear regression line
 
@@ -445,8 +516,8 @@ def generate_scatter_plots_question_7(dataframe):
     crawl_mode = dataframe["crawl_mode"]
     tranco_ranks_list = list(dataframe["nr_requests"])
 
-    generate_scatter_plot("desktop", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "Number of distinct third parties")
-    generate_scatter_plot("mobile", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "Number of distinct third parties")
+    generate_scatter_plot("Desktop", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "Number of distinct third parties")
+    generate_scatter_plot("Mobile", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "Number of distinct third parties")
 
 
 def generate_scatter_plots_question_8(dataframe):
@@ -465,31 +536,21 @@ def generate_scatter_plots_question_8(dataframe):
         tracker_list[i].intersection_update(tracker_domains)
         tracker_list[i] = list(tracker_list[i])
 
-    generate_scatter_plot("desktop", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "Number of distinct trackers")
-    generate_scatter_plot("mobile", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "Number of distinct trackers")
+    generate_scatter_plot("Desktop", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "Number of distinct trackers")
+    generate_scatter_plot("Mobile", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "Number of distinct trackers")
 
 
 def main():
-    headers = ["website_domain", "tranco_rank", "crawl_mode", "pageload_start_ts", "pageload_end_ts", "post_pageload_url", "consent_status", "cookies", "third_party_domains", "nr_third_party_domains", "requests_list", "nr_requests", "tracker_domains", "nr_tracker_domains", "tracker_entities", "nr_tracker_entities"]
-    write_data_to_csv(headers)
-    dataframe = csv_to_pandas_dataframe(headers)
+    # We first preprocess the data and turn it into a Pandas dataframe
+    dataframe = preprocess_data()
 
     # Generate answers for all the questions in the assignment
     generate_table_question_1()
-    generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
-    generate_box_plot(dataframe, "nr_third_party_domains", "crawl_mode", "number of disctinct third-party domains")
-    generate_box_plot(dataframe, "nr_tracker_domains", "crawl_mode", "number of disctinct tracker domains")
-    generate_box_plot(dataframe, "nr_tracker_entities", "crawl_mode", "number of disctinct tracker entities")
+    generate_box_plots_question_2(dataframe)
     generate_table_question_3(dataframe, [("nr_requests", "Page load time(s)")])
-    top_ten_desktop = prevalence(dataframe, "desktop", "third_party_domains").most_common(10)
-    top_ten_mobile = prevalence(dataframe, "mobile", "third_party_domains").most_common(10)
-    generate_table_question(4, "third-party domain", top_ten_desktop, top_ten_mobile)
-    top_ten_tracker_desktop = prevalence(dataframe, "desktop", "tracker_domains").most_common(10)
-    top_ten_tracker_mobile = prevalence(dataframe, "mobile", "tracker_domains").most_common(10)
-    generate_table_question(5, "tracker domain", top_ten_tracker_desktop, top_ten_tracker_mobile)
-    top_ten_entities_desktop = prevalence(dataframe, "desktop", "tracker_entities").most_common(10)
-    top_ten_entities_mobile = prevalence(dataframe, "mobile", "tracker_entities").most_common(10)
-    generate_table_question(6, "tracker entity", top_ten_entities_desktop, top_ten_entities_mobile)
+    generate_table_question_4(dataframe)
+    generate_table_question_5(dataframe)
+    generate_table_question_6(dataframe)
     generate_scatter_plots_question_7(dataframe)
     generate_scatter_plots_question_8(dataframe)
 
