@@ -19,8 +19,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
 from tld.exceptions import TldDomainNotFound
-from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException,\
-    TimeoutException
+from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException
 
 WINDOW_SIZE = "1920x1080"
 
@@ -129,7 +128,7 @@ def get_url_requests_times(driver, domain):
     url = "https://" + domain
     pageload_start_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
     try:
-        python_requests.get(url)
+        python_requests.get(url, timeout=20)
     except SSLError:
         print("The website gave a TLS error!")
         return None, None, None, None, True, False, False
