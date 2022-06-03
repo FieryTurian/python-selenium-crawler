@@ -7,7 +7,6 @@ from ast import literal_eval
 from collections import Counter
 from colors import *
 import csv
-import copy
 import glob
 import json
 import os
@@ -18,6 +17,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 from operator import itemgetter
+from urllib.parse import urlparse
 
 
 def read_blocklist():
@@ -556,8 +556,82 @@ def generate_scatter_plots_question_8(dataframe):
     generate_scatter_plot(dataframe, "Mobile", "trackers", "Number of distinct trackers", "nr_tracker_domains")
 
 
-def generate_table_question_9():
-    """Generate a LaTeX table holding the request with the most cookies for each crawl"""
+def find_request_with_most_cookies(dataframe, mode):
+    """Find the request (and website domain) with the most number of cookies
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    mode: string
+        A string that holds the crawl-mode to use: either desktop or mobile
+
+    Returns
+    -------
+    request_hostname: string
+        A string holding the hostname of the request
+    website: string
+        A string holding the website domain belonging to the request
+    most_number_of_cookies: int
+        An integer holding the number of cookies set by the request
+    """
+    # reset_index(drop=True) resets the indices from 0 to the length of the number of entries in the
+    # dataframe that correspond to the right crawl mode
+    requests_list = dataframe.loc[dataframe["crawl_mode"] == mode, "requests_list"].reset_index(drop=True)
+    website_domain = dataframe.loc[dataframe["crawl_mode"] == mode, "website_domain"].reset_index(drop=True)
+    most_number_of_cookies = 0
+    request_hostname = ""
+    website = ""
+
+    # Search all requests in the requests_list for the most cookies
+    for i, requests_domain in enumerate(requests_list):
+        for request in requests_domain:
+            request_url = request.get("request_url")
+            nr_cookies = request.get("nr_cookies")
+            if most_number_of_cookies < nr_cookies:
+                most_number_of_cookies = nr_cookies
+                request_hostname = urlparse(request_url).hostname
+                website = website_domain[i]
+
+    return request_hostname, website, most_number_of_cookies
+
+
+def generate_entry_table_question_9(dataframe, mode):
+    """Generate a header specific entry for the table about the request with the most cookies
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    mode: string
+        A string that holds the crawl-mode to use: either desktop or mobile
+
+    Returns
+    -------
+    entry: string
+        A string that holds the precise entry text that will be added in the table
+    """
+    request_hostname, website, most_number_of_cookies = find_request_with_most_cookies(dataframe, mode)
+
+    # Check if the request hostname matches the website domain and set first_party accordingly
+    if request_hostname == website or request_hostname == ("www." + website):
+        first_party = "Yes"
+    else:
+        first_party = "No"
+
+    entry = "\\textbf{%s} & %s & %s & %s & %s \\\\ \hline \n" % (mode, request_hostname, website, most_number_of_cookies, first_party)
+
+    return entry
+
+
+def generate_table_question_9(dataframe):
+    """Generate a LaTeX table holding the request with the most cookies for each crawl
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    """
     # Remove the file if it is already existing
     if os.path.isfile(f"data/table_question_9.tex"):
         os.remove(f"data/table_question_9.tex")
@@ -573,7 +647,11 @@ def generate_table_question_9():
         "\\textbf{Crawl} & \\textbf{Request hostname} & \\textbf{Website} & " +
         "\multicolumn{1}{l|}{\\textbf{\# cookies}} & \multicolumn{1}{l|}{\\textbf{First-party request}} \\\\ \hline \n")
 
-    # ToDo
+    # Write the data for the request with the most cookies to the file
+    entry_desktop = generate_entry_table_question_9(dataframe, "Desktop")
+    file.write(entry_desktop)
+    entry_mobile = generate_entry_table_question_9(dataframe, "Mobile")
+    file.write(entry_mobile)
 
     file.write("\end{tabular} \n")
     file.write("\label{tab:mostcookies} \n")
@@ -766,15 +844,17 @@ def main():
     dataframe = preprocess_data()
 
     # Generate answers for all the questions in the assignment
-    # generate_table_question_1()
-    # generate_box_plots_question_2(dataframe)
-    # generate_table_question_3(dataframe)
-    # generate_table_question_4(dataframe)
-    # generate_table_question_5(dataframe)
-    # generate_table_question_6(dataframe)
-    # generate_scatter_plots_question_7(dataframe)
-    # generate_scatter_plots_question_8(dataframe)
+    generate_table_question_1()
+    generate_box_plots_question_2(dataframe)
+    generate_table_question_3(dataframe)
+    generate_table_question_4(dataframe)
+    generate_table_question_5(dataframe)
+    generate_table_question_6(dataframe)
+    generate_scatter_plots_question_7(dataframe)
+    generate_scatter_plots_question_8(dataframe)
+    generate_table_question_9(dataframe)
     generate_table_question_10(dataframe, "Desktop")
+    generate_table_question_10(dataframe, "Mobile")
 
 
 if __name__ == '__main__':
