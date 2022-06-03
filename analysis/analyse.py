@@ -110,7 +110,7 @@ def write_data_to_csv(headers):
             try:
                 json_file = json.load(f)
                 tracker_domains, tracker_entities = extract_tracker_domains_entities(
-                                                        json_file['third_party_domains'], blocklist, blocklist_domains)
+                    json_file['third_party_domains'], blocklist, blocklist_domains)
                 page_load_time = calculate_page_load_time(json_file['pageload_start_ts'], json_file['pageload_end_ts'])
                 data.append([
                     json_file['website_domain'],
@@ -157,6 +157,7 @@ def csv_to_pandas_dataframe(headers):
     dataframe = pd.read_csv("data/data.csv", usecols=headers)
 
     # Turn strings into their corresponding python literals
+    dataframe['cookies'] = dataframe.cookies.apply(literal_eval)
     dataframe['third_party_domains'] = dataframe.third_party_domains.apply(literal_eval)
     dataframe['requests_list'] = dataframe.requests_list.apply(literal_eval)
     dataframe['tracker_domains'] = dataframe.tracker_domains.apply(literal_eval)
@@ -338,7 +339,7 @@ def generate_entry_table_question_3(dataframe, header):
     median_mobile = df[header[0]].median()[1]
 
     entry = "%s & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} & \multicolumn{1}{r|}{%s} \\\\ \hline \n" % (
-    header[1], min_desktop, max_desktop, median_desktop, min_mobile, max_mobile, median_mobile)
+        header[1], min_desktop, max_desktop, median_desktop, min_mobile, max_mobile, median_mobile)
 
     return entry
 
@@ -352,7 +353,10 @@ def generate_table_question_3(dataframe):
         A Pandas dataframe with all the data in the CSV file
     """
     # A list of tuples holding the headers and text that should appear in the table
-    headers = [("page_load_time", "Page load time(s)"), ("nr_requests", "\# requests"), ("nr_third_party_domains", "\# distinct third parties"), ("nr_tracker_domains", "\# distinct tracker domains"), ("nr_tracker_entities", "\# distinct tracker entities/companies")]
+    headers = [("page_load_time", "Page load time(s)"), ("nr_requests", "\# requests"),
+               ("nr_third_party_domains", "\# distinct third parties"),
+               ("nr_tracker_domains", "\# distinct tracker domains"),
+               ("nr_tracker_entities", "\# distinct tracker entities/companies")]
 
     # Remove the file if it is already existing
     if os.path.isfile("data/table_question_3.tex"):
@@ -365,8 +369,10 @@ def generate_table_question_3(dataframe):
     file.write("\centering \n")
     file.write("\\begin{tabular}{|l|rrl|lll|} \n")
     file.write("\\hline \n")
-    file.write("\\textbf{} & \multicolumn{3}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{3}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
-    file.write("\\textbf{Metric} & \multicolumn{1}{r|}{\\textbf{Min}} & \multicolumn{1}{r|}{\\textbf{Max}} & \\textbf{Median} & \multicolumn{1}{l|}{\\textbf{Min}} & \multicolumn{1}{l|}{\\textbf{Max}} & \\textbf{Median} \\\\ \hline \n")
+    file.write(
+        "\\textbf{} & \multicolumn{3}{c|}{\\textbf{Crawl-desktop}} & \multicolumn{3}{c|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
+    file.write(
+        "\\textbf{Metric} & \multicolumn{1}{r|}{\\textbf{Min}} & \multicolumn{1}{r|}{\\textbf{Max}} & \\textbf{Median} & \multicolumn{1}{l|}{\\textbf{Min}} & \multicolumn{1}{l|}{\\textbf{Max}} & \\textbf{Median} \\\\ \hline \n")
 
     for header in headers:
         entry = generate_entry_table_question_3(dataframe, header)
@@ -390,7 +396,7 @@ def prevalence(dataframe, mode, target):
     mode: string
         A string that holds the crawl-mode to use: either desktop or mobile
     target: string
-        The group that the prevalance needs to be find for, e.g., third-party domains
+        The group that the prevalence needs to be found for, e.g., third-party domains
 
     Returns
     -------
@@ -443,8 +449,9 @@ def generate_table_question(questionnr, target, top_ten_desktop, top_ten_mobile,
     # Write the data of the top ten for both mobile and desktop to the table
     for i in range(10):
         entry = ("\\textbf{%d} & \multicolumn{1}{l|}{%s} & " % (i + 1, top_ten_desktop[i][0]) +
-                "\multicolumn{1}{r|}{%d} & \multicolumn{1}{l|}{%s} & " % (top_ten_desktop[i][1], top_ten_mobile[i][0]) +
-                "\multicolumn{1}{r|}{%d} \\\\ \hline \n" % (top_ten_mobile[i][1]))
+                 "\multicolumn{1}{r|}{%d} & \multicolumn{1}{l|}{%s} & " % (
+                     top_ten_desktop[i][1], top_ten_mobile[i][0]) +
+                 "\multicolumn{1}{r|}{%d} \\\\ \hline \n" % (top_ten_mobile[i][1]))
         file.write(entry)
 
     file.write("\end{tabular} \n")
@@ -496,37 +503,28 @@ def generate_table_question_6(dataframe):
     generate_table_question(6, "tracker entity", top_ten_entities_desktop, top_ten_entities_mobile)
 
 
-def generate_scatter_plot(mode, third_parties_list, crawl_mode, tranco_ranks_list, png_text, plot_text):
+def generate_scatter_plot(dataframe, mode, png_text, plot_text, target):
     """Generate scatter plots of the provided data along with a linear regression line
 
     Parameters
     ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
     mode: string
         A string that holds the crawl-mode to use: either desktop or mobile
-    third_parties_list: pandas.core.series.Series
-        A Pandas dataframe that holds the third party data from the CSV file
-    crawl_mode: pandas.core.series.Series
-        A Pandas dataframe with the data crawl mode data from the CSV file
-    tranco_ranks_list: list
-        A list of the Pandas dataframe that holds the website's Tranco ranks
-    text: string
+    png_text: string
         A string that holds information on how to name the output .png file
+    plot_text: string
+        A string that holds information on how to name the text on the y-axis
+    target: string
+        The group that the scatter plot needs to plot
     """
-    # Define lists to hold the values belonging to the x- and y-axis
-    y_axis = []
-    x_axis = []
+    # Make a dataframe with the columns tranco rank and number of third party domains filtered on crawl mode
+    df = dataframe.loc[dataframe["crawl_mode"] == mode, ["tranco_rank", target]].rename(
+        columns={"tranco_rank": "Website's Tranco rank", target: plot_text})
 
-    for i in range(len(tranco_ranks_list)):
-        if crawl_mode[i] == mode:
-            x_axis.append(tranco_ranks_list[i])
-    for index, third_parties in enumerate(third_parties_list):
-        if crawl_mode[index] == mode:
-            y_axis.append(len(third_parties))
-
-    df = pd.DataFrame(list(zip(x_axis, y_axis)),
-                      columns=["Website's Tranco rank", plot_text])
+    # Make the scatter plot
     sns.lmplot(x="Website's Tranco rank", y=plot_text, data=df)
-
     plt.title(f"The {plot_text.lower()} vs the website's Tranco rank ({mode}-crawl)")
     plt.savefig(f"data/scatter_plot_{png_text}_{mode}.png", bbox_inches='tight')
     # plt.show()  # use plt.show(block=True) if the window closes too soon
@@ -541,12 +539,8 @@ def generate_scatter_plots_question_7(dataframe):
     dataframe: pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
     """
-    third_parties_list = dataframe["third_party_domains"]
-    crawl_mode = dataframe["crawl_mode"]
-    tranco_ranks_list = list(dataframe["tranco_rank"])
-
-    generate_scatter_plot("Desktop", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "Number of distinct third parties")
-    generate_scatter_plot("Mobile", third_parties_list, crawl_mode, tranco_ranks_list, "third_parties", "Number of distinct third parties")
+    generate_scatter_plot(dataframe, "Desktop", "third_parties", "Number of distinct third parties", "nr_third_party_domains")
+    generate_scatter_plot(dataframe, "Mobile", "third_parties", "Number of distinct third parties", "nr_third_party_domains")
 
 
 def generate_scatter_plots_question_8(dataframe):
@@ -557,20 +551,8 @@ def generate_scatter_plots_question_8(dataframe):
     dataframe: pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
     """
-    third_parties_list = dataframe["third_party_domains"]
-    tracker_list = copy.deepcopy(third_parties_list)
-    crawl_mode = dataframe["crawl_mode"]
-    tranco_ranks_list = list(dataframe["tranco_rank"])
-    tracker_domains = read_blocklist()
-
-    # Transform the third party domains list to a tracker list by only saving the tracker domains in tracker_list
-    for i in range(len(tracker_list)):
-        tracker_list[i] = set(tracker_list[i])
-        tracker_list[i].intersection_update(tracker_domains)
-        tracker_list[i] = list(tracker_list[i])
-
-    generate_scatter_plot("Desktop", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "Number of distinct trackers")
-    generate_scatter_plot("Mobile", tracker_list, crawl_mode, tranco_ranks_list, "trackers", "Number of distinct trackers")
+    generate_scatter_plot(dataframe, "Desktop", "trackers", "Number of distinct trackers", "nr_tracker_domains")
+    generate_scatter_plot(dataframe, "Mobile", "trackers", "Number of distinct trackers", "nr_tracker_domains")
 
 
 def generate_table_question_9():
@@ -600,22 +582,29 @@ def generate_table_question_9():
     file.close()
 
 
-def generate_table_question_10(crawl_mode):
+def find_cookies_longest_lifespans(dataframe, mode):
+    cookies_list = dataframe.loc[dataframe["crawl_mode"] == mode, "cookies"]
+    print(cookies_list)
+
+
+def generate_table_question_10(dataframe, mode):
     """Generate a LaTeX table holding the three cookies with the longest lifespan in the `crawl_mode` crawl
 
     Parameters
     ----------
-    crawl_mode: str
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    mode: str
         The crawl mode for which the table needs to be generated
     """
     # Remove the file if it is already existing
-    if os.path.isfile(f"data/table_question_10_{crawl_mode}.tex"):
-        os.remove(f"data/table_question_10_{crawl_mode}.tex")
+    if os.path.isfile(f"data/table_question_10_{mode}.tex"):
+        os.remove(f"data/table_question_10_{mode}.tex")
 
     # Open the file and write to it
-    file = open(f"data/table_question_10_{crawl_mode}.tex", 'a')
+    file = open(f"data/table_question_10_{mode}.tex", 'a')
     file.write("\\begin{table}[!htbp] \n")
-    file.write("\caption{Three cookies with the longest lifespan in the %s crawl.} \n" % (crawl_mode))
+    file.write("\caption{Three cookies with the longest lifespan in the %s crawl.} \n" % (mode))
     file.write("\centering \n")
     file.write("\\resizebox{\\textwidth}{!}{\\begin{tabular}{|l|l|l|l|l|l|l|l|l|} \n")
     file.write("\hline\\rowcolor{lightgray} \n")
@@ -624,9 +613,14 @@ def generate_table_question_10(crawl_mode):
         "\\textbf{Size} & \\textbf{HttpOnly} & \\textbf{Secure} & \\textbf{SameSite} \\\\ \hline \n")
 
     # ToDo
+    find_cookies_longest_lifespans(dataframe, mode)
+
+    for i in range(3):
+        entry = "entry \n"
+        file.write(entry)
 
     file.write("\end{tabular}} \n")
-    file.write("\label{tab:lifespan_%s} \n" % (crawl_mode))
+    file.write("\label{tab:lifespan_%s} \n" % mode)
     file.write("\end{table}")
 
     # Close the file
@@ -670,14 +664,15 @@ def main():
     dataframe = preprocess_data()
 
     # Generate answers for all the questions in the assignment
-    generate_table_question_1()
-    generate_box_plots_question_2(dataframe)
-    generate_table_question_3(dataframe)
-    generate_table_question_4(dataframe)
-    generate_table_question_5(dataframe)
-    generate_table_question_6(dataframe)
-    generate_scatter_plots_question_7(dataframe)
-    generate_scatter_plots_question_8(dataframe)
+    # generate_table_question_1()
+    # generate_box_plots_question_2(dataframe)
+    # generate_table_question_3(dataframe)
+    # generate_table_question_4(dataframe)
+    # generate_table_question_5(dataframe)
+    # generate_table_question_6(dataframe)
+    # generate_scatter_plots_question_7(dataframe)
+    # generate_scatter_plots_question_8(dataframe)
+    generate_table_question_10(dataframe, "Desktop")
 
 
 if __name__ == '__main__':
