@@ -238,7 +238,7 @@ def allow_cookies(driver):
         except Exception:
             pass
 
-        if allow_all_cookies:
+        if allow_all_cookies and allow_all_cookies.is_displayed():
             try:
                 allow_all_cookies.click()
                 status = "clicked"
