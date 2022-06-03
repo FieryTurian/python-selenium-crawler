@@ -265,8 +265,9 @@ def get_response_cookies(response_headers, cookies):
         if key == "set-cookie":
             cookie = response_headers[key]
             cookie_dict = cookie_parser(cookie)
-            cookie_dict.update({"size": len(list(cookie_dict.values())[0])})
-            cookies.append(cookie_dict)
+            if cookie_dict.values():
+                cookie_dict.update({"size": len(list(cookie_dict.values())[0])})
+                cookies.append(cookie_dict)
 
 
 def get_all_cookies(requests):
