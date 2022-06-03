@@ -18,7 +18,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-from tld.exceptions import TldDomainNotFound
+from tld.exceptions import TldDomainNotFound,TldBadUrl
 from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException
 
 WINDOW_SIZE = "1920x1080"
@@ -182,6 +182,30 @@ def get_third_party_domains(domain, requests):
     return list(third_party_domains)
 
 
+def detect_redirections(requests, domain, post_pageload_url):
+    redirections = {}
+
+    if domain != get_fld(post_pageload_url):
+        redirections.update({domain: get_fld(post_pageload_url)})
+
+    for request in requests:
+        request_url = request.url
+
+        if request.response:
+            response_headers = request.response.headers
+
+            for key in response_headers.keys():
+                if key == "location":
+                    try:
+                        if get_fld(response_headers[key]) != get_fld(request_url):
+                            redirections.update({get_fld(request_url): get_fld(response_headers[key])})
+                    except TldBadUrl:
+                        print("An invalid URL format was found!")
+                        pass
+
+    return redirections
+
+
 def allow_cookies(driver):
     status = ""
 
@@ -308,6 +332,7 @@ def crawl_url(params, domain, rank):
                     "consent_status": status,
                     "cookies": get_all_cookies(requests_url),
                     "third_party_domains": get_third_party_domains(domain, requests_url),
+                    "redirect_tracker_pairs": detect_redirections(requests_url, domain, post_pageload_url),
                     "requests_list": []}
 
         for request in requests_url:
