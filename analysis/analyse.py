@@ -146,7 +146,8 @@ def write_data_to_dataframe(headers, blocklist, blocklist_domains):
                                  list(tracker_domains),
                                  len(tracker_domains),
                                  list(tracker_entities),
-                                 len(tracker_entities)])
+                                 len(tracker_entities),
+                                 json_file['redirect_tracker_pairs']])
             except KeyError:
                 print(f"Skipping {file} because of bad formatting.")
 
@@ -170,7 +171,7 @@ def preprocess_data():
     headers = ["website_domain", "tranco_rank", "crawl_mode", "pageload_start_ts", "pageload_end_ts", "page_load_time",
                "post_pageload_url", "consent_status", "cookies", "third_party_domains", "nr_third_party_domains",
                "requests_list", "nr_requests", "tracker_domains", "nr_tracker_domains", "tracker_entities",
-               "nr_tracker_entities"]
+               "nr_tracker_entities", "redirection_pairs"]
     blocklist = read_blocklist()
     blocklist_domains = blocklist.keys()
 
