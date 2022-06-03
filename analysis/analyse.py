@@ -92,79 +92,69 @@ def calculate_page_load_time(start_time, end_time):
     return page_load_time
 
 
-def write_data_to_csv(headers):
+def write_data_to_dataframe(headers, blocklist, blocklist_domains):
     """Writes the data from the JSON files for all the crawled websites to a CSV file
 
     Parameters
     ----------
     headers: list
         A list with the values for the headers of the data in the JSON files
+    blocklist: dict
+        A dictionary with domains of trackers as key and the corresponding entity name as the value
+    blocklist_domains: dict_keys
+        A list of domains that are in the blocklist
+
+    Returns
+    -------
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
+    err_dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe containing all domains where errors occured
     """
-    blocklist = read_blocklist()
-    blocklist_domains = blocklist.keys()
+    data = []
+    errors = []
 
     # Get all JSON files within the crawl_data folder
     files = glob.glob("../crawl_data/*.json")
-    data = []
     for file in files:
         with open(file, 'r') as f:
             try:
                 json_file = json.load(f)
-                tracker_domains, tracker_entities = extract_tracker_domains_entities(
-                    json_file['third_party_domains'], blocklist, blocklist_domains)
-                page_load_time = calculate_page_load_time(json_file['pageload_start_ts'], json_file['pageload_end_ts'])
-                data.append([
-                    json_file['website_domain'],
-                    json_file['tranco_rank'],
-                    json_file['crawl_mode'],
-                    json_file['pageload_start_ts'],
-                    json_file['pageload_end_ts'],
-                    page_load_time,
-                    json_file['post_pageload_url'],
-                    json_file['consent_status'],
-                    json_file['cookies'],
-                    json_file['third_party_domains'],
-                    len(json_file['third_party_domains']),
-                    json_file['requests_list'],
-                    len(json_file['requests_list']),
-                    list(tracker_domains),
-                    len(tracker_domains),
-                    list(tracker_entities),
-                    len(tracker_entities)
-                ])
+                # If an error occured, only 4 items will be stored in the json file
+                if len(json_file) == 4:
+                    errors.append([json_file['website_domain'],
+                                   json_file['tranco_rank'],
+                                   json_file['crawl_mode'],
+                                   json_file['error']])
+                else:
+                    tracker_domains, tracker_entities = extract_tracker_domains_entities(
+                        json_file['third_party_domains'], blocklist, blocklist_domains)
+                    page_load_time = calculate_page_load_time(json_file['pageload_start_ts'], json_file['pageload_end_ts'])
+                    data.append([json_file['website_domain'],
+                                 json_file['tranco_rank'],
+                                 json_file['crawl_mode'],
+                                 json_file['pageload_start_ts'],
+                                 json_file['pageload_end_ts'],
+                                 page_load_time,
+                                 json_file['post_pageload_url'],
+                                 json_file['consent_status'],
+                                 json_file['cookies'],
+                                 json_file['third_party_domains'],
+                                 len(json_file['third_party_domains']),
+                                 json_file['requests_list'],
+                                 len(json_file['requests_list']),
+                                 list(tracker_domains),
+                                 len(tracker_domains),
+                                 list(tracker_entities),
+                                 len(tracker_entities)])
             except KeyError:
                 print(f"Skipping {file} because of bad formatting.")
 
-    # Add headers
-    data.insert(0, headers)
-    with open("data/data.csv", 'w', newline="") as f:
-        writer = csv.writer(f)
-        writer.writerows(data)
+    # Write the data to a Pandas dataframe
+    dataframe = pd.DataFrame(data, columns=headers)
+    err_dataframe = pd.DataFrame(errors, columns=["website_domain", "tranco_rank", "crawl_mode", "error"])
 
-
-def csv_to_pandas_dataframe(headers):
-    """Read the CSV file into a pandas dataframe in order to analyse the data
-
-    Parameters
-    ----------
-    headers: list
-        A list with the values for the headers of the data in the JSON files
-
-    Returns
-    -------
-    pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
-    """
-    dataframe = pd.read_csv("data/data.csv", usecols=headers)
-
-    # Turn strings into their corresponding python literals
-    dataframe['cookies'] = dataframe.cookies.apply(literal_eval)
-    dataframe['third_party_domains'] = dataframe.third_party_domains.apply(literal_eval)
-    dataframe['requests_list'] = dataframe.requests_list.apply(literal_eval)
-    dataframe['tracker_domains'] = dataframe.tracker_domains.apply(literal_eval)
-    dataframe['tracker_entities'] = dataframe.tracker_entities.apply(literal_eval)
-
-    return dataframe
+    return dataframe, err_dataframe
 
 
 def preprocess_data():
@@ -172,23 +162,60 @@ def preprocess_data():
 
     Returns
     -------
-    pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
+    err_dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe containing all domains where errors occured
     """
     headers = ["website_domain", "tranco_rank", "crawl_mode", "pageload_start_ts", "pageload_end_ts", "page_load_time",
                "post_pageload_url", "consent_status", "cookies", "third_party_domains", "nr_third_party_domains",
                "requests_list", "nr_requests", "tracker_domains", "nr_tracker_domains", "tracker_entities",
                "nr_tracker_entities"]
-    write_data_to_csv(headers)
-    dataframe = csv_to_pandas_dataframe(headers)
+    blocklist = read_blocklist()
+    blocklist_domains = blocklist.keys()
 
-    return dataframe
+    dataframe, err_dataframe = write_data_to_dataframe(headers, blocklist, blocklist_domains)
+
+    return dataframe, err_dataframe
 
 
-def generate_table_question_1():
+def generate_entry_table_question_1(header):
+    """Generate a header specific entry for the table on the number of failures encountered during each crawl
+
+    Parameters
+    ----------
+    header: tuple
+        A tuple holding the header name and value that need to be filtered, the belonging text that should appear
+            in the entry and the dataframe that the data should be filtered from
+
+    Returns
+    -------
+    string
+        A string that holds the precise entry text that will be added in the table
     """
-    TODO: TEMPLATE FOR TABLE QUESTION 1 -> ADD ACTUAL CONTENT IN TABLE
+    target, val, text, df = header
+    err_desktop = df[(df['crawl_mode'] == "Desktop") & (df[target] == val)]
+    err_mobile = df[(df['crawl_mode'] == "Mobile") & (df[target] == val)]
+
+    entry = "%s & %s & %s \\\\ \hline \n" % (text, len(err_desktop), len(err_mobile))
+
+    return entry
+
+
+def generate_table_question_1(dataframe, err_dataframe):
+    """Generate a LaTeX table on the number of failures encountered during each crawl
+
+    Parameters
+    ----------
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
+    err_dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe containing all domains where errors occured
     """
+    # # A list of tuples holding the error and text that should appear in the table for that error
+    headers = [("error", "Timeout", "Page load timeout", err_dataframe), ("error", "TLS", "TLS error", err_dataframe),
+               ("consent_status", "consent_status", "Consent click error", dataframe)]
+
     # Remove the file if it is already existing
     if os.path.isfile("data/table_question_1.tex"):
         os.remove("data/table_question_1.tex")
@@ -203,8 +230,9 @@ def generate_table_question_1():
     file.write(
         "\\textbf{Error type} & \multicolumn{1}{l|}{\\textbf{Crawl-desktop}} & \multicolumn{1}{l|}{\\textbf{Crawl-mobile}} \\\\ \hline \n")
 
-    # for header in headers
-    #    do something to make the entries for each error type
+    for header in headers:
+        entry = generate_entry_table_question_1(header)
+        file.write(entry)
 
     file.write("\end{tabular} \n")
     file.write("\label{table:NumberOfFailures} \n")
@@ -277,8 +305,8 @@ def generate_box_plot(dataframe, header, crawl_mode, metric):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     header: string
         A string with the value for one of the headers of the data in the dataframe
     crawl_mode: string
@@ -303,8 +331,8 @@ def generate_box_plots_question_2(dataframe):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     """
     generate_box_plot(dataframe, "page_load_time", "crawl_mode", "page load time")
     generate_box_plot(dataframe, "nr_requests", "crawl_mode", "number of requests")
@@ -318,8 +346,8 @@ def generate_entry_table_question_3(dataframe, header):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     header: tuple
         A tuple holding the header name and belonging text that should appear in the entry
 
@@ -350,8 +378,8 @@ def generate_table_question_3(dataframe):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     """
     # A list of tuples holding the headers and text that should appear in the table
     headers = [("page_load_time", "Page load time(s)"), ("nr_requests", "\# requests"),
@@ -392,8 +420,8 @@ def prevalence(dataframe, mode, target):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     mode: string
         A string that holds the crawl-mode to use: either desktop or mobile
     target: string
@@ -468,8 +496,8 @@ def generate_table_question_4(dataframe):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     """
     top_ten_desktop = prevalence(dataframe, "Desktop", "third_party_domains").most_common(10)
     top_ten_mobile = prevalence(dataframe, "Mobile", "third_party_domains").most_common(10)
@@ -482,8 +510,8 @@ def generate_table_question_5(dataframe):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     """
     top_ten_tracker_desktop = prevalence(dataframe, "Desktop", "tracker_domains").most_common(10)
     top_ten_tracker_mobile = prevalence(dataframe, "Mobile", "tracker_domains").most_common(10)
@@ -496,8 +524,8 @@ def generate_table_question_6(dataframe):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     """
     top_ten_entities_desktop = prevalence(dataframe, "Desktop", "tracker_entities").most_common(10)
     top_ten_entities_mobile = prevalence(dataframe, "Mobile", "tracker_entities").most_common(10)
@@ -509,8 +537,8 @@ def generate_scatter_plot(dataframe, mode, png_text, plot_text, target):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     mode: string
         A string that holds the crawl-mode to use: either desktop or mobile
     png_text: string
@@ -537,8 +565,8 @@ def generate_scatter_plots_question_7(dataframe):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     """
     generate_scatter_plot(dataframe, "Desktop", "third_parties", "Number of distinct third parties", "nr_third_party_domains")
     generate_scatter_plot(dataframe, "Mobile", "third_parties", "Number of distinct third parties", "nr_third_party_domains")
@@ -549,8 +577,8 @@ def generate_scatter_plots_question_8(dataframe):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     """
     generate_scatter_plot(dataframe, "Desktop", "trackers", "Number of distinct trackers", "nr_tracker_domains")
     generate_scatter_plot(dataframe, "Mobile", "trackers", "Number of distinct trackers", "nr_tracker_domains")
@@ -561,8 +589,8 @@ def find_request_with_most_cookies(dataframe, mode):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     mode: string
         A string that holds the crawl-mode to use: either desktop or mobile
 
@@ -601,8 +629,8 @@ def generate_entry_table_question_9(dataframe, mode):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     mode: string
         A string that holds the crawl-mode to use: either desktop or mobile
 
@@ -629,8 +657,8 @@ def generate_table_question_9(dataframe):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     """
     # Remove the file if it is already existing
     if os.path.isfile(f"data/table_question_9.tex"):
@@ -666,8 +694,8 @@ def find_cookies_longest_lifespans(dataframe, mode, number):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     mode: string
         A string that holds the crawl-mode to use: either desktop or mobile
     number: int
@@ -773,8 +801,8 @@ def generate_table_question_10(dataframe, mode):
 
     Parameters
     ----------
-    dataframe: pandas.core.series.Series
-        A Pandas dataframe with all the data in the CSV file
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
     mode: str
         The crawl mode for which the table needs to be generated
     """
@@ -841,10 +869,10 @@ def generate_table_question_11(crawl_mode):
 
 def main():
     # We first preprocess the data and turn it into a Pandas dataframe
-    dataframe = preprocess_data()
+    dataframe, err_dataframe = preprocess_data()
 
     # Generate answers for all the questions in the assignment
-    generate_table_question_1()
+    generate_table_question_1(dataframe, err_dataframe)
     generate_box_plots_question_2(dataframe)
     generate_table_question_3(dataframe)
     generate_table_question_4(dataframe)
