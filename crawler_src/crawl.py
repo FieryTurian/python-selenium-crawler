@@ -124,30 +124,39 @@ def take_screenshots_consent(params, driver, domain, state):
     print(f"{state} consent screenshot has been taken successfully!")
 
 
-def get_url_requests_times(driver, domain):
-    url = "https://" + domain
-    pageload_start_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
+def check_errors(url):
+    if not url.startswith("http"):
+        url = "https://" + url
+
     try:
         python_requests.get(url, timeout=20)
     except SSLError:
         print("The website gave a TLS error!")
-        return None, None, None, None, True, False, False
+        return "TLS"
     except ConnectTimeout:
         print("The website gave a timeout error!")
-        return None, None, None, None, False, True, False
+        return "Timeout"
     except ConnectionError:
         print("The website has an invalid domain!")
-        return None, None, None, None, False, False, True
+        return "Other"
     except TooManyRedirects:
         pass
 
-    driver.get(url)
+    return None
 
+
+def get_url_requests_times(driver, url):
+    if not url.startswith("http"):
+        url = "https://" + url
+
+    pageload_start_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
+    driver.get(url)
     pageload_end_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
+    
     post_pageload_url = driver.current_url
     requests_url = driver.requests
 
-    return post_pageload_url, requests_url, pageload_start_ts, pageload_end_ts, False, False, False
+    return post_pageload_url, requests_url, pageload_start_ts, pageload_end_ts
 
 
 def get_headers(request):
@@ -194,14 +203,14 @@ def detect_redirections(requests, domain, post_pageload_url):
         if request.response:
             response_headers = request.response.headers
 
-            for key in response_headers.keys():
-                if key == "location":
-                    try:
-                        if get_fld(response_headers[key]) != get_fld(request_url):
-                            redirections.update({get_fld(request_url): get_fld(response_headers[key])})
-                    except TldBadUrl:
-                        print("An invalid URL format was found!")
-                        pass
+            if "location" in response_headers:
+                try:
+                    location = response_headers['location']
+                    if get_fld(location) != get_fld(request_url):
+                        redirections.update({get_fld(request_url): get_fld(location)})
+                except TldBadUrl:
+                    print("An invalid URL format was found!")
+                    pass
 
     return redirections
 
@@ -258,10 +267,9 @@ def get_nr_cookies(request):
     nr_cookies = 0
     request_headers = request.headers
 
-    for key in request_headers.keys():
-        if key == "cookie":
-            cookies = request_headers[key].split("; ")
-            nr_cookies = len(cookies)
+    if "cookie" in request_headers:
+        cookies = request_headers['cookie'].split("; ")
+        nr_cookies = len(cookies)
 
     return nr_cookies
 
@@ -284,9 +292,8 @@ def cookie_parser(cookie):
 
 
 def get_response_cookies(response_headers, cookies):
-    for key in response_headers.keys():
+    for key, cookie in response_headers.items():
         if key == "set-cookie":
-            cookie = response_headers[key]
             cookie_dict = cookie_parser(cookie)
             if cookie_dict.values():
                 cookie_dict.update({"size": len(list(cookie_dict.values())[0])})
@@ -307,10 +314,14 @@ def crawl_url(params, domain, rank):
     chrome_options = set_webdriver_options(params)
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), chrome_options=chrome_options)
 
-    post_pageload_url, requests_url, pageload_start_ts, pageload_end_ts, tls_error, timeout_error, domain_error = \
-        get_url_requests_times(driver, domain)
+    error = check_errors(domain)
 
-    if not tls_error and not timeout_error and not domain_error:
+    url_dict = {"website_domain": domain,
+                "tranco_rank": rank,
+                "crawl_mode": "Mobile" if params["mobile"] else "Desktop"}
+
+    if error is None:
+        post_pageload_url, requests_url, pageload_start_ts, pageload_end_ts = get_url_requests_times(driver, domain)
         time.sleep(3)  # ToDo: Change back to 10 seconds
         # take_screenshots_consent(params, driver, domain, "pre")
         cookies_accepted, status = allow_cookies(driver)
@@ -323,17 +334,14 @@ def crawl_url(params, domain, rank):
         driver.quit()
 
         # Now it is time to process the gathered data:
-        url_dict = {"website_domain": domain,
-                    "tranco_rank": rank,
-                    "crawl_mode": "Mobile" if params["mobile"] else "Desktop",
-                    "pageload_start_ts": pageload_start_ts,
-                    "pageload_end_ts": pageload_end_ts,
-                    "post_pageload_url": post_pageload_url,
-                    "consent_status": status,
-                    "cookies": get_all_cookies(requests_url),
-                    "third_party_domains": get_third_party_domains(domain, requests_url),
-                    "redirect_tracker_pairs": detect_redirections(requests_url, domain, post_pageload_url),
-                    "requests_list": []}
+        url_dict.update({"pageload_start_ts": pageload_start_ts,
+                         "pageload_end_ts": pageload_end_ts,
+                         "post_pageload_url": post_pageload_url,
+                         "consent_status": status,
+                         "cookies": get_all_cookies(requests_url),
+                         "third_party_domains": get_third_party_domains(domain, requests_url),
+                         "redirect_tracker_pairs": detect_redirections(requests_url, domain, post_pageload_url),
+                         "requests_list": []})
 
         for request in requests_url:
             url = request.url
@@ -347,16 +355,19 @@ def crawl_url(params, domain, rank):
                                               response_headers,
                                               "nr_cookies": nr_cookies})
 
-        return url_dict
+    else:
+        url_dict.update({"error": error})
 
-    return {"TLS Error": "The page has returned a TLS Error"} if tls_error \
-        else {"Timeout Error": "The page has returned a Timeout Error"} if timeout_error \
-        else {"Domain Error": "The page has an invalid domain"}
+    return url_dict
+
+    # return {"TLS Error": "The page has returned a TLS Error"} if tls_error \
+    #     else {"Timeout Error": "The page has returned a Timeout Error"} if timeout_error \
+    #     else {"Domain Error": "The page has an invalid domain"}
 
 
 def crawl_list(params, domain_list):
     print("Please wait, we are trying to crawl your entire input list!")
-    for tranco_rank in domain_list.keys():
+    for tranco_rank in domain_list:
         url_dict = crawl_url(params, domain_list[tranco_rank], tranco_rank)
         convert_to_json(params, domain_list[tranco_rank], url_dict)
 
