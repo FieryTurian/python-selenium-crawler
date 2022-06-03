@@ -173,6 +173,38 @@
                   "nr_cookies": 3
             },
             {
+                  "request_url": "https://www.google.com/gen_204?ei=P06aYpCqEOyU9u8P_MyK4AY&vet=10ahUKEwjQxdOj8JH4AhVsiv0HHXymAmwQhJAHCBg..s&gl=NL&pc=SEARCH_HOMEPAGE&isMobile=false",
+                  "timestamp": "03/06/2022 20:09:04.417269",
+                  "request_headers": {
+                        "content-length": "0",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "text/plain;charset=UTF-8",
+                        "accept": "*/*",
+                        "origin": "https://www.google.com",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.google.com/",
+                        "accept-language": "en-GB",
+                        "accept-encoding": "br, gzip, deflate",
+                        "cookie": "CONSENT=PENDING+283; AEC=AakniGPMvZX8YmZh7-WzPDG2_yEGwAwmDdJekPOSMts14AdkNIdmbk5tiA; __Secure-ENID=5.SE=CwI0Va6tPlC4DcTlteG5hU4-mSVruhk8vgG_GoWkEc8shvVGxXeWW8fBwcWXLkdrdQ3AWQjA9_zuYs3egKCbAb5C__ajuSHb39qPpK3YkZfOe6BD2dPLRumkjBS5u2iP4dGiSKm_Aiqkg0ZinORL3G0uMYBJIAwHU-oqUWlVOo8"
+                  },
+                  "response_headers": {
+                        "content-type": "text/html; charset=UTF-8",
+                        "bfcache-opt-in": "unload",
+                        "date": "Fri, 03 Jun 2022 18:09:03 GMT",
+                        "server": "gws",
+                        "content-length": "0",
+                        "x-xss-protection": "0",
+                        "x-frame-options": "SAMEORIGIN",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 3
+            },
+            {
                   "request_url": "https://www.google.com/images/searchbox/desktop_searchbox_sprites318_hr.webp",
                   "timestamp": "03/06/2022 20:09:04.427242",
                   "request_headers": {

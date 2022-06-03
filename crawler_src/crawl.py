@@ -7,10 +7,8 @@ import os
 import time
 import json
 import requests as python_requests
-from requests.exceptions import SSLError, ConnectTimeout, ConnectionError, TooManyRedirects
-
-from tld import get_fld
 import pandas as pd
+from tld import get_fld
 from datetime import datetime
 
 from seleniumwire import webdriver
@@ -18,8 +16,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-from tld.exceptions import TldDomainNotFound,TldBadUrl
 from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException
+from requests.exceptions import SSLError, ConnectTimeout, ConnectionError, TooManyRedirects
+from tld.exceptions import TldDomainNotFound,TldBadUrl
 
 WINDOW_SIZE = "1920x1080"
 
@@ -125,6 +124,18 @@ def take_screenshots_consent(params, driver, domain, state):
 
 
 def check_errors(url):
+    """Check if the webpage at given URL gives any errors
+
+    Parameters
+    ----------
+    url: str
+        The URL being accessed by the webdriver
+
+    Returns
+    ----------
+    str
+        A string specifying the error that has occured, or None otherwise
+    """
     if not url.startswith("http"):
         url = "https://" + url
 
@@ -146,13 +157,34 @@ def check_errors(url):
 
 
 def get_url_requests_times(driver, url):
+    """Retrieve the requests of the webpage found at URL and computing the start and end times of the page load as
+    well as retrieving the URL after redirections
+
+    Parameters
+    ----------
+    driver: seleniumwire.webdriver
+        The webdriver that is used to visit the domain
+    url: str
+        The URL being accessed by the webdriver
+
+    Returns
+    ----------
+    post_pageload_url: str
+        The URL of the webpage after all potential redirections
+    requests_url: selenium.webdriver.requests
+        The requests for the URL being accessed
+    pageload_start_ts: datetime
+        The start time of the page loading process
+    pageload_end_ts: datetime
+        The end time of the page loading process
+    """
     if not url.startswith("http"):
         url = "https://" + url
 
     pageload_start_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
     driver.get(url)
     pageload_end_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
-    
+
     post_pageload_url = driver.current_url
     requests_url = driver.requests
 
@@ -160,6 +192,20 @@ def get_url_requests_times(driver, url):
 
 
 def get_headers(request):
+    """Retrieve the headers of a HTTP request and its response
+
+    Parameters
+    ----------
+    request: seleniumwire.webdriver.requests
+        A specific HTTP request
+
+    Returns
+    -------
+    request_headers: dict
+        A dictionary containing all the headers of the HTTP request
+    response_headers: dict
+        A dictionary containing all the headers of the response for the HTTP request
+    """
     request_headers = request.headers
     response_headers = None
 
@@ -167,6 +213,7 @@ def get_headers(request):
         if len(request_headers[key]) > 512:
             request_headers[key] = request_headers[key][:512]
 
+    # Check whether the request had any response
     if request.response:
         response_headers = request.response.headers
         for key in response_headers.keys():
@@ -177,6 +224,20 @@ def get_headers(request):
 
 
 def get_third_party_domains(domain, requests):
+    """Retrieve a list of all third party domains used by the requests for the given domain
+
+    Parameters
+    ----------
+    domain: str
+        The domain that is visited
+    requests: selenium.webdriver.requests
+        The requests for the domain
+
+    Returns
+    ----------
+    list
+        A list containing all third party domains used by requests
+    """
     first_party_domains = [domain]
     third_party_domains = set()
 
@@ -191,12 +252,30 @@ def get_third_party_domains(domain, requests):
     return list(third_party_domains)
 
 
-def detect_redirections(requests, domain, post_pageload_url):
+def detect_redirections(domain, requests, post_pageload_url):
+    """Detect redirections for a certain domain, in both the address bar and the requests
+
+    Parameters
+    ----------
+    domain: str
+        The domain that is visited
+    requests: selenium.webdriver.requests
+        The requests for the domain
+    post_pageload_url: str
+        The URL of the webpage at domain after all potential redirections
+
+    Returns
+    ----------
+    dict
+        A dictionary containing all redirection pairs
+    """
     redirections = {}
 
+    # Detect address bar redirections
     if domain != get_fld(post_pageload_url):
         redirections.update({domain: get_fld(post_pageload_url)})
 
+    # Detect redirections in the requests
     for request in requests:
         request_url = request.url
 
@@ -216,6 +295,20 @@ def detect_redirections(requests, domain, post_pageload_url):
 
 
 def allow_cookies(driver):
+    """Look for the button for accepting cookies and accepts the cookies, if possible, otherwise logs the error given
+
+    Parameters
+    ----------
+    driver: selenium.webdriver
+        The webdriver that is used to visit the domain
+
+    Returns
+    ----------
+    bool
+        A boolean value specifying whether cookies were accepted or not
+    status: str
+        Specifying the status of accepting cookies
+    """
     status = ""
 
     # We open and read the full datalist of the priv-accept project.
@@ -253,6 +346,20 @@ def allow_cookies(driver):
 
 
 def consent_error_logging(status, domain):
+    """Log the errors for accepting the cookies of a certain domain webpage
+
+    Parameters
+    ----------
+    status: str
+        Specifying the status of accepting cookies
+    domain: str
+        The domain that is visited
+
+    Returns
+    ----------
+    str
+        A log message specifying the status of accepting the cookies
+    """
     if status == "clicked":
         logging = f"The cookies for {domain} are accepted!"
     elif status == "not_found":
@@ -264,6 +371,18 @@ def consent_error_logging(status, domain):
 
 
 def get_nr_cookies(request):
+    """Count the number of cookies being sent with a request
+
+    Parameters
+    ----------
+    request: selenium.webdriver.requests
+        A specific HTTP request
+
+    Returns
+    ----------
+    int
+        The number of cookies sent by the request
+    """
     nr_cookies = 0
     request_headers = request.headers
 
@@ -275,6 +394,18 @@ def get_nr_cookies(request):
 
 
 def cookie_parser(cookie):
+    """Parse a cookie string and create a dictionary with information regarding the cookie settings and value
+
+    Parameters
+    ----------
+    cookie: str
+        A specific cookie string
+
+    Returns
+    ----------
+    dict
+        A dictionary containing various information given in the cookie string
+    """
     # https://stackoverflow.com/questions/21522586/python-convert-set-cookies-response-to-dict-of-cookies
     cookie_dict = {}
 
@@ -288,12 +419,23 @@ def cookie_parser(cookie):
             continue
         name, value = item.split('=', 1)
         cookie_dict[name] = value
+
     return cookie_dict
 
 
 def get_response_cookies(response_headers, cookies):
+    """Retrieve the cookies being set by a certain response
+
+    Parameters
+    ----------
+    response_headers: selenium.webdriver.requests.response.headers
+        The headers of a response for a HTTP request
+    cookies: list
+        A list containing all the cookies being set by responses
+    """
     for key, cookie in response_headers.items():
         if key == "set-cookie":
+            cookie = response_headers[key]
             cookie_dict = cookie_parser(cookie)
             if cookie_dict.values():
                 cookie_dict.update({"size": len(list(cookie_dict.values())[0])})
@@ -301,16 +443,46 @@ def get_response_cookies(response_headers, cookies):
 
 
 def get_all_cookies(requests):
+    """Retrieve all the cookies being set by the responses of all HTTP requests for a specific domain
+
+    Parameters
+    ----------
+    requests: selenium.webdriver.requests
+        The requests for a specific domain
+
+    Returns
+    ----------
+    dict
+        A dictionary containing all the unique cookies set by responses
+    """
     cookies = []
 
     for request in requests:
         if request.response:
             get_response_cookies(request.response.headers, cookies)
 
+    # Remove the duplicates
     return [dict(t) for t in {tuple(dictionary.items()) for dictionary in cookies}]
 
 
 def crawl_url(params, domain, rank):
+    """Access a webpage, take screenshots, accept cookies and create a dictionary
+    containing various information about the webpage visit
+
+    Parameters
+    ----------
+    params: dict
+        A dictionary with the values for all command line arguments
+    domain: str
+        The domain that is visited
+    rank: int
+        The tranco rank of the domain that is being visited
+
+    Returns
+    ----------
+    dict
+        A dictionary containing various information retrieved from the URL being accessed by the webdriver
+    """
     chrome_options = set_webdriver_options(params)
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), chrome_options=chrome_options)
 
@@ -360,12 +532,17 @@ def crawl_url(params, domain, rank):
 
     return url_dict
 
-    # return {"TLS Error": "The page has returned a TLS Error"} if tls_error \
-    #     else {"Timeout Error": "The page has returned a Timeout Error"} if timeout_error \
-    #     else {"Domain Error": "The page has an invalid domain"}
-
 
 def crawl_list(params, domain_list):
+    """Crawl all the domains in the list and create a JSON file per domain
+
+    Parameters
+    ----------
+    params: dict
+        A dictionary with the values for all command line arguments
+    domain_list: lst
+        A list of domains to be crawled
+    """
     print("Please wait, we are trying to crawl your entire input list!")
     for tranco_rank in domain_list:
         url_dict = crawl_url(params, domain_list[tranco_rank], tranco_rank)
@@ -373,6 +550,17 @@ def crawl_list(params, domain_list):
 
 
 def convert_to_json(params, domain, url_dict):
+    """Create a JSON for a specific domain using the dictionary created by the crawl
+
+    Parameters
+    ----------
+    params: dict
+        A dictionary with the values for all command line arguments
+    domain: str
+        The domain that is visited
+    url_dict: dict
+         A dictionary containing various information retrieved from the URL being accessed by the webdriver
+    """
     if params["mobile"]:
         out_file = open(f"../crawl_data/{domain}_mobile.json", "w")
     else:
@@ -382,6 +570,8 @@ def convert_to_json(params, domain, url_dict):
 
 
 def main():
+    """ Parse arguments and decide whether we crawl a list of domains or a single domain
+    """
     args = parse_arguments()
     if args["input"]:
         tranco_domains = read_tranco_top_500(args["input"])
