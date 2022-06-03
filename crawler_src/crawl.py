@@ -169,9 +169,9 @@ def get_url_requests_times(driver, url):
 
     Returns
     ----------
-    post_pageload_url: str
+    post_pageload_url: seleniumwire.webdriver.current_url
         The URL of the webpage after all potential redirections
-    requests_url: selenium.webdriver.requests
+    requests_url: seleniumwire.webdriver.requests
         The requests for the URL being accessed
     pageload_start_ts: datetime
         The start time of the page loading process
@@ -230,7 +230,7 @@ def get_third_party_domains(domain, requests):
     ----------
     domain: str
         The domain that is visited
-    requests: selenium.webdriver.requests
+    requests: seleniumwire.webdriver.requests
         The requests for the domain
 
     Returns
@@ -259,9 +259,9 @@ def detect_redirections(domain, requests, post_pageload_url):
     ----------
     domain: str
         The domain that is visited
-    requests: selenium.webdriver.requests
+    requests: seleniumwire.webdriver.requests
         The requests for the domain
-    post_pageload_url: str
+    post_pageload_url: seleniumwire.webdriver.current_url
         The URL of the webpage at domain after all potential redirections
 
     Returns
@@ -299,7 +299,7 @@ def allow_cookies(driver):
 
     Parameters
     ----------
-    driver: selenium.webdriver
+    driver: seleniumwire.webdriver
         The webdriver that is used to visit the domain
 
     Returns
@@ -375,7 +375,7 @@ def get_nr_cookies(request):
 
     Parameters
     ----------
-    request: selenium.webdriver.requests
+    request: seleniumwire.webdriver.requests
         A specific HTTP request
 
     Returns
