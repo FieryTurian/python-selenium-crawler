@@ -17,6 +17,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
+from operator import itemgetter
 
 
 def read_blocklist():
@@ -324,7 +325,7 @@ def generate_entry_table_question_3(dataframe, header):
 
     Returns
     -------
-    string
+    entry: string
         A string that holds the precise entry text that will be added in the table
     """
     # Sort the CSV data by crawl_mode and then by the value of the provided header
@@ -582,9 +583,111 @@ def generate_table_question_9():
     file.close()
 
 
-def find_cookies_longest_lifespans(dataframe, mode):
-    cookies_list = dataframe.loc[dataframe["crawl_mode"] == mode, "cookies"]
-    print(cookies_list)
+def find_cookies_longest_lifespans(dataframe, mode, number):
+    """Find the three cookies with the longest lifespans
+
+    Parameters
+    ----------
+    dataframe: pandas.core.series.Series
+        A Pandas dataframe with all the data in the CSV file
+    mode: string
+        A string that holds the crawl-mode to use: either desktop or mobile
+    number: int
+        An integer holding the value of whether we want the first, second or third cookie regarding the lifespans
+
+    Returns
+    -------
+    longest_lifespans_cookies: dict
+        A dictionary holding the three cookies with the longest lifespans
+    longest_lifespans[number][1]: string
+        A string holding the information whether the maximal life span was in the Max-Age or Expires column
+    """
+    # reset_index(drop=True) resets the indices from 0 to the length of the number of entries in the
+    # dataframe that correspond to the right crawl mode
+    cookies_list = dataframe.loc[dataframe["crawl_mode"] == mode, "cookies"].reset_index(drop=True)
+    lifespans = []
+
+    for i, entry_with_cookie_dicts in enumerate(cookies_list):
+        if entry_with_cookie_dicts:
+            for j, cookie_dict in enumerate(entry_with_cookie_dicts):
+                max_age = cookie_dict.get("Max-Age")
+                expiry = cookie_dict.get("Expires")
+                # max_age overrides the expires field: https://www.rfc-editor.org/rfc/rfc7234#section-5.3
+                if max_age:
+                    lifespans.append([float(max_age), "max-age", i, j])
+                elif expiry:
+                    # Change the dates to in how many seconds they will expire
+                    expiry = datetime.strptime(expiry.replace("-", " "), '%a, %d %b %Y %H:%M:%S %Z')
+                    current_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                    current_time = datetime.strptime(current_time_str, '%Y-%m-%d %H:%M:%S')
+                    expiry_age = (expiry - current_time).total_seconds()
+                    lifespans.append([expiry_age, "expires", i, j])
+
+    # Sort the list of lists on the first argument of the inner list
+    longest_lifespans = sorted(lifespans, key=itemgetter(0), reverse=True)[:3]
+    longest_lifespans_cookies = cookies_list[longest_lifespans[number][2]][longest_lifespans[number][3]]
+
+    return longest_lifespans_cookies, longest_lifespans[number][1]
+
+
+def replace_dict_value(dictionary, key, value):
+    """Replace possible None values to self-defined values
+
+    Parameters
+    ----------
+    dictionary: dict
+        A dictionary holding the three cookies with the longest lifespans
+    key: string
+        The key we want to use in the get-function in order to get the belonging value
+    value: string
+        If the get-function returns None, we want to have "value" instead
+
+    Returns
+    -------
+    official_value: string
+        Either the value that returned from the get-function or the value given as parameter
+    """
+    dictionary_output = dictionary.get(key)
+
+    if dictionary_output:
+        official_value = dictionary_output
+    else:
+        official_value = value
+
+    return official_value
+
+
+def generate_entry_table_question_10(longest_lifespans_cookies, column):
+    """Generate a header specific entry for the table about the cookies with the longest lifespan
+
+    Parameters
+    ----------
+    longest_lifespans_cookies: dict
+        A dictionary holding the three cookies with the longest lifespans
+    column: string
+        A string holding the information whether the maximal life span was in the Max-Age or Expires column
+
+    Returns
+    -------
+    entry: string
+        A string that holds the precise entry text that will be added in the table
+    """
+    # First cast the dictionary keys to lowercase and then build up the table entry
+    cookie_dict = {k.lower(): v for k, v in longest_lifespans_cookies.items()}
+    name = list(longest_lifespans_cookies.keys())[0]
+    value = cookie_dict.get(name.lower())
+    domain = replace_dict_value(cookie_dict, "domain", "-")
+    path = replace_dict_value(cookie_dict, "path", "-")
+    expiry = cookie_dict.get(column)
+    size = len(value)
+    httponly = replace_dict_value(cookie_dict, "httponly", "False")
+    secure = replace_dict_value(cookie_dict, "secure", "False")
+    samesite = cookie_dict.get("samesite")
+
+    entry = "%s & %s & %s & %s & %s & %s & %s & %s & %s \\\\ \hline \n" % (name, value, domain, path, expiry, size,
+                                                                        httponly, secure, samesite)
+
+    return entry
 
 
 def generate_table_question_10(dataframe, mode):
@@ -598,13 +701,13 @@ def generate_table_question_10(dataframe, mode):
         The crawl mode for which the table needs to be generated
     """
     # Remove the file if it is already existing
-    if os.path.isfile(f"data/table_question_10_{mode}.tex"):
-        os.remove(f"data/table_question_10_{mode}.tex")
+    if os.path.isfile(f"data/table_question_10_{mode.lower()}.tex"):
+        os.remove(f"data/table_question_10_{mode.lower()}.tex")
 
     # Open the file and write to it
-    file = open(f"data/table_question_10_{mode}.tex", 'a')
+    file = open(f"data/table_question_10_{mode.lower()}.tex", 'a')
     file.write("\\begin{table}[!htbp] \n")
-    file.write("\caption{Three cookies with the longest lifespan in the %s crawl.} \n" % (mode))
+    file.write("\caption{Three cookies with the longest lifespan in the %s crawl.} \n" % mode)
     file.write("\centering \n")
     file.write("\\resizebox{\\textwidth}{!}{\\begin{tabular}{|l|l|l|l|l|l|l|l|l|} \n")
     file.write("\hline\\rowcolor{lightgray} \n")
@@ -612,11 +715,10 @@ def generate_table_question_10(dataframe, mode):
         "\\textbf{Name} & \\textbf{Value} & \\textbf{Domain} & \\textbf{Path} & \\textbf{Expires / Max-Age} & " +
         "\\textbf{Size} & \\textbf{HttpOnly} & \\textbf{Secure} & \\textbf{SameSite} \\\\ \hline \n")
 
-    # ToDo
-    find_cookies_longest_lifespans(dataframe, mode)
-
+    # Write the data for the three cookies with the longest expiry
     for i in range(3):
-        entry = "entry \n"
+        longest_lifespans_cookies, column = find_cookies_longest_lifespans(dataframe, mode, i)
+        entry = generate_entry_table_question_10(longest_lifespans_cookies, column)
         file.write(entry)
 
     file.write("\end{tabular}} \n")
