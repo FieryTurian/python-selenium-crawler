@@ -82,7 +82,7 @@ def calculate_page_load_time(start_time, end_time):
 
     Returns
     -------
-    page_load_time: float
+    float
         The page load time in seconds
     """
     page_load_start = datetime.strptime(start_time, '%d/%m/%Y %H:%M:%S.%f')
@@ -172,7 +172,7 @@ def preprocess_data():
 
     Returns
     -------
-    dataframe: pandas.core.series.Series
+    pandas.core.series.Series
         A Pandas dataframe with all the data in the CSV file
     """
     headers = ["website_domain", "tranco_rank", "crawl_mode", "pageload_start_ts", "pageload_end_ts", "page_load_time",
@@ -325,7 +325,7 @@ def generate_entry_table_question_3(dataframe, header):
 
     Returns
     -------
-    entry: string
+    string
         A string that holds the precise entry text that will be added in the table
     """
     # Sort the CSV data by crawl_mode and then by the value of the provided header
@@ -608,7 +608,7 @@ def generate_entry_table_question_9(dataframe, mode):
 
     Returns
     -------
-    entry: string
+    string
         A string that holds the precise entry text that will be added in the table
     """
     request_hostname, website, most_number_of_cookies = find_request_with_most_cookies(dataframe, mode)
@@ -722,7 +722,7 @@ def replace_dict_value(dictionary, key, value):
 
     Returns
     -------
-    official_value: string
+    string
         Either the value that returned from the get-function or the value given as parameter
     """
     dictionary_output = dictionary.get(key)
@@ -747,7 +747,7 @@ def generate_entry_table_question_10(longest_lifespans_cookies, column):
 
     Returns
     -------
-    entry: string
+    string
         A string that holds the precise entry text that will be added in the table
     """
     # First cast the dictionary keys to lowercase and then build up the table entry
