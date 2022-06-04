@@ -8,6 +8,7 @@ from collections import Counter
 from colors import *
 import csv
 import glob
+from itertools import chain
 import json
 import os
 import re
@@ -46,7 +47,7 @@ def read_blocklist():
 
 
 def extract_tracker_domains_entities(third_party_domains, blocklist, blocklist_domains):
-    """Extract tracker domains and their corresponding entity name from a list of third-party domain_list
+    """Extract tracker domains and their corresponding entity name from a list of third-party domains
         using a blocklist
 
     Parameters
@@ -55,7 +56,7 @@ def extract_tracker_domains_entities(third_party_domains, blocklist, blocklist_d
         A set with all distinct third-party domains for a request
     blocklist: dict
         A dictionary with the domains and their corresponding entity names from the blocklist
-    blocklist_domains: dict_keys
+    blocklist_domains: set
         A list of domains that are present in the blocklist
 
     Returns
@@ -65,7 +66,7 @@ def extract_tracker_domains_entities(third_party_domains, blocklist, blocklist_d
     tracker_entities: set
         A set of all (distinct) tracker entities for a request
     """
-    tracker_domains = set(blocklist_domains).intersection(third_party_domains)
+    tracker_domains = blocklist_domains.intersection(third_party_domains)
     tracker_entities = {blocklist[domain] for domain in tracker_domains}
     return tracker_domains, tracker_entities
 
@@ -101,7 +102,7 @@ def write_data_to_dataframe(headers, blocklist, blocklist_domains):
         A list with the values for the headers of the data in the JSON files
     blocklist: dict
         A dictionary with domains of trackers as key and the corresponding entity name as the value
-    blocklist_domains: dict_keys
+    blocklist_domains: set
         A list of domains that are in the blocklist
 
     Returns
@@ -147,7 +148,7 @@ def write_data_to_dataframe(headers, blocklist, blocklist_domains):
                                  len(tracker_domains),
                                  list(tracker_entities),
                                  len(tracker_entities),
-                                 json_file['redirect_tracker_pairs']])
+                                 json_file['redirect_pairs']])
             except KeyError:
                 print(f"Skipping {file} because of bad formatting.")
 
@@ -173,11 +174,11 @@ def preprocess_data():
                "requests_list", "nr_requests", "tracker_domains", "nr_tracker_domains", "tracker_entities",
                "nr_tracker_entities", "redirection_pairs"]
     blocklist = read_blocklist()
-    blocklist_domains = blocklist.keys()
+    blocklist_domains = set(blocklist.keys())
 
     dataframe, err_dataframe = write_data_to_dataframe(headers, blocklist, blocklist_domains)
 
-    return dataframe, err_dataframe
+    return dataframe, err_dataframe, blocklist_domains
 
 
 def generate_entry_table_question_1(header):
@@ -437,7 +438,7 @@ def prevalence(dataframe, mode, target):
     # Collect all items belonging to the target group for the (desktop or mobile) crawl
     third_parties = dataframe.loc[dataframe["crawl_mode"] == mode, target]
     # Turn the pandas series into a list and flatten it
-    third_parties_list = sum(third_parties.tolist(), [])
+    third_parties_list = list(chain.from_iterable(third_parties))
     # Use Python Counter to return the count of every element in the list
     counter_third_parties = Counter(third_parties_list)
 
@@ -836,13 +837,43 @@ def generate_table_question_10(dataframe, mode):
     file.close()
 
 
-def generate_table_question_11(crawl_mode):
+def top_ten_tracker_redirection_pairs(dataframe, mode, tracker_domains):
+    """Generate a list holding the ten most prevalent cross-domain HTTP redirection pairs for the `mode` crawl
+
+    Parameters
+    ----------
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
+    mode: str
+        The crawl mode for which the list needs to be generated
+    tracker_domains: set
+        A set of all (distinct) tracker domains in the blocklist
+
+    Returns:
+    --------
+    list
+        A list with the top ten prevalent cross-domain HTTP redirection pairs
+    """
+    # Filter the redirection pairs for the crawl mode
+    pairs = dataframe.loc[dataframe["crawl_mode"] == mode, "redirection_pairs"]
+    # Get all tuples of redirection pairs into a list of tuples
+    pairs_tuples = [tuple(i) for i in list(chain.from_iterable(pairs))]
+    # Filter the redirection pairs that involve a tracker domain and get the top ten most prevalent pairs
+    tracker_pairs = [p for p in pairs_tuples if p[0] in tracker_domains or p[1] in tracker_domains]
+    top_ten_pairs = Counter(tracker_pairs).most_common(10)
+
+    return top_ten_pairs
+
+
+def generate_table_question_11(crawl_mode, top_ten_redirection_pairs):
     """Generate a LaTeX table holding the ten most prevalent cross-domain HTTP redirection pairs for the `crawl_mode` crawl
 
     Parameters
     ----------
     crawl_mode: str
         The crawl mode for which the table needs to be generated
+    top_ten_redirection_pairs: list
+        A list with the top ten prevalent cross-domain HTTP redirection pairs
     """
     # Remove the file if it is already existing
     if os.path.isfile(f"data/table_question_11_{crawl_mode}.tex"):
@@ -858,7 +889,11 @@ def generate_table_question_11(crawl_mode):
     file.write(
         "& \\textbf{Source hostname} & \\textbf{Target hostname} & \\textbf{Number of distinct websites \\\\ \hline \n")
 
-    # ToDo
+    # Write the data of the top ten redirection pairs for both mobile and desktop to the table
+    for i in range(10):
+        entry = ("\\textbf{%d} & %s & %s & " % (i + 1, top_ten_redirection_pairs[i][0][0], top_ten_redirection_pairs[i][0][1]) +
+                 "\multicolumn{1}{r|}{%d} \\\\ \hline \n" % (top_ten_redirection_pairs[i][1]))
+        file.write(entry)
 
     file.write("\end{tabular} \n")
     file.write("\label{tab:redirections%s} \n" % (crawl_mode))
@@ -868,22 +903,40 @@ def generate_table_question_11(crawl_mode):
     file.close()
 
 
+def generate_tables_question_11(dataframe, tracker_domains):
+    """Generate a LaTeX table holding the ten most prevalent third-party domains for each crawl
+
+    Parameters
+    ----------
+    dataframe: pandas.core.frame.DataFrame
+        A Pandas dataframe with all the data that needs to be analysed
+    tracker_domains: set
+        A set of all (distinct) tracker domains in the blocklist
+    """
+    top_ten_desktop = top_ten_tracker_redirection_pairs(dataframe, "Desktop", tracker_domains)
+    top_ten_mobile = top_ten_tracker_redirection_pairs(dataframe, "Mobile", tracker_domains)
+
+    generate_table_question_11("Desktop", top_ten_desktop)
+    generate_table_question_11("Mobile", top_ten_mobile)
+
+
 def main():
     # We first preprocess the data and turn it into a Pandas dataframe
-    dataframe, err_dataframe = preprocess_data()
+    dataframe, err_dataframe, tracker_domains = preprocess_data()
 
     # Generate answers for all the questions in the assignment
     generate_table_question_1(dataframe, err_dataframe)
-    # generate_box_plots_question_2(dataframe)
-    # generate_table_question_3(dataframe)
-    # generate_table_question_4(dataframe)
-    # generate_table_question_5(dataframe)
-    # generate_table_question_6(dataframe)
-    # generate_scatter_plots_question_7(dataframe)
-    # generate_scatter_plots_question_8(dataframe)
-    # generate_table_question_9(dataframe)
-    # generate_table_question_10(dataframe, "Desktop")
-    # generate_table_question_10(dataframe, "Mobile")
+    generate_box_plots_question_2(dataframe)
+    generate_table_question_3(dataframe)
+    generate_table_question_4(dataframe)
+    generate_table_question_5(dataframe)
+    generate_table_question_6(dataframe)
+    generate_scatter_plots_question_7(dataframe)
+    generate_scatter_plots_question_8(dataframe)
+    generate_table_question_9(dataframe)
+    generate_table_question_10(dataframe, "Desktop")
+    generate_table_question_10(dataframe, "Mobile")
+    generate_tables_question_11(dataframe, tracker_domains)
 
 
 if __name__ == '__main__':

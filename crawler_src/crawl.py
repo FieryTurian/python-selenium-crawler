@@ -591,7 +591,7 @@ def crawl_url(params, domain, rank):
                              "consent_status": status,
                              "cookies": get_all_cookies(requests_url),
                              "third_party_domains": get_third_party_domains(domain, requests_url),
-                             "redirect_tracker_pairs": detect_redirections(domain, requests_url, post_pageload_url),
+                             "redirect_pairs": detect_redirections(domain, requests_url, post_pageload_url),
                              "requests_list": requests_list})
         else:
             url_dict.update({"error": "Timeout"})
