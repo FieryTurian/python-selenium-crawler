@@ -303,10 +303,11 @@ def search_element_using_xpath(driver, accept_word):
     # noinspection PyBroadException
     try:
         allow_all_cookies = driver.find_elements(
-        # Long and complicated XPATH. Searches case-insensitive for an accept word in Button values or Text.
-            By.XPATH, "//*[normalize-space(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
+            # Long and complicated XPATH. Searches case-insensitive for an accept word in Button values or Text.
+            By.XPATH, "//*[(normalize-space(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
                       "'abcdefghijklmnopqrstuvwxyz')) = \"" + accept_word + "\" or translate(@value, "
-                      "'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = \"" + accept_word + "\"]"
+                      "'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = \"" + accept_word + "\")"
+                      "and not(self::span)]"
         )
         return allow_all_cookies
     except Exception:
