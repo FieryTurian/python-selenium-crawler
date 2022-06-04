@@ -16,7 +16,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException
+from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException, \
+    NoSuchFrameException
 from requests.exceptions import SSLError, ConnectTimeout, ConnectionError, TooManyRedirects
 from tld.exceptions import TldDomainNotFound,TldBadUrl
 
@@ -294,6 +295,59 @@ def detect_redirections(domain, requests, post_pageload_url):
     return redirections
 
 
+def search_element_using_xpath(driver, accept_word):
+    # noinspection PyBroadException
+    try:
+        allow_all_cookies = driver.find_elements(
+        # Long and complicated XPATH. Searches case-insensitive for an accept word in Button values or Text.
+            By.XPATH, "//*[normalize-space(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
+                      "'abcdefghijklmnopqrstuvwxyz')) = \"" + accept_word + "\" or translate(@value, "
+                      "'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = \"" + accept_word + "\"]"
+        )
+        return allow_all_cookies
+    except Exception:
+        return None
+
+
+def try_clicking_element(element):
+    if element and element.is_displayed():
+        try:
+            element.click()
+            status = "clicked"
+            return True, status
+        except (ElementClickInterceptedException, ElementNotInteractableException):
+            status = "errored"
+            return False, status
+    else:
+        status = "not_found"
+        return False, status
+
+
+def search_and_click_iframes(driver, status, accept_word):
+    list_of_iframes = driver.find_elements(By.TAG_NAME, "iframe")
+
+    for frame in list_of_iframes:
+        try:
+            driver.switch_to.frame(frame)
+        except NoSuchFrameException:
+            pass
+
+        allow_all_cookies = search_element_using_xpath(driver, accept_word)
+
+        if allow_all_cookies:
+            for element in allow_all_cookies:
+                bool_val, status = try_clicking_element(element)
+                if bool_val:
+                    return True, status
+            if status == "errored":
+                break
+        else:
+            status = "not_found"
+
+        driver.switch_to.default_content()
+    return False, status
+
+
 def allow_cookies(driver):
     """Look for the button for accepting cookies and accepts the cookies, if possible, otherwise logs the error given
 
@@ -315,32 +369,24 @@ def allow_cookies(driver):
     with open("accept_words.txt", encoding="utf8") as acceptwords_file:
         accept_words = acceptwords_file.read().splitlines()
 
-    # Initialise the allow_all_cookies variable to None. If we are able to find an element using one of the words in
-    # the list, it becomes something and the code breaks out of the loop. It then clicks on this found element.
-    allow_all_cookies = None
     for accept_word in accept_words:
         # print("Checking: " + accept_word)  # TODO: Remove this print. It's just here now for testing purposes.
-        # noinspection PyBroadException
-        try:
-            allow_all_cookies = driver.find_element(
-                    # Long and complicated XPATH. Searches case-insensitive for an accept word in Button values or Text.
-                    By.XPATH, "//*[normalize-space(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
-                               "'abcdefghijklmnopqrstuvwxyz')) = \"" + accept_word + "\" or translate(@value, "
-                               "'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = \"" + accept_word + "\"]"
-            )
-        except Exception:
-            pass
 
-        if allow_all_cookies and allow_all_cookies.is_displayed():
-            try:
-                allow_all_cookies.click()
-                status = "clicked"
-                return True, status
-            except (ElementClickInterceptedException, ElementNotInteractableException):
-                status = "errored"
-                break
+        accepted_via_iframe, status = search_and_click_iframes(driver, status, accept_word)
+        if accepted_via_iframe:
+            return accepted_via_iframe, status
         else:
-            status = "not_found"
+            allow_all_cookies = search_element_using_xpath(driver, accept_word)
+
+            if allow_all_cookies:
+                for element in allow_all_cookies:
+                    bool_val, status = try_clicking_element(element)
+                    if bool_val:
+                        return True, status
+                if status == "errored":
+                    break
+            else:
+                status = "not_found"
 
     return False, status
 
