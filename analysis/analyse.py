@@ -926,7 +926,6 @@ def main():
 
     # Generate answers for all the questions in the assignment
     generate_table_question_1(dataframe, err_dataframe)
-<<<<<<< HEAD
     generate_box_plots_question_2(dataframe)
     generate_table_question_3(dataframe)
     generate_table_question_4(dataframe)
@@ -938,18 +937,6 @@ def main():
     generate_table_question_10(dataframe, "Desktop")
     generate_table_question_10(dataframe, "Mobile")
     generate_tables_question_11(dataframe, tracker_domains)
-=======
-    # generate_box_plots_question_2(dataframe)
-    # generate_table_question_3(dataframe)
-    # generate_table_question_4(dataframe)
-    # generate_table_question_5(dataframe)
-    # generate_table_question_6(dataframe)
-    # generate_scatter_plots_question_7(dataframe)
-    # generate_scatter_plots_question_8(dataframe)
-    # generate_table_question_9(dataframe)
-    # generate_table_question_10(dataframe, "Desktop")
-    # generate_table_question_10(dataframe, "Mobile")
->>>>>>> dd6161d75462033be4805020e434de67925bf9ca
 
 
 if __name__ == '__main__':
