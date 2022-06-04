@@ -216,7 +216,7 @@ def generate_table_question_1(dataframe, err_dataframe):
     """
     # # A list of tuples holding the error and text that should appear in the table for that error
     headers = [("error", "Timeout", "Page load timeout", err_dataframe), ("error", "TLS", "TLS error", err_dataframe),
-               ("consent_status", "consent_status", "Consent click error", dataframe)]
+               ("consent_status", "errored", "Consent click error", dataframe)]
 
     # Remove the file if it is already existing
     if os.path.isfile("data/table_question_1.tex"):
@@ -926,6 +926,7 @@ def main():
 
     # Generate answers for all the questions in the assignment
     generate_table_question_1(dataframe, err_dataframe)
+<<<<<<< HEAD
     generate_box_plots_question_2(dataframe)
     generate_table_question_3(dataframe)
     generate_table_question_4(dataframe)
@@ -937,6 +938,18 @@ def main():
     generate_table_question_10(dataframe, "Desktop")
     generate_table_question_10(dataframe, "Mobile")
     generate_tables_question_11(dataframe, tracker_domains)
+=======
+    # generate_box_plots_question_2(dataframe)
+    # generate_table_question_3(dataframe)
+    # generate_table_question_4(dataframe)
+    # generate_table_question_5(dataframe)
+    # generate_table_question_6(dataframe)
+    # generate_scatter_plots_question_7(dataframe)
+    # generate_scatter_plots_question_8(dataframe)
+    # generate_table_question_9(dataframe)
+    # generate_table_question_10(dataframe, "Desktop")
+    # generate_table_question_10(dataframe, "Mobile")
+>>>>>>> dd6161d75462033be4805020e434de67925bf9ca
 
 
 if __name__ == '__main__':
