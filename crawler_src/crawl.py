@@ -18,7 +18,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException, \
     NoSuchFrameException, TimeoutException
-from requests.exceptions import SSLError, ConnectTimeout, ConnectionError, TooManyRedirects
+from requests.exceptions import SSLError, Timeout, ConnectionError, TooManyRedirects
 from tld.exceptions import TldDomainNotFound,TldBadUrl
 
 WINDOW_SIZE = "1920x1080"
@@ -145,7 +145,7 @@ def check_errors(url):
     except SSLError:
         print("The website gave a TLS error!")
         return "TLS"
-    except ConnectTimeout:
+    except Timeout:
         print("The website gave a timeout error!")
         return "Timeout"
     except ConnectionError:
