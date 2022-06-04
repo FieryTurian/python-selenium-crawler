@@ -3,6 +3,7 @@ akkoord
 i agree!
 accepteer cookies
 got it!
+got it !
 cookies accepteren
 alle cookies accepteren
 alles accepteren
@@ -11,6 +12,7 @@ accept all analytics cookies
 accept all & visit the site
 accept additional cookies
 alle cookies toestaan
+agree and proceed with standard settings
 allow
 allow all
 allow all cookies
