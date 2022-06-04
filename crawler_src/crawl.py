@@ -271,14 +271,14 @@ def detect_redirections(domain, requests, post_pageload_url):
 
     Returns
     ----------
-    dict
+    list
         A dictionary containing all redirection pairs
     """
-    redirections = {}
+    redirections = []
 
     # Detect address bar redirections
     if domain != get_fld(post_pageload_url):
-        redirections.update({domain: get_fld(post_pageload_url)})
+        redirections.append((domain, get_fld(post_pageload_url)))
 
     # Detect redirections in the requests
     for request in requests:
@@ -291,7 +291,7 @@ def detect_redirections(domain, requests, post_pageload_url):
                 try:
                     location = response_headers['location']
                     if get_fld(location) != get_fld(request_url):
-                        redirections.update({get_fld(request_url): get_fld(location)})
+                        redirections.append((get_fld(request_url), get_fld(location)))
                 except TldBadUrl:
                     print("An invalid URL format was found!")
                     pass
