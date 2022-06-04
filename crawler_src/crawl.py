@@ -572,13 +572,13 @@ def crawl_url(params, domain, rank):
     if error is None:
         post_pageload_url, requests_url, pageload_start_ts, pageload_end_ts = get_url_requests_times(driver, domain)
         if post_pageload_url:
-            time.sleep(3)  # ToDo: Change back to 10 seconds
+            time.sleep(10)  # ToDo: Change back to 10 seconds
             # take_screenshots_consent(params, driver, domain, "pre")
             cookies_accepted, status = allow_cookies(driver)
             print(consent_error_logging(status, domain))
 
             if cookies_accepted:
-                time.sleep(3)  # ToDo: Change to 10 seconds
+                time.sleep(10)  # ToDo: Change to 10 seconds
                 # take_screenshots_consent(params, driver, domain, "post")
 
             driver.quit()
