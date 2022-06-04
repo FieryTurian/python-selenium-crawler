@@ -17,7 +17,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
 from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException, \
-    NoSuchFrameException
+    NoSuchFrameException, TimeoutException
 from requests.exceptions import SSLError, ConnectTimeout, ConnectionError, TooManyRedirects
 from tld.exceptions import TldDomainNotFound,TldBadUrl
 
@@ -183,7 +183,11 @@ def get_url_requests_times(driver, url):
         url = "https://" + url
 
     pageload_start_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
-    driver.get(url)
+    try:
+        driver.get(url)
+    except TimeoutException:
+        print("Could not properly load the website!")
+        return None, None, pageload_start_ts, 0
     pageload_end_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
 
     post_pageload_url = driver.current_url
@@ -540,39 +544,41 @@ def crawl_url(params, domain, rank):
 
     if error is None:
         post_pageload_url, requests_url, pageload_start_ts, pageload_end_ts = get_url_requests_times(driver, domain)
-        time.sleep(3)  # ToDo: Change back to 10 seconds
-        # take_screenshots_consent(params, driver, domain, "pre")
-        cookies_accepted, status = allow_cookies(driver)
-        print(consent_error_logging(status, domain))
+        if post_pageload_url:
+            time.sleep(3)  # ToDo: Change back to 10 seconds
+            # take_screenshots_consent(params, driver, domain, "pre")
+            cookies_accepted, status = allow_cookies(driver)
+            print(consent_error_logging(status, domain))
 
-        if cookies_accepted:
-            time.sleep(3)  # ToDo: Change to 10 seconds
-            # take_screenshots_consent(params, driver, domain, "post")
+            if cookies_accepted:
+                time.sleep(3)  # ToDo: Change to 10 seconds
+                # take_screenshots_consent(params, driver, domain, "post")
 
-        driver.quit()
+            driver.quit()
 
-        # Now it is time to process the gathered data:
-        url_dict.update({"pageload_start_ts": pageload_start_ts,
-                         "pageload_end_ts": pageload_end_ts,
-                         "post_pageload_url": post_pageload_url,
-                         "consent_status": status,
-                         "cookies": get_all_cookies(requests_url),
-                         "third_party_domains": get_third_party_domains(domain, requests_url),
-                         "redirect_tracker_pairs": detect_redirections(domain, requests_url, post_pageload_url),
-                         "requests_list": []})
+            # Now it is time to process the gathered data:
+            url_dict.update({"pageload_start_ts": pageload_start_ts,
+                             "pageload_end_ts": pageload_end_ts,
+                             "post_pageload_url": post_pageload_url,
+                             "consent_status": status,
+                             "cookies": get_all_cookies(requests_url),
+                             "third_party_domains": get_third_party_domains(domain, requests_url),
+                             "redirect_tracker_pairs": detect_redirections(domain, requests_url, post_pageload_url),
+                             "requests_list": []})
 
-        for request in requests_url:
-            url = request.url
-            timestamp = request.date
-            request_headers, response_headers = get_headers(request)
-            nr_cookies = get_nr_cookies(request)
-            url_dict["requests_list"].append({"request_url": url,
-                                              "timestamp": timestamp.strftime("%d/%m/%Y %H:%M:%S.%f"),
-                                              "request_headers": dict(request_headers),
-                                              "response_headers": dict(response_headers) if response_headers else
-                                              response_headers,
-                                              "nr_cookies": nr_cookies})
-
+            for request in requests_url:
+                url = request.url
+                timestamp = request.date
+                request_headers, response_headers = get_headers(request)
+                nr_cookies = get_nr_cookies(request)
+                url_dict["requests_list"].append({"request_url": url,
+                                                  "timestamp": timestamp.strftime("%d/%m/%Y %H:%M:%S.%f"),
+                                                  "request_headers": dict(request_headers),
+                                                  "response_headers": dict(response_headers) if response_headers else
+                                                  response_headers,
+                                                  "nr_cookies": nr_cookies})
+        else:
+            url_dict.update({"error": "Timeout"})
     else:
         url_dict.update({"error": error})
 
