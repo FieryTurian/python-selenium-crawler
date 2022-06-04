@@ -456,7 +456,7 @@ def cookie_parser(cookie):
     dict
         A dictionary containing various information given in the cookie string
     """
-    # https://stackoverflow.com/questions/21522586/python-convert-set-cookies-response-to-dict-of-cookies
+    # ToDo remove? https://stackoverflow.com/questions/21522586/python-convert-set-cookies-response-to-dict-of-cookies
     cookie_dict = {}
 
     for item in cookie.split(';'):
@@ -515,6 +515,33 @@ def get_all_cookies(requests):
     return [dict(t) for t in {tuple(dictionary.items()) for dictionary in cookies}]
 
 
+def build_requests_list(requests_url):
+    """Build the list of requests with the information that needs to be stored in the JSON file
+
+    Parameters
+    ----------
+    requests_url: list
+        A list with the requests for the URL being accessed
+
+    Returns
+    -------
+    list
+        A list with the requests parsed in the format that is needed for the JSON file
+    """
+    requests_list = []
+    for request in requests_url:
+        url = request.url
+        timestamp = request.date
+        request_headers, response_headers = get_headers(request)
+        nr_cookies = get_nr_cookies(request)
+        requests_list.append({"request_url": url,
+                              "timestamp": timestamp.strftime("%d/%m/%Y %H:%M:%S.%f"),
+                              "request_headers": dict(request_headers),
+                              "response_headers": dict(response_headers) if response_headers else response_headers,
+                              "nr_cookies": nr_cookies})
+    return requests_list
+
+
 def crawl_url(params, domain, rank):
     """Access a webpage, take screenshots, accept cookies and create a dictionary
     containing various information about the webpage visit
@@ -557,6 +584,7 @@ def crawl_url(params, domain, rank):
             driver.quit()
 
             # Now it is time to process the gathered data:
+            requests_list = build_requests_list(requests_url)
             url_dict.update({"pageload_start_ts": pageload_start_ts,
                              "pageload_end_ts": pageload_end_ts,
                              "post_pageload_url": post_pageload_url,
@@ -564,19 +592,7 @@ def crawl_url(params, domain, rank):
                              "cookies": get_all_cookies(requests_url),
                              "third_party_domains": get_third_party_domains(domain, requests_url),
                              "redirect_tracker_pairs": detect_redirections(domain, requests_url, post_pageload_url),
-                             "requests_list": []})
-
-            for request in requests_url:
-                url = request.url
-                timestamp = request.date
-                request_headers, response_headers = get_headers(request)
-                nr_cookies = get_nr_cookies(request)
-                url_dict["requests_list"].append({"request_url": url,
-                                                  "timestamp": timestamp.strftime("%d/%m/%Y %H:%M:%S.%f"),
-                                                  "request_headers": dict(request_headers),
-                                                  "response_headers": dict(response_headers) if response_headers else
-                                                  response_headers,
-                                                  "nr_cookies": nr_cookies})
+                             "requests_list": requests_list})
         else:
             url_dict.update({"error": "Timeout"})
     else:
