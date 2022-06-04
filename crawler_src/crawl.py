@@ -17,9 +17,9 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
 from selenium.common.exceptions import ElementClickInterceptedException, ElementNotInteractableException, \
-    NoSuchFrameException, TimeoutException
+    NoSuchFrameException, TimeoutException, StaleElementReferenceException, WebDriverException
 from requests.exceptions import SSLError, Timeout, ConnectionError, TooManyRedirects
-from tld.exceptions import TldDomainNotFound,TldBadUrl
+from tld.exceptions import TldDomainNotFound, TldBadUrl
 
 WINDOW_SIZE = "1920x1080"
 
@@ -333,7 +333,7 @@ def search_and_click_iframes(driver, status, accept_word):
     for frame in list_of_iframes:
         try:
             driver.switch_to.frame(frame)
-        except NoSuchFrameException:
+        except (NoSuchFrameException, StaleElementReferenceException, WebDriverException):
             pass
 
         allow_all_cookies = search_element_using_xpath(driver, accept_word)
