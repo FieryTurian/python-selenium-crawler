@@ -18,6 +18,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
 from operator import itemgetter
+from tld import get_fld
 from urllib.parse import urlparse
 
 
@@ -70,7 +71,6 @@ def domain_in_blocklist(tracker_domains, domain):
     domain = ".".join(domain.rsplit(".", 5)[1:])
     count = 0
     while domain != "":
-        print(domain)
         count += 1
         if count > 4:
             return None, False
@@ -686,7 +686,7 @@ def generate_entry_table_question_9(dataframe, mode):
     request_hostname, website, most_number_of_cookies = find_request_with_most_cookies(dataframe, mode)
 
     # Check if the request hostname matches the website domain and set first_party accordingly
-    if request_hostname == website or request_hostname == ("www." + website):
+    if get_fld(request_hostname, fix_protocol=True) == website:
         first_party = "Yes"
     else:
         first_party = "No"
