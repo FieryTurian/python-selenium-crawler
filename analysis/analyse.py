@@ -46,6 +46,43 @@ def read_blocklist():
     return tracker_domains
 
 
+def domain_in_blocklist(tracker_domains, domain):
+    """Check whether `domain` is present in the set of tracker domains
+
+    Parameters
+    ----------
+    tracker_domains: set
+        A set of domains that are present in the blocklist
+    domain: str
+        The domain that needs to be checked
+
+    Returns
+    -------
+    bool
+        A boolean indicating whether the domain is present in the blocklist or not
+    """
+    if domain in tracker_domains:
+        return domain, True
+
+    # Check up to four domains formed by starting with the least five components
+    #  Following the example of Mozilla's trackingprotection-tools library:
+    #  (https://github.com/mozilla/trackingprotection-tools/blob/a55109119f0f66ddda92c133cee1d8ee31b64da9/trackingprotection_tools/DisconnectParser.py#L315)
+    domain = ".".join(domain.rsplit(".", 5)[1:])
+    count = 0
+    while domain != "":
+        print(domain)
+        count += 1
+        if count > 4:
+            return None, False
+        if domain in tracker_domains:
+            return domain, True
+        try:
+            domain = domain.split(".", 1)[1]
+        except IndexError:
+            return None, False
+    return None, False
+
+
 def extract_tracker_domains_entities(third_party_domains, blocklist, blocklist_domains):
     """Extract tracker domains and their corresponding entity name from a list of third-party domains
         using a blocklist
@@ -57,7 +94,7 @@ def extract_tracker_domains_entities(third_party_domains, blocklist, blocklist_d
     blocklist: dict
         A dictionary with the domains and their corresponding entity names from the blocklist
     blocklist_domains: set
-        A list of domains that are present in the blocklist
+        A set of domains that are present in the blocklist
 
     Returns
     -------
@@ -66,8 +103,13 @@ def extract_tracker_domains_entities(third_party_domains, blocklist, blocklist_d
     tracker_entities: set
         A set of all (distinct) tracker entities for a request
     """
-    tracker_domains = blocklist_domains.intersection(third_party_domains)
-    tracker_entities = {blocklist[domain] for domain in tracker_domains}
+    # Store the domains that are present in the blocklist in order to match them with the entity later
+    domains = list(filter(None, [domain_in_blocklist(blocklist_domains, d)[0] for d in third_party_domains]))
+
+    # Store the sets with (distinct) tracker domains and their corresponding entities
+    tracker_domains = {domain for domain in third_party_domains if domain_in_blocklist(blocklist_domains, domain)[1]}
+    tracker_entities = {blocklist[domain] for domain in domains}
+
     return tracker_domains, tracker_entities
 
 
@@ -859,7 +901,7 @@ def top_ten_tracker_redirection_pairs(dataframe, mode, tracker_domains):
     # Get all tuples of redirection pairs into a list of tuples
     pairs_tuples = [tuple(i) for i in list(chain.from_iterable(pairs))]
     # Filter the redirection pairs that involve a tracker domain and get the top ten most prevalent pairs
-    tracker_pairs = [p for p in pairs_tuples if p[0] in tracker_domains or p[1] in tracker_domains]
+    tracker_pairs = [p for p in pairs_tuples if domain_in_blocklist(tracker_domains, p[0])[1] or domain_in_blocklist(tracker_domains, p[1])[1]]
     top_ten_pairs = Counter(tracker_pairs).most_common(10)
 
     return top_ten_pairs
