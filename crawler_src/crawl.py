@@ -177,7 +177,7 @@ def get_url_requests_times(driver, url):
 
     Returns
     ----------
-    post_pageload_url: url
+    post_pageload_url: str
         The URL of the webpage after all potential redirections
     requests_url: list
         The requests for the URL being accessed
@@ -316,7 +316,7 @@ def search_element_using_xpath(driver, accept_word):
     ----------
     driver: seleniumwire.webdriver
         The webdriver that is used to visit the domain
-    accept_word:
+    accept_word: str
         The accept cookies word to be searched
 
     Returns
@@ -339,6 +339,20 @@ def search_element_using_xpath(driver, accept_word):
 
 
 def try_clicking_element(element):
+    """Search for the accept word using the XPATH
+
+    Parameters
+    ----------
+    element: selenium.WebElement
+        The element to be clicked
+
+    Returns
+    ----------
+    bool
+        A boolean value specifying whether the element was clicked or not
+    status: str
+        Specifying the status of clicking the element
+    """
     if element and element.is_displayed():
         try:
             element.click()
