@@ -933,11 +933,11 @@ def generate_table_question_11(crawl_mode, top_ten_redirection_pairs):
         A list with the top ten prevalent cross-domain HTTP redirection pairs
     """
     # Remove the file if it is already existing
-    if os.path.isfile(f"data/table_question_11_{crawl_mode}.tex"):
-        os.remove(f"data/table_question_11_{crawl_mode}.tex")
+    if os.path.isfile(f"data/table_question_11_{crawl_mode.lower()}.tex"):
+        os.remove(f"data/table_question_11_{crawl_mode.lower()}.tex")
 
     # Open the file and write to it
-    file = open(f"data/table_question_11_{crawl_mode}.tex", 'a')
+    file = open(f"data/table_question_11_{crawl_mode.lower()}.tex", 'a')
     file.write("\\begin{table}[ht] \n")
     file.write("\caption{The ten most prevalent cross-domain HTTP redirection pairs (%s crawl).} \n" % (crawl_mode))
     file.write("\centering \n")
