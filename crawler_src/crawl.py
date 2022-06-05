@@ -1,6 +1,21 @@
 """Crawler
+Onno de Gouw - s1025613
+Laura Kolijn - s1025724
+Stefan Popa - s1027672
+Denise Verbakel - s1018597
 
-A placeholder for a very nice description of our crawler :)
+The crawler was designed using Selenium and SeleniumWire, and Python requests for some error handling. It has multiple
+functionalities:
+- Multiple Modes: Headless/Headful, Mobile/Desktop, Single URL/Input File
+- Error Checking: TLS Errors, Timeout Errors or Domain/Other Errors
+- Cookie Accepting and Cookie Accepting Error Handling
+- Getting Number of Cookies/Parsing Cookies
+- Webpage Screenshots
+- Computing Webpage Loading Times
+- Request/Response Header Parsing
+- Detecting Reditections
+- Detecting Third-Party Domains
+- Converting Data into JSON Files
 """
 import argparse
 import os
@@ -45,7 +60,7 @@ def parse_arguments():
     arguments = parser.parse_args()
 
     if (not arguments.url and not arguments.input) or (arguments.url and arguments.input):
-        parser.error("Invalid input: please provide either the -u or -i argument.")
+        parser.error("Invalid input: please provide either the -u or -i argument!")
 
     print("Arguments have been parsed successfully!")
     return vars(arguments)
@@ -339,7 +354,7 @@ def search_element_using_xpath(driver, accept_word):
 
 
 def try_clicking_element(element):
-    """Search for the accept word using the XPATH
+    """Check whether a WebElement can be clicked
 
     Parameters
     ----------
@@ -367,6 +382,24 @@ def try_clicking_element(element):
 
 
 def search_and_click_iframes(driver, status, accept_word):
+    """Look for a WebElement containing the accept word in different iframes
+
+    Parameters
+    ----------
+    driver: seleniumwire.webdriver
+        The webdriver that is used to visit the domain
+    status: str
+        Specifying the status of clicking the element
+    accept_word: str
+        The accept cookies word to be searched
+
+    Returns
+    ----------
+    bool
+        A boolean value specifying whether the element was clicked or not
+    status: str
+        Specifying the status of clicking an element in different iframes
+    """
     try:
         list_of_iframes = driver.find_elements(By.TAG_NAME, "iframe")
         for frame in list_of_iframes:
@@ -395,7 +428,7 @@ def search_and_click_iframes(driver, status, accept_word):
         return False, status
 
     except TimeoutException:
-        print("Timed out: could not find iframe elements")
+        print("Timed Out: could not find iframe elements!")
         return False, "errored"
 
 
@@ -491,6 +524,7 @@ def get_nr_cookies(request):
 
 def cookie_parser(cookie):
     """Parse a cookie string and create a dictionary with information regarding the cookie settings and value
+    Taken from https://stackoverflow.com/questions/21522586/python-convert-set-cookies-response-to-dict-of-cookies
 
     Parameters
     ----------
@@ -502,7 +536,6 @@ def cookie_parser(cookie):
     dict
         A dictionary containing various information given in the cookie string
     """
-    # https://stackoverflow.com/questions/21522586/python-convert-set-cookies-response-to-dict-of-cookies
     cookie_dict = {}
 
     for item in cookie.split(';'):
@@ -524,7 +557,7 @@ def get_response_cookies(response_headers, cookies):
 
     Parameters
     ----------
-    response_headers: selenium.webdriver.requests.response.headers
+    response_headers: dict
         The headers of a response for a HTTP request
     cookies: list
         A list containing all the cookies being set by responses
@@ -543,7 +576,7 @@ def get_all_cookies(requests):
 
     Parameters
     ----------
-    requests: selenium.webdriver.requests
+    requests: list
         The requests for a specific domain
 
     Returns
@@ -620,12 +653,18 @@ def crawl_url(params, domain, rank):
         if post_pageload_url:
             time.sleep(10)
             take_screenshots_consent(params, driver, domain, "pre")
-            cookies_accepted, status = allow_cookies(driver)
-            print(consent_error_logging(status, domain))
 
-            if cookies_accepted:
-                time.sleep(10)
-                take_screenshots_consent(params, driver, domain, "post")
+            # Skip latimes.com on mobile due to weird iframe location
+            if domain == "latimes.com" and params["mobile"]:
+                status = "errored"
+                print(consent_error_logging(status, domain))
+            else:
+                cookies_accepted, status = allow_cookies(driver)
+                print(consent_error_logging(status, domain))
+
+                if cookies_accepted:
+                    time.sleep(10)
+                    take_screenshots_consent(params, driver, domain, "post")
 
             driver.quit()
 
@@ -659,11 +698,8 @@ def crawl_list(params, domain_list):
     """
     print("Please wait, we are trying to crawl your entire input list!")
     for tranco_rank in domain_list:
-        if domain_list[tranco_rank] == "latimes.com" and params["mobile"]:
-            pass
-        else:
-            url_dict = crawl_url(params, domain_list[tranco_rank], tranco_rank)
-            convert_to_json(params, domain_list[tranco_rank], url_dict)
+        url_dict = crawl_url(params, domain_list[tranco_rank], tranco_rank)
+        convert_to_json(params, domain_list[tranco_rank], url_dict)
 
 
 def convert_to_json(params, domain, url_dict):
