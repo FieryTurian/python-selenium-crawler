@@ -355,8 +355,6 @@ def try_clicking_element(element):
 def search_and_click_iframes(driver, status, accept_word):
     try:
         list_of_iframes = driver.find_elements(By.TAG_NAME, "iframe")
-
-        print(len(list_of_iframes))
         for frame in list_of_iframes:
             try:
                 driver.switch_to.frame(frame)
