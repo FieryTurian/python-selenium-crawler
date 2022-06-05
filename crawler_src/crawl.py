@@ -117,9 +117,15 @@ def take_screenshots_consent(params, driver, domain, state):
         Indicates whether the screenshot is taken pre or post consent
     """
     if params["mobile"]:
-        driver.save_screenshot(f"../crawl_data/{domain}_mobile_{state}_consent.png")
+        try:
+            driver.save_screenshot(f"../crawl_data/{domain}_mobile_{state}_consent.png")
+        except TimeoutException:
+            print("Could not take a screenshot due to a timeout error!")
     else:
-        driver.save_screenshot(f"../crawl_data/{domain}_desktop_{state}_consent.png")
+        try:
+            driver.save_screenshot(f"../crawl_data/{domain}_desktop_{state}_consent.png")
+        except TimeoutException:
+            print("Could not take a screenshot due to a timeout error!")
 
     print(f"{state} consent screenshot has been taken successfully!")
 
