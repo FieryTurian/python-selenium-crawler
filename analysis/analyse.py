@@ -765,11 +765,26 @@ def find_cookies_longest_lifespans(dataframe, mode, number):
                 # max_age overrides the expires field: https://www.rfc-editor.org/rfc/rfc7234#section-5.3
                 if max_age:
                     lifespans.append([float(max_age), "max-age", i, j])
-                elif expiry:
+                elif expiry and expiry != "Session":
                     # Change the dates to in how many seconds they will expire
-                    expiry = datetime.strptime(expiry.replace("-", " "), '%a, %d %b %Y %H:%M:%S %Z')
-                    current_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-                    current_time = datetime.strptime(current_time_str, '%Y-%m-%d %H:%M:%S')
+                    expiry = expiry.replace("-", "").replace(" ", "")
+                    # In case the day name is written in full, then only take the first 3 letters
+                    if len(expiry) >= 24:
+                        day, rest = expiry.split(",")
+                        expiry = day[:3] + "," + rest
+                    # Remove if there is a timezone or trailing zeros
+                    if (len(expiry) == 21 or len(expiry) == 22 or len(expiry) == 23 or len(expiry) == 24) and \
+                            ":" not in expiry[-4:]:
+                        expiry = expiry[:-4]
+                    # Exception for when the year is only 2 digits
+                    try:
+                        expiry = datetime.strptime(expiry, '%a,%d%b%Y%H:%M:%S')
+                        current_time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                        current_time = datetime.strptime(current_time_str, '%Y-%m-%d %H:%M:%S')
+                    except ValueError:
+                        expiry = datetime.strptime(expiry, '%a,%d%b%y%H:%M:%S')
+                        current_time_str = datetime.now().strftime("%y-%m-%d %H:%M:%S")
+                        current_time = datetime.strptime(current_time_str, '%y-%m-%d %H:%M:%S')
                     expiry_age = (expiry - current_time).total_seconds()
                     lifespans.append([expiry_age, "expires", i, j])
 
