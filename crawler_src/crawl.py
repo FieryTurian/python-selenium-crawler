@@ -339,31 +339,37 @@ def try_clicking_element(element):
 
 
 def search_and_click_iframes(driver, status, accept_word):
-    list_of_iframes = driver.find_elements(By.TAG_NAME, "iframe")
+    try:
+        list_of_iframes = driver.find_elements(By.TAG_NAME, "iframe")
 
-    for frame in list_of_iframes:
-        try:
-            driver.switch_to.frame(frame)
-        except (NoSuchFrameException, StaleElementReferenceException, WebDriverException):
-            pass
+        print(len(list_of_iframes))
+        for frame in list_of_iframes:
+            try:
+                driver.switch_to.frame(frame)
+            except (NoSuchFrameException, StaleElementReferenceException, WebDriverException):
+                pass
 
-        allow_all_cookies = search_element_using_xpath(driver, accept_word)
+            allow_all_cookies = search_element_using_xpath(driver, accept_word)
 
-        if allow_all_cookies:
-            for element in allow_all_cookies:
-                bool_val, status = try_clicking_element(element)
-                if bool_val:
-                    return True, status
-            if status == "errored":
-                break
-        else:
-            status = "not_found"
+            if allow_all_cookies:
+                for element in allow_all_cookies:
+                    bool_val, status = try_clicking_element(element)
+                    if bool_val:
+                        return True, status
+                if status == "errored":
+                    break
+            else:
+                status = "not_found"
 
-        try:
-            driver.switch_to.default_content()
-        except TimeoutException:
-            pass
-    return False, status
+            try:
+                driver.switch_to.default_content()
+            except TimeoutException:
+                print("Timed out: could not switch to default content")
+                pass
+        return False, status
+
+    except TimeoutException:
+        print("Timed out: could not find iframe elements")
 
 
 def allow_cookies(driver):
