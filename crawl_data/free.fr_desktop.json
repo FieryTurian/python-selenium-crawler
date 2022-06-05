@@ -1,0 +1,2162 @@
+{
+      "website_domain": "free.fr",
+      "tranco_rank": 326,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 13:25:34.819504",
+      "pageload_end_ts": "05/06/2022 13:25:38.922827",
+      "post_pageload_url": "https://www.free.fr/freebox/",
+      "consent_status": "not_found",
+      "cookies": [],
+      "third_party_domains": [
+            "privacy-center.org",
+            "proxad.net"
+      ],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://free.fr/",
+                  "timestamp": "05/06/2022 13:25:35.082156",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:35 GMT",
+                        "content-type": "text/html",
+                        "content-length": "185",
+                        "location": "https://www.free.fr/"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/",
+                  "timestamp": "05/06/2022 13:25:35.486124",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:36 GMT",
+                        "content-type": "text/html",
+                        "content-length": "161",
+                        "location": "https://www.free.fr/freebox/",
+                        "x-frame-options": "SAMEORIGIN",
+                        "x-content-type-options": "nosniff",
+                        "x-xss-protection": "1; mode=block"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/freebox/",
+                  "timestamp": "05/06/2022 13:25:35.754572",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:36 GMT",
+                        "content-type": "text/html",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-15ab4\"",
+                        "x-frame-options": "SAMEORIGIN",
+                        "x-content-type-options": "nosniff",
+                        "x-xss-protection": "1; mode=block",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/fonts/fonts.css",
+                  "timestamp": "05/06/2022 13:25:36.066122",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "text/css,*/*;q=0.1",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "style",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:36 GMT",
+                        "content-type": "text/css",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-1fdc\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:36 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/css/95d072e5bd6f0613a9f9.css",
+                  "timestamp": "05/06/2022 13:25:36.069123",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "text/css,*/*;q=0.1",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "style",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:36 GMT",
+                        "content-type": "text/css",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-26580\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:36 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/data/env-config.js?1654251260263",
+                  "timestamp": "05/06/2022 13:25:36.072123",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:36 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:04 GMT",
+                        "etag": "W/\"6299edb0-1df\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:36 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/webpack-0ffac749a5d4ac880c10.js",
+                  "timestamp": "05/06/2022 13:25:36.364372",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:36 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-14bd\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:36 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/main-b2c640e459eabd1aec25.js",
+                  "timestamp": "05/06/2022 13:25:36.379594",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:36 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-1341d\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:36 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/framework-8bf70a078d4900bd2245.js",
+                  "timestamp": "05/06/2022 13:25:36.382594",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:36 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-214ed\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:36 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/pages/_app-a4d643e2777beabef611.js",
+                  "timestamp": "05/06/2022 13:25:36.386595",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:36 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-49c13\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:36 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/cb1608f2-f6700b83bbb828afdecf.js",
+                  "timestamp": "05/06/2022 13:25:36.390596",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-492\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/7944-5dc6eab42492124b4caf.js",
+                  "timestamp": "05/06/2022 13:25:36.396597",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-568b\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/2301-ce54aa39c150bc6f7048.js",
+                  "timestamp": "05/06/2022 13:25:36.399598",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-989d\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/9359-3f5588f31bf106a38bfc.js",
+                  "timestamp": "05/06/2022 13:25:36.402598",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-4e78\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/8880-6e29dcf1fcb8ee43cdf2.js",
+                  "timestamp": "05/06/2022 13:25:36.405599",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-615c\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/492-853d5c7df010c990da5a.js",
+                  "timestamp": "05/06/2022 13:25:36.407600",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-41d2\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/1940-1dc6295ed12593d0965b.js",
+                  "timestamp": "05/06/2022 13:25:36.410601",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-1593d\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/7625-034c62eb0951669c0d37.js",
+                  "timestamp": "05/06/2022 13:25:36.413601",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-7ca4\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/pages/freebox-eeb66e7ae4ab1f05ef48.js",
+                  "timestamp": "05/06/2022 13:25:36.418602",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-e2ce\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/238-4864247f68e48a487f66.js",
+                  "timestamp": "05/06/2022 13:25:36.420604",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-46c7\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/6709-4da4f924d2937766b0b9.js",
+                  "timestamp": "05/06/2022 13:25:36.423605",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-372a\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/3732-d01a7f178b2b745ca408.js",
+                  "timestamp": "05/06/2022 13:25:36.426603",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-55e0\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/1181-2632acbbce2b8695bf4f.js",
+                  "timestamp": "05/06/2022 13:25:36.428604",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-2f51\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/qMuUINL6Qx2kWgBXSAVdZ/_ssgManifest.js",
+                  "timestamp": "05/06/2022 13:25:36.431605",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-6d\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/qMuUINL6Qx2kWgBXSAVdZ/_buildManifest.js",
+                  "timestamp": "05/06/2022 13:25:36.434606",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-3178\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/navHeader/icons/free.svg",
+                  "timestamp": "05/06/2022 13:25:36.436606",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "13389",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-344d\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/navHeader/icons/arrow-to-right.svg",
+                  "timestamp": "05/06/2022 13:25:36.449609",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "817",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-331\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/navHeader/icons/portal.svg",
+                  "timestamp": "05/06/2022 13:25:36.455611",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "1908",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-774\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/navHeader/icons/contact.svg",
+                  "timestamp": "05/06/2022 13:25:36.515624",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "1203",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-4b3\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/navHeader/icons/mail.svg",
+                  "timestamp": "05/06/2022 13:25:36.523626",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "1329",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-531\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/fonts/montserrat/montserrat-regular.woff2",
+                  "timestamp": "05/06/2022 13:25:36.530628",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.free.fr",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.free.fr/assets/fonts/fonts.css",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/octet-stream",
+                        "content-length": "13708",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-358c\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/fonts/montserrat/montserrat-semibold.woff2",
+                  "timestamp": "05/06/2022 13:25:36.533629",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.free.fr",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.free.fr/assets/fonts/fonts.css",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/octet-stream",
+                        "content-length": "13464",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-3498\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/fonts/montserrat/montserrat-medium.woff2",
+                  "timestamp": "05/06/2022 13:25:36.536629",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.free.fr",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.free.fr/assets/fonts/fonts.css",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/octet-stream",
+                        "content-length": "13640",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-3548\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/freebox/home/banner/desktopAppleTVBg.jpg",
+                  "timestamp": "05/06/2022 13:25:36.538629",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "64430",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-fbae\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/freebox/home/banner/desktopDevialetBg.jpg",
+                  "timestamp": "05/06/2022 13:25:36.541630",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "59949",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-ea2d\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/freebox/home/banner/desktop-cardHP-comparateur.jpg",
+                  "timestamp": "05/06/2022 13:25:36.544631",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "141371",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-2283b\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/fonts/montserrat/montserrat-bold.woff2",
+                  "timestamp": "05/06/2022 13:25:36.548631",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.free.fr",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.free.fr/assets/fonts/fonts.css",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/octet-stream",
+                        "content-length": "13612",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-352c\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/fonts/montserrat/montserrat-extralight.woff2",
+                  "timestamp": "05/06/2022 13:25:36.551632",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.free.fr",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.free.fr/assets/fonts/fonts.css",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/octet-stream",
+                        "content-length": "13540",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-34e4\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/fonts/montserrat/montserrat-thin.woff2",
+                  "timestamp": "05/06/2022 13:25:36.554633",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.free.fr",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.free.fr/assets/fonts/fonts.css",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/octet-stream",
+                        "content-length": "12660",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-3174\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/_next/static/chunks/4827.ea71563f4142d9a8b1fd.js",
+                  "timestamp": "05/06/2022 13:25:37.414409",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:37 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "W/\"6299edae-d100\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:37 GMT",
+                        "cache-control": "max-age=31536000",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/data-json/legalNotices/legal-notices.json",
+                  "timestamp": "05/06/2022 13:25:37.447490",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "accept": "application/json, text/plain, */*",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "application/json",
+                        "last-modified": "Thu, 02 Jun 2022 14:36:41 GMT",
+                        "etag": "W/\"6298caf9-7c95\"",
+                        "x-frame-options": "SAMEORIGIN",
+                        "x-content-type-options": "nosniff",
+                        "x-xss-protection": "1; mode=block",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/data-json/home/slides.json",
+                  "timestamp": "05/06/2022 13:25:37.450491",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "accept": "application/json, text/plain, */*",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "application/json",
+                        "last-modified": "Thu, 02 Jun 2022 14:36:30 GMT",
+                        "etag": "W/\"6298caee-704\"",
+                        "x-frame-options": "SAMEORIGIN",
+                        "x-content-type-options": "nosniff",
+                        "x-xss-protection": "1; mode=block",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://analytics.proxad.net/piwik.js",
+                  "timestamp": "05/06/2022 13:25:37.476506",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "application/x-javascript",
+                        "content-length": "70428",
+                        "last-modified": "Thu, 10 Sep 2020 22:55:10 GMT",
+                        "etag": "\"5f5aaece-1131c\"",
+                        "expires": "Sun, 05 Jun 2022 12:25:38 GMT",
+                        "cache-control": "max-age=3600",
+                        "pragma": "public",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/shared/freeboxUpFace/freeboxMini4KDuoUpFaceRectangle/freeboxMini4KDuoUpFaceRectangle-lowdpi.jpeg",
+                  "timestamp": "05/06/2022 13:25:37.493367",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "1848",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-738\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/shared/freeboxUpFace/freeboxRevolutionDuoUpFaceRectangle/freeboxRevolutionDuoUpFaceRectangle-lowdpi.jpeg",
+                  "timestamp": "05/06/2022 13:25:37.496368",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "2409",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-969\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://sdk.privacy-center.org/87df2f8d-232a-4617-8efc-3764b3bbd0c0/loader.js?target=www.free.fr",
+                  "timestamp": "05/06/2022 13:25:37.539379",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "application/javascript; charset=utf-8",
+                        "content-length": "4735",
+                        "server": "CloudFront",
+                        "date": "Sun, 05 Jun 2022 09:58:19 GMT",
+                        "x-didomi-remote-config-source": "Dynamo",
+                        "content-encoding": "gzip",
+                        "cache-control": "max-age=7200, public",
+                        "etag": "\"de0ffeb721658ff6e2a2edd2585f56c6\"",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 2d8216898001f8ce3fde38c8796d2fa6.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P2",
+                        "x-amz-cf-id": "ihuLcoB07S5AY2i23-0L3tSne-AivGUy-4R4hwcEb71b186IcF7Vmg==",
+                        "age": "5239"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/freebox/home/preview/ServeurPopPlayerPop/ServeurPopPlayerPop-lowdpi.jpeg",
+                  "timestamp": "05/06/2022 13:25:37.698955",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "1254",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-4e6\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/svg/canalplus-series.svg",
+                  "timestamp": "05/06/2022 13:25:37.731470",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "4709",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-1265\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/freebox/home/preview/ServeurDeltaPlayerPop/ServeurDeltaPlayerPop-lowdpi.jpeg",
+                  "timestamp": "05/06/2022 13:25:37.738470",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "1260",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-4ec\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/shared/logos/Apple_TV.svg",
+                  "timestamp": "05/06/2022 13:25:37.746472",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "1869",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-74d\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/shared/logos/netflix.svg",
+                  "timestamp": "05/06/2022 13:25:37.841494",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "2604",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-a2c\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/services/amazonPrime/amazonPrimePrimary.svg",
+                  "timestamp": "05/06/2022 13:25:37.849495",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "8165",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-1fe5\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/data/logotypes/tvbycanal.svg",
+                  "timestamp": "05/06/2022 13:25:37.852496",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "15305",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-3bc9\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/features/oqeeByFree/homePage/logoOqee.svg",
+                  "timestamp": "05/06/2022 13:25:37.860497",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "19447",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-4bf7\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/freebox/playerFreeDevialet/logo-free-devialet.svg",
+                  "timestamp": "05/06/2022 13:25:37.982712",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "11285",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-2c15\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/others/freebox-connect/freebox-connect-lowdpi.jpeg",
+                  "timestamp": "05/06/2022 13:25:37.998711",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "3870",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-f1e\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/others/freebox-oqee/freebox-oqee-lowdpi.jpeg",
+                  "timestamp": "05/06/2022 13:25:38.001712",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "6542",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-198e\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/freebox/home/banner/AppleTvLogo.svg",
+                  "timestamp": "05/06/2022 13:25:38.003712",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "2012",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-7dc\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/others/freebox-ligue-un/freebox-ligue-un-lowdpi.jpeg",
+                  "timestamp": "05/06/2022 13:25:38.021716",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "4775",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-12a7\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/freebox/home/whyFree/service-client/service-client-lowdpi.jpeg",
+                  "timestamp": "05/06/2022 13:25:38.140650",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "1503",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-5df\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/freebox/home/whyFree/boutiques-free/boutiques-free-lowdpi.jpeg",
+                  "timestamp": "05/06/2022 13:25:38.143650",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "2098",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-832\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/freebox/home/whyFree/fibre-free/fibre-free-lowdpi.jpeg",
+                  "timestamp": "05/06/2022 13:25:38.156749",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "2025",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-7e9\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/freebox/home/whyFree/prix-avantageux/prix-avantageux-lowdpi.jpeg",
+                  "timestamp": "05/06/2022 13:25:38.170807",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "1450",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-5aa\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/shared/freeboxUpFace/freeboxRevolutionDuoUpFaceRectangle/freeboxRevolutionDuoUpFaceRectangle.webp",
+                  "timestamp": "05/06/2022 13:25:38.174807",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/webp",
+                        "content-length": "64912",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-fd90\"",
+                        "x-frame-options": "SAMEORIGIN",
+                        "x-content-type-options": "nosniff",
+                        "x-xss-protection": "1; mode=block",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/img/shared/freeboxUpFace/freeboxMini4KDuoUpFaceRectangle/freeboxMini4KDuoUpFaceRectangle.webp",
+                  "timestamp": "05/06/2022 13:25:38.217319",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/webp",
+                        "content-length": "27204",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:02 GMT",
+                        "etag": "\"6299edae-6a44\"",
+                        "x-frame-options": "SAMEORIGIN",
+                        "x-content-type-options": "nosniff",
+                        "x-xss-protection": "1; mode=block",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/s3/Apple_TV_Banner_Homepage_1920x450_Mai2022_6fdcbe42a8.jpg",
+                  "timestamp": "05/06/2022 13:25:38.224321",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/jpeg",
+                        "content-length": "546368",
+                        "last-modified": "Wed, 04 May 2022 10:29:59 GMT",
+                        "etag": "\"627255a7-85640\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://sdk.privacy-center.org/sdk.c51977a204504f3dd1c1c4bd07a24612bc152e2c.js",
+                  "timestamp": "05/06/2022 13:25:38.344401",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.free.fr/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "application/javascript; charset=utf-8",
+                        "date": "Thu, 02 Jun 2022 22:25:08 GMT",
+                        "last-modified": "Thu, 02 Jun 2022 22:21:16 GMT",
+                        "etag": "W/\"916cfbd2944e31767d935621b8ef866a\"",
+                        "x-amz-server-side-encryption": "AES256",
+                        "x-amz-meta-s3cmd-attrs": "atime:1654208017/ctime:1654208017/gid:0/gname:root/md5:916cfbd2944e31767d935621b8ef866a/mode:33188/mtime:1654208017/uid:0/uname:root",
+                        "cache-control": "public, max-age=31536000",
+                        "server": "AmazonS3",
+                        "content-encoding": "gzip",
+                        "vary": "Accept-Encoding",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 2d8216898001f8ce3fde38c8796d2fa6.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P2",
+                        "x-amz-cf-id": "NT-Q0I3vS1k8sGcY5Q9kY1BbSdi44_7m8-G6xIfXYU6rhJdltvKYew==",
+                        "age": "219631"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/footer/img/instagram.svg",
+                  "timestamp": "05/06/2022 13:25:38.361407",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "1366",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-556\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/footer/img/twitter.svg",
+                  "timestamp": "05/06/2022 13:25:38.368408",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "1299",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-513\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/footer/img/facebook.svg",
+                  "timestamp": "05/06/2022 13:25:38.375409",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "605",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-25d\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/footer/img/youtube.svg",
+                  "timestamp": "05/06/2022 13:25:38.382411",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:38 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "999",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-3e7\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:38 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/footer/icons/arrowBottom.svg",
+                  "timestamp": "05/06/2022 13:25:38.581695",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:39 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "1231",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-4cf\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:39 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://www.free.fr/assets/footer/icons/plusSquare.svg",
+                  "timestamp": "05/06/2022 13:25:38.682719",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/freebox/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "_pk_id.2.f75b=b5f8e82ecd818a99.1654428338.1.1654428338.1654428338.; _pk_ses.2.f75b=1"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:39 GMT",
+                        "content-type": "image/svg+xml",
+                        "content-length": "404",
+                        "last-modified": "Fri, 03 Jun 2022 11:17:03 GMT",
+                        "etag": "\"6299edaf-194\"",
+                        "expires": "Mon, 05 Jun 2023 11:25:39 GMT",
+                        "cache-control": "max-age=31536000",
+                        "accept-ranges": "bytes"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://analytics.proxad.net/piwik.php?action_name=Choisissez%20une%20offre%20Fibre%20ou%20ADSL%20sans%20engagement%20-%20Free&idsite=2&rec=1&r=148353&h=13&m=25&s=37&url=https%3A%2F%2Fwww.free.fr%2Ffreebox%2F&_id=b5f8e82ecd818a99&_idts=1654428338&_idvc=1&_idn=1&_refts=0&_viewts=1654428338&send_image=1&cookie=1&res=1920x1080&gt_ms=298&pv_id=Zy2xsu",
+                  "timestamp": "05/06/2022 13:25:38.692721",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.free.fr/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.14.2",
+                        "date": "Sun, 05 Jun 2022 11:25:39 GMT",
+                        "content-type": "image/gif",
+                        "cache-control": "no-store",
+                        "referrer-policy": "origin"
+                  },
+                  "nr_cookies": 0
+            }
+      ]
+}

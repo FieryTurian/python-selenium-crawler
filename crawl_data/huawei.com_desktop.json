@@ -1,0 +1,1100 @@
+{
+      "website_domain": "huawei.com",
+      "tranco_rank": 355,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 13:43:15.990064",
+      "pageload_end_ts": "05/06/2022 13:43:20.013083",
+      "post_pageload_url": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+      "consent_status": "not_found",
+      "cookies": [
+            {
+                  "corp#lang": "en",
+                  "path": "/",
+                  "size": 2
+            }
+      ],
+      "third_party_domains": [
+            "google-analytics.com",
+            "tiqcdn.com"
+      ],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://huawei.com/",
+                  "timestamp": "05/06/2022 13:43:16.740511",
+                  "request_headers": {
+                        "Host": "huawei.com",
+                        "Connection": "keep-alive",
+                        "Upgrade-Insecure-Requests": "1",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "Sec-Fetch-Site": "none",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-User": "?1",
+                        "Sec-Fetch-Dest": "document",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Server": "PAAS-WEB",
+                        "Date": "Sun, 05 Jun 2022 11:43:17 GMT",
+                        "Content-Type": "text/html",
+                        "Content-Length": "165",
+                        "Connection": "keep-alive",
+                        "Location": "https://www.huawei.com/",
+                        "processtime": "0.000"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/",
+                  "timestamp": "05/06/2022 13:43:17.181425",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "AkamaiGHost",
+                        "content-length": "0",
+                        "location": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "date": "Sun, 05 Jun 2022 11:43:17 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                  "timestamp": "05/06/2022 13:43:17.353750",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "text/html; charset=utf-8",
+                        "x-frame-options": "SAMEORIGIN",
+                        "x-content-type-options": "nosniff",
+                        "x-xss-protection": "1; mode=block",
+                        "x-download-options": "noopen",
+                        "strict-transport-security": "max-age=31536000",
+                        "x-powered-by": "ASP.NET",
+                        "processtime": "0.034",
+                        "content-encoding": "gzip",
+                        "content-length": "20403",
+                        "expires": "Sun, 05 Jun 2022 11:43:17 GMT",
+                        "cache-control": "max-age=0, no-cache, no-store",
+                        "pragma": "no-cache",
+                        "date": "Sun, 05 Jun 2022 11:43:17 GMT",
+                        "vary": "Accept-Encoding"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/css/bootstrap.css?ver=202206012032",
+                  "timestamp": "05/06/2022 13:43:17.513510",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "text/css,*/*;q=0.1",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "style",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "text/css",
+                        "last-modified": "Sat, 29 Aug 2020 17:34:02 GMT",
+                        "etag": "W/\"5f4a918a-1dfb6\"",
+                        "processtime": "0.000",
+                        "content-encoding": "gzip",
+                        "content-length": "25323",
+                        "cache-control": "max-age=953652",
+                        "expires": "Thu, 16 Jun 2022 12:37:30 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT",
+                        "vary": "Accept-Encoding"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/css/common.css?ver=202206012032",
+                  "timestamp": "05/06/2022 13:43:17.516510",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "text/css,*/*;q=0.1",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "style",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "text/css",
+                        "last-modified": "Tue, 31 May 2022 08:37:28 GMT",
+                        "etag": "W/\"6295d3c8-4c608\"",
+                        "processtime": "0.000",
+                        "content-encoding": "gzip",
+                        "content-length": "81666",
+                        "cache-control": "max-age=953654",
+                        "expires": "Thu, 16 Jun 2022 12:37:32 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT",
+                        "vary": "Accept-Encoding"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/css/hack.css?ver=202206012032",
+                  "timestamp": "05/06/2022 13:43:17.527513",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "text/css,*/*;q=0.1",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "style",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "text/css",
+                        "last-modified": "Fri, 08 Jan 2021 14:38:00 GMT",
+                        "etag": "W/\"5ff86e48-99ae\"",
+                        "processtime": "0.000",
+                        "content-encoding": "gzip",
+                        "content-length": "26712",
+                        "cache-control": "max-age=953700",
+                        "expires": "Thu, 16 Jun 2022 12:38:18 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT",
+                        "vary": "Accept-Encoding"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/~/media/CORP2020/Assets/corp/2020/css/global-hack.css?ver=202206012032",
+                  "timestamp": "05/06/2022 13:43:17.531513",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "text/css,*/*;q=0.1",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "style",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "text/css",
+                        "last-modified": "Tue, 12 Apr 2022 06:35:16 GMT",
+                        "content-disposition": "inline; filename=\"global-hack.css\"; filename*=UTF-8''global-hack.css",
+                        "x-powered-by": "ASP.NET",
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
+                        "access-control-allow-headers": "Content-Type",
+                        "processtime": "0.028",
+                        "content-encoding": "gzip",
+                        "content-length": "357",
+                        "cache-control": "max-age=953625",
+                        "expires": "Thu, 16 Jun 2022 12:37:03 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT",
+                        "vary": "Accept-Encoding"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/js/lib/vendor/bootstrap/bootstrap.min.js?ver=202206012032",
+                  "timestamp": "05/06/2022 13:43:17.544693",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "application/x-javascript",
+                        "last-modified": "Sat, 12 Dec 2020 18:43:04 GMT",
+                        "etag": "W/\"5fd50f38-9b05\"",
+                        "processtime": "0.000",
+                        "content-encoding": "gzip",
+                        "content-length": "13279",
+                        "cache-control": "max-age=953660",
+                        "expires": "Thu, 16 Jun 2022 12:37:38 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT",
+                        "vary": "Accept-Encoding"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/js/common.js?ver=202206012032",
+                  "timestamp": "05/06/2022 13:43:17.547694",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "application/x-javascript",
+                        "last-modified": "Tue, 31 May 2022 08:37:26 GMT",
+                        "etag": "W/\"6295d3c6-3ecba\"",
+                        "processtime": "0.000",
+                        "content-encoding": "gzip",
+                        "content-length": "83465",
+                        "cache-control": "max-age=953643",
+                        "expires": "Thu, 16 Jun 2022 12:37:21 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT",
+                        "vary": "Accept-Encoding"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/js/lib/require.js?ver=202206012032",
+                  "timestamp": "05/06/2022 13:43:17.550695",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "application/x-javascript",
+                        "last-modified": "Sat, 12 Dec 2020 18:43:04 GMT",
+                        "etag": "W/\"5fd50f38-4455\"",
+                        "processtime": "0.000",
+                        "content-encoding": "gzip",
+                        "content-length": "7193",
+                        "cache-control": "max-age=953682",
+                        "expires": "Thu, 16 Jun 2022 12:38:00 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT",
+                        "vary": "Accept-Encoding"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/js/index.js?ver=202206012032",
+                  "timestamp": "05/06/2022 13:43:17.554695",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "application/x-javascript",
+                        "last-modified": "Sat, 10 Jul 2021 18:59:38 GMT",
+                        "etag": "W/\"60e9ee1a-fc0d\"",
+                        "processtime": "0.000",
+                        "content-encoding": "gzip",
+                        "content-length": "22048",
+                        "cache-control": "max-age=953688",
+                        "expires": "Thu, 16 Jun 2022 12:38:06 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT",
+                        "vary": "Accept-Encoding"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/css/index.css?ver=202206012032",
+                  "timestamp": "05/06/2022 13:43:17.557696",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "text/css,*/*;q=0.1",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "style",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "text/css",
+                        "last-modified": "Fri, 08 Apr 2022 08:45:56 GMT",
+                        "etag": "W/\"624ff644-6552\"",
+                        "processtime": "0.000",
+                        "content-encoding": "gzip",
+                        "content-length": "10822",
+                        "cache-control": "max-age=953768",
+                        "expires": "Thu, 16 Jun 2022 12:39:26 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT",
+                        "vary": "Accept-Encoding"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/js/lib/vendor/jquery-3.5.1.min.js?ver=202206012032",
+                  "timestamp": "05/06/2022 13:43:17.561697",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "application/x-javascript",
+                        "last-modified": "Sat, 12 Dec 2020 18:43:04 GMT",
+                        "etag": "W/\"5fd50f38-15d86\"",
+                        "processtime": "0.000",
+                        "content-encoding": "gzip",
+                        "content-length": "36075",
+                        "cache-control": "max-age=953614",
+                        "expires": "Thu, 16 Jun 2022 12:36:52 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT",
+                        "vary": "Accept-Encoding"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/img/media-gallery/maskpop.png",
+                  "timestamp": "05/06/2022 13:43:17.566698",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "image/png",
+                        "content-length": "923",
+                        "last-modified": "Sat, 13 Jun 2020 19:33:22 GMT",
+                        "etag": "\"5ee52a02-39b\"",
+                        "processtime": "0.000",
+                        "accept-ranges": "bytes",
+                        "cache-control": "max-age=562919",
+                        "expires": "Sun, 12 Jun 2022 00:05:17 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/img/index/popup-icon.jpg",
+                  "timestamp": "05/06/2022 13:43:17.573700",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "image/jpeg",
+                        "content-length": "3776",
+                        "last-modified": "Sat, 13 Jun 2020 19:33:22 GMT",
+                        "etag": "\"5ee52a02-ec0\"",
+                        "processtime": "0.000",
+                        "accept-ranges": "bytes",
+                        "cache-control": "max-age=562989",
+                        "expires": "Sun, 12 Jun 2022 00:06:27 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www-file.huawei.com/-/media/corp2020/home/cbg/0518/mate_xs_2.jpg",
+                  "timestamp": "05/06/2022 13:43:17.704423",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
+                        "last-modified": "Wed, 18 May 2022 14:08:12 GMT",
+                        "access-control-allow-headers": "Content-Type",
+                        "server": "Akamai Image Manager",
+                        "x-serial": "1700",
+                        "x-check-cacheable": "YES",
+                        "content-length": "131822",
+                        "content-type": "image/jpeg",
+                        "cache-control": "private, no-transform, max-age=1045482",
+                        "expires": "Fri, 17 Jun 2022 14:08:00 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www-file.huawei.com/-/media/corporate/images/home/logo/huawei_logo.png",
+                  "timestamp": "05/06/2022 13:43:17.708425",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
+                        "last-modified": "Tue, 24 Nov 2020 04:19:11 GMT",
+                        "access-control-allow-headers": "Content-Type",
+                        "server": "Akamai Image Manager",
+                        "content-length": "7387",
+                        "content-type": "image/png",
+                        "cache-control": "private, no-transform, max-age=1010971",
+                        "expires": "Fri, 17 Jun 2022 04:32:49 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www-file.huawei.com/-/media/corp2020/home/cbg/1/huawei-watch3-gt-pro-m.jpg",
+                  "timestamp": "05/06/2022 13:43:17.718433",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
+                        "last-modified": "Thu, 28 Apr 2022 12:54:58 GMT",
+                        "access-control-allow-headers": "Content-Type",
+                        "server": "Akamai Image Manager",
+                        "content-length": "68034",
+                        "content-type": "image/jpeg",
+                        "cache-control": "private, no-transform, max-age=1645807",
+                        "expires": "Fri, 24 Jun 2022 12:53:25 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www-file.huawei.com/-/media/corp2020/home/cbg/0518/mate_xs_2_m.jpg",
+                  "timestamp": "05/06/2022 13:43:17.721434",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
+                        "last-modified": "Wed, 18 May 2022 14:05:12 GMT",
+                        "access-control-allow-headers": "Content-Type",
+                        "server": "Akamai Image Manager",
+                        "x-serial": "595",
+                        "x-check-cacheable": "YES",
+                        "content-length": "87374",
+                        "content-type": "image/jpeg",
+                        "cache-control": "private, no-transform, max-age=1045247",
+                        "expires": "Fri, 17 Jun 2022 14:04:05 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/v2/fonts/HuaweiSans-Regular.woff2?20180113",
+                  "timestamp": "05/06/2022 13:43:17.986934",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.huawei.com",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "application/octet-stream",
+                        "content-length": "35452",
+                        "last-modified": "Fri, 26 Apr 2019 13:46:44 GMT",
+                        "etag": "\"5cc30bc4-8a7c\"",
+                        "processtime": "0.000",
+                        "accept-ranges": "bytes",
+                        "date": "Sun, 05 Jun 2022 11:43:19 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/img/exhibition/type2.png",
+                  "timestamp": "05/06/2022 13:43:18.002937",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/Assets/corp/2020/css/hack.css?ver=202206012032",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "image/png",
+                        "content-length": "992",
+                        "last-modified": "Sat, 13 Jun 2020 19:33:22 GMT",
+                        "etag": "\"5ee52a02-3e0\"",
+                        "processtime": "0.000",
+                        "accept-ranges": "bytes",
+                        "cache-control": "max-age=487572",
+                        "expires": "Sat, 11 Jun 2022 03:09:30 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/img/lazy.png",
+                  "timestamp": "05/06/2022 13:43:18.008939",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/Assets/corp/2020/css/index.css?ver=202206012032",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "image/png",
+                        "content-length": "5387",
+                        "last-modified": "Sat, 22 Apr 2017 05:51:31 GMT",
+                        "etag": "\"58faef63-150b\"",
+                        "processtime": "0.000",
+                        "accept-ranges": "bytes",
+                        "cache-control": "max-age=563288",
+                        "expires": "Sun, 12 Jun 2022 00:11:26 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://tags.tiqcdn.com/utag/huawei/main/prod/utag.js",
+                  "timestamp": "05/06/2022 13:43:18.050953",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "accept-ranges": "bytes",
+                        "content-type": "application/x-javascript",
+                        "etag": "\"322b138cb2e3d78a2c3438ac8443dcc8:1653529331.43837\"",
+                        "last-modified": "Thu, 26 May 2022 01:42:11 GMT",
+                        "server": "AkamaiNetStorage",
+                        "vary": "Accept-Encoding",
+                        "content-encoding": "gzip",
+                        "cache-control": "max-age=300",
+                        "expires": "Sun, 05 Jun 2022 11:48:18 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/img/icon/corpfont.ttf?utuc4q",
+                  "timestamp": "05/06/2022 13:43:18.066967",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.huawei.com",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.huawei.com/Assets/corp/2020/css/common.css?ver=202206012032",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "application/octet-stream",
+                        "content-length": "15460",
+                        "last-modified": "Sat, 13 Jun 2020 19:33:22 GMT",
+                        "etag": "\"5ee52a02-3c64\"",
+                        "processtime": "0.000",
+                        "accept-ranges": "bytes",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/2020/fonts/huawei-iconfont.woff?t=202204080919",
+                  "timestamp": "05/06/2022 13:43:18.069968",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.huawei.com",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.huawei.com/Assets/corp/2020/css/common.css?ver=202206012032",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "application/octet-stream",
+                        "content-length": "11752",
+                        "last-modified": "Fri, 08 Apr 2022 08:45:56 GMT",
+                        "etag": "\"624ff644-2de8\"",
+                        "processtime": "0.000",
+                        "accept-ranges": "bytes",
+                        "date": "Sun, 05 Jun 2022 11:43:18 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/Assets/corp/v2/fonts/HuaweiSans-Bold.woff2?20180113",
+                  "timestamp": "05/06/2022 13:43:18.071967",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.huawei.com",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "application/octet-stream",
+                        "content-length": "35404",
+                        "last-modified": "Fri, 26 Apr 2019 13:46:44 GMT",
+                        "etag": "\"5cc30bc4-8a4c\"",
+                        "processtime": "0.000",
+                        "accept-ranges": "bytes",
+                        "date": "Sun, 05 Jun 2022 11:43:19 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.huawei.com/en/user?action=userstate&currentUrl=https%3A%2F%2Fwww.huawei.com%2Fen%2F%3Fic_medium%3Ddirect%26ic_source%3Dsurlent&_=1654429397873",
+                  "timestamp": "05/06/2022 13:43:18.127912",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "accept": "application/json, text/javascript, */*; q=0.01",
+                        "x-requested-with": "XMLHttpRequest",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.huawei.com/en/?ic_medium=direct&ic_source=surlent",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "PAAS-WEB",
+                        "content-type": "application/json; charset=utf-8",
+                        "cache-control": "no-cache, no-store",
+                        "pragma": "no-cache",
+                        "expires": "-1",
+                        "x-powered-by": "ASP.NET",
+                        "processtime": "0.012",
+                        "content-encoding": "gzip",
+                        "date": "Sun, 05 Jun 2022 11:43:19 GMT",
+                        "content-length": "49",
+                        "vary": "Accept-Encoding",
+                        "set-cookie": "corp#lang=en; path=/"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www-file.huawei.com/-/media/corp2020/home/nav/p50.jpg?la=en",
+                  "timestamp": "05/06/2022 13:43:19.192912",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
+                        "last-modified": "Tue, 07 Sep 2021 08:20:19 GMT",
+                        "access-control-allow-headers": "Content-Type",
+                        "server": "Akamai Image Manager",
+                        "content-length": "42125",
+                        "content-type": "image/jpeg",
+                        "cache-control": "private, no-transform, max-age=254590",
+                        "expires": "Wed, 08 Jun 2022 10:26:29 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:19 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www-file.huawei.com/-/media/corp2020/home/banner/6/seeds-2022-2.jpg",
+                  "timestamp": "05/06/2022 13:43:19.196912",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
+                        "last-modified": "Thu, 12 May 2022 06:03:50 GMT",
+                        "access-control-allow-headers": "Content-Type",
+                        "server": "Akamai Image Manager",
+                        "x-serial": "1835",
+                        "x-check-cacheable": "YES",
+                        "content-length": "137278",
+                        "content-type": "image/jpeg",
+                        "cache-control": "private, no-transform, max-age=497989",
+                        "expires": "Sat, 11 Jun 2022 06:03:08 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:19 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www-file.huawei.com/-/media/corp2020/home/cbg/1/huawei-watch3-gt-pro.jpg",
+                  "timestamp": "05/06/2022 13:43:19.199912",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
+                        "last-modified": "Thu, 28 Apr 2022 12:54:59 GMT",
+                        "access-control-allow-headers": "Content-Type",
+                        "server": "Akamai Image Manager",
+                        "x-serial": "125",
+                        "x-check-cacheable": "YES",
+                        "content-length": "69251",
+                        "content-type": "image/jpeg",
+                        "cache-control": "private, no-transform, max-age=1645873",
+                        "expires": "Fri, 24 Jun 2022 12:54:32 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:19 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www-file.huawei.com/-/media/corp2020/home/cbg/0518/row1right_p50_pocke.jpg",
+                  "timestamp": "05/06/2022 13:43:19.205914",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
+                        "last-modified": "Wed, 18 May 2022 14:05:11 GMT",
+                        "access-control-allow-headers": "Content-Type",
+                        "server": "Akamai Image Manager",
+                        "x-serial": "2002",
+                        "x-check-cacheable": "YES",
+                        "content-length": "46812",
+                        "content-type": "image/jpeg",
+                        "cache-control": "private, no-transform, max-age=1045369",
+                        "expires": "Fri, 17 Jun 2022 14:06:08 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:19 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www-file.huawei.com/-/media/corp2020/home/cbg/0402/sound-joy-p.jpg",
+                  "timestamp": "05/06/2022 13:43:19.266800",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "utag_main=v_id:018133ad386000009007a84395480007b003d07300bd0$_sn:1$_se:1$_ss:1$_st:1654431199137$ses_id:1654429399137%3Bexp-session$_pn:1%3Bexp-session; channel_name=direct; channel_category=direct"
+                  },
+                  "response_headers": {
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
+                        "last-modified": "Sat, 02 Apr 2022 09:57:07 GMT",
+                        "access-control-allow-headers": "Content-Type",
+                        "server": "Akamai Image Manager",
+                        "x-serial": "1183",
+                        "x-check-cacheable": "YES",
+                        "content-length": "66196",
+                        "content-type": "image/jpeg",
+                        "cache-control": "private, no-transform, max-age=1794939",
+                        "expires": "Sun, 26 Jun 2022 06:18:58 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:19 GMT"
+                  },
+                  "nr_cookies": 3
+            },
+            {
+                  "request_url": "https://www-file.huawei.com/-/media/corp2020/home/cbg/0518/matebook_e.jpg",
+                  "timestamp": "05/06/2022 13:43:19.270801",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "utag_main=v_id:018133ad386000009007a84395480007b003d07300bd0$_sn:1$_se:1$_ss:1$_st:1654431199137$ses_id:1654429399137%3Bexp-session$_pn:1%3Bexp-session; channel_name=direct; channel_category=direct"
+                  },
+                  "response_headers": {
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS",
+                        "last-modified": "Wed, 18 May 2022 14:05:09 GMT",
+                        "access-control-allow-headers": "Content-Type",
+                        "server": "Akamai Image Manager",
+                        "x-serial": "1532",
+                        "x-check-cacheable": "YES",
+                        "content-length": "58317",
+                        "content-type": "image/jpeg",
+                        "cache-control": "private, no-transform, max-age=1045305",
+                        "expires": "Fri, 17 Jun 2022 14:05:04 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:19 GMT"
+                  },
+                  "nr_cookies": 3
+            },
+            {
+                  "request_url": "https://tags.tiqcdn.com/utag/huawei/main/prod/utag.19.js?utv=ut4.46.202204190744",
+                  "timestamp": "05/06/2022 13:43:19.597154",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "accept-ranges": "bytes",
+                        "content-type": "application/x-javascript",
+                        "etag": "\"4d2711059541e01335df2183eb71ae47:1650354305.610582\"",
+                        "last-modified": "Tue, 19 Apr 2022 07:45:05 GMT",
+                        "server": "AkamaiNetStorage",
+                        "vary": "Accept-Encoding",
+                        "content-encoding": "gzip",
+                        "cache-control": "max-age=1296000",
+                        "expires": "Mon, 20 Jun 2022 11:43:20 GMT",
+                        "date": "Sun, 05 Jun 2022 11:43:20 GMT",
+                        "content-length": "6121"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.google-analytics.com/analytics.js",
+                  "timestamp": "05/06/2022 13:43:19.845308",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.huawei.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+                        "x-content-type-options": "nosniff",
+                        "vary": "Accept-Encoding",
+                        "content-encoding": "gzip",
+                        "cross-origin-resource-policy": "cross-origin",
+                        "server": "Golfe2",
+                        "content-length": "20006",
+                        "date": "Sun, 05 Jun 2022 09:58:51 GMT",
+                        "expires": "Sun, 05 Jun 2022 11:58:51 GMT",
+                        "cache-control": "public, max-age=7200",
+                        "age": "6269",
+                        "last-modified": "Wed, 13 Apr 2022 21:02:38 GMT",
+                        "content-type": "text/javascript",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 0
+            }
+      ]
+}

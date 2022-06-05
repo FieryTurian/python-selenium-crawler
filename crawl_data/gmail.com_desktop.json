@@ -1,0 +1,319 @@
+{
+      "website_domain": "gmail.com",
+      "tranco_rank": 446,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 14:34:06.840642",
+      "pageload_end_ts": "05/06/2022 14:34:09.179817",
+      "post_pageload_url": "https://accounts.google.com/v3/signin/identifier?dsh=S1460221354%3A1654432448882653&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&osid=1&passive=1209600&service=mail&flowName=WebLiteSignIn&flowEntry=ServiceLogin&ifkv=AU9NCcyfH3Xv5wh_7CdPJq0DaSNVj12DMZsdJf6qyxpD5vCz52vgave9phrRDKenS_K_mM7Keyp1yQ",
+      "consent_status": "clicked",
+      "cookies": [
+            {
+                  "__Host-GAPS": "1:llEcfRonSSSzxgGS4EVrx1uD6Ff8tg:2pVhwTQ2G1S1Is_T",
+                  "Expires": "Tue, 04-Jun-2024 12:34:09 GMT",
+                  "Path": "/",
+                  "Secure": true,
+                  "HttpOnly": true,
+                  "Priority": "HIGH",
+                  "size": 49
+            },
+            {
+                  "__Host-GAPS": "1:oC6oiVYQQnvbsTUSkCwsRvPebqB1Ig:P5Q3uX6C41mWUx0p",
+                  "Path": "/",
+                  "Expires": "Tue, 04-Jun-2024 12:34:08 GMT",
+                  "Secure": true,
+                  "HttpOnly": true,
+                  "Priority": "HIGH",
+                  "size": 49
+            }
+      ],
+      "third_party_domains": [
+            "google.com",
+            "gstatic.com"
+      ],
+      "redirect_pairs": [
+            [
+                  "gmail.com",
+                  "google.com"
+            ],
+            [
+                  "gmail.com",
+                  "google.com"
+            ]
+      ],
+      "requests_list": [
+            {
+                  "request_url": "https://gmail.com/",
+                  "timestamp": "05/06/2022 14:34:07.093014",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "location": "https://www.google.com/gmail/",
+                        "cross-origin-resource-policy": "cross-origin",
+                        "x-content-type-options": "nosniff",
+                        "server": "sffe",
+                        "content-length": "226",
+                        "x-xss-protection": "0",
+                        "date": "Sun, 05 Jun 2022 12:28:42 GMT",
+                        "expires": "Sun, 05 Jun 2022 12:58:42 GMT",
+                        "cache-control": "public, max-age=1800",
+                        "content-type": "text/html; charset=UTF-8",
+                        "age": "325",
+                        "alt-svc": "clear"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.google.com/gmail/",
+                  "timestamp": "05/06/2022 14:34:07.312184",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "location": "https://mail.google.com/mail/",
+                        "cache-control": "private",
+                        "cross-origin-resource-policy": "cross-origin",
+                        "content-type": "text/html; charset=UTF-8",
+                        "x-content-type-options": "nosniff",
+                        "date": "Sun, 05 Jun 2022 12:34:07 GMT",
+                        "server": "sffe",
+                        "content-length": "226",
+                        "x-xss-protection": "0",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://mail.google.com/mail/",
+                  "timestamp": "05/06/2022 14:34:07.530529",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "text/html; charset=UTF-8",
+                        "expires": "Sun, 05 Jun 2022 12:34:08 GMT",
+                        "date": "Sun, 05 Jun 2022 12:34:08 GMT",
+                        "cache-control": "private, max-age=7776000",
+                        "location": "https://mail.google.com/mail/u/0/",
+                        "content-encoding": "gzip",
+                        "x-content-type-options": "nosniff",
+                        "x-frame-options": "SAMEORIGIN",
+                        "content-security-policy": "frame-ancestors 'self'",
+                        "x-xss-protection": "1; mode=block",
+                        "content-length": "177",
+                        "server": "GSE",
+                        "alt-svc": "clear"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://mail.google.com/mail/u/0/",
+                  "timestamp": "05/06/2022 14:34:07.877517",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "text/html; charset=UTF-8",
+                        "location": "https://accounts.google.com/ServiceLogin?service=mail&passive=1209600&osid=1&continue=https://mail.google.com/mail/u/0/&followup=https://mail.google.com/mail/u/0/&emr=1",
+                        "strict-transport-security": "max-age=10886400; includeSubDomains",
+                        "content-encoding": "gzip",
+                        "date": "Sun, 05 Jun 2022 12:34:08 GMT",
+                        "expires": "Sun, 05 Jun 2022 12:34:08 GMT",
+                        "cache-control": "private, max-age=0",
+                        "x-content-type-options": "nosniff",
+                        "x-frame-options": "SAMEORIGIN",
+                        "content-security-policy": "frame-ancestors 'self'",
+                        "x-xss-protection": "1; mode=block",
+                        "content-length": "252",
+                        "server": "GSE",
+                        "alt-svc": "clear"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://accounts.google.com/ServiceLogin?service=mail&passive=1209600&osid=1&continue=https://mail.google.com/mail/u/0/&followup=https://mail.google.com/mail/u/0/&emr=1",
+                  "timestamp": "05/06/2022 14:34:08.270831",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "text/html; charset=UTF-8",
+                        "x-frame-options": "DENY",
+                        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+                        "pragma": "no-cache",
+                        "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+                        "date": "Sun, 05 Jun 2022 12:34:08 GMT",
+                        "location": "https://accounts.google.com/v3/signin/identifier?dsh=S1460221354%3A1654432448882653&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&osid=1&passive=1209600&service=mail&flowName=WebLiteSignIn&flowEntry=ServiceLogin&ifkv=AU9NCcyfH3Xv5wh_7CdPJq0DaSNVj12DMZsdJf6qyxpD5vCz52vgave9phrRDKenS_K_mM7Keyp1yQ",
+                        "strict-transport-security": "max-age=31536000; includeSubDomains",
+                        "content-security-policy": "require-trusted-types-for 'script';report-uri /cspreport",
+                        "report-to": "{\"group\":\"coop_gse_qebhlk\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/gse_qebhlk\"}]}",
+                        "cross-origin-opener-policy-report-only": "same-origin; report-to=\"coop_gse_qebhlk\"",
+                        "content-encoding": "gzip",
+                        "x-content-type-options": "nosniff",
+                        "x-xss-protection": "1; mode=block",
+                        "content-length": "404",
+                        "server": "GSE",
+                        "set-cookie": "__Host-GAPS=1:oC6oiVYQQnvbsTUSkCwsRvPebqB1Ig:P5Q3uX6C41mWUx0p;Path=/;Expires=Tue, 04-Jun-2024 12:34:08 GMT;Secure;HttpOnly;Priority=HIGH",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://accounts.google.com/v3/signin/identifier?dsh=S1460221354%3A1654432448882653&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&osid=1&passive=1209600&service=mail&flowName=WebLiteSignIn&flowEntry=ServiceLogin&ifkv=AU9NCcyfH3Xv5wh_7CdPJq0DaSNVj12DMZsdJf6qyxpD5vCz52vgave9phrRDKenS_K_mM7Keyp1yQ",
+                  "timestamp": "05/06/2022 14:34:08.586214",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "__Host-GAPS=1:oC6oiVYQQnvbsTUSkCwsRvPebqB1Ig:P5Q3uX6C41mWUx0p"
+                  },
+                  "response_headers": {
+                        "content-type": "text/html; charset=utf-8",
+                        "x-frame-options": "DENY",
+                        "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+                        "x-auto-login": "realm=com.google&args=service%3Dmail%26continue%3Dhttps://mail.google.com/mail/u/0/",
+                        "link": "<https://www.google.com/gmail/>; rel=\"canonical\"",
+                        "x-ua-compatible": "IE=edge",
+                        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+                        "pragma": "no-cache",
+                        "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+                        "date": "Sun, 05 Jun 2022 12:34:09 GMT",
+                        "p3p": "CP=\"This is not a P3P policy! See g.co/p3phelp for more info.\"",
+                        "strict-transport-security": "max-age=31536000; includeSubDomains",
+                        "content-security-policy": "require-trusted-types-for 'script';report-uri /v3/signin/_/AccountsSignInUi/cspreport",
+                        "accept-ch": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+                        "report-to": "{\"group\":\"AccountsSignInUi\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/AccountsSignInUi/external\"}]}",
+                        "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-platform=*, ch-ua-platform-version=*",
+                        "cross-origin-opener-policy": "same-origin; report-to=\"AccountsSignInUi\"",
+                        "cross-origin-resource-policy": "same-site",
+                        "content-encoding": "gzip",
+                        "server": "ESF",
+                        "x-xss-protection": "0",
+                        "x-content-type-options": "nosniff",
+                        "set-cookie": "__Host-GAPS=1:llEcfRonSSSzxgGS4EVrx1uD6Ff8tg:2pVhwTQ2G1S1Is_T; Expires=Tue, 04-Jun-2024 12:34:09 GMT; Path=/; Secure; HttpOnly; Priority=HIGH",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 1
+            },
+            {
+                  "request_url": "https://accounts.google.com/_/bscframe",
+                  "timestamp": "05/06/2022 14:34:08.944963",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-dest": "iframe",
+                        "referer": "https://accounts.google.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "__Host-GAPS=1:llEcfRonSSSzxgGS4EVrx1uD6Ff8tg:2pVhwTQ2G1S1Is_T; NID=511=tdICS3kNfXia1-rGoboD5RgOM-UPREpNozfx2W1-dJznylfjfbFF8tNYY4okWQTErNDVz95DGKcZBFDdMPoIk5CnYgchrrqghbFhnYLgPiI_HpkQxfL_dumfGq2tMdykKCbu722HTR4yst9eJMONhaR4u5tLjBjSIV_LkhZG8ao"
+                  },
+                  "response_headers": {
+                        "content-type": "text/html; charset=utf-8",
+                        "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+                        "x-frame-options": "SAMEORIGIN",
+                        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+                        "pragma": "no-cache",
+                        "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+                        "date": "Sun, 05 Jun 2022 12:34:09 GMT",
+                        "content-security-policy": "script-src 'unsafe-eval';require-trusted-types-for 'script';object-src 'none'",
+                        "strict-transport-security": "max-age=31536000; includeSubDomains",
+                        "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-platform=*, ch-ua-platform-version=*",
+                        "cross-origin-resource-policy": "same-site",
+                        "report-to": "{\"group\":\"AccountsSignInSignUpUi\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/AccountsSignInSignUpUi/external\"}]}",
+                        "accept-ch": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+                        "cross-origin-opener-policy-report-only": "same-origin; report-to=\"AccountsSignInSignUpUi\"",
+                        "content-encoding": "gzip",
+                        "server": "ESF",
+                        "x-xss-protection": "0",
+                        "x-content-type-options": "nosniff",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_74x24dp.png",
+                  "timestamp": "05/06/2022 14:34:09.005859",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://accounts.google.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "accept-ranges": "bytes",
+                        "vary": "Origin",
+                        "cross-origin-resource-policy": "cross-origin",
+                        "cross-origin-opener-policy-report-only": "same-origin; report-to=\"static-on-bigtable\"",
+                        "report-to": "{\"group\":\"static-on-bigtable\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/static-on-bigtable\"}]}",
+                        "content-length": "3240",
+                        "x-content-type-options": "nosniff",
+                        "server": "sffe",
+                        "x-xss-protection": "0",
+                        "date": "Fri, 03 Jun 2022 07:12:35 GMT",
+                        "expires": "Sat, 03 Jun 2023 07:12:35 GMT",
+                        "cache-control": "public, max-age=31536000",
+                        "age": "192094",
+                        "last-modified": "Tue, 22 Oct 2019 18:15:00 GMT",
+                        "content-type": "image/png",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 0
+            }
+      ]
+}

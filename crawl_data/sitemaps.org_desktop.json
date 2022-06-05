@@ -1,0 +1,153 @@
+{
+      "website_domain": "sitemaps.org",
+      "tranco_rank": 357,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 13:44:08.901801",
+      "pageload_end_ts": "05/06/2022 13:44:10.142225",
+      "post_pageload_url": "https://sitemaps.org/",
+      "consent_status": "not_found",
+      "cookies": [],
+      "third_party_domains": [
+            "msecnd.net"
+      ],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://sitemaps.org/",
+                  "timestamp": "05/06/2022 13:44:09.404986",
+                  "request_headers": {
+                        "Host": "sitemaps.org",
+                        "Connection": "keep-alive",
+                        "Upgrade-Insecure-Requests": "1",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "Sec-Fetch-Site": "none",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-User": "?1",
+                        "Sec-Fetch-Dest": "document",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Content-Length": "2214",
+                        "Content-Type": "text/html",
+                        "Content-Encoding": "gzip",
+                        "Last-Modified": "Mon, 27 Sep 2021 12:13:03 GMT",
+                        "Accept-Ranges": "bytes",
+                        "ETag": "\"5d863599b3d71:0\"",
+                        "Vary": "Accept-Encoding",
+                        "Server": "Microsoft-IIS/10.0",
+                        "X-Powered-By": "ASP.NET",
+                        "Set-Cookie": "ARRAffinity=99f97b025e42605e669248c3ec2ec7257b474a81da18cf976b59c93f0ccb2dac;Path=/;HttpOnly;Secure;Domain=sitemaps.org",
+                        "Date": "Sun, 05 Jun 2022 11:44:09 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://sitemaps.org/sitemaps.css",
+                  "timestamp": "05/06/2022 13:44:09.564775",
+                  "request_headers": {
+                        "Host": "sitemaps.org",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "text/css,*/*;q=0.1",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "style",
+                        "Referer": "https://sitemaps.org/",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB",
+                        "Cookie": "ARRAffinity=99f97b025e42605e669248c3ec2ec7257b474a81da18cf976b59c93f0ccb2dac; ARRAffinitySameSite=99f97b025e42605e669248c3ec2ec7257b474a81da18cf976b59c93f0ccb2dac"
+                  },
+                  "response_headers": {
+                        "Content-Length": "1183",
+                        "Content-Type": "text/css",
+                        "Content-Encoding": "gzip",
+                        "Last-Modified": "Mon, 27 Sep 2021 12:13:03 GMT",
+                        "Accept-Ranges": "bytes",
+                        "ETag": "\"80713d599b3d71:0\"",
+                        "Vary": "Accept-Encoding",
+                        "Server": "Microsoft-IIS/10.0",
+                        "X-Powered-By": "ASP.NET",
+                        "Date": "Sun, 05 Jun 2022 11:44:09 GMT"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://sitemaps.org/lang.js",
+                  "timestamp": "05/06/2022 13:44:09.712295",
+                  "request_headers": {
+                        "Host": "sitemaps.org",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "*/*",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "script",
+                        "Referer": "https://sitemaps.org/",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB",
+                        "Cookie": "ARRAffinity=99f97b025e42605e669248c3ec2ec7257b474a81da18cf976b59c93f0ccb2dac; ARRAffinitySameSite=99f97b025e42605e669248c3ec2ec7257b474a81da18cf976b59c93f0ccb2dac"
+                  },
+                  "response_headers": {
+                        "Content-Length": "1392",
+                        "Content-Type": "application/x-javascript",
+                        "Content-Encoding": "gzip",
+                        "Last-Modified": "Mon, 27 Sep 2021 12:13:03 GMT",
+                        "Accept-Ranges": "bytes",
+                        "ETag": "\"80713d599b3d71:0\"",
+                        "Vary": "Accept-Encoding",
+                        "Server": "Microsoft-IIS/10.0",
+                        "X-Powered-By": "ASP.NET",
+                        "Date": "Sun, 05 Jun 2022 11:44:09 GMT"
+                  },
+                  "nr_cookies": 2
+            },
+            {
+                  "request_url": "https://az416426.vo.msecnd.net/scripts/a/ai.0.js",
+                  "timestamp": "05/06/2022 13:44:09.933582",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://sitemaps.org/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-encoding": "gzip",
+                        "access-control-allow-origin": "*",
+                        "access-control-expose-headers": "x-ms-request-id,Server,x-ms-version,Content-Length,Date,Transfer-Encoding",
+                        "age": "1016",
+                        "cache-control": "public, max-age=1800",
+                        "content-md5": "HdY95yzx9wIyQkVEGES+Ew==",
+                        "content-type": "application/x-javascript",
+                        "date": "Sun, 05 Jun 2022 11:44:10 GMT",
+                        "etag": "0x8D8E461DA1A5889",
+                        "expires": "Sun, 05 Jun 2022 12:14:10 GMT",
+                        "last-modified": "Thu, 11 Mar 2021 07:46:59 GMT",
+                        "server": "ECAcc (ama/8AAA)",
+                        "vary": "Accept-Encoding",
+                        "x-cache": "HIT",
+                        "x-ms-blob-type": "BlockBlob",
+                        "x-ms-lease-status": "unlocked",
+                        "x-ms-meta-lastmodified": "2020-10-01 19:31:04",
+                        "x-ms-request-id": "58fbfcb1-b01e-007f-70cf-7827ee000000",
+                        "x-ms-version": "2009-09-19",
+                        "content-length": "22495"
+                  },
+                  "nr_cookies": 0
+            }
+      ]
+}

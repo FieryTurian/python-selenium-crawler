@@ -1,0 +1,40 @@
+{
+      "website_domain": "tribunnews.com",
+      "tranco_rank": 164,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 11:35:03.178361",
+      "pageload_end_ts": "05/06/2022 11:35:03.614887",
+      "post_pageload_url": "https://tribunnews.com/",
+      "consent_status": "not_found",
+      "cookies": [],
+      "third_party_domains": [],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://tribunnews.com/",
+                  "timestamp": "05/06/2022 11:35:03.435028",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "CloudFront",
+                        "date": "Sun, 05 Jun 2022 09:35:04 GMT",
+                        "content-type": "text/html",
+                        "content-length": "919",
+                        "x-cache": "Error from cloudfront",
+                        "via": "1.1 2b11d6e7cfac22d5fd2bf9a0df8c4d2a.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS54-C1",
+                        "x-amz-cf-id": "HK_Oc5vyJh6dEmy3TuTaFP9V4Wugaq50yC-U8Rm8Je9W365BeP9JVA=="
+                  },
+                  "nr_cookies": 0
+            }
+      ]
+}

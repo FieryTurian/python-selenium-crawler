@@ -1,0 +1,92 @@
+{
+      "website_domain": "sciencedirect.com",
+      "tranco_rank": 113,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 11:08:28.517434",
+      "pageload_end_ts": "05/06/2022 11:08:29.301781",
+      "post_pageload_url": "https://sciencedirect.com/",
+      "consent_status": "not_found",
+      "cookies": [
+            {
+                  "__cf_bm": "gZ_yzEZe20MBaxi.wM2EAu2S51f4ORThWxdXjGcWqzk-1654420109-0-Ab9YYpFm2CqgU1BxQS/9iwUcX6maEctzhSCWLpeSH4/GVFG4m/5Pvxj0LD77xxiOtLDNtPhvC3y7VVphQZv8R1ew0mfHjNBg/7qNk2xGljFF",
+                  "path": "/",
+                  "expires": "Sun, 05-Jun-22 09:38:29 GMT",
+                  "domain": ".sciencedirect.com",
+                  "HttpOnly": true,
+                  "Secure": true,
+                  "SameSite": "None",
+                  "size": 165
+            }
+      ],
+      "third_party_domains": [],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://sciencedirect.com/",
+                  "timestamp": "05/06/2022 11:08:28.754567",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 09:08:29 GMT",
+                        "content-type": "text/html; charset=UTF-8",
+                        "x-frame-options": "SAMEORIGIN",
+                        "referrer-policy": "same-origin",
+                        "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+                        "expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+                        "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                        "set-cookie": "__cf_bm=gZ_yzEZe20MBaxi.wM2EAu2S51f4ORThWxdXjGcWqzk-1654420109-0-Ab9YYpFm2CqgU1BxQS/9iwUcX6maEctzhSCWLpeSH4/GVFG4m/5Pvxj0LD77xxiOtLDNtPhvC3y7VVphQZv8R1ew0mfHjNBg/7qNk2xGljFF; path=/; expires=Sun, 05-Jun-22 09:38:29 GMT; domain=.sciencedirect.com; HttpOnly; Secure; SameSite=None",
+                        "vary": "Accept-Encoding",
+                        "strict-transport-security": "max-age=2678400; preload",
+                        "x-content-type-options": "nosniff",
+                        "server": "cloudflare",
+                        "cf-ray": "7167c39359530b67-AMS",
+                        "content-encoding": "br"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://sciencedirect.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js",
+                  "timestamp": "05/06/2022 11:08:29.257532",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://sciencedirect.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "__cf_bm=gZ_yzEZe20MBaxi.wM2EAu2S51f4ORThWxdXjGcWqzk-1654420109-0-Ab9YYpFm2CqgU1BxQS/9iwUcX6maEctzhSCWLpeSH4/GVFG4m/5Pvxj0LD77xxiOtLDNtPhvC3y7VVphQZv8R1ew0mfHjNBg/7qNk2xGljFF"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 09:08:29 GMT",
+                        "content-type": "application/javascript",
+                        "last-modified": "Fri, 27 May 2022 19:22:11 GMT",
+                        "etag": "W/\"629124e3-302c\"",
+                        "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                        "vary": "Accept-Encoding",
+                        "strict-transport-security": "max-age=2678400; preload",
+                        "x-content-type-options": "nosniff",
+                        "server": "cloudflare",
+                        "cf-ray": "7167c3967d3a0b67-AMS",
+                        "x-frame-options": "DENY",
+                        "expires": "Tue, 07 Jun 2022 09:08:29 GMT",
+                        "cache-control": "max-age=172800",
+                        "content-encoding": "gzip"
+                  },
+                  "nr_cookies": 1
+            }
+      ]
+}

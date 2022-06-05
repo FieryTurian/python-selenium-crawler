@@ -1,0 +1,53 @@
+{
+      "website_domain": "forms.gle",
+      "tranco_rank": 110,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 11:07:37.120791",
+      "pageload_end_ts": "05/06/2022 11:07:37.614637",
+      "post_pageload_url": "https://forms.gle/",
+      "consent_status": "not_found",
+      "cookies": [],
+      "third_party_domains": [],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://forms.gle/",
+                  "timestamp": "05/06/2022 11:07:37.376156",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "accept-ch": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+                        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+                        "content-encoding": "gzip",
+                        "content-security-policy": "script-src 'report-sample' 'nonce-7a_R2O3SePsTRG7L5e2y5w' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/DurableDeepLinkUi/cspreport;worker-src 'self',script-src 'nonce-7a_R2O3SePsTRG7L5e2y5w' 'self' https://apis.google.com https://ssl.gstatic.com https://www.google.com https://www.gstatic.com https://www.google-analytics.com https://www.googleapis.com/appsmarket/v2/installedApps/;report-uri /_/DurableDeepLinkUi/cspreport,require-trusted-types-for 'script';report-uri /_/DurableDeepLinkUi/cspreport",
+                        "content-type": "text/html; charset=utf-8",
+                        "cross-origin-opener-policy": "unsafe-none; report-to=\"DurableDeepLinkUi\"",
+                        "expires": "Mon, 01 Jan 1990 00:00:00 GMT",
+                        "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-platform=*, ch-ua-platform-version=*",
+                        "pragma": "no-cache",
+                        "report-to": "{\"group\":\"DurableDeepLinkUi\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/DurableDeepLinkUi/external\"}]}",
+                        "server": "ESF",
+                        "x-content-type-options": "nosniff",
+                        "x-frame-options": "SAMEORIGIN",
+                        "x-xss-protection": "0",
+                        "accept-ranges": "bytes",
+                        "date": "Sun, 05 Jun 2022 09:07:38 GMT",
+                        "x-served-by": "cache-ams21063-AMS",
+                        "x-cache": "MISS",
+                        "x-cache-hits": "0",
+                        "x-timer": "S1654420058.966798,VS0,VE45",
+                        "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site, x-fh-requested-host, accept-encoding"
+                  },
+                  "nr_cookies": 0
+            }
+      ]
+}

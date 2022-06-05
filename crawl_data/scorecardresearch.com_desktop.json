@@ -1,0 +1,388 @@
+{
+      "website_domain": "scorecardresearch.com",
+      "tranco_rank": 262,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 12:48:12.886718",
+      "pageload_end_ts": "05/06/2022 12:48:14.867814",
+      "post_pageload_url": "https://www.scorecardresearch.com/home.aspx",
+      "consent_status": "not_found",
+      "cookies": [],
+      "third_party_domains": [
+            "jquery.com",
+            "googletagmanager.com"
+      ],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://scorecardresearch.com/",
+                  "timestamp": "05/06/2022 12:48:13.340656",
+                  "request_headers": {
+                        "Host": "scorecardresearch.com",
+                        "Connection": "keep-alive",
+                        "Upgrade-Insecure-Requests": "1",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "Sec-Fetch-Site": "none",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-User": "?1",
+                        "Sec-Fetch-Dest": "document",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Cache-Control": "private",
+                        "Content-Type": "text/html; charset=utf-8",
+                        "Location": "https://www.scorecardresearch.com/home.aspx",
+                        "Server": "Microsoft-IIS/8.5",
+                        "X-Powered-By": "ASP.NET",
+                        "X-Frame-Options": "SAMEORIGIN",
+                        "Content-Security-Policy": "frame-ancestors 'self' *.storyblok.com;",
+                        "Date": "Sun, 05 Jun 2022 10:48:13 GMT",
+                        "Content-Length": "160"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.scorecardresearch.com/home.aspx",
+                  "timestamp": "05/06/2022 12:48:13.868927",
+                  "request_headers": {
+                        "Host": "www.scorecardresearch.com",
+                        "Connection": "keep-alive",
+                        "Upgrade-Insecure-Requests": "1",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "Sec-Fetch-Site": "none",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-User": "?1",
+                        "Sec-Fetch-Dest": "document",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Cache-Control": "private",
+                        "Content-Type": "text/html; charset=utf-8",
+                        "ETag": "984562",
+                        "Server": "Microsoft-IIS/8.5",
+                        "X-Powered-By": "ASP.NET",
+                        "X-Frame-Options": "SAMEORIGIN",
+                        "Content-Security-Policy": "frame-ancestors 'self' *.storyblok.com;",
+                        "Date": "Sun, 05 Jun 2022 10:48:14 GMT",
+                        "Content-Length": "19443"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.scorecardresearch.com/Css/SR_Styles.css",
+                  "timestamp": "05/06/2022 12:48:14.149947",
+                  "request_headers": {
+                        "Host": "www.scorecardresearch.com",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "text/css,*/*;q=0.1",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "style",
+                        "Referer": "https://www.scorecardresearch.com/home.aspx",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Content-Type": "text/css",
+                        "Last-Modified": "Wed, 29 Nov 2017 14:37:26 GMT",
+                        "Accept-Ranges": "bytes",
+                        "ETag": "\"7e93a1931f69d31:0\"",
+                        "Server": "Microsoft-IIS/8.5",
+                        "X-Powered-By": "ASP.NET",
+                        "X-Frame-Options": "SAMEORIGIN",
+                        "Content-Security-Policy": "frame-ancestors 'self' *.storyblok.com;",
+                        "Date": "Sun, 05 Jun 2022 10:48:14 GMT",
+                        "Content-Length": "7105"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.scorecardresearch.com/Css/sitecommon.js",
+                  "timestamp": "05/06/2022 12:48:14.287953",
+                  "request_headers": {
+                        "Host": "www.scorecardresearch.com",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "*/*",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "script",
+                        "Referer": "https://www.scorecardresearch.com/home.aspx",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Content-Type": "application/javascript",
+                        "Last-Modified": "Tue, 15 Jul 2014 21:14:12 GMT",
+                        "Accept-Ranges": "bytes",
+                        "ETag": "\"46e083b971a0cf1:0\"",
+                        "Server": "Microsoft-IIS/8.5",
+                        "X-Powered-By": "ASP.NET",
+                        "X-Frame-Options": "SAMEORIGIN",
+                        "Content-Security-Policy": "frame-ancestors 'self' *.storyblok.com;",
+                        "Date": "Sun, 05 Jun 2022 10:48:14 GMT",
+                        "Content-Length": "994"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://code.jquery.com/jquery-3.6.0.min.js",
+                  "timestamp": "05/06/2022 12:48:14.364600",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.scorecardresearch.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 10:48:14 GMT",
+                        "content-encoding": "gzip",
+                        "content-length": "30875",
+                        "content-type": "application/javascript; charset=utf-8",
+                        "last-modified": "Fri, 18 Oct 1991 12:00:00 GMT",
+                        "accept-ranges": "bytes",
+                        "server": "nginx",
+                        "etag": "W/\"28feccc0-15d9d\"",
+                        "cache-control": "max-age=315360000",
+                        "access-control-allow-origin": "*",
+                        "vary": "Accept-Encoding",
+                        "x-hw": "1654426094.dop224.am5.t,1654426094.cds222.am5.hn,1654426094.cds210.am5.c"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://code.jquery.com/ui/1.13.0/jquery-ui.min.js",
+                  "timestamp": "05/06/2022 12:48:14.367601",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.scorecardresearch.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 10:48:14 GMT",
+                        "content-encoding": "gzip",
+                        "content-length": "67605",
+                        "content-type": "application/javascript; charset=utf-8",
+                        "last-modified": "Wed, 16 Feb 2022 10:50:40 GMT",
+                        "accept-ranges": "bytes",
+                        "server": "nginx",
+                        "etag": "W/\"620cd700-3e3c9\"",
+                        "cache-control": "max-age=315360000",
+                        "access-control-allow-origin": "*",
+                        "vary": "Accept-Encoding",
+                        "x-hw": "1654426094.dop224.am5.t,1654426094.cds222.am5.hn,1654426094.cds305.am5.c"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css",
+                  "timestamp": "05/06/2022 12:48:14.371602",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "text/css,*/*;q=0.1",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "style",
+                        "referer": "https://www.scorecardresearch.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 10:48:14 GMT",
+                        "content-encoding": "gzip",
+                        "content-length": "8444",
+                        "content-type": "text/css",
+                        "last-modified": "Thu, 07 Oct 2021 14:21:41 GMT",
+                        "accept-ranges": "bytes",
+                        "server": "nginx",
+                        "etag": "W/\"615f0275-8f36\"",
+                        "cache-control": "max-age=315360000",
+                        "access-control-allow-origin": "*",
+                        "vary": "Accept-Encoding",
+                        "x-hw": "1654426094.dop224.am5.t,1654426094.cds222.am5.hn,1654426094.cds264.am5.c"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.scorecardresearch.com/Images/ScorecardResearch_01_Small.jpg",
+                  "timestamp": "05/06/2022 12:48:14.565640",
+                  "request_headers": {
+                        "Host": "www.scorecardresearch.com",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "image",
+                        "Referer": "https://www.scorecardresearch.com/home.aspx",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Content-Type": "image/jpeg",
+                        "Last-Modified": "Thu, 25 Jul 2013 15:17:01 GMT",
+                        "Accept-Ranges": "bytes",
+                        "ETag": "\"d2237334a89ce1:0\"",
+                        "Server": "Microsoft-IIS/8.5",
+                        "X-Powered-By": "ASP.NET",
+                        "X-Frame-Options": "SAMEORIGIN",
+                        "Content-Security-Policy": "frame-ancestors 'self' *.storyblok.com;",
+                        "Date": "Sun, 05 Jun 2022 10:48:15 GMT",
+                        "Content-Length": "12009"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.scorecardresearch.com/Images/bk-hdr.jpg",
+                  "timestamp": "05/06/2022 12:48:14.587987",
+                  "request_headers": {
+                        "Host": "www.scorecardresearch.com",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "image",
+                        "Referer": "https://www.scorecardresearch.com/Css/SR_Styles.css",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Content-Type": "image/jpeg",
+                        "Last-Modified": "Thu, 25 Jul 2013 15:17:01 GMT",
+                        "Accept-Ranges": "bytes",
+                        "ETag": "\"36c66f34a89ce1:0\"",
+                        "Server": "Microsoft-IIS/8.5",
+                        "X-Powered-By": "ASP.NET",
+                        "X-Frame-Options": "SAMEORIGIN",
+                        "Content-Security-Policy": "frame-ancestors 'self' *.storyblok.com;",
+                        "Date": "Sun, 05 Jun 2022 10:48:14 GMT",
+                        "Content-Length": "443"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.scorecardresearch.com/Images/bk-ftr.jpg",
+                  "timestamp": "05/06/2022 12:48:14.711900",
+                  "request_headers": {
+                        "Host": "www.scorecardresearch.com",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "image",
+                        "Referer": "https://www.scorecardresearch.com/Css/SR_Styles.css",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Content-Type": "image/jpeg",
+                        "Last-Modified": "Thu, 25 Jul 2013 15:17:01 GMT",
+                        "Accept-Ranges": "bytes",
+                        "ETag": "\"a63c7d34a89ce1:0\"",
+                        "Server": "Microsoft-IIS/8.5",
+                        "X-Powered-By": "ASP.NET",
+                        "X-Frame-Options": "SAMEORIGIN",
+                        "Content-Security-Policy": "frame-ancestors 'self' *.storyblok.com;",
+                        "Date": "Sun, 05 Jun 2022 10:48:15 GMT",
+                        "Content-Length": "327"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.googletagmanager.com/gtm.js?id=GTM-NSNGHZX",
+                  "timestamp": "05/06/2022 12:48:14.784229",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.scorecardresearch.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "application/javascript; charset=UTF-8",
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-credentials": "true",
+                        "access-control-allow-headers": "Cache-Control",
+                        "content-encoding": "br",
+                        "vary": "Accept-Encoding",
+                        "date": "Sun, 05 Jun 2022 10:48:15 GMT",
+                        "expires": "Sun, 05 Jun 2022 10:48:15 GMT",
+                        "cache-control": "private, max-age=900",
+                        "last-modified": "Sun, 05 Jun 2022 09:00:00 GMT",
+                        "strict-transport-security": "max-age=31536000; includeSubDomains",
+                        "cross-origin-resource-policy": "cross-origin",
+                        "server": "Google Tag Manager",
+                        "content-length": "40869",
+                        "x-xss-protection": "0",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.scorecardresearch.com/Images/nav-home.jpg",
+                  "timestamp": "05/06/2022 12:48:14.863814",
+                  "request_headers": {
+                        "Host": "www.scorecardresearch.com",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "image",
+                        "Referer": "https://www.scorecardresearch.com/Css/SR_Styles.css",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": null,
+                  "nr_cookies": 0
+            }
+      ]
+}

@@ -1,0 +1,76 @@
+{
+      "website_domain": "homedepot.com",
+      "tranco_rank": 455,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 14:38:41.535048",
+      "pageload_end_ts": "05/06/2022 14:38:42.346676",
+      "post_pageload_url": "https://www.homedepot.com/",
+      "consent_status": "not_found",
+      "cookies": [
+            {
+                  "HD_DC": "origin",
+                  "path": "/",
+                  "domain": ".homedepot.com",
+                  "secure": true,
+                  "size": 6
+            }
+      ],
+      "third_party_domains": [],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://homedepot.com/",
+                  "timestamp": "05/06/2022 14:38:41.785300",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "nginx/1.19.10",
+                        "date": "Sun, 05 Jun 2022 12:38:42 GMT",
+                        "content-type": "text/html",
+                        "content-length": "170",
+                        "location": "https://www.homedepot.com/",
+                        "via": "1.1 google",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.homedepot.com/",
+                  "timestamp": "05/06/2022 14:38:42.133291",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "AkamaiGHost",
+                        "mime-version": "1.0",
+                        "content-type": "text/html",
+                        "content-length": "267",
+                        "expires": "Sun, 05 Jun 2022 12:38:42 GMT",
+                        "cache-control": "max-age=0, no-cache, no-store",
+                        "pragma": "no-cache",
+                        "date": "Sun, 05 Jun 2022 12:38:42 GMT",
+                        "set-cookie": "HD_DC=origin; path=/; domain=.homedepot.com; secure",
+                        "server-timing": "cdn-cache; desc=HIT",
+                        "x-proto": "secure"
+                  },
+                  "nr_cookies": 0
+            }
+      ]
+}

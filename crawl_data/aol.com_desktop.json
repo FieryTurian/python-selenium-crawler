@@ -1,0 +1,535 @@
+{
+      "website_domain": "aol.com",
+      "tranco_rank": 214,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 12:19:58.568104",
+      "pageload_end_ts": "05/06/2022 12:20:01.969664",
+      "post_pageload_url": "https://consent.yahoo.com/v2/collectConsent?sessionId=3_cc-session_706e43c5-9aeb-45cd-b352-c3bc5c7c4547",
+      "consent_status": "clicked",
+      "cookies": [
+            {
+                  "GUCS": "AUmvIPpi",
+                  "Max-Age": "1800",
+                  "Domain": ".aol.com",
+                  "Path": "/",
+                  "Secure": true,
+                  "size": 8
+            }
+      ],
+      "third_party_domains": [
+            "yahoo.com",
+            "advertising.com",
+            "yimg.com"
+      ],
+      "redirect_pairs": [
+            [
+                  "aol.com",
+                  "yahoo.com"
+            ],
+            [
+                  "aol.com",
+                  "advertising.com"
+            ],
+            [
+                  "advertising.com",
+                  "aol.com"
+            ],
+            [
+                  "aol.com",
+                  "yahoo.com"
+            ]
+      ],
+      "requests_list": [
+            {
+                  "request_url": "https://aol.com/",
+                  "timestamp": "05/06/2022 12:19:59.426920",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 10:20:00 GMT",
+                        "strict-transport-security": "max-age=31536000",
+                        "server": "ATS",
+                        "cache-control": "no-store",
+                        "content-type": "text/html",
+                        "content-language": "en",
+                        "expect-ct": "max-age=31536000, report-uri=\"http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only\"",
+                        "x-frame-options": "DENY",
+                        "x-content-type-options": "nosniff",
+                        "referrer-policy": "strict-origin-when-cross-origin",
+                        "content-security-policy": "sandbox allow-scripts; default-src 'self'; img-src https:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; report-uri http://csp.yahoo.com/beacon/csp?src=redirect",
+                        "location": "https://www.aol.com/",
+                        "content-length": "4367"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.aol.com/",
+                  "timestamp": "05/06/2022 12:20:00.218384",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 10:20:00 GMT",
+                        "strict-transport-security": "max-age=31536000",
+                        "server": "ATS",
+                        "cache-control": "no-store",
+                        "content-type": "text/html; charset=utf-8",
+                        "content-language": "en",
+                        "location": "https://guce.aol.com/consent?brandType=nonEu&gcrumb=Sa8g-mI&lang=en-US&done=https%3A%2F%2Fwww.aol.com%2F",
+                        "set-cookie": "GUCS=AUmvIPpi; Max-Age=1800; Domain=.aol.com; Path=/; Secure",
+                        "expect-ct": "max-age=31536000, report-uri=\"http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only\"",
+                        "referrer-policy": "no-referrer-when-downgrade",
+                        "x-content-type-options": "nosniff",
+                        "x-xss-protection": "1; mode=block",
+                        "x-frame-options": "SAMEORIGIN",
+                        "content-length": "0"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://guce.aol.com/consent?brandType=nonEu&gcrumb=Sa8g-mI&lang=en-US&done=https%3A%2F%2Fwww.aol.com%2F",
+                  "timestamp": "05/06/2022 12:20:00.595438",
+                  "request_headers": {
+                        "Host": "guce.aol.com",
+                        "Connection": "keep-alive",
+                        "Upgrade-Insecure-Requests": "1",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "Sec-Fetch-Site": "none",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-User": "?1",
+                        "Sec-Fetch-Dest": "document",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB",
+                        "Cookie": "GUCS=AUmvIPpi"
+                  },
+                  "response_headers": {
+                        "Connection": "keep-alive",
+                        "Server": "guce",
+                        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+                        "Location": "https://guce.advertising.com/collectIdentifiers?sessionId=3_cc-session_35105545-0863-4aed-ab0e-74cbb4bf4aa9",
+                        "Content-Length": "0",
+                        "Date": "Sun, 05 Jun 2022 10:20:01 GMT"
+                  },
+                  "nr_cookies": 1
+            },
+            {
+                  "request_url": "https://guce.advertising.com/collectIdentifiers?sessionId=3_cc-session_35105545-0863-4aed-ab0e-74cbb4bf4aa9",
+                  "timestamp": "05/06/2022 12:20:00.855360",
+                  "request_headers": {
+                        "Host": "guce.advertising.com",
+                        "Connection": "keep-alive",
+                        "Upgrade-Insecure-Requests": "1",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "Sec-Fetch-Site": "none",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-User": "?1",
+                        "Sec-Fetch-Dest": "document",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Connection": "keep-alive",
+                        "Server": "guce",
+                        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+                        "Location": "https://guce.aol.com/consent?apidSessionId=3_cc-session_35105545-0863-4aed-ab0e-74cbb4bf4aa9&done=https%3A%2F%2Fwww.aol.com%2F%3Fguccounter%3D1&lang=en-US&brandType=nonEu&gcrumb=Sa8g-mI&trapType=ats&bucketed=false&src=null",
+                        "Content-Length": "0",
+                        "Date": "Sun, 05 Jun 2022 10:20:01 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://guce.aol.com/consent?apidSessionId=3_cc-session_35105545-0863-4aed-ab0e-74cbb4bf4aa9&done=https%3A%2F%2Fwww.aol.com%2F%3Fguccounter%3D1&lang=en-US&brandType=nonEu&gcrumb=Sa8g-mI&trapType=ats&bucketed=false&src=null",
+                  "timestamp": "05/06/2022 12:20:00.920821",
+                  "request_headers": {
+                        "Host": "guce.aol.com",
+                        "Connection": "keep-alive",
+                        "Upgrade-Insecure-Requests": "1",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "Sec-Fetch-Site": "none",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-User": "?1",
+                        "Sec-Fetch-Dest": "document",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB",
+                        "Cookie": "GUCS=AUmvIPpi"
+                  },
+                  "response_headers": {
+                        "Connection": "keep-alive",
+                        "Server": "guce",
+                        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+                        "Location": "https://consent.yahoo.com/v2/collectConsent?sessionId=3_cc-session_706e43c5-9aeb-45cd-b352-c3bc5c7c4547",
+                        "Content-Length": "0",
+                        "Date": "Sun, 05 Jun 2022 10:20:01 GMT"
+                  },
+                  "nr_cookies": 1
+            },
+            {
+                  "request_url": "https://consent.yahoo.com/v2/collectConsent?sessionId=3_cc-session_706e43c5-9aeb-45cd-b352-c3bc5c7c4547",
+                  "timestamp": "05/06/2022 12:20:01.189868",
+                  "request_headers": {
+                        "Host": "consent.yahoo.com",
+                        "Connection": "keep-alive",
+                        "Upgrade-Insecure-Requests": "1",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "Sec-Fetch-Site": "none",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-User": "?1",
+                        "Sec-Fetch-Dest": "document",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Content-Encoding": "gzip",
+                        "Expires": "0",
+                        "Cache-Control": "no-cache, no-store, must-revalidate",
+                        "Content-Security-Policy-Report-Only": "default-src 'none'; block-all-mixed-content; connect-src 'self'; frame-ancestors 'none'; img-src 'self' https://s.yimg.com; media-src 'none'; script-src 'self' 'nonce-LuqP8XQb/FAoscXQheDtV2O38gwj2Byw' https://s.yimg.com; style-src 'self' 'nonce-LuqP8XQb/FAoscXQheDtV2O38gwj2Byw' https://s.yimg.com; font-src 'self'; object-src 'none'; frame-src 'none'; report-uri https://csp.yahoo.com/beacon/csp?src=guce",
+                        "Server": "guce",
+                        "X-XSS-Protection": "1; mode=block",
+                        "Pragma": "no-cache",
+                        "X-Frame-Options": "DENY",
+                        "Referrer-Policy": "strict-origin-when-cross-origin",
+                        "Date": "Sun, 05 Jun 2022 10:20:01 GMT",
+                        "Connection": "keep-alive",
+                        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+                        "X-Content-Type-Options": "nosniff",
+                        "Content-Type": "text/html;charset=UTF-8",
+                        "Content-Length": "7955"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://consent.yahoo.com/beacon?tag=TCF2&step=Layer1-View&brandDomain=www.aol.com&brandBid=&userType=nonreg&sdk=false&tos=en-US&country=NL&sessionId=3_cc-session_706e43c5-9aeb-45cd-b352-c3bc5c7c4547",
+                  "timestamp": "05/06/2022 12:20:01.352173",
+                  "request_headers": {
+                        "Host": "consent.yahoo.com",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "image",
+                        "Referer": "https://consent.yahoo.com/v2/collectConsent?sessionId=3_cc-session_706e43c5-9aeb-45cd-b352-c3bc5c7c4547",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Server": "guce",
+                        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+                        "Date": "Sun, 05 Jun 2022 10:20:01 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://s.yimg.com/oa/build/css/site-ltr-04728dca.css",
+                  "timestamp": "05/06/2022 12:20:01.550636",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "text/css,*/*;q=0.1",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "style",
+                        "referer": "https://consent.yahoo.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "x-amz-id-2": "OxbNWHAFTA/NEEfa72Bpue+FgVBbDov2nHQjdvqVg0NEx4EEas5QJUAvQT6/yC5VTb3GQUuM0r0=",
+                        "x-amz-request-id": "A7D22N5PC1FK3X0Y",
+                        "date": "Thu, 05 May 2022 19:51:14 GMT",
+                        "last-modified": "Tue, 03 May 2022 20:12:35 GMT",
+                        "etag": "\"770d07b9713fe5bd541ade25307fffc6\"",
+                        "x-amz-server-side-encryption": "AES256",
+                        "cache-control": "max-age=31536000; immutable",
+                        "content-encoding": "gzip",
+                        "accept-ranges": "bytes",
+                        "content-type": "text/css",
+                        "server": "ATS",
+                        "content-length": "25004",
+                        "referrer-policy": "no-referrer-when-downgrade",
+                        "vary": "Origin",
+                        "age": "2644129",
+                        "ats-carp-promotion": "1",
+                        "strict-transport-security": "max-age=15552000",
+                        "expect-ct": "max-age=31536000, report-uri=\"http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only\"",
+                        "x-xss-protection": "1; mode=block",
+                        "x-content-type-options": "nosniff"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://s.yimg.com/oa/build/js/site-700dc8ba.js",
+                  "timestamp": "05/06/2022 12:20:01.555626",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://consent.yahoo.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "x-amz-id-2": "YUO+ZiSk812iqQno3KNfUlWXaPGCubelASTwrli6vmR84A4jSC8URDz40ddNgc+lnvPGPa1FjXI=",
+                        "x-amz-request-id": "N52TT0PVYGC0C7TD",
+                        "date": "Sun, 05 Jun 2022 06:17:06 GMT",
+                        "last-modified": "Thu, 02 Jun 2022 00:01:37 GMT",
+                        "etag": "\"deec0fca46764bc9a34bb03d2b8f13f7\"",
+                        "x-amz-server-side-encryption": "AES256",
+                        "cache-control": "max-age=31536000; immutable",
+                        "content-encoding": "gzip",
+                        "accept-ranges": "bytes",
+                        "content-type": "application/javascript",
+                        "server": "ATS",
+                        "content-length": "11485",
+                        "referrer-policy": "no-referrer-when-downgrade",
+                        "vary": "Origin",
+                        "age": "14577",
+                        "strict-transport-security": "max-age=15552000",
+                        "expect-ct": "max-age=31536000, report-uri=\"http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only\"",
+                        "x-xss-protection": "1; mode=block",
+                        "x-content-type-options": "nosniff"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://s.yimg.com/wm/assets/images/ns/aol-logo-black-v.0.0.2.png",
+                  "timestamp": "05/06/2022 12:20:01.558627",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://consent.yahoo.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "x-amz-id-2": "pGdtwoD3NQSZ2NNan4gjRqnzIjWf/Wk3yQRf8PsKlsPvhyEyp65ncoCbqwnEEO2ik/CjP+k4zjA=",
+                        "x-amz-request-id": "Q932KMAXVD13NQ0J",
+                        "date": "Wed, 04 May 2022 00:25:03 GMT",
+                        "last-modified": "Fri, 04 May 2018 01:23:57 GMT",
+                        "etag": "\"f9e0f24b60732cd95150a37fb003b871\"",
+                        "x-amz-server-side-encryption": "AES256",
+                        "cache-control": "max-age=31536000; public",
+                        "x-amz-meta-created-date": "Thu, 16 Nov 2017 19:59:27 GMT",
+                        "x-amz-meta-mbst-etag": "\"YM:1:3570f846-88d6-4c90-bd91-179d937c363c00055e1f0ebaf172\"",
+                        "x-amz-meta-x-ysws-mbst-vtime": "1510862367682930",
+                        "expires": "Sat, 04 May 2019 01:23:56 GMT",
+                        "x-amz-meta-x-ysws-access": "public",
+                        "accept-ranges": "bytes",
+                        "content-type": "image/png",
+                        "server": "ATS",
+                        "content-length": "16340",
+                        "referrer-policy": "no-referrer-when-downgrade",
+                        "vary": "Origin",
+                        "age": "2800500",
+                        "ats-carp-promotion": "1",
+                        "strict-transport-security": "max-age=15552000",
+                        "expect-ct": "max-age=31536000, report-uri=\"http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only\"",
+                        "x-xss-protection": "1; mode=block",
+                        "x-content-type-options": "nosniff"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://s.yimg.com/wm/assets/images/ybar/aol-logo-white-v0.0.4.png",
+                  "timestamp": "05/06/2022 12:20:01.565687",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://consent.yahoo.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "x-amz-id-2": "vS8TgiKmKDDl1LLZllNbX3PN/APNg/xBcRUJFBy/GubTcPkE3kCzxJ7YgkLMMUXMixngUT2Eeuw=",
+                        "x-amz-request-id": "B9FH5VE366CZSQBT",
+                        "date": "Mon, 07 Feb 2022 21:14:36 GMT",
+                        "last-modified": "Thu, 03 May 2018 20:51:15 GMT",
+                        "etag": "\"f0d2ba5c63ab03f3b53158f293f651c7\"",
+                        "x-amz-server-side-encryption": "AES256",
+                        "cache-control": "public,max-age=31536000",
+                        "x-amz-meta-created-date": "Wed, 18 Apr 2018 19:01:42 GMT",
+                        "x-amz-meta-mbst-etag": "\"YM:1:d32351c9-ea78-46c0-b7a5-1066118ae37d00056a2415eb6ba6\"",
+                        "x-amz-meta-x-ysws-mbst-vtime": "1524078102670246",
+                        "expires": "Fri, 03 May 2019 20:51:13 GMT",
+                        "x-amz-meta-x-ysws-access": "public",
+                        "accept-ranges": "bytes",
+                        "content-type": "image/png",
+                        "server": "ATS",
+                        "content-length": "4314",
+                        "referrer-policy": "no-referrer-when-downgrade",
+                        "vary": "Origin",
+                        "age": "10155927",
+                        "ats-carp-promotion": "1",
+                        "strict-transport-security": "max-age=15552000",
+                        "expect-ct": "max-age=31536000, report-uri=\"http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only\"",
+                        "x-xss-protection": "1; mode=block",
+                        "x-content-type-options": "nosniff"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://edge-mcdn.secure.yahoo.com/ybar/cerebro_min.js",
+                  "timestamp": "05/06/2022 12:20:01.580351",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://consent.yahoo.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "x-amz-id-2": "XYpRfqIWjcG5skGP3puONnvAdPtm1atLEqAH8b0E8vU7l0FbZJD6t3Xcq1Mz7p7vPrceMSJ9XBY=",
+                        "x-amz-request-id": "76K85M9VFEEPV5GX",
+                        "date": "Sat, 04 Jun 2022 14:40:25 GMT",
+                        "last-modified": "Thu, 05 May 2022 20:34:05 GMT",
+                        "x-amz-server-side-encryption": "AES256",
+                        "accept-ranges": "bytes",
+                        "content-type": "application/javascript",
+                        "server": "ATS",
+                        "content-length": "5636",
+                        "referrer-policy": "no-referrer-when-downgrade",
+                        "etag": "\"0ccb51bc1dd6980920da39e008a599e0\"",
+                        "age": "70778",
+                        "strict-transport-security": "max-age=15552000",
+                        "expect-ct": "max-age=31536000, report-uri=\"http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only\"",
+                        "x-xss-protection": "1; mode=block",
+                        "x-content-type-options": "nosniff",
+                        "timing-allow-origin": "*",
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-methods": "GET"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://s.yimg.com/oa/build/images/home_f85f9a6ec27318b6.jpg",
+                  "timestamp": "05/06/2022 12:20:01.760062",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://s.yimg.com/oa/build/css/site-ltr-04728dca.css",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "x-amz-id-2": "EjZ9UO9GerOYlmeQLUWxCq670RMs6xeUdfjGYIlOFxOZeZnJXUAqyao/Jjt6GsI4eRoGh7qaSDA=",
+                        "x-amz-request-id": "AR5E1BRAXFA9JGMH",
+                        "date": "Wed, 25 May 2022 08:13:49 GMT",
+                        "last-modified": "Tue, 24 May 2022 19:08:20 GMT",
+                        "etag": "\"795d500102d4c33f45f829a69bc56ac9\"",
+                        "x-amz-server-side-encryption": "AES256",
+                        "cache-control": "max-age=31536000; immutable",
+                        "accept-ranges": "bytes",
+                        "content-type": "image/jpeg",
+                        "server": "ATS",
+                        "content-length": "107464",
+                        "referrer-policy": "no-referrer-when-downgrade",
+                        "vary": "Origin",
+                        "age": "957975",
+                        "strict-transport-security": "max-age=15552000",
+                        "expect-ct": "max-age=31536000, report-uri=\"http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only\"",
+                        "x-xss-protection": "1; mode=block",
+                        "x-content-type-options": "nosniff"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://csp.yahoo.com/beacon/csp?src=guce",
+                  "timestamp": "05/06/2022 12:20:01.782068",
+                  "request_headers": {
+                        "content-length": "787",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/csp-report",
+                        "accept": "*/*",
+                        "origin": "https://consent.yahoo.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "report",
+                        "referer": "https://consent.yahoo.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": null,
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://csp.yahoo.com/beacon/csp?src=guce",
+                  "timestamp": "05/06/2022 12:20:01.789069",
+                  "request_headers": {
+                        "content-length": "880",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/csp-report",
+                        "accept": "*/*",
+                        "origin": "https://consent.yahoo.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "report",
+                        "referer": "https://consent.yahoo.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": null,
+                  "nr_cookies": 0
+            }
+      ]
+}

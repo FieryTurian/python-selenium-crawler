@@ -1,0 +1,71 @@
+{
+      "website_domain": "t.co",
+      "tranco_rank": 50,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 10:21:54.563295",
+      "pageload_end_ts": "05/06/2022 10:21:55.445603",
+      "post_pageload_url": "https://t.co/",
+      "consent_status": "not_found",
+      "cookies": [],
+      "third_party_domains": [],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://t.co/",
+                  "timestamp": "05/06/2022 10:21:54.812131",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 08:21:54 GMT",
+                        "server": "tsa_o",
+                        "content-type": "text/html; charset=utf-8",
+                        "cache-control": "no-cache, no-store, max-age=0",
+                        "content-length": "1385",
+                        "content-encoding": "gzip",
+                        "x-xss-protection": "0",
+                        "strict-transport-security": "max-age=0",
+                        "x-response-time": "110",
+                        "x-connection-hash": "7cede6b9c75b5febcf91e3911777864cb18815f5f94e11a7b2090cdf3bcd0a1d"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://t.co/static/images/bird.png",
+                  "timestamp": "05/06/2022 10:21:55.189579",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://t.co/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 08:21:55 GMT",
+                        "server": "tsa_o",
+                        "content-type": "image/png",
+                        "cache-control": "no-cache, no-store, max-age=0",
+                        "last-modified": "Thu, 02 Jun 2022 19:05:54 GMT",
+                        "content-length": "519",
+                        "strict-transport-security": "max-age=0",
+                        "x-response-time": "103",
+                        "x-connection-hash": "7cede6b9c75b5febcf91e3911777864cb18815f5f94e11a7b2090cdf3bcd0a1d"
+                  },
+                  "nr_cookies": 0
+            }
+      ]
+}

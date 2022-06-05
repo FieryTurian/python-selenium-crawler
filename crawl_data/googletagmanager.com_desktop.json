@@ -1,0 +1,109 @@
+{
+      "website_domain": "googletagmanager.com",
+      "tranco_rank": 17,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 09:59:46.732006",
+      "pageload_end_ts": "05/06/2022 09:59:48.387706",
+      "post_pageload_url": "https://googletagmanager.com/",
+      "consent_status": "not_found",
+      "cookies": [],
+      "third_party_domains": [
+            "google.com"
+      ],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://googletagmanager.com/",
+                  "timestamp": "05/06/2022 09:59:46.991440",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 07:59:47 GMT",
+                        "content-type": "text/html; charset=UTF-8",
+                        "server": "Google Tag Manager",
+                        "content-length": "1555",
+                        "x-xss-protection": "0",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.google.com/images/errors/robot.png",
+                  "timestamp": "05/06/2022 09:59:48.237536",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://googletagmanager.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "accept-ranges": "bytes",
+                        "cross-origin-resource-policy": "cross-origin",
+                        "cross-origin-opener-policy-report-only": "same-origin; report-to=\"static-on-bigtable\"",
+                        "report-to": "{\"group\":\"static-on-bigtable\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/static-on-bigtable\"}]}",
+                        "content-length": "6327",
+                        "x-content-type-options": "nosniff",
+                        "server": "sffe",
+                        "x-xss-protection": "0",
+                        "date": "Wed, 01 Jun 2022 15:48:10 GMT",
+                        "expires": "Thu, 01 Jun 2023 15:48:10 GMT",
+                        "cache-control": "public, max-age=31536000",
+                        "age": "317498",
+                        "last-modified": "Tue, 22 Oct 2019 18:30:00 GMT",
+                        "content-type": "image/png",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png",
+                  "timestamp": "05/06/2022 09:59:48.244538",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://googletagmanager.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "accept-ranges": "bytes",
+                        "content-type": "image/png",
+                        "cross-origin-resource-policy": "cross-origin",
+                        "cross-origin-opener-policy-report-only": "same-origin; report-to=\"static-on-bigtable\"",
+                        "report-to": "{\"group\":\"static-on-bigtable\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/static-on-bigtable\"}]}",
+                        "content-length": "3170",
+                        "date": "Sun, 05 Jun 2022 07:59:48 GMT",
+                        "expires": "Sun, 05 Jun 2022 07:59:48 GMT",
+                        "cache-control": "private, max-age=31536000",
+                        "last-modified": "Tue, 22 Oct 2019 18:30:00 GMT",
+                        "x-content-type-options": "nosniff",
+                        "server": "sffe",
+                        "x-xss-protection": "0",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 0
+            }
+      ]
+}

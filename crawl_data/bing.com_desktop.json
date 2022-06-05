@@ -1,0 +1,171 @@
+{
+      "website_domain": "bing.com",
+      "tranco_rank": 25,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 10:06:43.905540",
+      "pageload_end_ts": "05/06/2022 10:06:45.084997",
+      "post_pageload_url": "https://www4.bing.com/?form=DCDN",
+      "consent_status": "clicked",
+      "cookies": [
+            {
+                  "MUIDB": "061E7E379FD86ACF195C6F8D9E7B6B95",
+                  "expires": "Fri, 30-Jun-2023 08:06:45 GMT",
+                  "path": "/",
+                  "HttpOnly": true,
+                  "size": 32
+            },
+            {
+                  "SUID": "M",
+                  "domain": "bing.com",
+                  "expires": "Mon, 06-Jun-2022 08:06:44 GMT",
+                  "path": "/",
+                  "secure": true,
+                  "HttpOnly": true,
+                  "SameSite": "None",
+                  "size": 1
+            }
+      ],
+      "third_party_domains": [],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://bing.com/",
+                  "timestamp": "05/06/2022 10:06:44.184384",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "cache-control": "private",
+                        "content-length": "144",
+                        "content-type": "text/html; charset=utf-8",
+                        "content-encoding": "br",
+                        "location": "https://www.bing.com:443/?toWww=1&redig=FA40608DD3514FCA8B6399E01122FCB3",
+                        "vary": "Accept-Encoding",
+                        "set-cookie": "SUID=M; domain=bing.com; expires=Mon, 06-Jun-2022 08:06:44 GMT; path=/; secure; HttpOnly; SameSite=None",
+                        "x-snr-routing": "1",
+                        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                        "content-security-policy-report-only": "script-src https: 'strict-dynamic' 'report-sample' 'nonce-YfwYZNn9NKezZ+FkqoI6jrMV5wbBtSlSGl1srDmYNHo='; base-uri 'self';report-to csp-endpoint",
+                        "report-to": "{\"group\":\"csp-endpoint\",\"max_age\":86400,\"endpoints\":[{\"url\":\"https://aefd.nelreports.net/api/report?cat=bingcsp\"}]}",
+                        "x-cache": "CONFIG_NOCACHE",
+                        "accept-ch": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+                        "x-msedge-ref": "Ref A: 05639B8620E04BD684C5D8B3CE1AC405 Ref B: AMS04EDGE1618 Ref C: 2022-06-05T08:06:44Z",
+                        "date": "Sun, 05 Jun 2022 08:06:44 GMT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.bing.com/?toWww=1&redig=FA40608DD3514FCA8B6399E01122FCB3",
+                  "timestamp": "05/06/2022 10:06:44.461249",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SUID=M; MUID=061E7E379FD86ACF195C6F8D9E7B6B95; _EDGE_S=F=1&SID=22BB6294DE2564971280732EDF86653B; _EDGE_V=1"
+                  },
+                  "response_headers": {
+                        "cache-control": "no-cache",
+                        "pragma": "no-cache",
+                        "content-length": "112",
+                        "content-type": "text/html; charset=utf-8",
+                        "content-encoding": "br",
+                        "expires": "-1",
+                        "location": "https://www4.bing.com/?form=DCDN",
+                        "vary": "Accept-Encoding",
+                        "p3p": "CP=\"NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"",
+                        "set-cookie": "MUIDB=061E7E379FD86ACF195C6F8D9E7B6B95; expires=Fri, 30-Jun-2023 08:06:45 GMT; path=/; HttpOnly",
+                        "x-snr-routing": "1",
+                        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                        "content-security-policy-report-only": "script-src https: 'strict-dynamic' 'report-sample' 'nonce-Dg86Q5wxAIAUd8n4iHbchIFnystTEDMu/T8MjSrF4n4='; base-uri 'self';report-to csp-endpoint",
+                        "report-to": "{\"group\":\"csp-endpoint\",\"max_age\":86400,\"endpoints\":[{\"url\":\"https://aefd.nelreports.net/api/report?cat=bingcsp\"}]}",
+                        "x-cache": "CONFIG_NOCACHE",
+                        "accept-ch": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+                        "x-msedge-ref": "Ref A: DCEEA6350A3D4ACBA1DD3D343C463DC9 Ref B: AMSEDGE0919 Ref C: 2022-06-05T08:06:45Z",
+                        "date": "Sun, 05 Jun 2022 08:06:44 GMT"
+                  },
+                  "nr_cookies": 4
+            },
+            {
+                  "request_url": "https://www4.bing.com/?form=DCDN",
+                  "timestamp": "05/06/2022 10:06:44.706783",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SUID=M; MUID=061E7E379FD86ACF195C6F8D9E7B6B95; _EDGE_S=F=1&SID=22BB6294DE2564971280732EDF86653B; _EDGE_V=1; SRCHD=AF=NOFORM; SRCHUID=V=2&GUID=A85402EFF6594224A0911E9E4FBA04F8&dmnchg=1; SRCHUSR=DOB=20220605; SRCHHPGUSR=SRCHLANG=en; _SS=SID=22BB6294DE2564971280732EDF86653B"
+                  },
+                  "response_headers": {
+                        "content-type": "text/html; charset=utf-8",
+                        "cache-control": "private",
+                        "content-encoding": "br",
+                        "vary": "Accept-Encoding",
+                        "x-snr-routing": "1",
+                        "x-as-instrumentationoptions": "AppServerLoggingMaster=1",
+                        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                        "x-as-machinename": "DU02AP3A984A976",
+                        "x-as-suppresssetcookie": "1",
+                        "content-security-policy-report-only": "script-src https: 'strict-dynamic' 'report-sample' 'nonce-jM+bO2P402XoT3AMtRl/upVCEA+KHOSnMBwi0GGMyMY='; base-uri 'self';report-to csp-endpoint",
+                        "report-to": "{\"group\":\"csp-endpoint\",\"max_age\":86400,\"endpoints\":[{\"url\":\"https://aefd.nelreports.net/api/report?cat=bingcsp\"}]}",
+                        "p3p": "CP=\"NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND\"",
+                        "nel": "{\"report_to\":\"network-errors\",\"max_age\":604800,\"success_fraction\":0.01,\"failure_fraction\":1.0,\"include_subdomains\":true}",
+                        "cross-origin-embedder-policy-report-only": "require-corp; report-to=\"crossorigin-errors\"",
+                        "cross-origin-opener-policy-report-only": "same-origin; report-to=\"crossorigin-errors\"",
+                        "x-as-usechunkseparator": "true",
+                        "date": "Sun, 05 Jun 2022 08:06:45 GMT",
+                        "set-cookie": "MUIDB=061E7E379FD86ACF195C6F8D9E7B6B95; expires=Fri, 30-Jun-2023 08:06:45 GMT; path=/; HttpOnly"
+                  },
+                  "nr_cookies": 9
+            },
+            {
+                  "request_url": "https://www4.bing.com/th?id=OHR.RapadalenSNP_ROW2513658493_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&qlt=30",
+                  "timestamp": "05/06/2022 10:06:44.962704",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www4.bing.com/?form=DCDN",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SUID=M; MUID=061E7E379FD86ACF195C6F8D9E7B6B95; _EDGE_S=F=1&SID=22BB6294DE2564971280732EDF86653B; _EDGE_V=1; SRCHD=AF=NOFORM; SRCHUID=V=2&GUID=A85402EFF6594224A0911E9E4FBA04F8&dmnchg=1; SRCHUSR=DOB=20220605; SRCHHPGUSR=SRCHLANG=en; _SS=SID=22BB6294DE2564971280732EDF86653B; MUIDB=061E7E379FD86ACF195C6F8D9E7B6B95; _HPVN=CS=eyJQbiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiUCJ9LCJTYyI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiSCJ9LCJReiI6eyJDbiI6MSwiU3QiOjAsIlFzIjowLCJQcm9kIjoiVCJ9LCJBcCI6dHJ1ZSwiTXV0ZSI6dHJ1ZSwiTGFkIjoiMjAyMi0wNi0wNVQwMDowMDowMFoiLCJJb3RkIjowLCJHd2IiOjAsIkRmdCI6bnVsbCwiTXZzIjowLCJGbHQiOjAsIkltcCI6MX0="
+                  },
+                  "response_headers": {
+                        "cache-control": "public, max-age=691200",
+                        "content-length": "128837",
+                        "content-type": "image/jpeg",
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-headers": "*",
+                        "timing-allow-origin": "*",
+                        "report-to": "{\"group\":\"network-errors\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://aefd.nelreports.net/api/report?cat=bingth\"}]}",
+                        "nel": "{\"report_to\":\"network-errors\",\"max_age\":604800,\"success_fraction\":0.001,\"failure_fraction\":1.0}",
+                        "accept-ch": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+                        "x-msedge-ref": "Ref A: 6C33C11A97DF4F24BBEB2E571D3D7CA5 Ref B: DUS30EDGE0421 Ref C: 2022-06-05T07:00:00Z",
+                        "date": "Sun, 05 Jun 2022 08:06:45 GMT"
+                  },
+                  "nr_cookies": 11
+            }
+      ]
+}

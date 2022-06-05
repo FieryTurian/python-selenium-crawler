@@ -1,0 +1,357 @@
+{
+      "website_domain": "doi.org",
+      "tranco_rank": 215,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 12:20:33.776453",
+      "pageload_end_ts": "05/06/2022 12:20:34.888669",
+      "post_pageload_url": "https://www.doi.org/",
+      "consent_status": "not_found",
+      "cookies": [],
+      "third_party_domains": [],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://doi.org/",
+                  "timestamp": "05/06/2022 12:20:34.019025",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 10:20:34 GMT",
+                        "content-length": "0",
+                        "location": "https://www.doi.org/",
+                        "permissions-policy": "interest-cohort=(),browsing-topics=()",
+                        "cache-control": "max-age=14400",
+                        "cf-cache-status": "HIT",
+                        "age": "13987",
+                        "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+                        "report-to": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=rK30ws0qmcD9jEWyuzKh%2BkZrLsW4fGA3V6HUChwpm5yKI9J6DTG0OxtxtLyqUex63N0EcAHVE2OHaDvjtjWdhsGxWRN9xqgSN%2F6Fseh42W8ytIA9CV7SOt8%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+                        "nel": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+                        "vary": "Accept-Encoding",
+                        "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                        "server": "cloudflare",
+                        "cf-ray": "71682d2c4afa6b30-AMS",
+                        "alt-svc": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.doi.org/",
+                  "timestamp": "05/06/2022 12:20:34.375538",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "text/html",
+                        "last-modified": "Thu, 13 May 2021 21:36:40 GMT",
+                        "server": "AmazonS3",
+                        "content-encoding": "gzip",
+                        "date": "Sun, 05 Jun 2022 09:59:17 GMT",
+                        "etag": "W/\"1b1173de3494fb951ac3096fb445c95b\"",
+                        "vary": "Accept-Encoding",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 d0b402ca7e5fc6514bdd05f23e206b58.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P1",
+                        "x-amz-cf-id": "tFMoRIM5WV1pBa9tFjJQvuRi3TZeQtxRrEJ1XmhDpfTyO9OogZz4-Q==",
+                        "age": "1293"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.doi.org/img/banner-413.gif",
+                  "timestamp": "05/06/2022 12:20:34.533781",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.doi.org/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "image/gif",
+                        "content-length": "9827",
+                        "last-modified": "Thu, 16 Mar 2017 17:54:36 GMT",
+                        "server": "AmazonS3",
+                        "date": "Sun, 05 Jun 2022 10:05:15 GMT",
+                        "etag": "\"aba63b24e543e206aa877f43f7a07374\"",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 d0b402ca7e5fc6514bdd05f23e206b58.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P1",
+                        "x-amz-cf-id": "j0jJiYIU9i-2UTXDR867lJT5lK36EwbLzJvuJ6NRi8vbs_Ppg0G89w==",
+                        "age": "1142"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.doi.org/img/transparent.gif",
+                  "timestamp": "05/06/2022 12:20:34.540784",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.doi.org/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "image/gif",
+                        "content-length": "43",
+                        "last-modified": "Thu, 16 Mar 2017 17:54:42 GMT",
+                        "server": "AmazonS3",
+                        "date": "Sun, 05 Jun 2022 10:18:42 GMT",
+                        "etag": "\"325472601571f31e1bf00674c368d335\"",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 d0b402ca7e5fc6514bdd05f23e206b58.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P1",
+                        "x-amz-cf-id": "hdsRYfvqHY89QkiKguLWYk2X7w2-1AMXgzNtV8uDPzCX6MyCn8cmSQ==",
+                        "age": "357"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.doi.org/img/submit.gif",
+                  "timestamp": "05/06/2022 12:20:34.546784",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.doi.org/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "image/gif",
+                        "content-length": "2026",
+                        "last-modified": "Thu, 16 Mar 2017 17:54:42 GMT",
+                        "server": "AmazonS3",
+                        "date": "Sun, 05 Jun 2022 10:20:08 GMT",
+                        "etag": "\"411739545a1525794b19be8e04cbbb5b\"",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 d0b402ca7e5fc6514bdd05f23e206b58.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P1",
+                        "x-amz-cf-id": "sBz5PLt52s5fwULxhF1F6bngU0xE9mI-kOp_yDdlIPEXDUh--Eu0nw==",
+                        "age": "483"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.doi.org/style/new-style2.css",
+                  "timestamp": "05/06/2022 12:20:34.553863",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "text/css,*/*;q=0.1",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "style",
+                        "referer": "https://www.doi.org/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "text/css",
+                        "last-modified": "Thu, 16 Mar 2017 17:55:57 GMT",
+                        "server": "AmazonS3",
+                        "content-encoding": "gzip",
+                        "date": "Sun, 05 Jun 2022 10:05:15 GMT",
+                        "etag": "W/\"518ae86de6bb5fe7e3d19dcba05fe956\"",
+                        "vary": "Accept-Encoding",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 d0b402ca7e5fc6514bdd05f23e206b58.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P1",
+                        "x-amz-cf-id": "VizTL9p5d1OBCZyArTNWSQ3Inly00Bb29jMyYUFaY5r6tXTC35tCfQ==",
+                        "age": "1142"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.doi.org/img/collage-2.jpg",
+                  "timestamp": "05/06/2022 12:20:34.555863",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.doi.org/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "image/jpeg",
+                        "content-length": "40681",
+                        "last-modified": "Thu, 16 Mar 2017 17:54:37 GMT",
+                        "server": "AmazonS3",
+                        "date": "Sun, 05 Jun 2022 09:54:25 GMT",
+                        "etag": "\"5ff448272936fb571b33b13a2bb3b739\"",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 d0b402ca7e5fc6514bdd05f23e206b58.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P1",
+                        "x-amz-cf-id": "-E2PGwKG3QAtGkSNm61HEOpGGmTK6J2MFLIxkvbqlM93QDNv24zM2A==",
+                        "age": "1741"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.doi.org/img/Logo_TM.png",
+                  "timestamp": "05/06/2022 12:20:34.562941",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.doi.org/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "image/png",
+                        "content-length": "2179",
+                        "last-modified": "Thu, 16 Mar 2017 17:54:23 GMT",
+                        "server": "AmazonS3",
+                        "date": "Sun, 05 Jun 2022 09:40:50 GMT",
+                        "etag": "\"181ac2c528e820d6e1a9e3e8dbf37374\"",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 d0b402ca7e5fc6514bdd05f23e206b58.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P1",
+                        "x-amz-cf-id": "_EvLKLuQ9jlHmtNQJ81CDGT0dsdW39zHb10nApXhyzwojdpKUnQz3g==",
+                        "age": "3008"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.doi.org/img/Driven_By_DOI_small.jpg",
+                  "timestamp": "05/06/2022 12:20:34.569942",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.doi.org/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "image/jpeg",
+                        "content-length": "22750",
+                        "last-modified": "Thu, 16 Mar 2017 17:54:23 GMT",
+                        "server": "AmazonS3",
+                        "date": "Sun, 05 Jun 2022 09:54:25 GMT",
+                        "etag": "\"bdebcc46dfadd2afe6294e71093b8ee1\"",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 d0b402ca7e5fc6514bdd05f23e206b58.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P1",
+                        "x-amz-cf-id": "cw2NVObyWjTM4_BTsiQ8wh_P11sdTbT9FtdqzUKJF_EQRpLdmWcCkw==",
+                        "age": "1608"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.doi.org/img/acap_enabled_small.gif",
+                  "timestamp": "05/06/2022 12:20:34.577030",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.doi.org/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "image/gif",
+                        "content-length": "656",
+                        "last-modified": "Thu, 16 Mar 2017 17:54:35 GMT",
+                        "server": "AmazonS3",
+                        "date": "Sun, 05 Jun 2022 10:20:08 GMT",
+                        "etag": "\"c92c55ca974329ae535706f8c84bb160\"",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 d0b402ca7e5fc6514bdd05f23e206b58.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P1",
+                        "x-amz-cf-id": "86LzN7-BzarQIvc6ayO_IatdPi69T95NKB-C-Cg0rEF-D6P1yHsEhg==",
+                        "age": "357"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.doi.org/img/submit.gif",
+                  "timestamp": "05/06/2022 12:20:34.737614",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.doi.org/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "image/gif",
+                        "content-length": "2026",
+                        "last-modified": "Thu, 16 Mar 2017 17:54:42 GMT",
+                        "server": "AmazonS3",
+                        "date": "Sun, 05 Jun 2022 10:20:08 GMT",
+                        "etag": "\"411739545a1525794b19be8e04cbbb5b\"",
+                        "x-cache": "Hit from cloudfront",
+                        "via": "1.1 d0b402ca7e5fc6514bdd05f23e206b58.cloudfront.net (CloudFront)",
+                        "x-amz-cf-pop": "AMS1-P1",
+                        "x-amz-cf-id": "YZ5r6_Vnx0Bciq01omXtZ-O4t2_hgpRWCyDxscwfxdeTEAZqBEgmVg==",
+                        "age": "483"
+                  },
+                  "nr_cookies": 0
+            }
+      ]
+}

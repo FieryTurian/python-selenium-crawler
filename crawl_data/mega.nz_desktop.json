@@ -1,0 +1,205 @@
+{
+      "website_domain": "mega.nz",
+      "tranco_rank": 276,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 12:57:45.302405",
+      "pageload_end_ts": "05/06/2022 12:57:46.024690",
+      "post_pageload_url": "https://mega.io/",
+      "consent_status": "not_found",
+      "cookies": [],
+      "third_party_domains": [
+            "mega.io"
+      ],
+      "redirect_pairs": [
+            [
+                  "mega.nz",
+                  "mega.io"
+            ]
+      ],
+      "requests_list": [
+            {
+                  "request_url": "https://mega.nz/",
+                  "timestamp": "05/06/2022 12:57:45.457441",
+                  "request_headers": {
+                        "Host": "mega.nz",
+                        "Connection": "keep-alive",
+                        "Upgrade-Insecure-Requests": "1",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "Sec-Fetch-Site": "none",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-User": "?1",
+                        "Sec-Fetch-Dest": "document",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Content-Type": "text/html",
+                        "Access-Control-Allow-Origin": "*",
+                        "Access-Control-Allow-Headers": "MEGA-Chrome-Antileak",
+                        "Access-Control-Max-Age": "86400",
+                        "Content-Encoding": "gzip",
+                        "Content-Length": "1008",
+                        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+                        "X-Frame-Options": "DENY",
+                        "Set-Cookie": "geoip=NL",
+                        "Content-Security-Policy": "default-src 'self' data: blob: *.mega.co.nz *.mega.nz *.mega.io http://*.mega.co.nz http://*.mega.nz http://*.mega.io wss://*.karere.mega.nz wss://*.sfu.mega.co.nz *.karere.mega.nz:1380 http://127.0.0.1:6341 localhost.megasyncloopback.mega.nz:6342; script-src 'self' *.mega.co.nz *.mega.nz *.mega.io data: blob:; style-src 'self' 'unsafe-inline' *.mega.co.nz *.mega.nz *.mega.io data: blob:; frame-src 'self' *.megapay.nz mega: *.megaad.nz https://mega.nz/ https://mega.io/; img-src 'self' *.mega.co.nz *.mega.nz *.mega.io data: blob: mega.nz",
+                        "Connection": "Keep-Alive"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://mega.nz/secureboot.js?r=1654216061",
+                  "timestamp": "05/06/2022 12:57:45.531799",
+                  "request_headers": {
+                        "Host": "mega.nz",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "*/*",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "script",
+                        "Referer": "https://mega.nz/",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB",
+                        "Cookie": "geoip=NL"
+                  },
+                  "response_headers": {
+                        "Content-Type": "text/javascript",
+                        "Content-Length": "66040",
+                        "Cache-Control": "no-cache, no-store, must-revalidate",
+                        "Pragma": "no-cache",
+                        "Expires": "0",
+                        "Access-Control-Allow-Origin": "*",
+                        "Access-Control-Allow-Headers": "MEGA-Chrome-Antileak",
+                        "Access-Control-Max-Age": "86400",
+                        "Content-Encoding": "gzip"
+                  },
+                  "nr_cookies": 1
+            },
+            {
+                  "request_url": "https://mega.nz/loading-sprite_v4.png",
+                  "timestamp": "05/06/2022 12:57:45.646456",
+                  "request_headers": {
+                        "Host": "mega.nz",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "image",
+                        "Referer": "https://mega.nz/",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB",
+                        "Cookie": "geoip=NL"
+                  },
+                  "response_headers": {
+                        "Content-Type": "image/png",
+                        "Content-Length": "3414",
+                        "Cache-Control": "max-age=8640000",
+                        "Access-Control-Allow-Origin": "*",
+                        "Access-Control-Allow-Headers": "MEGA-Chrome-Antileak",
+                        "Access-Control-Max-Age": "86400"
+                  },
+                  "nr_cookies": 1
+            },
+            {
+                  "request_url": "https://mega.io/?nz=1",
+                  "timestamp": "05/06/2022 12:57:45.794034",
+                  "request_headers": {
+                        "Host": "mega.io",
+                        "Connection": "keep-alive",
+                        "Upgrade-Insecure-Requests": "1",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "Sec-Fetch-Site": "cross-site",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-Dest": "document",
+                        "Referer": "https://mega.nz/",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Content-Type": "text/html",
+                        "Access-Control-Allow-Origin": "*",
+                        "Access-Control-Allow-Headers": "MEGA-Chrome-Antileak",
+                        "Access-Control-Max-Age": "86400",
+                        "Content-Encoding": "gzip",
+                        "Content-Length": "1010",
+                        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+                        "X-Frame-Options": "DENY",
+                        "Set-Cookie": "geoip=NL",
+                        "Content-Security-Policy": "default-src 'self' data: blob: *.mega.co.nz *.mega.nz *.mega.io http://*.mega.co.nz http://*.mega.nz http://*.mega.io wss://*.karere.mega.nz wss://*.sfu.mega.co.nz *.karere.mega.nz:1380 http://127.0.0.1:6341 localhost.megasyncloopback.mega.nz:6342; script-src 'self' *.mega.co.nz *.mega.nz *.mega.io data: blob:; style-src 'self' 'unsafe-inline' *.mega.co.nz *.mega.nz *.mega.io data: blob:; frame-src 'self' *.megapay.nz mega: *.megaad.nz https://mega.nz/ https://mega.io/; img-src 'self' *.mega.co.nz *.mega.nz *.mega.io data: blob: mega.nz",
+                        "Connection": "Keep-Alive"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://mega.io/secureboot.js?r=1654216061",
+                  "timestamp": "05/06/2022 12:57:45.883674",
+                  "request_headers": {
+                        "Host": "mega.io",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "*/*",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "script",
+                        "Referer": "https://mega.io/?nz=1",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB",
+                        "Cookie": "geoip=NL"
+                  },
+                  "response_headers": {
+                        "Content-Type": "text/javascript",
+                        "Content-Length": "66040",
+                        "Cache-Control": "no-cache, no-store, must-revalidate",
+                        "Pragma": "no-cache",
+                        "Expires": "0",
+                        "Access-Control-Allow-Origin": "*",
+                        "Access-Control-Allow-Headers": "MEGA-Chrome-Antileak",
+                        "Access-Control-Max-Age": "86400",
+                        "Content-Encoding": "gzip"
+                  },
+                  "nr_cookies": 1
+            },
+            {
+                  "request_url": "https://mega.io/loading-sprite_v4.png",
+                  "timestamp": "05/06/2022 12:57:45.983680",
+                  "request_headers": {
+                        "Host": "mega.io",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "image",
+                        "Referer": "https://mega.io/",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB",
+                        "Cookie": "geoip=NL"
+                  },
+                  "response_headers": {
+                        "Content-Type": "image/png",
+                        "Content-Length": "3414",
+                        "Cache-Control": "max-age=8640000",
+                        "Access-Control-Allow-Origin": "*",
+                        "Access-Control-Allow-Headers": "MEGA-Chrome-Antileak",
+                        "Access-Control-Max-Age": "86400"
+                  },
+                  "nr_cookies": 1
+            }
+      ]
+}

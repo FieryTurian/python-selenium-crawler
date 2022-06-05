@@ -1,0 +1,133 @@
+{
+      "website_domain": "nginx.org",
+      "tranco_rank": 231,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 12:30:07.232950",
+      "pageload_end_ts": "05/06/2022 12:30:07.707584",
+      "post_pageload_url": "https://nginx.org/",
+      "consent_status": "not_found",
+      "cookies": [],
+      "third_party_domains": [
+            "googletagmanager.com"
+      ],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://nginx.org/",
+                  "timestamp": "05/06/2022 12:30:07.403525",
+                  "request_headers": {
+                        "Host": "nginx.org",
+                        "Connection": "keep-alive",
+                        "Upgrade-Insecure-Requests": "1",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "Sec-Fetch-Site": "none",
+                        "Sec-Fetch-Mode": "navigate",
+                        "Sec-Fetch-User": "?1",
+                        "Sec-Fetch-Dest": "document",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Server": "nginx/1.21.5",
+                        "Date": "Sun, 05 Jun 2022 10:30:07 GMT",
+                        "Content-Type": "text/html; charset=utf-8",
+                        "Content-Length": "2693",
+                        "Last-Modified": "Thu, 02 Jun 2022 15:03:58 GMT",
+                        "Connection": "keep-alive",
+                        "Keep-Alive": "timeout=15",
+                        "ETag": "\"6298d15e-a85\"",
+                        "Content-Encoding": "gzip"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://nginx.org/nginx.png",
+                  "timestamp": "05/06/2022 12:30:07.442533",
+                  "request_headers": {
+                        "Host": "nginx.org",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "no-cors",
+                        "Sec-Fetch-Dest": "image",
+                        "Referer": "https://nginx.org/",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": {
+                        "Server": "nginx/1.21.5",
+                        "Date": "Sun, 05 Jun 2022 10:30:08 GMT",
+                        "Content-Type": "image/png",
+                        "Content-Length": "2103",
+                        "Last-Modified": "Thu, 02 Oct 2014 14:54:03 GMT",
+                        "Connection": "keep-alive",
+                        "Keep-Alive": "timeout=15",
+                        "ETag": "\"542d670b-837\"",
+                        "Accept-Ranges": "bytes"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.googletagmanager.com/gtm.js?id=GTM-TPSP33",
+                  "timestamp": "05/06/2022 12:30:07.634560",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://nginx.org/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "application/javascript; charset=UTF-8",
+                        "access-control-allow-origin": "*",
+                        "access-control-allow-credentials": "true",
+                        "access-control-allow-headers": "Cache-Control",
+                        "content-encoding": "br",
+                        "vary": "Accept-Encoding",
+                        "date": "Sun, 05 Jun 2022 10:30:08 GMT",
+                        "expires": "Sun, 05 Jun 2022 10:30:08 GMT",
+                        "cache-control": "private, max-age=900",
+                        "last-modified": "Sun, 05 Jun 2022 09:00:00 GMT",
+                        "strict-transport-security": "max-age=31536000; includeSubDomains",
+                        "cross-origin-resource-policy": "cross-origin",
+                        "server": "Google Tag Manager",
+                        "content-length": "35271",
+                        "x-xss-protection": "0",
+                        "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://nginx.org/banner/banner.html",
+                  "timestamp": "05/06/2022 12:30:07.704582",
+                  "request_headers": {
+                        "Host": "nginx.org",
+                        "Connection": "keep-alive",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "Accept": "*/*",
+                        "Sec-Fetch-Site": "same-origin",
+                        "Sec-Fetch-Mode": "cors",
+                        "Sec-Fetch-Dest": "empty",
+                        "Referer": "https://nginx.org/",
+                        "Accept-Encoding": "gzip, deflate, br",
+                        "Accept-Language": "en-GB"
+                  },
+                  "response_headers": null,
+                  "nr_cookies": 0
+            }
+      ]
+}

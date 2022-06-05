@@ -1,0 +1,1838 @@
+{
+      "website_domain": "bestbuy.com",
+      "tranco_rank": 501,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 15:08:30.875535",
+      "pageload_end_ts": "05/06/2022 15:08:58.045869",
+      "post_pageload_url": "https://www.bestbuy.com/",
+      "consent_status": "not_found",
+      "cookies": [
+            {
+                  "_abck": "A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF7nVQvOAAQAASYX7Mwgx+kkfuxX2T6lv7iAx7/ZOFg3xeQNDqcJlB0BC7xHls5R2hkU8RRaA3D4AJcwfI5ibj5ZAwAnTOqU08k3PLIM5IjrIIYfWm7tquwN5HgUe2naZss087KwGdMpsljleh7717j9jN+9Er9z9bgd8NxhA28N0hVtCiQbyXKDdfPY9+4fQH3T0GLCC2znRMws4e+jdMS1xmJvckqPIGEiCPIkoiIxxol3zGluzoklaMtGqWdWUQYj/uuioPXliB919jLnIlHpQ4dQ0JjvZySeahEHRQ0qCCTgXZbsWiI/mhKxMLsv0fBZzlHaUm1TpbP5d9KqYfFvKn7CLh2AAt/456uIqRNh+ofVs1D+nZ2oWob/4SHhA8bsb~-1~||1-opsTWwBbDA-1-10-1000-2||~-1",
+                  "Domain": ".bestbuy.com",
+                  "Path": "/",
+                  "Expires": "Mon, 05 Jun 2023 13:08:50 GMT",
+                  "Max-Age": "31536000",
+                  "Secure": true,
+                  "size": 467
+            },
+            {
+                  "_abck": "A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF7vVQvOAAQAAVIf7MwjRgZQTEkIfFjE44deHq9SW5WXbKn8qaQbS3UdGdDOBwtuA+9K5xfLcyQpWi8jWgndukZBtk2Qeoq0xhjWnWCMPMaypWUbnVymkvoqlS1+18ZaAdVjm9BdLNqTx87syBVdb70Ca/t75MBRfj3nN9tTMsNYn+mD0Emk3efiVrAPkwzQ+wu5Eoe9K3E3e/LDcqKLP1u2Ngd/yTm3gR77HZCVlRhmXefh3h/fj58zd2rDkoiEUF/EuQxbsq2CUhA5PPUdaeiFPgjZZTu47zcJymuObE/5AZIKSwauUleM1f9oWnMu2GyIJJGkbWNTES7YCPAsSxrIdt2PXNPEOCdxVuP8rsYRWvG9Lv9vInfN30xemec/kDIDR~-1~||-1||~-1",
+                  "Domain": ".bestbuy.com",
+                  "Path": "/",
+                  "Expires": "Mon, 05 Jun 2023 13:08:51 GMT",
+                  "Max-Age": "31536000",
+                  "Secure": true,
+                  "size": 445
+            },
+            {
+                  "bby_cbc_lb": "p-browse-e",
+                  "expires": "Sun, 05-Jun-2022 13:18:40 GMT",
+                  "path": "/",
+                  "domain": ".bestbuy.com",
+                  "size": 10
+            },
+            {
+                  "SID": "5b670e07-62e0-477b-ac40-3a35949c34d4",
+                  "path": "/",
+                  "domain": ".bestbuy.com",
+                  "size": 36
+            },
+            {
+                  "_abck": "A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF7rVQvOAAQAAaob7Mwh5zrnKC0Y0M5HG1XxgqpRceS0VOf3dyKQ2gjoKkjBmmyqxBKXRXPPoUB4CIxdPy7sgNQCQ3QNX3eSi/lmm8cLuiO1Bn8ihR6cZ9vSWend93rLIBrs4ZI+VO4+ZgYCv5dKd1fKMwDAwk0H9bqFlSK4y8GZ4icGn+hUqKebSMdIKycmpgZMsz961dU3FUbfm4WQ2+i04VyHbHvHZ+5b+8aVYgOOH0vfz8NxNg6ABkgWSX5friGih4X7ypxR/sZyjsv6f4JRNND8Kgtqh9kjQH8WckBxPxtJwOF/kA5oBqH5enP6uCo0Od11EzZOAsySzAszmi8dcw15lndXskIaa3mqbcFqcLwWyleOey1WULYWkDZbSUGxy~-1~||1-opsTWwBbDA-1-10-1000-2||~-1",
+                  "Domain": ".bestbuy.com",
+                  "Path": "/",
+                  "Expires": "Mon, 05 Jun 2023 13:08:50 GMT",
+                  "Max-Age": "31536000",
+                  "Secure": true,
+                  "size": 467
+            }
+      ],
+      "third_party_domains": [
+            "bbystatic.com"
+      ],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://bestbuy.com/",
+                  "timestamp": "05/06/2022 15:08:31.130358",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-length": "0",
+                        "location": "https://www.bestbuy.com/",
+                        "date": "Sun, 05 Jun 2022 13:08:31 GMT",
+                        "x-frame-options": "SAMEORIGIN",
+                        "strict-transport-security": "max-age=31536000"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/",
+                  "timestamp": "05/06/2022 15:08:31.346169",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "content-type": "text/html",
+                        "set-cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; path=/; domain=.bestbuy.com",
+                        "strict-transport-security": "max-age=15768000",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "etag": "\"24bae23cb7945b3b9b472756d814b57e:1636744666.35861\"",
+                        "x-akamai-transformed": "9 7090 0 pmb=mTOE,1",
+                        "vary": "Accept-Encoding",
+                        "content-encoding": "gzip",
+                        "expires": "Sun, 05 Jun 2022 13:08:39 GMT",
+                        "cache-control": "max-age=0, no-cache, no-store",
+                        "pragma": "no-cache",
+                        "date": "Sun, 05 Jun 2022 13:08:39 GMT",
+                        "content-length": "1651"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_intl/landing_page/css/app.css",
+                  "timestamp": "05/06/2022 15:08:39.518889",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "text/css,*/*;q=0.1",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "style",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5rVQvOAAQAAi1v7MwglufFXI9+LRjo5FUh1jEkzhK7wvuLoVTdGmt2m0qwZdusk4pLY0mCVj+UMT1sse56KtL9uJJlrBmOSIvj35KBB093QOPnqQYtexfiZM6mo7KfqSpm0epmw685yhmsnBefnQHR86k9u+tNjl7inSpcINXbvALZSQiQLhcJV63CU02e4Y80dHmuFAFx1K944qzmIgKcQdYXSnaTAw0249ZLezp+zzynMbOZhh09qH0/BQI+GXWr6BmlmJViQFhUYCzXYi9XbFsLd4Tm1keQSSayYLlkYlqzBnGbsXZOGVcdqyuc2xp7K8Ei7jvPmvsNcO9nKxAPiAc/Ba0J9OToSG6HD8+qgx+ELFQ==~-1~-1~-1; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97"
+                  },
+                  "response_headers": {
+                        "content-type": "text/css",
+                        "accept-ranges": "bytes",
+                        "content-encoding": "br",
+                        "etag": "\"c78cef1b4159911e2b6c43afb599678c:1562964474.621973\"",
+                        "last-modified": "Wed, 09 Mar 2022 16:15:37 GMT",
+                        "vary": "Accept-Encoding",
+                        "content-length": "1551",
+                        "cache-control": "max-age=1972847",
+                        "expires": "Tue, 28 Jun 2022 09:09:35 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:48 GMT",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 5
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_com/cacheable-gvp-66138ea0147dd17ecdc9dc0ac1b86344.min.js",
+                  "timestamp": "05/06/2022 15:08:39.534714",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5rVQvOAAQAAi1v7MwglufFXI9+LRjo5FUh1jEkzhK7wvuLoVTdGmt2m0qwZdusk4pLY0mCVj+UMT1sse56KtL9uJJlrBmOSIvj35KBB093QOPnqQYtexfiZM6mo7KfqSpm0epmw685yhmsnBefnQHR86k9u+tNjl7inSpcINXbvALZSQiQLhcJV63CU02e4Y80dHmuFAFx1K944qzmIgKcQdYXSnaTAw0249ZLezp+zzynMbOZhh09qH0/BQI+GXWr6BmlmJViQFhUYCzXYi9XbFsLd4Tm1keQSSayYLlkYlqzBnGbsXZOGVcdqyuc2xp7K8Ei7jvPmvsNcO9nKxAPiAc/Ba0J9OToSG6HD8+qgx+ELFQ==~-1~-1~-1; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97"
+                  },
+                  "response_headers": {
+                        "content-type": "application/x-javascript",
+                        "accept-ranges": "bytes",
+                        "content-encoding": "br",
+                        "etag": "\"cbe739c66ba2b37ee8d9030839ad143d:1619014976.752842\"",
+                        "last-modified": "Mon, 14 Feb 2022 04:17:18 GMT",
+                        "vary": "Accept-Encoding",
+                        "content-length": "132120",
+                        "cache-control": "max-age=1972846",
+                        "expires": "Tue, 28 Jun 2022 09:09:34 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:48 GMT",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 5
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_intl/landing_page/js/app.min.js",
+                  "timestamp": "05/06/2022 15:08:39.537715",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5rVQvOAAQAAi1v7MwglufFXI9+LRjo5FUh1jEkzhK7wvuLoVTdGmt2m0qwZdusk4pLY0mCVj+UMT1sse56KtL9uJJlrBmOSIvj35KBB093QOPnqQYtexfiZM6mo7KfqSpm0epmw685yhmsnBefnQHR86k9u+tNjl7inSpcINXbvALZSQiQLhcJV63CU02e4Y80dHmuFAFx1K944qzmIgKcQdYXSnaTAw0249ZLezp+zzynMbOZhh09qH0/BQI+GXWr6BmlmJViQFhUYCzXYi9XbFsLd4Tm1keQSSayYLlkYlqzBnGbsXZOGVcdqyuc2xp7K8Ei7jvPmvsNcO9nKxAPiAc/Ba0J9OToSG6HD8+qgx+ELFQ==~-1~-1~-1; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97"
+                  },
+                  "response_headers": {
+                        "content-type": "application/x-javascript",
+                        "accept-ranges": "bytes",
+                        "content-encoding": "br",
+                        "etag": "\"dc564a93f05437b94ea72b14973a5833:1647967228.340256\"",
+                        "last-modified": "Tue, 12 Apr 2022 19:40:17 GMT",
+                        "content-length": "649",
+                        "cache-control": "max-age=1006517",
+                        "expires": "Fri, 17 Jun 2022 04:44:07 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 5
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_com/legacy-66138ea0147dd17ecdc9dc0ac1b86344.min.js",
+                  "timestamp": "05/06/2022 15:08:39.540715",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5rVQvOAAQAAi1v7MwglufFXI9+LRjo5FUh1jEkzhK7wvuLoVTdGmt2m0qwZdusk4pLY0mCVj+UMT1sse56KtL9uJJlrBmOSIvj35KBB093QOPnqQYtexfiZM6mo7KfqSpm0epmw685yhmsnBefnQHR86k9u+tNjl7inSpcINXbvALZSQiQLhcJV63CU02e4Y80dHmuFAFx1K944qzmIgKcQdYXSnaTAw0249ZLezp+zzynMbOZhh09qH0/BQI+GXWr6BmlmJViQFhUYCzXYi9XbFsLd4Tm1keQSSayYLlkYlqzBnGbsXZOGVcdqyuc2xp7K8Ei7jvPmvsNcO9nKxAPiAc/Ba0J9OToSG6HD8+qgx+ELFQ==~-1~-1~-1; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97"
+                  },
+                  "response_headers": {
+                        "content-type": "application/x-javascript",
+                        "accept-ranges": "bytes",
+                        "content-encoding": "br",
+                        "etag": "\"80e96c542168b4a82a78e485b2a038a2:1619014979.503688\"",
+                        "last-modified": "Fri, 01 Apr 2022 21:17:11 GMT",
+                        "vary": "Accept-Encoding",
+                        "content-length": "6017",
+                        "cache-control": "max-age=1006517",
+                        "expires": "Fri, 17 Jun 2022 04:44:07 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 5
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_intl/landing_page/js/zepto.min.js",
+                  "timestamp": "05/06/2022 15:08:39.543716",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5rVQvOAAQAAi1v7MwglufFXI9+LRjo5FUh1jEkzhK7wvuLoVTdGmt2m0qwZdusk4pLY0mCVj+UMT1sse56KtL9uJJlrBmOSIvj35KBB093QOPnqQYtexfiZM6mo7KfqSpm0epmw685yhmsnBefnQHR86k9u+tNjl7inSpcINXbvALZSQiQLhcJV63CU02e4Y80dHmuFAFx1K944qzmIgKcQdYXSnaTAw0249ZLezp+zzynMbOZhh09qH0/BQI+GXWr6BmlmJViQFhUYCzXYi9XbFsLd4Tm1keQSSayYLlkYlqzBnGbsXZOGVcdqyuc2xp7K8Ei7jvPmvsNcO9nKxAPiAc/Ba0J9OToSG6HD8+qgx+ELFQ==~-1~-1~-1; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97"
+                  },
+                  "response_headers": {
+                        "content-type": "application/x-javascript",
+                        "accept-ranges": "bytes",
+                        "content-encoding": "br",
+                        "etag": "\"50a4556b0089cfa1cb61e88ea23bbcce:1562964478.840165\"",
+                        "last-modified": "Sat, 07 May 2022 02:21:21 GMT",
+                        "vary": "Accept-Encoding",
+                        "content-length": "8801",
+                        "cache-control": "max-age=1006519",
+                        "expires": "Fri, 17 Jun 2022 04:44:07 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:48 GMT",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 5
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_com/header-footer/images/bby_logo-a7e90594729ed2e119331378def6c97e.png",
+                  "timestamp": "05/06/2022 15:08:39.546717",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5rVQvOAAQAAi1v7MwglufFXI9+LRjo5FUh1jEkzhK7wvuLoVTdGmt2m0qwZdusk4pLY0mCVj+UMT1sse56KtL9uJJlrBmOSIvj35KBB093QOPnqQYtexfiZM6mo7KfqSpm0epmw685yhmsnBefnQHR86k9u+tNjl7inSpcINXbvALZSQiQLhcJV63CU02e4Y80dHmuFAFx1K944qzmIgKcQdYXSnaTAw0249ZLezp+zzynMbOZhh09qH0/BQI+GXWr6BmlmJViQFhUYCzXYi9XbFsLd4Tm1keQSSayYLlkYlqzBnGbsXZOGVcdqyuc2xp7K8Ei7jvPmvsNcO9nKxAPiAc/Ba0J9OToSG6HD8+qgx+ELFQ==~-1~-1~-1; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97"
+                  },
+                  "response_headers": {
+                        "accept-ranges": "bytes",
+                        "content-type": "image/png",
+                        "etag": "\"a7e90594729ed2e119331378def6c97e:1603823742.005078\"",
+                        "last-modified": "Tue, 27 Oct 2020 18:35:41 GMT",
+                        "content-length": "6521",
+                        "cache-control": "max-age=1962645",
+                        "expires": "Tue, 28 Jun 2022 06:19:34 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:49 GMT",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 5
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/3lLnrh/61UQP/6HIzM/Mmks/1X7fNrkJacam/TkcnSwE/dyF/6NWBIaw",
+                  "timestamp": "05/06/2022 15:08:39.550717",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5rVQvOAAQAAi1v7MwglufFXI9+LRjo5FUh1jEkzhK7wvuLoVTdGmt2m0qwZdusk4pLY0mCVj+UMT1sse56KtL9uJJlrBmOSIvj35KBB093QOPnqQYtexfiZM6mo7KfqSpm0epmw685yhmsnBefnQHR86k9u+tNjl7inSpcINXbvALZSQiQLhcJV63CU02e4Y80dHmuFAFx1K944qzmIgKcQdYXSnaTAw0249ZLezp+zzynMbOZhh09qH0/BQI+GXWr6BmlmJViQFhUYCzXYi9XbFsLd4Tm1keQSSayYLlkYlqzBnGbsXZOGVcdqyuc2xp7K8Ei7jvPmvsNcO9nKxAPiAc/Ba0J9OToSG6HD8+qgx+ELFQ==~-1~-1~-1; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97"
+                  },
+                  "response_headers": {
+                        "last-modified": "Mon, 28 Feb 2022 19:29:24 GMT",
+                        "etag": "\"a7a61709860c0c57ec0c92584ae4f1bc214dfc71043ea43843572e55d14841f6\"",
+                        "content-type": "application/javascript",
+                        "vary": "Accept-Encoding",
+                        "content-encoding": "gzip",
+                        "content-length": "20456",
+                        "x-forwarded-proto": "https",
+                        "expires": "Sat, 02 Jul 2022 00:31:55 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:40 GMT",
+                        "set-cookie": "bby_cbc_lb=p-browse-e; expires=Sun, 05-Jun-2022 13:18:40 GMT; path=/; domain=.bestbuy.com",
+                        "cache-control": "max-age=21600",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 5
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/usa.svg",
+                  "timestamp": "05/06/2022 15:08:39.553719",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5rVQvOAAQAAi1v7MwglufFXI9+LRjo5FUh1jEkzhK7wvuLoVTdGmt2m0qwZdusk4pLY0mCVj+UMT1sse56KtL9uJJlrBmOSIvj35KBB093QOPnqQYtexfiZM6mo7KfqSpm0epmw685yhmsnBefnQHR86k9u+tNjl7inSpcINXbvALZSQiQLhcJV63CU02e4Y80dHmuFAFx1K944qzmIgKcQdYXSnaTAw0249ZLezp+zzynMbOZhh09qH0/BQI+GXWr6BmlmJViQFhUYCzXYi9XbFsLd4Tm1keQSSayYLlkYlqzBnGbsXZOGVcdqyuc2xp7K8Ei7jvPmvsNcO9nKxAPiAc/Ba0J9OToSG6HD8+qgx+ELFQ==~-1~-1~-1; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97"
+                  },
+                  "response_headers": {
+                        "content-type": "image/svg+xml",
+                        "accept-ranges": "bytes",
+                        "content-encoding": "gzip",
+                        "etag": "\"aefba3fef673e14305b112b0e82805fe:1562964475.454015\"",
+                        "last-modified": "Fri, 18 Mar 2022 04:41:11 GMT",
+                        "content-length": "392",
+                        "cache-control": "max-age=1972845",
+                        "expires": "Tue, 28 Jun 2022 09:09:35 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "vary": "Accept-Encoding",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 5
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/canada.svg",
+                  "timestamp": "05/06/2022 15:08:39.556719",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5rVQvOAAQAAi1v7MwglufFXI9+LRjo5FUh1jEkzhK7wvuLoVTdGmt2m0qwZdusk4pLY0mCVj+UMT1sse56KtL9uJJlrBmOSIvj35KBB093QOPnqQYtexfiZM6mo7KfqSpm0epmw685yhmsnBefnQHR86k9u+tNjl7inSpcINXbvALZSQiQLhcJV63CU02e4Y80dHmuFAFx1K944qzmIgKcQdYXSnaTAw0249ZLezp+zzynMbOZhh09qH0/BQI+GXWr6BmlmJViQFhUYCzXYi9XbFsLd4Tm1keQSSayYLlkYlqzBnGbsXZOGVcdqyuc2xp7K8Ei7jvPmvsNcO9nKxAPiAc/Ba0J9OToSG6HD8+qgx+ELFQ==~-1~-1~-1; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97"
+                  },
+                  "response_headers": {
+                        "content-type": "image/svg+xml",
+                        "accept-ranges": "bytes",
+                        "content-encoding": "gzip",
+                        "etag": "\"72c41a24b815ee8a1be86253b290cf9c:1562964476.630725\"",
+                        "last-modified": "Wed, 26 Jan 2022 20:55:20 GMT",
+                        "content-length": "718",
+                        "cache-control": "max-age=1972847",
+                        "expires": "Tue, 28 Jun 2022 09:09:35 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:48 GMT",
+                        "vary": "Accept-Encoding",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 5
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/maps/mexico.svg",
+                  "timestamp": "05/06/2022 15:08:39.559720",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5rVQvOAAQAAi1v7MwglufFXI9+LRjo5FUh1jEkzhK7wvuLoVTdGmt2m0qwZdusk4pLY0mCVj+UMT1sse56KtL9uJJlrBmOSIvj35KBB093QOPnqQYtexfiZM6mo7KfqSpm0epmw685yhmsnBefnQHR86k9u+tNjl7inSpcINXbvALZSQiQLhcJV63CU02e4Y80dHmuFAFx1K944qzmIgKcQdYXSnaTAw0249ZLezp+zzynMbOZhh09qH0/BQI+GXWr6BmlmJViQFhUYCzXYi9XbFsLd4Tm1keQSSayYLlkYlqzBnGbsXZOGVcdqyuc2xp7K8Ei7jvPmvsNcO9nKxAPiAc/Ba0J9OToSG6HD8+qgx+ELFQ==~-1~-1~-1; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97"
+                  },
+                  "response_headers": {
+                        "content-type": "image/svg+xml",
+                        "accept-ranges": "bytes",
+                        "content-encoding": "gzip",
+                        "etag": "\"77f3c0ffb351d1290d9e3afc56109c1a:1562964475.841207\"",
+                        "last-modified": "Fri, 21 Jan 2022 20:49:13 GMT",
+                        "vary": "Accept-Encoding",
+                        "content-length": "81870",
+                        "cache-control": "max-age=1972844",
+                        "expires": "Tue, 28 Jun 2022 09:09:34 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 5
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_intl/landing_page/images/icons/arrow.svg",
+                  "timestamp": "05/06/2022 15:08:39.562720",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "image",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5rVQvOAAQAAi1v7MwglufFXI9+LRjo5FUh1jEkzhK7wvuLoVTdGmt2m0qwZdusk4pLY0mCVj+UMT1sse56KtL9uJJlrBmOSIvj35KBB093QOPnqQYtexfiZM6mo7KfqSpm0epmw685yhmsnBefnQHR86k9u+tNjl7inSpcINXbvALZSQiQLhcJV63CU02e4Y80dHmuFAFx1K944qzmIgKcQdYXSnaTAw0249ZLezp+zzynMbOZhh09qH0/BQI+GXWr6BmlmJViQFhUYCzXYi9XbFsLd4Tm1keQSSayYLlkYlqzBnGbsXZOGVcdqyuc2xp7K8Ei7jvPmvsNcO9nKxAPiAc/Ba0J9OToSG6HD8+qgx+ELFQ==~-1~-1~-1; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97"
+                  },
+                  "response_headers": {
+                        "content-type": "image/svg+xml",
+                        "accept-ranges": "bytes",
+                        "content-encoding": "gzip",
+                        "etag": "\"bc6aaf6f6b6337778b6db92e1d78d4ce:1562964477.864232\"",
+                        "last-modified": "Thu, 31 Mar 2022 01:02:47 GMT",
+                        "content-length": "377",
+                        "cache-control": "max-age=1972847",
+                        "expires": "Tue, 28 Jun 2022 09:09:35 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:48 GMT",
+                        "vary": "Accept-Encoding",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 5
+            },
+            {
+                  "request_url": "https://assets.bbystatic.com/analytics-dotcom/analyticsInit-f7791796aa580255fd28610903e3089e.js",
+                  "timestamp": "05/06/2022 15:08:39.633050",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "cross-site",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "accept-ranges": "bytes",
+                        "content-type": "application/x-javascript",
+                        "etag": "\"f7791796aa580255fd28610903e3089e:1636142862.510681\"",
+                        "last-modified": "Fri, 05 Nov 2021 20:07:42 GMT",
+                        "vary": "Accept-Encoding",
+                        "content-encoding": "gzip",
+                        "cache-control": "max-age=2349565",
+                        "expires": "Sat, 02 Jul 2022 17:48:13 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:48 GMT",
+                        "access-control-allow-origin": "*",
+                        "timing-allow-origin": "https://www.bestbuy.com",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_com/sc-pattern-library/dist/e4ad7a6cc30f9153dc15124aa8ec616c.woff2",
+                  "timestamp": "05/06/2022 15:08:47.723648",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.bestbuy.com/~assets/bby/_intl/landing_page/css/app.css",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97; bby_cbc_lb=p-browse-e; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5zVQvOAAQAAc1z7MwjEuKHWt+mVkEnzYJHMbuux4xZzMwHx09nVYBD5DK7J1QnFz7xrh7LzLYteUyJrPk3LHfr86PNm1YWA71Sqm+jN6s8Tfqqwd2BcLqhmpMra/LaUgURpKu/lb7KJNBy55o5pIWAvtHEgcQP58ZoBJkiK8TEMUN9SFHKg88eQ1SdtVZdMo7nhHQ1zggm9feXcmbWOoNtTBB/hChZLKWBOC9puwD4upLer0FojMpzwPPfv0lH0ma71YjW2wnnrHYupGPeoaqrGDc2mt241il3gRkdtIr9bb+KCI1f6JOFJTncl1RdfLczW1uexfnCleT3vPiAevXm+n+kzWMcxFfriXFI4fdJodVUZZ6lsGEGp3m5u731kO3pp~-1~-1~-1"
+                  },
+                  "response_headers": {
+                        "accept-ranges": "bytes",
+                        "content-type": "font/woff2",
+                        "etag": "\"e4ad7a6cc30f9153dc15124aa8ec616c:1620237902.806331\"",
+                        "last-modified": "Wed, 05 May 2021 18:05:02 GMT",
+                        "content-length": "20856",
+                        "cache-control": "max-age=1422212",
+                        "expires": "Wed, 22 Jun 2022 00:12:30 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:58 GMT",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "access-control-allow-credentials": "true",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 6
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_com/sc-pattern-library/dist/9b64d8057a58697c89b7d537d4f5f809.woff2",
+                  "timestamp": "05/06/2022 15:08:47.727650",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.bestbuy.com/~assets/bby/_intl/landing_page/css/app.css",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97; bby_cbc_lb=p-browse-e; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5zVQvOAAQAAc1z7MwjEuKHWt+mVkEnzYJHMbuux4xZzMwHx09nVYBD5DK7J1QnFz7xrh7LzLYteUyJrPk3LHfr86PNm1YWA71Sqm+jN6s8Tfqqwd2BcLqhmpMra/LaUgURpKu/lb7KJNBy55o5pIWAvtHEgcQP58ZoBJkiK8TEMUN9SFHKg88eQ1SdtVZdMo7nhHQ1zggm9feXcmbWOoNtTBB/hChZLKWBOC9puwD4upLer0FojMpzwPPfv0lH0ma71YjW2wnnrHYupGPeoaqrGDc2mt241il3gRkdtIr9bb+KCI1f6JOFJTncl1RdfLczW1uexfnCleT3vPiAevXm+n+kzWMcxFfriXFI4fdJodVUZZ6lsGEGp3m5u731kO3pp~-1~-1~-1"
+                  },
+                  "response_headers": {
+                        "accept-ranges": "bytes",
+                        "content-type": "font/woff2",
+                        "etag": "\"9b64d8057a58697c89b7d537d4f5f809:1620237897.695858\"",
+                        "last-modified": "Wed, 05 May 2021 18:04:57 GMT",
+                        "content-length": "22072",
+                        "cache-control": "max-age=743870",
+                        "expires": "Tue, 14 Jun 2022 03:46:48 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:58 GMT",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "access-control-allow-credentials": "true",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 6
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_com/sc-pattern-library/dist/5562484cf98053a028aea627e45d4b7c.woff2",
+                  "timestamp": "05/06/2022 15:08:47.731650",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "font",
+                        "referer": "https://www.bestbuy.com/~assets/bby/_intl/landing_page/css/app.css",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97; bby_cbc_lb=p-browse-e; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5zVQvOAAQAAc1z7MwjEuKHWt+mVkEnzYJHMbuux4xZzMwHx09nVYBD5DK7J1QnFz7xrh7LzLYteUyJrPk3LHfr86PNm1YWA71Sqm+jN6s8Tfqqwd2BcLqhmpMra/LaUgURpKu/lb7KJNBy55o5pIWAvtHEgcQP58ZoBJkiK8TEMUN9SFHKg88eQ1SdtVZdMo7nhHQ1zggm9feXcmbWOoNtTBB/hChZLKWBOC9puwD4upLer0FojMpzwPPfv0lH0ma71YjW2wnnrHYupGPeoaqrGDc2mt241il3gRkdtIr9bb+KCI1f6JOFJTncl1RdfLczW1uexfnCleT3vPiAevXm+n+kzWMcxFfriXFI4fdJodVUZZ6lsGEGp3m5u731kO3pp~-1~-1~-1"
+                  },
+                  "response_headers": {
+                        "accept-ranges": "bytes",
+                        "content-type": "font/woff2",
+                        "etag": "\"5562484cf98053a028aea627e45d4b7c:1620237895.161663\"",
+                        "last-modified": "Wed, 05 May 2021 18:04:55 GMT",
+                        "content-length": "21896",
+                        "cache-control": "max-age=1281076",
+                        "expires": "Mon, 20 Jun 2022 09:00:13 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:57 GMT",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "access-control-allow-credentials": "true",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 6
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/3lLnrh/61UQP/6HIzM/Mmks/1X7fNrkJacam/TkcnSwE/dyF/6NWBIaw",
+                  "timestamp": "05/06/2022 15:08:49.657431",
+                  "request_headers": {
+                        "content-length": "1393",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "text/plain;charset=UTF-8",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97; bby_cbc_lb=p-browse-e; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5zVQvOAAQAAc1z7MwjEuKHWt+mVkEnzYJHMbuux4xZzMwHx09nVYBD5DK7J1QnFz7xrh7LzLYteUyJrPk3LHfr86PNm1YWA71Sqm+jN6s8Tfqqwd2BcLqhmpMra/LaUgURpKu/lb7KJNBy55o5pIWAvtHEgcQP58ZoBJkiK8TEMUN9SFHKg88eQ1SdtVZdMo7nhHQ1zggm9feXcmbWOoNtTBB/hChZLKWBOC9puwD4upLer0FojMpzwPPfv0lH0ma71YjW2wnnrHYupGPeoaqrGDc2mt241il3gRkdtIr9bb+KCI1f6JOFJTncl1RdfLczW1uexfnCleT3vPiAevXm+n+kzWMcxFfriXFI4fdJodVUZZ6lsGEGp3m5u731kO3pp~-1~-1~-1"
+                  },
+                  "response_headers": {
+                        "content-length": "18",
+                        "x_req_id": "2e5cfed0-1251-4040-ad0f-c7c2178d2f64",
+                        "x-forwarded-proto": "https",
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "vary": "Origin",
+                        "access-control-allow-credentials": "true",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-headers": "Content-Type",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000",
+                        "set-cookie": "_abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF7nVQvOAAQAASYX7Mwgx+kkfuxX2T6lv7iAx7/ZOFg3xeQNDqcJlB0BC7xHls5R2hkU8RRaA3D4AJcwfI5ibj5ZAwAnTOqU08k3PLIM5IjrIIYfWm7tquwN5HgUe2naZss087KwGdMpsljleh7717j9jN+9Er9z9bgd8NxhA28N0hVtCiQbyXKDdfPY9+4fQH3T0GLCC2znRMws4e+jdMS1xmJvckqPIGEiCPIkoiIxxol3zGluzoklaMtGqWdWUQYj/uuioPXliB919jLnIlHpQ4dQ0JjvZySeahEHRQ0qCCTgXZbsWiI/mhKxMLsv0fBZzlHaUm1TpbP5d9KqYfFvKn7CLh2AAt/456uIqRNh+ofVs1D+nZ2oWob/4SHhA8bsb~-1~||1-opsTWwBbDA-1-10-1000-2||~-1; Domain=.bestbuy.com; Path=/; Expires=Mon, 05 Jun 2023 13:08:50 GMT; Max-Age=31536000; Secure"
+                  },
+                  "nr_cookies": 6
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/~assets/bby/_com/analytics-dotcom/sandbox-index-21.42.20.html?parentOrigin=https%3A%2F%2Fwww.bestbuy.com&env=prod",
+                  "timestamp": "05/06/2022 15:08:49.802464",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-dest": "iframe",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97; bby_cbc_lb=p-browse-e; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF5zVQvOAAQAAc1z7MwjEuKHWt+mVkEnzYJHMbuux4xZzMwHx09nVYBD5DK7J1QnFz7xrh7LzLYteUyJrPk3LHfr86PNm1YWA71Sqm+jN6s8Tfqqwd2BcLqhmpMra/LaUgURpKu/lb7KJNBy55o5pIWAvtHEgcQP58ZoBJkiK8TEMUN9SFHKg88eQ1SdtVZdMo7nhHQ1zggm9feXcmbWOoNtTBB/hChZLKWBOC9puwD4upLer0FojMpzwPPfv0lH0ma71YjW2wnnrHYupGPeoaqrGDc2mt241il3gRkdtIr9bb+KCI1f6JOFJTncl1RdfLczW1uexfnCleT3vPiAevXm+n+kzWMcxFfriXFI4fdJodVUZZ6lsGEGp3m5u731kO3pp~-1~-1~-1"
+                  },
+                  "response_headers": {
+                        "accept-ranges": "bytes",
+                        "content-type": "text/html",
+                        "etag": "\"5e31f1151e8b20c7c75bad70ea284f4e:1636142863.293635\"",
+                        "last-modified": "Fri, 05 Nov 2021 20:07:43 GMT",
+                        "x-akamai-transformed": "9 - 0 pmb=mTOE,1",
+                        "vary": "Accept-Encoding",
+                        "content-encoding": "gzip",
+                        "cache-control": "max-age=1802017",
+                        "expires": "Sun, 26 Jun 2022 09:42:35 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:58 GMT",
+                        "content-length": "373",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 6
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/3lLnrh/61UQP/6HIzM/Mmks/1X7fNrkJacam/TkcnSwE/dyF/6NWBIaw",
+                  "timestamp": "05/06/2022 15:08:50.182403",
+                  "request_headers": {
+                        "content-length": "1578",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "text/plain;charset=UTF-8",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97; bby_cbc_lb=p-browse-e; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF7nVQvOAAQAASYX7Mwgx+kkfuxX2T6lv7iAx7/ZOFg3xeQNDqcJlB0BC7xHls5R2hkU8RRaA3D4AJcwfI5ibj5ZAwAnTOqU08k3PLIM5IjrIIYfWm7tquwN5HgUe2naZss087KwGdMpsljleh7717j9jN+9Er9z9bgd8NxhA28N0hVtCiQbyXKDdfPY9+4fQH3T0GLCC2znRMws4e+jdMS1xmJvckqPIGEiCPIkoiIxxol3zGluzoklaMtGqWdWUQYj/uuioPXliB919jLnIlHpQ4dQ0JjvZySeahEHRQ0qCCTgXZbsWiI/mhKxMLsv0fBZzlHaUm1TpbP5d9KqYfFvKn7CLh2AAt/456uIqRNh+ofVs1D+nZ2oWob/4SHhA8bsb~-1~||1-opsTWwBbDA-1-10-1000-2||~-1"
+                  },
+                  "response_headers": {
+                        "content-length": "18",
+                        "x_req_id": "b164b772-cc84-4950-8da2-c47b6d1fed0a",
+                        "x-forwarded-proto": "https",
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "vary": "Origin",
+                        "access-control-allow-credentials": "true",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-headers": "Content-Type",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000",
+                        "set-cookie": "_abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF7rVQvOAAQAAaob7Mwh5zrnKC0Y0M5HG1XxgqpRceS0VOf3dyKQ2gjoKkjBmmyqxBKXRXPPoUB4CIxdPy7sgNQCQ3QNX3eSi/lmm8cLuiO1Bn8ihR6cZ9vSWend93rLIBrs4ZI+VO4+ZgYCv5dKd1fKMwDAwk0H9bqFlSK4y8GZ4icGn+hUqKebSMdIKycmpgZMsz961dU3FUbfm4WQ2+i04VyHbHvHZ+5b+8aVYgOOH0vfz8NxNg6ABkgWSX5friGih4X7ypxR/sZyjsv6f4JRNND8Kgtqh9kjQH8WckBxPxtJwOF/kA5oBqH5enP6uCo0Od11EzZOAsySzAszmi8dcw15lndXskIaa3mqbcFqcLwWyleOey1WULYWkDZbSUGxy~-1~||1-opsTWwBbDA-1-10-1000-2||~-1; Domain=.bestbuy.com; Path=/; Expires=Mon, 05 Jun 2023 13:08:50 GMT; Max-Age=31536000; Secure"
+                  },
+                  "nr_cookies": 6
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.202409",
+                  "request_headers": {
+                        "content-length": "628",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.207409",
+                  "request_headers": {
+                        "content-length": "634",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.211410",
+                  "request_headers": {
+                        "content-length": "672",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.215410",
+                  "request_headers": {
+                        "content-length": "638",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.218648",
+                  "request_headers": {
+                        "content-length": "646",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.222649",
+                  "request_headers": {
+                        "content-length": "622",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.226650",
+                  "request_headers": {
+                        "content-length": "636",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.235652",
+                  "request_headers": {
+                        "content-length": "622",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.238653",
+                  "request_headers": {
+                        "content-length": "644",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.242653",
+                  "request_headers": {
+                        "content-length": "630",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.246654",
+                  "request_headers": {
+                        "content-length": "636",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.251655",
+                  "request_headers": {
+                        "content-length": "624",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.255656",
+                  "request_headers": {
+                        "content-length": "632",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.259657",
+                  "request_headers": {
+                        "content-length": "642",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.262658",
+                  "request_headers": {
+                        "content-length": "654",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.265658",
+                  "request_headers": {
+                        "content-length": "620",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.269659",
+                  "request_headers": {
+                        "content-length": "654",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.272660",
+                  "request_headers": {
+                        "content-length": "632",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.275661",
+                  "request_headers": {
+                        "content-length": "634",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.279662",
+                  "request_headers": {
+                        "content-length": "620",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.282662",
+                  "request_headers": {
+                        "content-length": "630",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.285663",
+                  "request_headers": {
+                        "content-length": "620",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.289665",
+                  "request_headers": {
+                        "content-length": "646",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.292665",
+                  "request_headers": {
+                        "content-length": "644",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.300666",
+                  "request_headers": {
+                        "content-length": "646",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.307668",
+                  "request_headers": {
+                        "content-length": "652",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.310668",
+                  "request_headers": {
+                        "content-length": "630",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.313670",
+                  "request_headers": {
+                        "content-length": "632",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.317670",
+                  "request_headers": {
+                        "content-length": "632",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.321672",
+                  "request_headers": {
+                        "content-length": "662",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.327673",
+                  "request_headers": {
+                        "content-length": "632",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.332674",
+                  "request_headers": {
+                        "content-length": "642",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.337675",
+                  "request_headers": {
+                        "content-length": "646",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:50 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.341677",
+                  "request_headers": {
+                        "content-length": "646",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:51 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.345677",
+                  "request_headers": {
+                        "content-length": "644",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:51 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.350678",
+                  "request_headers": {
+                        "content-length": "642",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:51 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://fel-api.prod.browse.bestbuy.com/exception",
+                  "timestamp": "05/06/2022 15:08:50.353679",
+                  "request_headers": {
+                        "content-length": "624",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "application/x-www-form-urlencoded",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-site",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "date": "Sun, 05 Jun 2022 13:08:51 GMT",
+                        "content-type": "application/json",
+                        "content-length": "16",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-methods": "POST"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/3lLnrh/61UQP/6HIzM/Mmks/1X7fNrkJacam/TkcnSwE/dyF/6NWBIaw",
+                  "timestamp": "05/06/2022 15:08:50.389687",
+                  "request_headers": {
+                        "content-length": "2190",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "text/plain;charset=UTF-8",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97; bby_cbc_lb=p-browse-e; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF7nVQvOAAQAASYX7Mwgx+kkfuxX2T6lv7iAx7/ZOFg3xeQNDqcJlB0BC7xHls5R2hkU8RRaA3D4AJcwfI5ibj5ZAwAnTOqU08k3PLIM5IjrIIYfWm7tquwN5HgUe2naZss087KwGdMpsljleh7717j9jN+9Er9z9bgd8NxhA28N0hVtCiQbyXKDdfPY9+4fQH3T0GLCC2znRMws4e+jdMS1xmJvckqPIGEiCPIkoiIxxol3zGluzoklaMtGqWdWUQYj/uuioPXliB919jLnIlHpQ4dQ0JjvZySeahEHRQ0qCCTgXZbsWiI/mhKxMLsv0fBZzlHaUm1TpbP5d9KqYfFvKn7CLh2AAt/456uIqRNh+ofVs1D+nZ2oWob/4SHhA8bsb~-1~||1-opsTWwBbDA-1-10-1000-2||~-1"
+                  },
+                  "response_headers": {
+                        "content-length": "18",
+                        "x_req_id": "4f381058-dd70-47d6-8df7-8e8c28f48c9c",
+                        "x-forwarded-proto": "https",
+                        "date": "Sun, 05 Jun 2022 13:08:51 GMT",
+                        "content-type": "application/json",
+                        "vary": "Origin",
+                        "access-control-allow-credentials": "true",
+                        "access-control-allow-origin": "https://www.bestbuy.com",
+                        "access-control-allow-headers": "Content-Type",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000",
+                        "set-cookie": "_abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF7vVQvOAAQAAVIf7MwjRgZQTEkIfFjE44deHq9SW5WXbKn8qaQbS3UdGdDOBwtuA+9K5xfLcyQpWi8jWgndukZBtk2Qeoq0xhjWnWCMPMaypWUbnVymkvoqlS1+18ZaAdVjm9BdLNqTx87syBVdb70Ca/t75MBRfj3nN9tTMsNYn+mD0Emk3efiVrAPkwzQ+wu5Eoe9K3E3e/LDcqKLP1u2Ngd/yTm3gR77HZCVlRhmXefh3h/fj58zd2rDkoiEUF/EuQxbsq2CUhA5PPUdaeiFPgjZZTu47zcJymuObE/5AZIKSwauUleM1f9oWnMu2GyIJJGkbWNTES7YCPAsSxrIdt2PXNPEOCdxVuP8rsYRWvG9Lv9vInfN30xemec/kDIDR~-1~||-1||~-1; Domain=.bestbuy.com; Path=/; Expires=Mon, 05 Jun 2023 13:08:51 GMT; Max-Age=31536000; Secure"
+                  },
+                  "nr_cookies": 6
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/3lLnrh/61UQP/6HIzM/Mmks/1X7fNrkJacam/TkcnSwE/dyF/6NWBIaw",
+                  "timestamp": "05/06/2022 15:08:57.966837",
+                  "request_headers": {
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "accept": "*/*",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "no-cors",
+                        "sec-fetch-dest": "script",
+                        "referer": "https://www.bestbuy.com/~assets/bby/_com/analytics-dotcom/sandbox-index-21.42.20.html?parentOrigin=https%3A%2F%2Fwww.bestbuy.com&env=prod",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97; bby_cbc_lb=p-browse-e; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF7vVQvOAAQAAVIf7MwjRgZQTEkIfFjE44deHq9SW5WXbKn8qaQbS3UdGdDOBwtuA+9K5xfLcyQpWi8jWgndukZBtk2Qeoq0xhjWnWCMPMaypWUbnVymkvoqlS1+18ZaAdVjm9BdLNqTx87syBVdb70Ca/t75MBRfj3nN9tTMsNYn+mD0Emk3efiVrAPkwzQ+wu5Eoe9K3E3e/LDcqKLP1u2Ngd/yTm3gR77HZCVlRhmXefh3h/fj58zd2rDkoiEUF/EuQxbsq2CUhA5PPUdaeiFPgjZZTu47zcJymuObE/5AZIKSwauUleM1f9oWnMu2GyIJJGkbWNTES7YCPAsSxrIdt2PXNPEOCdxVuP8rsYRWvG9Lv9vInfN30xemec/kDIDR~-1~||-1||~-1"
+                  },
+                  "response_headers": {
+                        "last-modified": "Mon, 28 Feb 2022 19:29:24 GMT",
+                        "etag": "\"a7a61709860c0c57ec0c92584ae4f1bc214dfc71043ea43843572e55d14841f6\"",
+                        "content-type": "application/javascript",
+                        "vary": "Accept-Encoding",
+                        "content-encoding": "gzip",
+                        "content-length": "20456",
+                        "x-forwarded-proto": "https",
+                        "expires": "Sat, 02 Jul 2022 00:31:55 GMT",
+                        "date": "Sun, 05 Jun 2022 13:08:58 GMT",
+                        "cache-control": "max-age=21600",
+                        "x-employment": "If you are reading this, consider a job at BestBuy.com http://www.bestbuy-jobs.com/job-family/all-corporate-careers/",
+                        "strict-transport-security": "max-age=15768000"
+                  },
+                  "nr_cookies": 6
+            },
+            {
+                  "request_url": "https://www.bestbuy.com/3lLnrh/61UQP/6HIzM/Mmks/1X7fNrkJacam/TkcnSwE/dyF/6NWBIaw",
+                  "timestamp": "05/06/2022 15:08:58.041867",
+                  "request_headers": {
+                        "content-length": "1504",
+                        "sec-ch-ua": "",
+                        "sec-ch-ua-mobile": "?0",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "sec-ch-ua-platform": "",
+                        "content-type": "text/plain;charset=UTF-8",
+                        "accept": "*/*",
+                        "origin": "https://www.bestbuy.com",
+                        "sec-fetch-site": "same-origin",
+                        "sec-fetch-mode": "cors",
+                        "sec-fetch-dest": "empty",
+                        "referer": "https://www.bestbuy.com/~assets/bby/_com/analytics-dotcom/sandbox-index-21.42.20.html?parentOrigin=https%3A%2F%2Fwww.bestbuy.com&env=prod",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB",
+                        "cookie": "SID=5b670e07-62e0-477b-ac40-3a35949c34d4; bm_sz=BC862EB6EAB2708D27887B3606D494EB~YAAQnP1IF5vVQvOAAQAAi1v7MxDluPeRrA9n23sJqgrUiwrcVMbMpkSo+U2bRmcwFvUXceaoH6h9SQ2hQicyQQhrjcB+H5ZjQLZcaZQVBdUg1HXhorCzsLOzopK2/rX9N9NegHNAFvH+cpeoygUp9EzQ06bae2onL2/pcSp0kpltasjNL3MTquUDWpETL+Dbx141mt1TtvstriR5/ef0ZKkOjQ67GOWM222dPJYg3cNk5mEzkfD72XckCUNE8sClusQAsrKQpAeI/Scs2Hbhzu+HgK0bzCQBBcfLA8u3XeIVtbeJVfVllS0/zhhHIn2bcM04S5IRcEtFWsiZC1465IWTC0bpY/bk4AoE54qEMW7sehU3PpWb8KJBtqHoJBoCoVZC~3686982~4343095; bby_rdp=l; CTT=6ff96d31298b5bf1475f497d0998ba97; bby_cbc_lb=p-browse-e; _abck=A14A5CF58DCF7F226F287130F31DEBF5~-1~YAAQnP1IF7vVQvOAAQAAVIf7MwjRgZQTEkIfFjE44deHq9SW5WXbKn8qaQbS3UdGdDOBwtuA+9K5xfLcyQpWi8jWgndukZBtk2Qeoq0xhjWnWCMPMaypWUbnVymkvoqlS1+18ZaAdVjm9BdLNqTx87syBVdb70Ca/t75MBRfj3nN9tTMsNYn+mD0Emk3efiVrAPkwzQ+wu5Eoe9K3E3e/LDcqKLP1u2Ngd/yTm3gR77HZCVlRhmXefh3h/fj58zd2rDkoiEUF/EuQxbsq2CUhA5PPUdaeiFPgjZZTu47zcJymuObE/5AZIKSwauUleM1f9oWnMu2GyIJJGkbWNTES7YCPAsSxrIdt2PXNPEOCdxVuP8rsYRWvG9Lv9vInfN30xemec/kDIDR~-1~||-1||~-1"
+                  },
+                  "response_headers": null,
+                  "nr_cookies": 6
+            }
+      ]
+}

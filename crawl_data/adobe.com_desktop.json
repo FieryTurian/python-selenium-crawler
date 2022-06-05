@@ -1,0 +1,280 @@
+{
+      "website_domain": "adobe.com",
+      "tranco_rank": 30,
+      "crawl_mode": "Desktop",
+      "pageload_start_ts": "05/06/2022 10:08:48.185549",
+      "pageload_end_ts": "05/06/2022 10:08:49.814173",
+      "post_pageload_url": "https://www.adobe.com/",
+      "consent_status": "not_found",
+      "cookies": [
+            {
+                  "AKA_A2": "A",
+                  "expires": "Sun, 05-Jun-2022 09:08:50 GMT",
+                  "path": "/",
+                  "domain": "adobe.com",
+                  "secure": true,
+                  "HttpOnly": true,
+                  "size": 1
+            }
+      ],
+      "third_party_domains": [],
+      "redirect_pairs": [],
+      "requests_list": [
+            {
+                  "request_url": "https://adobe.com/",
+                  "timestamp": "05/06/2022 10:08:48.968695",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "AkamaiGHost",
+                        "content-length": "0",
+                        "location": "https://www.adobe.com/",
+                        "date": "Sun, 05 Jun 2022 08:08:49 GMT",
+                        "strict-transport-security": "max-age=86400"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.adobe.com/",
+                  "timestamp": "05/06/2022 10:08:49.582943",
+                  "request_headers": {
+                        "upgrade-insecure-requests": "1",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+                        "sec-fetch-site": "none",
+                        "sec-fetch-mode": "navigate",
+                        "sec-fetch-user": "?1",
+                        "sec-fetch-dest": "document",
+                        "accept-encoding": "gzip, deflate, br",
+                        "accept-language": "en-GB"
+                  },
+                  "response_headers": {
+                        "server": "AkamaiGHost",
+                        "mime-version": "1.0",
+                        "content-type": "text/html",
+                        "content-length": "262",
+                        "expires": "Sun, 05 Jun 2022 08:08:50 GMT",
+                        "date": "Sun, 05 Jun 2022 08:08:50 GMT",
+                        "set-cookie": "AKA_A2=A; expires=Sun, 05-Jun-2022 09:08:50 GMT; path=/; domain=adobe.com; secure; HttpOnly",
+                        "server-timing": "cdn-cache; desc=HIT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.adobe.com/etc.titan.dexterlibs/homepage/clientlibs/head.combined.fp-ebb4ba77d2d38cc8c3902853790b72c6.js",
+                  "timestamp": "05/06/2022 10:08:49.726146",
+                  "request_headers": {
+                        "host": "www.adobe.com",
+                        "accept": "*/*",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept-encoding": "gzip, deflate, br"
+                  },
+                  "response_headers": null,
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.adobe.com/marketingtech/main.no-promise.min.js",
+                  "timestamp": "05/06/2022 10:08:49.743157",
+                  "request_headers": {
+                        "host": "www.adobe.com",
+                        "accept": "*/*",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept-encoding": "gzip, deflate, br"
+                  },
+                  "response_headers": {
+                        "content-type": "application/javascript",
+                        "server": "Apache",
+                        "strict-transport-security": "max-age=86400",
+                        "content-security-policy": "frame-ancestors *.adobe.com  http://adobe.lookbookhq.com https://adobe.lookbookhq.com http://adobeenterprise.lookbookhq.com https://adobeenterprise.lookbookhq.com",
+                        "accept-ranges": "bytes",
+                        "x-adobe-loc": "ew1",
+                        "x-adobe-source": "128.52",
+                        "x-content-type-options": "nosniff",
+                        "content-encoding": "gzip",
+                        "content-length": "4739",
+                        "cache-control": "max-age=21600",
+                        "expires": "Sun, 05 Jun 2022 14:08:50 GMT",
+                        "date": "Sun, 05 Jun 2022 08:08:50 GMT",
+                        "vary": "Accept-Encoding",
+                        "server-timing": "cdn-cache; desc=HIT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.adobe.com/etc.clientlibs/globalnav/clientlibs/base/feds.js",
+                  "timestamp": "05/06/2022 10:08:49.747158",
+                  "request_headers": {
+                        "host": "www.adobe.com",
+                        "accept": "*/*",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept-encoding": "gzip, deflate, br"
+                  },
+                  "response_headers": null,
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.adobe.com/services/feds.res_1.css/head/en/acom.css",
+                  "timestamp": "05/06/2022 10:08:49.749158",
+                  "request_headers": {
+                        "host": "www.adobe.com",
+                        "accept": "*/*",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept-encoding": "gzip, deflate, br"
+                  },
+                  "response_headers": {
+                        "content-type": "text/css",
+                        "server": "Apache",
+                        "strict-transport-security": "max-age=86400",
+                        "x-adobe-content": "AEM-CC",
+                        "x-frame-options": "SAMEORIGIN",
+                        "accept-ranges": "bytes",
+                        "x-adobe-loc": "ew1",
+                        "x-adobe-source": "128.124",
+                        "x-content-type-options": "nosniff",
+                        "vary": "Accept-Encoding",
+                        "content-encoding": "gzip",
+                        "cache-control": "max-age=287",
+                        "expires": "Sun, 05 Jun 2022 08:13:37 GMT",
+                        "date": "Sun, 05 Jun 2022 08:08:50 GMT",
+                        "content-length": "5590",
+                        "server-timing": "cdn-cache; desc=HIT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.adobe.com/services/feds.res_1.js/head/en/acom.js",
+                  "timestamp": "05/06/2022 10:08:49.751159",
+                  "request_headers": {
+                        "host": "www.adobe.com",
+                        "accept": "*/*",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept-encoding": "gzip, deflate, br"
+                  },
+                  "response_headers": null,
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.adobe.com/etc.titan.dexterlibs/homepage/clientlibs/publish.combined.fp-a4adf5444d07e366ef14d45ce9b715bc.css",
+                  "timestamp": "05/06/2022 10:08:49.753159",
+                  "request_headers": {
+                        "host": "www.adobe.com",
+                        "accept": "*/*",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept-encoding": "gzip, deflate, br"
+                  },
+                  "response_headers": null,
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.adobe.com/etc.hawks.dexterlibs/dexter/clientlibs/base/publish.fp-69e9119bddf1d7d248494f2ddbd05499.css",
+                  "timestamp": "05/06/2022 10:08:49.769164",
+                  "request_headers": {
+                        "host": "www.adobe.com",
+                        "accept": "*/*",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept-encoding": "gzip, deflate, br"
+                  },
+                  "response_headers": null,
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.adobe.com/etc.hawks.dexterlibs/dexter/clientlibs/base/head.fp-06dca258c69bb32da363dff0491f1066.js",
+                  "timestamp": "05/06/2022 10:08:49.772163",
+                  "request_headers": {
+                        "host": "www.adobe.com",
+                        "accept": "*/*",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept-encoding": "gzip, deflate, br"
+                  },
+                  "response_headers": {
+                        "last-modified": "Sat, 04 Jun 2022 00:04:00 GMT",
+                        "content-type": "application/javascript",
+                        "server": "Apache",
+                        "strict-transport-security": "max-age=86400",
+                        "x-adobe-content": "AEM-cc",
+                        "x-frame-options": "SAMEORIGIN",
+                        "accept-ranges": "bytes",
+                        "x-adobe-loc": "ew1",
+                        "x-adobe-source": "128.5",
+                        "x-content-type-options": "nosniff",
+                        "content-encoding": "gzip",
+                        "content-length": "12029",
+                        "cache-control": "max-age=31477327",
+                        "expires": "Sun, 04 Jun 2023 15:50:57 GMT",
+                        "date": "Sun, 05 Jun 2022 08:08:50 GMT",
+                        "vary": "Accept-Encoding",
+                        "server-timing": "cdn-cache; desc=HIT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.adobe.com/etc.clientlibs/globalnav/clientlibs/base/feds.css",
+                  "timestamp": "05/06/2022 10:08:49.775164",
+                  "request_headers": {
+                        "host": "www.adobe.com",
+                        "accept": "*/*",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept-encoding": "gzip, deflate, br"
+                  },
+                  "response_headers": {
+                        "last-modified": "Sat, 04 Jun 2022 00:04:00 GMT",
+                        "content-type": "text/css",
+                        "server": "Apache",
+                        "strict-transport-security": "max-age=86400",
+                        "x-adobe-content": "AEM-CC",
+                        "x-frame-options": "SAMEORIGIN",
+                        "accept-ranges": "bytes",
+                        "x-adobe-loc": "ew1",
+                        "x-adobe-source": "128.118",
+                        "x-content-type-options": "nosniff",
+                        "content-encoding": "gzip",
+                        "content-length": "2955",
+                        "cache-control": "max-age=900",
+                        "expires": "Sun, 05 Jun 2022 08:23:50 GMT",
+                        "date": "Sun, 05 Jun 2022 08:08:50 GMT",
+                        "vary": "Accept-Encoding",
+                        "server-timing": "cdn-cache; desc=HIT"
+                  },
+                  "nr_cookies": 0
+            },
+            {
+                  "request_url": "https://www.adobe.com/etc.hawks.dexterlibs/dexter/clientlibs/base/reactumd.fp-41f1d30fe21685807bd11c0d8a05fa29.js",
+                  "timestamp": "05/06/2022 10:08:49.777164",
+                  "request_headers": {
+                        "host": "www.adobe.com",
+                        "accept": "*/*",
+                        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/102.0.5005.63 Safari/537.36",
+                        "accept-encoding": "gzip, deflate, br"
+                  },
+                  "response_headers": {
+                        "last-modified": "Sat, 04 Jun 2022 00:04:00 GMT",
+                        "content-type": "application/javascript",
+                        "server": "Apache",
+                        "strict-transport-security": "max-age=86400",
+                        "x-adobe-content": "AEM-cc",
+                        "x-frame-options": "SAMEORIGIN",
+                        "accept-ranges": "bytes",
+                        "x-adobe-loc": "ew1",
+                        "x-adobe-source": "128.78",
+                        "x-content-type-options": "nosniff",
+                        "content-encoding": "gzip",
+                        "content-length": "42509",
+                        "cache-control": "max-age=31477213",
+                        "expires": "Sun, 04 Jun 2023 15:49:03 GMT",
+                        "date": "Sun, 05 Jun 2022 08:08:50 GMT",
+                        "vary": "Accept-Encoding",
+                        "server-timing": "cdn-cache; desc=HIT"
+                  },
+                  "nr_cookies": 0
+            }
+      ]
+}
