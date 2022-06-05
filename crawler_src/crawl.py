@@ -370,6 +370,7 @@ def search_and_click_iframes(driver, status, accept_word):
 
     except TimeoutException:
         print("Timed out: could not find iframe elements")
+        return False, "errored"
 
 
 def allow_cookies(driver):
