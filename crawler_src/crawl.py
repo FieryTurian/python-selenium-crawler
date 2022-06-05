@@ -642,13 +642,16 @@ def crawl_list(params, domain_list):
     ----------
     params: dict
         A dictionary with the values for all command line arguments
-    domain_list: lst
-        A list of domains to be crawled
+    domain_list: dict
+        A dictionary of domains to be crawled
     """
     print("Please wait, we are trying to crawl your entire input list!")
     for tranco_rank in domain_list:
-        url_dict = crawl_url(params, domain_list[tranco_rank], tranco_rank)
-        convert_to_json(params, domain_list[tranco_rank], url_dict)
+        if domain_list[tranco_rank] == "latimes.com" and params["mobile"]:
+            pass
+        else:
+            url_dict = crawl_url(params, domain_list[tranco_rank], tranco_rank)
+            convert_to_json(params, domain_list[tranco_rank], url_dict)
 
 
 def convert_to_json(params, domain, url_dict):
