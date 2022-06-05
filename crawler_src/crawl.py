@@ -188,6 +188,9 @@ def get_url_requests_times(driver, url):
     except TimeoutException:
         print("Could not properly load the website!")
         return None, None, pageload_start_ts, 0
+    except WebDriverException:
+        print("Webpage crashed!")
+        return None, None, pageload_start_ts, 0
     pageload_end_ts = datetime.now().strftime("%d/%m/%Y %H:%M:%S.%f")
 
     post_pageload_url = driver.current_url
@@ -375,7 +378,6 @@ def allow_cookies(driver):
         accept_words = acceptwords_file.read().splitlines()
 
     for accept_word in accept_words:
-        # print("Checking: " + accept_word)  # TODO: Remove this print. It's just here now for testing purposes.
 
         accepted_via_iframe, status = search_and_click_iframes(driver, status, accept_word)
         if accepted_via_iframe:
@@ -457,7 +459,7 @@ def cookie_parser(cookie):
     dict
         A dictionary containing various information given in the cookie string
     """
-    # ToDo remove? https://stackoverflow.com/questions/21522586/python-convert-set-cookies-response-to-dict-of-cookies
+    # https://stackoverflow.com/questions/21522586/python-convert-set-cookies-response-to-dict-of-cookies
     cookie_dict = {}
 
     for item in cookie.split(';'):
@@ -573,14 +575,14 @@ def crawl_url(params, domain, rank):
     if error is None:
         post_pageload_url, requests_url, pageload_start_ts, pageload_end_ts = get_url_requests_times(driver, domain)
         if post_pageload_url:
-            time.sleep(10)  # ToDo: Change back to 10 seconds
-            # take_screenshots_consent(params, driver, domain, "pre")
+            time.sleep(10)
+            take_screenshots_consent(params, driver, domain, "pre")
             cookies_accepted, status = allow_cookies(driver)
             print(consent_error_logging(status, domain))
 
             if cookies_accepted:
-                time.sleep(10)  # ToDo: Change to 10 seconds
-                # take_screenshots_consent(params, driver, domain, "post")
+                time.sleep(10)
+                take_screenshots_consent(params, driver, domain, "post")
 
             driver.quit()
 
