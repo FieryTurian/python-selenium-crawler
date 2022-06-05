@@ -359,7 +359,10 @@ def search_and_click_iframes(driver, status, accept_word):
         else:
             status = "not_found"
 
-        driver.switch_to.default_content()
+        try:
+            driver.switch_to.default_content()
+        except TimeoutException:
+            pass
     return False, status
 
 
