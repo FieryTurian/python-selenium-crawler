@@ -612,18 +612,18 @@ def build_requests_list(requests_url):
     list
         A list with the requests parsed in the format that is needed for the JSON file
     """
-    requests_list = []
+    requests = []
     for request in requests_url:
         url = request.url
         timestamp = request.date
         request_headers, response_headers = get_headers(request)
         nr_cookies = get_nr_cookies(request)
-        requests_list.append({"request_url": url,
+        requests.append({"request_url": url,
                               "timestamp": timestamp.strftime("%d/%m/%Y %H:%M:%S.%f"),
                               "request_headers": dict(request_headers),
                               "response_headers": dict(response_headers) if response_headers else response_headers,
                               "nr_cookies": nr_cookies})
-    return requests_list
+    return requests
 
 
 def crawl_url(params, domain, rank):
@@ -674,7 +674,7 @@ def crawl_url(params, domain, rank):
             driver.quit()
 
             # Now it is time to process the gathered data:
-            requests_list = build_requests_list(requests_url)
+            requests = build_requests_list(requests_url)
             url_dict.update({"pageload_start_ts": pageload_start_ts,
                              "pageload_end_ts": pageload_end_ts,
                              "post_pageload_url": post_pageload_url,
@@ -682,7 +682,7 @@ def crawl_url(params, domain, rank):
                              "cookies": get_all_cookies(requests_url),
                              "third_party_domains": get_third_party_domains(domain, requests_url),
                              "redirect_pairs": detect_redirections(domain, requests_url, post_pageload_url),
-                             "requests_list": requests_list})
+                             "requests": requests})
         else:
             url_dict.update({"error": "Timeout"})
     else:

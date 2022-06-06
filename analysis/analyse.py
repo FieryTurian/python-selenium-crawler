@@ -184,8 +184,8 @@ def write_data_to_dataframe(headers, blocklist, blocklist_domains):
                                  json_file['cookies'],
                                  json_file['third_party_domains'],
                                  len(json_file['third_party_domains']),
-                                 json_file['requests_list'],
-                                 len(json_file['requests_list']),
+                                 json_file['requests'],
+                                 len(json_file['requests']),
                                  list(tracker_domains),
                                  len(tracker_domains),
                                  list(tracker_entities),
@@ -213,7 +213,7 @@ def preprocess_data():
     """
     headers = ["website_domain", "tranco_rank", "crawl_mode", "pageload_start_ts", "pageload_end_ts", "page_load_time",
                "post_pageload_url", "consent_status", "cookies", "third_party_domains", "nr_third_party_domains",
-               "requests_list", "nr_requests", "tracker_domains", "nr_tracker_domains", "tracker_entities",
+               "requests", "nr_requests", "tracker_domains", "nr_tracker_domains", "tracker_entities",
                "nr_tracker_entities", "redirection_pairs"]
     blocklist = read_blocklist()
     blocklist_domains = set(blocklist.keys())
@@ -649,14 +649,14 @@ def find_request_with_most_cookies(dataframe, mode):
     """
     # reset_index(drop=True) resets the indices from 0 to the length of the number of entries in the
     # dataframe that correspond to the right crawl mode
-    requests_list = dataframe.loc[dataframe["crawl_mode"] == mode, "requests_list"].reset_index(drop=True)
+    requests = dataframe.loc[dataframe["crawl_mode"] == mode, "requests"].reset_index(drop=True)
     website_domain = dataframe.loc[dataframe["crawl_mode"] == mode, "website_domain"].reset_index(drop=True)
     most_number_of_cookies = 0
     request_hostname = ""
     website = ""
 
-    # Search all requests in the requests_list for the most cookies
-    for i, requests_domain in enumerate(requests_list):
+    # Search through all requests in the requests_list for the most cookies
+    for i, requests_domain in enumerate(requests):
         for request in requests_domain:
             request_url = request.get("request_url")
             nr_cookies = request.get("nr_cookies")
