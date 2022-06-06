@@ -13,7 +13,7 @@ functionalities:
 - Webpage Screenshots
 - Computing Webpage Loading Times
 - Request/Response Header Parsing
-- Detecting Reditections
+- Detecting Redirections
 - Detecting Third-Party Domains
 - Converting Data into JSON Files
 """
@@ -347,7 +347,8 @@ def search_element_using_xpath(driver, accept_word):
     # noinspection PyBroadException
     try:
         allow_all_cookies = driver.find_elements(
-            # Long and complicated XPATH. Searches case-insensitive for an accept word in Button values or Text.
+            # Long and complicated XPATH. Searches case-insensitive for a certain accept word in WebElements
+            # and Text present on the webpage, but not in span elements.
             By.XPATH, "//*[(normalize-space(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', "
                       "'abcdefghijklmnopqrstuvwxyz')) = \"" + accept_word + "\" or translate(@value, "
                       "'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz') = \"" + accept_word + "\")"

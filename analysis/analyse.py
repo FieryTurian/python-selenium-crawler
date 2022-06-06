@@ -1,12 +1,9 @@
 """Analyser
 
-Analyse the data obtained by the crawler:
-[WORK IN PROGRESS]
+Analyses the data obtained by the crawler following the description of the assignment.
 """
-from ast import literal_eval
 from collections import Counter
 from colors import *
-import csv
 import glob
 from itertools import chain
 import json
@@ -66,8 +63,8 @@ def domain_in_blocklist(tracker_domains, domain):
         return domain, True
 
     # Check up to four domains formed by starting with the least five components
-    #  Following the example of Mozilla's trackingprotection-tools library:
-    #  (https://github.com/mozilla/trackingprotection-tools/blob/a55109119f0f66ddda92c133cee1d8ee31b64da9/trackingprotection_tools/DisconnectParser.py#L315)
+    # Following the example of Mozilla's trackingprotection-tools library:
+    # (https://github.com/mozilla/trackingprotection-tools/blob/a55109119f0f66ddda92c133cee1d8ee31b64da9/trackingprotection_tools/DisconnectParser.py#L315)
     domain = ".".join(domain.rsplit(".", 5)[1:])
     count = 0
     while domain != "":
@@ -944,7 +941,7 @@ def generate_table_question_11(crawl_mode, top_ten_redirection_pairs):
     file.write("\\begin{tabular}{|l|l|l|l|} \n")
     file.write("\hline \n")
     file.write(
-        "& \\textbf{Source hostname} & \\textbf{Target hostname} & \\textbf{Number of distinct websites \\\\ \hline \n")
+        "& \\textbf{Source hostname} & \\textbf{Target hostname} & \\textbf{Number of distinct websites} \\\\ \hline \n")
 
     # Write the data of the top ten redirection pairs for both mobile and desktop to the table
     for i in range(10):
