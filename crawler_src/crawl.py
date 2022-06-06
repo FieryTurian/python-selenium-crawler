@@ -111,6 +111,11 @@ def set_webdriver_options(params):
         chrome_options.add_argument(f"--window-size={WINDOW_SIZE}")
 
     if params["mobile"]:
+        # User agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13\_2\_3 like Mac OS X)
+        #             AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
+        # Viewport width: 375 pixels
+        # Viewport height: 812 pixels
+        # deviceScaleFactor: 3 (obtained from the command window.devicePixelRatio in the DevTools console)
         mobile_emulation = {"deviceName": "iPhone X"}
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
 
